@@ -5,7 +5,8 @@ public enum GameState
     Menu,
     Game,
     Mini,
-    Cutscene
+    Cutscene,
+    Any
 }
 
 public interface IGameState

@@ -1326,6 +1326,7 @@ GameObject:
   - component: {fileID: 1923497755}
   - component: {fileID: 1923497754}
   - component: {fileID: 1923497753}
+  - component: {fileID: 1923497758}
   m_Layer: 5
   m_Name: Menu Canavas
   m_TagString: Untagged
@@ -1432,6 +1433,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1923497758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923497752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d33ba32be3230b47b60d0d7b6f912e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultRatio: {x: 16, y: 9}
 --- !u!1 &1985296071
 GameObject:
   m_ObjectHideFlags: 0

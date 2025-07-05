@@ -4,53 +4,52 @@ using Zenject;
 
 public class GameMenu : MonoBehaviour
 {
-    [SerializeField] private MenuManager menuManager;
-    [SerializeField] private Menu blankMenu;
-    [SerializeField] private Menu defaultMenu;
-    [SerializeField] private GameButton continueButton;
+    [Header("Game Menu")]
+    [SerializeField] protected MenuManager menuManager;
+    [SerializeField] protected Menu blankMenu;
+    [SerializeField] protected Menu defaultMenu;
+    [SerializeField] protected GameButton openButton;
+    [SerializeField] protected InputAction inputAction;
+    [SerializeField] protected GameState state = GameState.Any;
 
-    private IGameState gameState;
-    private InputSystem inputSystem;
+    protected IGameState gameState;
+    protected InputSystem inputSystem;
     [Inject] private void Init(IGameState gameState, IInputControler input)
     {
         this.gameState = gameState;
         inputSystem = input.GetInputSystem();
     }
 
-    private GameState curState = GameState.Game;
+    protected GameState curState = GameState.Game;
 
-    private void Update()
+    public virtual void Update()
     {
         if (!isMenuOpen && blankMenu.Open) curState = gameState.GetCurrectState();
     }
 
-    private void OnEnable()
+    public virtual void OnEnable()
     {
-        inputSystem.UI.Menu.performed += Open;
-        continueButton.OnButtonPressed += OpenByButton;
+        inputAction.performed += Open;
+        if (openButton != null) openButton.OnButtonPressed += OpenByButton;
     }
 
-    private void OnDisable()
+    public virtual void OnDisable()
     {
-        inputSystem.UI.Menu.performed -= Open;
-        continueButton.OnButtonPressed -= OpenByButton;
+        inputAction.performed -= Open;
+        if (openButton != null) openButton.OnButtonPressed -= OpenByButton;
     }
 
     private bool isMenuOpen = false;
-    private bool isButtonPressed = false;
 
-    private void Open(InputAction.CallbackContext context)
+    public virtual void Open(InputAction.CallbackContext context)
     {
-        isButtonPressed = !isButtonPressed;
-        if (!isButtonPressed) return;
-
         isMenuOpen = !isMenuOpen;
 
         menuManager.MenuOpen(isMenuOpen ? blankMenu.MenuName : defaultMenu.MenuName);
-        gameState.SetState(isMenuOpen ? curState : GameState.Menu);
+        if (state != GameState.Any) gameState.SetState(isMenuOpen ? curState : state);
     }
 
-    private void OpenByButton()
+    protected virtual void OpenByButton()
     {
         Open(new InputAction.CallbackContext());
     }
