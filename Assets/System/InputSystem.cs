@@ -117,6 +117,24 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchLayerUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""7574c633-0d5d-4418-b612-8a1651f12c99"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchLayerDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""0e4761d6-1a54-4bc7-8129-223c5e03b0d4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -282,6 +300,28 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f472577c-655f-4104-9fea-1ffc2af57353"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchLayerUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f86bf2bd-1930-4bf0-92ce-f01b345d2d6e"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchLayerDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -923,6 +963,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Use = m_Player.FindAction("Use", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_SwitchLayerUp = m_Player.FindAction("SwitchLayerUp", throwIfNotFound: true);
+        m_Player_SwitchLayerDown = m_Player.FindAction("SwitchLayerDown", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1021,6 +1063,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Use;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_SwitchLayerUp;
+    private readonly InputAction m_Player_SwitchLayerDown;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1044,6 +1088,14 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Jump".
         /// </summary>
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/SwitchLayerUp".
+        /// </summary>
+        public InputAction @SwitchLayerUp => m_Wrapper.m_Player_SwitchLayerUp;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/SwitchLayerDown".
+        /// </summary>
+        public InputAction @SwitchLayerDown => m_Wrapper.m_Player_SwitchLayerDown;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1079,6 +1131,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @SwitchLayerUp.started += instance.OnSwitchLayerUp;
+            @SwitchLayerUp.performed += instance.OnSwitchLayerUp;
+            @SwitchLayerUp.canceled += instance.OnSwitchLayerUp;
+            @SwitchLayerDown.started += instance.OnSwitchLayerDown;
+            @SwitchLayerDown.performed += instance.OnSwitchLayerDown;
+            @SwitchLayerDown.canceled += instance.OnSwitchLayerDown;
         }
 
         /// <summary>
@@ -1099,6 +1157,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @SwitchLayerUp.started -= instance.OnSwitchLayerUp;
+            @SwitchLayerUp.performed -= instance.OnSwitchLayerUp;
+            @SwitchLayerUp.canceled -= instance.OnSwitchLayerUp;
+            @SwitchLayerDown.started -= instance.OnSwitchLayerDown;
+            @SwitchLayerDown.performed -= instance.OnSwitchLayerDown;
+            @SwitchLayerDown.canceled -= instance.OnSwitchLayerDown;
         }
 
         /// <summary>
@@ -1442,6 +1506,20 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnJump(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchLayerUp" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchLayerUp(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchLayerDown" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchLayerDown(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
