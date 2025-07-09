@@ -68,8 +68,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: time per symbols
   repeatable: 1
-  timeSet: 0.01
-  curTime: 0.01
+  timeSet: 0.005
+  curTime: 0.005
 --- !u!114 &8522200621033432683
 MonoBehaviour:
   m_ObjectHideFlags: 0

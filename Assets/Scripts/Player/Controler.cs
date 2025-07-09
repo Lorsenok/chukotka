@@ -76,7 +76,11 @@ public class Controler : MonoBehaviour
 
     private void Update()
     {
-        if (gameState.GetCurrectState() != GameState.Game) return;
+        if (gameState.GetCurrectState() != GameState.Game)
+        {
+            rg.linearVelocityX = 0f;
+            return;
+        }
 
         if (rg.linearVelocity.x > 0.1f | rg.linearVelocity.x < -0.1f && sound != null)
         {

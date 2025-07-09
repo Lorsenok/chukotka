@@ -15,31 +15,35 @@ public class DialogueTriggerMessage : PickableObject
 
     protected bool isPlayerOn = false;
 
-    public override void OnTriggerEnter(Collider other)
+    public override void OnEnter(GameObject obj)
     {
-        if (!other.gameObject.GetComponent<Controler>()) return;
+        if (!obj.GetComponent<Controler>()) return;
         
         isPlayerOn = true;
-        base.OnTriggerEnter(other);
+        base.OnEnter(obj);
 
         lastMessage = Instantiate(messagePrefab, messagePoint);
-        lastMessage.TryGetComponent(out DialogueMessage message);
-        message.CurText = table.GetTable().GetEntry(messageTextKey).Value;
+        if (table.GetTable().GetEntry(messageTextKey) == null)
+        {
+            Debug.LogError("Table key doesnt exist! Key: " + messageTextKey);
+            return;
+        }
+        lastMessage.GetComponentInChildren<DialogueMessage>().CurText = table.GetTable().GetEntry(messageTextKey).Value;
     }
 
-    public override void OnTriggerExit(Collider other)
+    public override void OnLeave(GameObject obj)
     {
-        if (!other.gameObject.GetComponent<Controler>()) return;
+        if (!obj.GetComponent<Controler>()) return;
 
         isPlayerOn = false;
-        base.OnTriggerExit(other);
+        base.OnLeave(obj);
         Destroy(lastMessage);
     }
 
     public override void Action()
     {
         if (!doubleMessage | !isPlayerOn) return;
-        lastMessage.TryGetComponent(out DialogueMessage message);
+        DialogueMessage message = lastMessage.GetComponentInChildren<DialogueMessage>();
         message.Clear();
         message.CurText = table.GetTable().GetEntry(doubleMessageTextKey).Value;
     }

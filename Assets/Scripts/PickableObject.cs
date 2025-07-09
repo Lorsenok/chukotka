@@ -17,22 +17,42 @@ public class PickableObject : MonoBehaviour
 
     protected bool canBePicked = false;
 
-    public virtual void OnTriggerEnter(Collider other)
+    public virtual void OnEnter(GameObject obj)
     {
         if (gameState.GetCurrectState() != GameState.Game) return;
-        if (other.TryGetComponent(out Controler controler))
+        if (obj.TryGetComponent(out Controler controler))
         {
             canBePicked = true;
         }
     }
 
-    public virtual void OnTriggerExit(Collider other)
+    public virtual void OnLeave(GameObject obj)
     {
         if (gameState.GetCurrectState() != GameState.Game) return;
-        if (other.TryGetComponent(out Controler controler))
+        if (obj.TryGetComponent(out Controler controler))
         {
             canBePicked = false;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        OnEnter(other.gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        OnEnter(collision.gameObject);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        OnLeave(other.gameObject);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        OnLeave(collision.gameObject);
     }
 
     public virtual void OnEnable()
