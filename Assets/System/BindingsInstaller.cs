@@ -11,6 +11,5 @@ public class BindingsInstaller : MonoInstaller
         Container.Bind<IDialogueSetter>().To<DialogueService>().AsSingle();
         Container.Bind<ISaver>().To<SaverService>().AsSingle();
         Container.Bind<IInventory>().To<InventoryService>().AsSingle();
-        Container.Bind<IGameLayerChanger>().To<GameLayerChangerService>().AsSingle();
     }
 }
