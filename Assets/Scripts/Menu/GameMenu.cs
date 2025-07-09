@@ -9,7 +9,7 @@ public class GameMenu : MonoBehaviour
     [SerializeField] protected Menu blankMenu;
     [SerializeField] protected Menu defaultMenu;
     [SerializeField] protected GameButton openButton;
-    [SerializeField] protected InputAction inputAction;
+    [SerializeField] protected bool switchByEscape;
     [SerializeField] protected GameState state = GameState.Any;
 
     protected IGameState gameState;
@@ -29,28 +29,31 @@ public class GameMenu : MonoBehaviour
 
     public virtual void OnEnable()
     {
-        inputAction.performed += Open;
-        if (openButton != null) openButton.OnButtonPressed += OpenByButton;
+        if (switchByEscape) inputSystem.UI.Menu.performed += OpenBySwitch;
+        if (openButton != null) openButton.OnButtonPressed += Open;
     }
 
     public virtual void OnDisable()
     {
-        inputAction.performed -= Open;
-        if (openButton != null) openButton.OnButtonPressed -= OpenByButton;
+        if (switchByEscape) inputSystem.UI.Menu.performed -= OpenBySwitch;
+        if (openButton != null) openButton.OnButtonPressed -= Open;
     }
 
     private bool isMenuOpen = false;
 
-    public virtual void Open(InputAction.CallbackContext context)
+    private bool hasSwitched = false;
+    protected virtual void OpenBySwitch(InputAction.CallbackContext context)
+    {
+        hasSwitched = !hasSwitched;
+
+        if (hasSwitched) Open();
+    }
+
+    public virtual void Open()
     {
         isMenuOpen = !isMenuOpen;
 
         menuManager.MenuOpen(isMenuOpen ? blankMenu.MenuName : defaultMenu.MenuName);
         if (state != GameState.Any) gameState.SetState(isMenuOpen ? curState : state);
-    }
-
-    protected virtual void OpenByButton()
-    {
-        Open(new InputAction.CallbackContext());
     }
 }
