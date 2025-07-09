@@ -99,10 +99,10 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _ExpireDistance: 10
-    - _ExpirePower: 20
+    - _ExpirePower: 10
     - _FadeDistance: 18
     - _FadeEndDistance: 10
-    - _FadePower: 2
+    - _FadePower: 10
     - _FadeStartDistance: 8
     - _Float: 0.01
     - _GlossMapScale: 0
