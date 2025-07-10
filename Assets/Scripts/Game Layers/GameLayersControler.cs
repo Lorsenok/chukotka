@@ -15,7 +15,7 @@ public class GameLayersControler : MonoBehaviour
     [SerializeField] private float zdistance;
     [SerializeField] private float ydistance;
 
-    private List<Collider2D[]> colliders = new List<Collider2D[]>();
+    private List<List<Collider2D>> colliders = new List<List<Collider2D>>();
 
     private InputSystem inputSystem;
     [Inject] private void Init(IInputControler inputControler)
@@ -29,7 +29,12 @@ public class GameLayersControler : MonoBehaviour
 
         foreach (GameLayer layer in layers)
         {
-            colliders.Add(layer.GetComponentsInChildren<Collider2D>());
+            List<Collider2D> colls = new List<Collider2D> ();
+            foreach (Collider2D coll in layer.GetComponentsInChildren<Collider2D>())
+            {
+                if (!coll.gameObject.GetComponent<GameLayerColliderLock>()) colls.Add(coll);
+            }
+            colliders.Add(colls);
         }
     }
 
@@ -62,7 +67,7 @@ public class GameLayersControler : MonoBehaviour
                 transform.position + new Vector3(0, ydistance * (i - CurrentLayer), zdistance * (i - CurrentLayer)), 
                 speed * Time.deltaTime);
 
-            for (int j = 0; j < colliders[i].Length; j++)
+            for (int j = 0; j < colliders[i].Count; j++)
             {
                 colliders[i][j].enabled = i == CurrentLayer;
             }

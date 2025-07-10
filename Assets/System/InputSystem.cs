@@ -438,6 +438,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""OpenTasks"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""ff8c4ce5-6763-4e98-9b55-4aba70730838"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -891,6 +900,17 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9882aed2-f31a-4a42-b2b7-8f0dfe0bd705"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OpenTasks"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -979,6 +999,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
         m_UI_Menu = m_UI.FindAction("Menu", throwIfNotFound: true);
         m_UI_MousePosition = m_UI.FindAction("MousePosition", throwIfNotFound: true);
+        m_UI_OpenTasks = m_UI.FindAction("OpenTasks", throwIfNotFound: true);
     }
 
     ~@InputSystem()
@@ -1212,6 +1233,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_TrackedDeviceOrientation;
     private readonly InputAction m_UI_Menu;
     private readonly InputAction m_UI_MousePosition;
+    private readonly InputAction m_UI_OpenTasks;
     /// <summary>
     /// Provides access to input actions defined in input action map "UI".
     /// </summary>
@@ -1271,6 +1293,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "UI/MousePosition".
         /// </summary>
         public InputAction @MousePosition => m_Wrapper.m_UI_MousePosition;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/OpenTasks".
+        /// </summary>
+        public InputAction @OpenTasks => m_Wrapper.m_UI_OpenTasks;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1333,6 +1359,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
+            @OpenTasks.started += instance.OnOpenTasks;
+            @OpenTasks.performed += instance.OnOpenTasks;
+            @OpenTasks.canceled += instance.OnOpenTasks;
         }
 
         /// <summary>
@@ -1380,6 +1409,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
+            @OpenTasks.started -= instance.OnOpenTasks;
+            @OpenTasks.performed -= instance.OnOpenTasks;
+            @OpenTasks.canceled -= instance.OnOpenTasks;
         }
 
         /// <summary>
@@ -1612,5 +1644,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMousePosition(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OpenTasks" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOpenTasks(InputAction.CallbackContext context);
     }
 }

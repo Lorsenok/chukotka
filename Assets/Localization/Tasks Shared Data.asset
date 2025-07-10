@@ -10,43 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Default Shared Data
+  m_Name: Tasks Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Default
-  m_TableCollectionNameGuidString: 4527dfa1c61fdb7418ea379f86c6e012
+  m_TableCollectionName: Tasks
+  m_TableCollectionNameGuidString: 9b7eb2a5917530f4ca4ec194f810e879
   m_Entries:
-  - m_Id: 12186374144
-    m_Key: startgame
+  - m_Id: 4141699072
+    m_Key: test
     m_Metadata:
       m_Items: []
-  - m_Id: 74958327808
-    m_Key: settings
+  - m_Id: 92188528640
+    m_Key: task1
     m_Metadata:
       m_Items: []
-  - m_Id: 114439311360
-    m_Key: exit
+  - m_Id: 260975710208
+    m_Key: task2
     m_Metadata:
       m_Items: []
-  - m_Id: 159922343936
-    m_Key: back
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3509020042022912
-    m_Key: continue
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3803160147480576
-    m_Key: quests
+  - m_Id: 407138816000
+    m_Key: task3
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 5332127396415668463
+    rid: 119309337498484813
   references:
     version: 2
     RefIds:
-    - rid: 5332127396415668463
+    - rid: 119309337498484813
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1751235772016
+        m_CustomEpoch: 1752140913514

@@ -10,36 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Default_en
+  m_Name: Tasks_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: 4527dfa1c61fdb7418ea379f86c6e012, type: 2}
+  m_SharedData: {fileID: 11400000, guid: 9b7eb2a5917530f4ca4ec194f810e879, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 12186374144
-    m_Localized: Start Game
+  - m_Id: 4141699072
+    m_Localized: Test task
     m_Metadata:
       m_Items: []
-  - m_Id: 74958327808
-    m_Localized: Settings
+  - m_Id: 92188528640
+    m_Localized: Harvest some sticks
     m_Metadata:
       m_Items: []
-  - m_Id: 114439311360
-    m_Localized: Exit
+  - m_Id: 260975710208
+    m_Localized: Hunt ducks
     m_Metadata:
       m_Items: []
-  - m_Id: 159922343936
-    m_Localized: Back
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3509020042022912
-    m_Localized: Continue
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3803160147480576
-    m_Localized: TAB to open quests
+  - m_Id: 407138816000
+    m_Localized: Come to shaman and create the amulet
     m_Metadata:
       m_Items: []
   references:

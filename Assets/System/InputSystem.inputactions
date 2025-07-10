@@ -352,6 +352,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "OpenTasks",
+                    "type": "PassThrough",
+                    "id": "ff8c4ce5-6763-4e98-9b55-4aba70730838",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -803,6 +812,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9882aed2-f31a-4a42-b2b7-8f0dfe0bd705",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenTasks",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

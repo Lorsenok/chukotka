@@ -13,4 +13,6 @@ public class DialogueTree : MonoBehaviour
     public Sprite[] icon;
     public bool[] side;
     public int[] nextId;
+
+    public int afterTaskID = 0;
 }
