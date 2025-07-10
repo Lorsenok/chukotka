@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
-    [SerializeField] private Collider2D trigger;
     [SerializeField] private CustomAnimator idle;
     [SerializeField] private CustomAnimator active;
 

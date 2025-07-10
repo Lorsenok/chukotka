@@ -5,6 +5,8 @@ using Zenject;
 
 public class PickableObject : MonoBehaviour
 {
+    [SerializeField] protected float maxZDif = 1f;
+
     protected InputSystem input;
     protected IGameState gameState;
 
@@ -22,7 +24,7 @@ public class PickableObject : MonoBehaviour
         if (gameState.GetCurrectState() != GameState.Game) return;
         if (obj.TryGetComponent(out Controler controler))
         {
-            canBePicked = true;
+            canBePicked = Mathf.Abs(obj.transform.position.z - transform.position.z) <= maxZDif;
         }
     }
 

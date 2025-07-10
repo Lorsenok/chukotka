@@ -40,11 +40,13 @@ public class GameLayersControler : MonoBehaviour
 
     private void OnSwitchUp(InputAction.CallbackContext context)
     {
+        if (GameLayerSwitchBlock.Block) return;
         if (CurrentLayer < layers.Length - 1) CurrentLayer++;
     }
 
     private void OnSwitchDown(InputAction.CallbackContext context)
     {
+        if (GameLayerSwitchBlock.Block) return;
         if (CurrentLayer > 0) CurrentLayer--;
     }
 

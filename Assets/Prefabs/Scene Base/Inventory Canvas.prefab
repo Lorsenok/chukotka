@@ -137,23 +137,7 @@ MonoBehaviour:
   blankMenu: {fileID: 8355762718277837}
   defaultMenu: {fileID: 3859097765522260094}
   openButton: {fileID: 2947976828484553450}
-  inputAction:
-    m_Name: Input
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 40094757-f2b3-4295-bf2f-d8bb1ae6728b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: b088aa84-98a6-4f67-b5d6-479378578e3f
-      m_Path: <Keyboard>/i
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Input
-      m_Flags: 0
-    m_Flags: 0
+  switchByEscape: 0
   state: 4
   canvas: {fileID: 6247093711537981012}
   itemPrefab: {fileID: 7255650423447059082, guid: 5514a29a12caf8140a210d39d2f09dd6, type: 3}
@@ -282,7 +266,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -786, y: 424}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8756139783036079010
 CanvasRenderer:
@@ -312,7 +296,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2712e615a374b774586a10e479948794, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

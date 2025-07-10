@@ -17,7 +17,7 @@ public class DialogueTriggerMessage : PickableObject
 
     public override void OnEnter(GameObject obj)
     {
-        if (!obj.GetComponent<Controler>()) return;
+        if (!obj.GetComponent<Controler>() || Mathf.Abs(obj.transform.position.z - transform.position.z) > maxZDif) return;
         
         isPlayerOn = true;
         base.OnEnter(obj);

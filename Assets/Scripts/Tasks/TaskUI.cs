@@ -14,7 +14,6 @@ public class TaskUI : MonoBehaviour
     [SerializeField] private Menu blank;
     [SerializeField] private Menu main;
 
-    [SerializeField] private Timer updateDelay;
     [SerializeField] private Timer tasksShowTime;
     [SerializeField] private Timer hideTasksTime;
 

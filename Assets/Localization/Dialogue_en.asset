@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 7828492288
-    m_Localized: Yes?
+    m_Localized: Go and collect some sticks
     m_Metadata:
       m_Items: []
   - m_Id: 127278075904
@@ -31,31 +31,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
-    m_Localized: ~bSo~
+    m_Localized: Go and collect some sticks
     m_Metadata:
       m_Items: []
-  - m_Id: 237480231915520
-    m_Localized: ~rimportant qustion!!11!11111!!~
+  - m_Id: 643025518546944
+    m_Localized: Cuz ur r the ~gchosen one~!
     m_Metadata:
       m_Items: []
   - m_Id: 237707051487232
-    m_Localized: '*13Cofe*14Tea*15Milk'
+    m_Localized: '*12Why me*13I dont want to*13No'
     m_Metadata:
       m_Items: []
-  - m_Id: 238579772903424
-    m_Localized: Meh
+  - m_Id: 643190539243520
+    m_Localized: ~rdont care actually~
     m_Metadata:
       m_Items: []
-  - m_Id: 238585372299264
-    m_Localized: stupid bri'ish ~r>:(~
+  - m_Id: 643332529016832
+    m_Localized: <3
     m_Metadata:
       m_Items: []
-  - m_Id: 238591131078656
-    m_Localized: ~g<3~
+  - m_Id: 643386824282112
+    m_Localized: Chu
     m_Metadata:
       m_Items: []
-  - m_Id: 246481258631168
-    m_Localized: '?'
+  - m_Id: 643406642368512
+    m_Localized: Smaman
     m_Metadata:
       m_Items: []
   references:
