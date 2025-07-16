@@ -1,7 +1,20 @@
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
+
+public class ItemWithCount
+{
+    public int Count { get; set; } = 1;
+    public Item Item { get; set; }
+
+    public ItemWithCount(Item item)
+    {
+        Item = item;
+    }
+}
 
 public class InventoryUI : GameMenu
 {
@@ -9,8 +22,9 @@ public class InventoryUI : GameMenu
     [SerializeField] private Transform canvas;
     [SerializeField] private InventoryItemUI itemPrefab;
     [SerializeField] private InventoryCell[] gridPositions;
+    [SerializeField] private GameObject countTextPrefab;
 
-    private Item[] gridFilled;
+    private ItemWithCount[] gridFilled;
     private List<InventoryItemUI> itemObjs = new();
 
     private IInventory inventory;
@@ -28,11 +42,21 @@ public class InventoryUI : GameMenu
             gridPositions[i].Canvas = canvas.GetComponent<RectTransform>();
         }
 
-        gridFilled = new Item[gridPositions.Length]; 
+        gridFilled = new ItemWithCount[gridPositions.Length];
         for (int i = 0; i < inventory.Items.Count; i++)
         {
             if (i == gridFilled.Length) break;
-            gridFilled[i] = inventory.Items[i];
+            bool contains = false;
+            foreach (ItemWithCount item in gridFilled)
+            {
+                if (item == null) continue;
+                if (item.Item.name == inventory.Items[i].name)
+                {
+                    item.Count++;
+                    contains = true;
+                }
+            }
+            if (!contains) gridFilled[i] = new ItemWithCount(inventory.Items[i]);
         }
 
         GridUpdate();
@@ -53,9 +77,10 @@ public class InventoryUI : GameMenu
 
             InventoryItemUI obj = Instantiate(itemPrefab, gridPositions[i].transform.position, Quaternion.identity, canvas);
             itemObjs.Add(obj);
-            obj.GetComponentInChildren<Image>().sprite = gridFilled[i].sprite;
+            obj.GetComponentInChildren<Image>().sprite = gridFilled[i].Item.sprite;
             obj.CurCell = gridPositions[i];
-            obj.Item = gridFilled[i];
+            obj.Item = gridFilled[i].Item;
+            Instantiate(countTextPrefab, obj.transform).GetComponentInChildren<TextMeshProUGUI>().text = gridFilled[i].Count.ToString();
 
             gridPositions[i].ItemObj = obj;
         }

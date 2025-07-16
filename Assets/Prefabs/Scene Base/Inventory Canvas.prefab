@@ -146,6 +146,7 @@ MonoBehaviour:
   - {fileID: 6968952849589489483}
   - {fileID: 2881440400995611243}
   - {fileID: 5717267094318662619}
+  countTextPrefab: {fileID: 102482295784959022, guid: 2a3948af32eab594d82772fb64f480c7, type: 3}
 --- !u!114 &3030345956482509041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 11400000, guid: 13dbf708319a39047841e9a5e5262ccf, type: 2}
   - {fileID: 11400000, guid: 13dbf708319a39047841e9a5e5262ccf, type: 2}
   - {fileID: 11400000, guid: 13dbf708319a39047841e9a5e5262ccf, type: 2}
 --- !u!1 &1751897267383560016
