@@ -12,6 +12,7 @@ public class DialogueLetter : MonoBehaviour
 
     [SerializeField] private float rotationSpeedM = 1f;
     [SerializeField] private float shakeSpeedM = 0.1f;
+    [SerializeField] private Vector3 shakeOffset;
 
     [SerializeField] private float timeBeforeEffect = 0f;
 
@@ -57,7 +58,7 @@ public class DialogueLetter : MonoBehaviour
         transform.eulerAngles += new Vector3(0f, 0f, rotationSpeed * Time.deltaTime);
         curPosition = startPosition + new Vector3(Random.Range(-shakePower, shakePower), 
             Random.Range(-shakePower, shakePower), 
-            Random.Range(-shakePower, shakePower));
+            Random.Range(-shakePower, shakePower)) + shakeOffset;
         transform.localPosition = Vector3.Lerp(transform.localPosition, curPosition, Time.deltaTime * shakePower);
     }
 }

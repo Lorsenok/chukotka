@@ -27,10 +27,6 @@ MonoBehaviour:
     m_Key: task2
     m_Metadata:
       m_Items: []
-  - m_Id: 407138816000
-    m_Key: task3
-    m_Metadata:
-      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

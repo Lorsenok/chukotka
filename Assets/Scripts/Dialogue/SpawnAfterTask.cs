@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class SpawnAfterTask : MonoBehaviour
+public class AfterTask : MonoBehaviour
 {
     [SerializeField] private int id;
     [SerializeField] private GameObject[] spawn;
+    [SerializeField] private GameObject[] enable;
     [SerializeField] private bool destroyAfterSpawn = true;
 
     private void OnEnable()
@@ -21,7 +22,11 @@ public class SpawnAfterTask : MonoBehaviour
         if (id != this.id) return;
         foreach (var item in spawn)
         {
-            Instantiate(item, transform.position, item.transform.rotation);
+            Instantiate(item, item.transform.position, item.transform.rotation);
+        }
+        foreach (var item in enable)
+        {
+            item.SetActive(true);
         }
         if (destroyAfterSpawn) Destroy(gameObject);
     }

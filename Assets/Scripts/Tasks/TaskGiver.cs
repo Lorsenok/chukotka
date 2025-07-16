@@ -3,7 +3,8 @@ using Zenject;
 
 public class TaskGiver : MonoBehaviour
 {
-    [SerializeField] private Task task;
+    [SerializeField] private Task[] taskGive;
+    [SerializeField] private Task[] taskTake;
 
     private ITaskContainer container;
     [Inject] private void Init(ITaskContainer taskContainer)
@@ -15,8 +16,10 @@ public class TaskGiver : MonoBehaviour
     {
         if (!collision.gameObject.GetComponent<Controler>()) return;
 
-        container.Tasks.Add(task);
+        foreach (Task task in taskGive) container.Tasks.Add(task);
+        foreach (Task task in taskTake) container.Tasks.Remove(task);
         container.OnTasksChanged?.Invoke();
+
         Destroy(gameObject);
     }
 }

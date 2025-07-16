@@ -18,9 +18,11 @@ public class GameLayersControler : MonoBehaviour
     private List<List<Collider2D>> colliders = new List<List<Collider2D>>();
 
     private InputSystem inputSystem;
-    [Inject] private void Init(IInputControler inputControler)
+    private IGameState state;
+    [Inject] private void Init(IInputControler inputControler, IGameState gameState)
     {
         inputSystem = inputControler.GetInputSystem();
+        state = gameState;
     }
 
     private void Start()
@@ -40,13 +42,13 @@ public class GameLayersControler : MonoBehaviour
 
     private void OnSwitchUp(InputAction.CallbackContext context)
     {
-        if (GameLayerSwitchBlock.Block) return;
+        if (GameLayerSwitchBlock.Block || state.GetCurrectState() != GameState.Game) return;
         if (CurrentLayer < layers.Length - 1) CurrentLayer++;
     }
 
     private void OnSwitchDown(InputAction.CallbackContext context)
     {
-        if (GameLayerSwitchBlock.Block) return;
+        if (GameLayerSwitchBlock.Block || state.GetCurrectState() != GameState.Game) return;
         if (CurrentLayer > 0) CurrentLayer--;
     }
 

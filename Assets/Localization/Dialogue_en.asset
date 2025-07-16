@@ -31,23 +31,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
-    m_Localized: Go and collect some sticks
+    m_Localized: "~rRyn'gyrgyng~ shines upon your path, child... But I see the shadows
+      of Kele already creeping toward the encampment.\r\nYou have torn the veil between
+      the worlds \u2014 now the Great Cold breathes down our necks.\r\n~rAwaken!~
+      Your spirit has wandered too long in the ice..."
     m_Metadata:
       m_Items: []
   - m_Id: 643025518546944
-    m_Localized: Cuz ur r the ~gchosen one~!
+    m_Localized: 'Questions can wait. Now listen carefully: go to the elder of our
+      ~gencampment~. He is at the heart of the encampment. He has words for you.'
     m_Metadata:
       m_Items: []
   - m_Id: 237707051487232
-    m_Localized: '*12Why me*13I dont want to*13No'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 643190539243520
-    m_Localized: ~rdont care actually~
-    m_Metadata:
-      m_Items: []
-  - m_Id: 643332529016832
-    m_Localized: <3
+    m_Localized: "~bWhere am I...?~ Before my eyes \u2014 shards of ice, black water...\r\nWho
+      are you?"
     m_Metadata:
       m_Items: []
   - m_Id: 643386824282112
@@ -55,7 +52,47 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 643406642368512
-    m_Localized: Smaman
+    m_Localized: ~bSmaman~
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2913206492024832
+    m_Localized: ~rAh, the damned one has come! Because of your weakness, all the
+      amulets have cracked!~ The reindeer are thrashing like mad things, the air
+      has grown heavy, something terrible is approaching... ~rNow an enormous danger
+      looms over us!~
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2914666168537088
+    m_Localized: Wait what
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2914788835151872
+    m_Localized: Either you fix everything you've wrought, or the encampment will
+      banish you forever as accursed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2915132415758336
+    m_Localized: '*14Okay man, what do i have to do?*15~rWHAT THE HELL ARE YOU TALKING
+      ABOUT?~'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2915678526722048
+    m_Localized: "You must prove you can atone for your guilt.\r\nThe sacred trees
+      have shed their branches \u2014 gather ten and bring them to me. Without them,
+      new protective charms cannot be made. The branches are scattered throughout
+      the encampment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2915692988682240
+    m_Localized: "~rShut up!~ If you want to atone for your guilt \u2014 you'll work
+      like the damned now, and I don't care that you nearly got yourself killed by
+      your own stupidity. The sacred trees have shed their branches \u2014 gather
+      ten. Without them, new protective charms can't be made. The branches are scattered
+      throughout the encampment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2917006401425408
+    m_Localized: The Elder
     m_Metadata:
       m_Items: []
   references:

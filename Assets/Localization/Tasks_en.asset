@@ -23,15 +23,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92188528640
-    m_Localized: Harvest some sticks
+    m_Localized: Go and talk with the Elder
     m_Metadata:
       m_Items: []
   - m_Id: 260975710208
-    m_Localized: Hunt ducks
-    m_Metadata:
-      m_Items: []
-  - m_Id: 407138816000
-    m_Localized: Come to shaman and create the amulet
+    m_Localized: Harvest some sticks
     m_Metadata:
       m_Items: []
   references:

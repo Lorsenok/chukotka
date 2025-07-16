@@ -60,11 +60,18 @@ public class Dialogue : MonoBehaviour
         Setup(0);
     }
 
+    private bool skipBlock = false;
     private bool hasSkiped = false;
     public void Skip(bool skipByChoice = false)
     {
         if (!isWorking || isChoice & !skipByChoice) return;
-        isChoice = false; 
+        if (skipBlock)
+        {
+            skipBlock = false;
+            return;
+        }
+        skipBlock = isChoice;
+        isChoice = false;
 
         if (!hasSkiped && !skipByChoice)
         {

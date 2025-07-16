@@ -155,6 +155,7 @@ MonoBehaviour:
   effectPower: 100
   rotationSpeedM: 1
   shakeSpeedM: 0.1
+  shakeOffset: {x: -12, y: -12, z: 0}
   timeBeforeEffect: 0
 --- !u!1 &6036294573367149130
 GameObject:
