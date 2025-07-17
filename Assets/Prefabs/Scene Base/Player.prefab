@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 2953897547763498807}
   - component: {fileID: 1102160502061187418}
   - component: {fileID: 4057524621664111513}
+  - component: {fileID: 2030695275406144610}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -291,6 +292,7 @@ MonoBehaviour:
   spr: {fileID: 7628232522701512542}
   minSpeedForRunAnim: 0.1
   fliplockSet: 0
+  gameLayerSwitchAnimationDelay: {fileID: 2030695275406144610}
 --- !u!114 &2953897547763498807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,3 +369,19 @@ MonoBehaviour:
   timePerFrame: 0.1
   loop: 1
   curSprite: 0
+--- !u!114 &2030695275406144610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: layer switch animation delay
+  repeatable: 0
+  timeSet: 1
+  curTime: 0

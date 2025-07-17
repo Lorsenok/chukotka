@@ -167,6 +167,53 @@ MonoBehaviour:
     m_Localized: Grandmother Ayna
     m_Metadata:
       m_Items: []
+  - m_Id: 3269075188666368
+    m_Localized: Hello! Are you the hunter?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3282607292633088
+    m_Localized: So, The Elder sent you...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3282931512332288
+    m_Localized: Well yeah, is there something wrong about it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3283085002887168
+    m_Localized: 'Then tell me this: why do some return from that terrible place,
+      while others are doomed to a cold death?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3283539904516096
+    m_Localized: '*15What are you talking about?*18Maybe this is the way...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3283986950213632
+    m_Localized: Dont play stupid. ~rThis is your fault~
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284187542802432
+    m_Localized: I-i-i really dont get it... im confused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284485799759872
+    m_Localized: Alright, order is the order. Just take the bow and hunt some birds.
+      I need 12 feathers to make new amulet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3284993352486912
+    m_Localized: I have never used the bow actually... well, lets try it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3286020004859904
+    m_Localized: "And to me, it seems those who returned are guilty of the others\u2019
+      deaths."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3287626037415936
+    m_Localized: The Hunter
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

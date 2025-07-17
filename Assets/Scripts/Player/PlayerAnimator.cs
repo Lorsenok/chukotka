@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Zenject;
 
 public class PlayerAnimator : MonoBehaviour
@@ -17,10 +18,41 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private float fliplockSet;
     private float flipLock = 0f;
 
+    [SerializeField] private Timer gameLayerSwitchAnimationDelay;
+
     private IGameState gameState;
-    [Inject] private void Init(IGameState state)
+    private InputSystem inputSystem;
+    [Inject] private void Init(IGameState state, IInputControler input)
     {
         gameState = state;
+        inputSystem = input.GetInputSystem();
+    }
+
+    private bool isLayerSwitching = false;
+
+    private void OnEnable()
+    {
+        gameLayerSwitchAnimationDelay.OnTimerEnd += OnLayerSwitchDelayEnd;
+        inputSystem.Player.SwitchLayerDown.performed += OnLayerSwitch;
+        inputSystem.Player.SwitchLayerUp.performed += OnLayerSwitch;
+    }
+
+    private void OnDisable()
+    {
+        gameLayerSwitchAnimationDelay.OnTimerEnd -= OnLayerSwitchDelayEnd;
+        inputSystem.Player.SwitchLayerDown.performed -= OnLayerSwitch;
+        inputSystem.Player.SwitchLayerUp.performed -= OnLayerSwitch;
+    }
+
+    private void OnLayerSwitchDelayEnd()
+    {
+        isLayerSwitching = false;
+    }
+
+    private void OnLayerSwitch(InputAction.CallbackContext context)
+    {
+        isLayerSwitching = true;
+        gameLayerSwitchAnimationDelay.StartTimer();
     }
 
     private void Update()
@@ -33,7 +65,7 @@ public class PlayerAnimator : MonoBehaviour
             return;
         }
         talk.enabled = false;
-        idle.enabled = rg.linearVelocity.x < minSpeedForRunAnim && rg.linearVelocity.x > -minSpeedForRunAnim;
+        idle.enabled = rg.linearVelocity.x < minSpeedForRunAnim && rg.linearVelocity.x > -minSpeedForRunAnim && !isLayerSwitching;
         run.enabled = !idle.enabled;
         if (rg.linearVelocity.x > minSpeedForRunAnim | rg.linearVelocity.x < -minSpeedForRunAnim && flipLock <= 0f)
         {
