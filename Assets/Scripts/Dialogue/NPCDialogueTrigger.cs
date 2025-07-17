@@ -17,7 +17,7 @@ public class NPCDialogueTrigger : MonoBehaviour
         DialogueService.OnDialogueEnd -= OnEnd;
     }
 
-    private void OnStart(DialogueTree tree)
+    private void OnStart(DialogueTree tree, Trigger trigger)
     {
         idle.enabled = false;
         active.enabled = true;

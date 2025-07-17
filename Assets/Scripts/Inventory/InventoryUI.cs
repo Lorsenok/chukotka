@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,12 +41,30 @@ public class InventoryUI : GameMenu
             gridPositions[i].Canvas = canvas.GetComponent<RectTransform>();
         }
 
+        GridUpdate();
+    }
+
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        inventory.OnItemsChanged += GridUpdate;
+    }
+
+    public override void OnDisable()
+    {
+        base.OnDisable();
+        inventory.OnItemsChanged -= GridUpdate;
+    }
+
+    private void GridUpdate()
+    {
         gridFilled = new ItemWithCount[gridPositions.Length];
+        ItemWithCount[] filled = new ItemWithCount[inventory.Items.Count];
+
         for (int i = 0; i < inventory.Items.Count; i++)
         {
-            if (i == gridFilled.Length) break;
             bool contains = false;
-            foreach (ItemWithCount item in gridFilled)
+            foreach (ItemWithCount item in filled)
             {
                 if (item == null) continue;
                 if (item.Item.name == inventory.Items[i].name)
@@ -56,14 +73,19 @@ public class InventoryUI : GameMenu
                     contains = true;
                 }
             }
-            if (!contains) gridFilled[i] = new ItemWithCount(inventory.Items[i]);
+            if (!contains) filled[i] = new ItemWithCount(inventory.Items[i]);
         }
 
-        GridUpdate();
-    }
+        int y = 0;
+        for (int i = 0; i < filled.Length; i++)
+        {
+            if (filled[i] != null)
+            {
+                gridFilled[y] = filled[i];
+                y++;
+            }
+        }
 
-    private void GridUpdate()
-    {
         foreach (InventoryItemUI obj in itemObjs)
         {
             Destroy(obj.gameObject);

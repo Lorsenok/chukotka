@@ -47,6 +47,11 @@ public class GrapableObject : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private bool onGrap = false;
 
+    public virtual void Start()
+    {
+        pos.anchoredPosition = InitialPosition;
+    }
+
     private Vector2 curPos = Vector2.zero;
     public virtual void Update()
     {

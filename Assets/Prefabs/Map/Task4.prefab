@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2552361259431489339}
   - component: {fileID: 7862267884879931105}
+  - component: {fileID: 1276437394168451259}
   - component: {fileID: 5356025238068775637}
   - component: {fileID: 3423947041193787238}
   m_Layer: 0
-  m_Name: Task1
+  m_Name: Task4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,8 +48,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskGive:
+  - {fileID: 11400000, guid: 33d376fbe7b7a6644a94fdba98a6508c, type: 2}
+  - {fileID: 11400000, guid: 5fa0f152e24e1b94fb2117d8a18d566f, type: 2}
+  taskTake:
   - {fileID: 11400000, guid: d6217dc61ac80fb4682276698e5a1703, type: 2}
-  taskTake: []
+--- !u!114 &1276437394168451259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5894156670154751451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54779eb15facd8d4fbb1c9ba156a719f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemGive: []
+  itemTake:
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  - {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
 --- !u!61 &5356025238068775637
 BoxCollider2D:
   m_ObjectHideFlags: 0

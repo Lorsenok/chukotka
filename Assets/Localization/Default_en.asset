@@ -42,6 +42,10 @@ MonoBehaviour:
     m_Localized: TAB to open quests
     m_Metadata:
       m_Items: []
+  - m_Id: 6326634388738048
+    m_Localized: Take (F)
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

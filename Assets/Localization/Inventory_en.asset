@@ -26,6 +26,14 @@ MonoBehaviour:
     m_Localized: Just test item, nothing special
     m_Metadata:
       m_Items: []
+  - m_Id: 4641600657248256
+    m_Localized: Stick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4641662506455040
+    m_Localized: Looks weird
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

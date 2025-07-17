@@ -169,7 +169,6 @@ GameObject:
   - component: {fileID: 3436341279681666755}
   - component: {fileID: 167969241903597809}
   - component: {fileID: 1834989711247437120}
-  - component: {fileID: 3957676581532235597}
   - component: {fileID: 8809314704711128937}
   - component: {fileID: 952787162051854869}
   m_Layer: 5
@@ -307,25 +306,8 @@ MonoBehaviour:
   textPrefab: {fileID: 457798730045491094, guid: c5edcde0e1ea6e54a91504a2235dee3e, type: 3}
   blank: {fileID: 8797373877047138994}
   main: {fileID: 6746796078593259794}
-  updateDelay: {fileID: 3957676581532235597}
   tasksShowTime: {fileID: 8809314704711128937}
   hideTasksTime: {fileID: 952787162051854869}
---- !u!114 &3957676581532235597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2030115995440533903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagname: update delay
-  repeatable: 0
-  timeSet: 2
-  curTime: 0
 --- !u!114 &8809314704711128937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: task hide time
   repeatable: 0
-  timeSet: 1
+  timeSet: 0.5
   curTime: 0
 --- !u!1 &4680203221764065013
 GameObject:
@@ -469,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuName: blank
   Open: 1
-  speed: 5
+  speed: 2.5
   openPosition: {x: 0, y: 0, z: 0}
   closePosition: {x: 1920, y: 0, z: 0}
 --- !u!1 &6643114617422649670

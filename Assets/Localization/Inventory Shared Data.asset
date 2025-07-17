@@ -23,6 +23,14 @@ MonoBehaviour:
     m_Key: testdes
     m_Metadata:
       m_Items: []
+  - m_Id: 4641600657248256
+    m_Key: stick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4641662506455040
+    m_Key: stickdes
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

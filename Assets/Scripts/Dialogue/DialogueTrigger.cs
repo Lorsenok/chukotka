@@ -4,7 +4,8 @@ using Zenject;
 
 public class DialogueTrigger : DialogueTriggerMessage
 {
-    [SerializeField] private DialogueTree tree; 
+    [SerializeField] private DialogueTree tree;
+    [SerializeField] private Trigger trigger;
 
     private IDialogueSetter dialogueSetter;
     [Inject] private void Init(IDialogueSetter dialogueSetter)
@@ -17,7 +18,7 @@ public class DialogueTrigger : DialogueTriggerMessage
         base.Action();
         if (gameState.GetCurrectState() == GameState.Game && isPlayerOn)
         {
-            dialogueSetter.SetTree(tree);
+            dialogueSetter.SetTree(tree, trigger);
         }
     }
 }

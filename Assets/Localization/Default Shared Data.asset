@@ -39,6 +39,10 @@ MonoBehaviour:
     m_Key: quests
     m_Metadata:
       m_Items: []
+  - m_Id: 6326634388738048
+    m_Key: take
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

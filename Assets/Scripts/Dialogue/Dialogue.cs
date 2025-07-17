@@ -7,6 +7,7 @@ using Zenject;
 public class Dialogue : MonoBehaviour
 {
     private DialogueTree curTree;
+    private Trigger trigger;
 
     [Header("Setup")]
     [SerializeField] private GameState state = GameState.Cutscene;
@@ -48,8 +49,9 @@ public class Dialogue : MonoBehaviour
         DialogueService.OnTreeSet -= SetDialogueTree;
     }
 
-    private void SetDialogueTree(DialogueTree tree)
+    private void SetDialogueTree(DialogueTree tree, Trigger trigger)
     {
+        this.trigger = trigger;
         gameState.SetState(state);
         message.Clear();
         messageName.Clear();
@@ -93,7 +95,7 @@ public class Dialogue : MonoBehaviour
     {
         if (curTree.keys.Length - 1 < curMessage)
         {
-            DialogueService.OnDialogueEnd?.Invoke(curTree.afterTaskID);
+            if (trigger != null) trigger.Action();
             isWorking = false;
             gameState.SetState(GameState.Game);
             return;

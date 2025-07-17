@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 7828492288
-    m_Localized: Go and collect some sticks
+    m_Localized: Yeah?
     m_Metadata:
       m_Items: []
   - m_Id: 127278075904
@@ -93,6 +93,39 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2917006401425408
     m_Localized: The Elder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3165914054610944
+    m_Localized: Not enough sticks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3201381835821056
+    m_Localized: '~bHmm...~ The branches took on a strange shape after your touch.
+      But... fine... It''s done. Now listen: the encampment stands on the edge of
+      an abyss.
+
+      Everyone must pull their weight - go to the wise ones or help
+      the hunter.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3201720760750080
+    m_Localized: '*12Where do i find the wise ones?*13Where is the hunter?*14~gMaybe
+      finally you''ll explain why everyone looks at me like I''m a cursed or something?~'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3202564457582592
+    m_Localized: "No idea. They're always wandering around the encampment. Find them
+      yourself \u2013 I won't be keeping you company on this one."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3202892804476928
+    m_Localized: "Old Man Umky is preparing for the hunt right now. He'll likely
+      be near his yaranga \u2014 it's in the northern part of the encampment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3203393117835264
+    m_Localized: By the name of great Kurkyl, leave already! I am truly not ready
+      to answer this question now.
     m_Metadata:
       m_Items: []
   references:
