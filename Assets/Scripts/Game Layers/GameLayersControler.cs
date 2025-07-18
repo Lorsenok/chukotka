@@ -42,13 +42,13 @@ public class GameLayersControler : MonoBehaviour
 
     private void OnSwitchUp(InputAction.CallbackContext context)
     {
-        if (GameLayerSwitchBlock.Block || state.GetCurrectState() != GameState.Game) return;
+        if (GameLayerSwitchBlock.BlockUp || state.GetCurrectState() != GameState.Game) return;
         if (CurrentLayer < layers.Length - 1) CurrentLayer++;
     }
 
     private void OnSwitchDown(InputAction.CallbackContext context)
     {
-        if (GameLayerSwitchBlock.Block || state.GetCurrectState() != GameState.Game) return;
+        if (GameLayerSwitchBlock.BlockDown || state.GetCurrectState() != GameState.Game) return;
         if (CurrentLayer > 0) CurrentLayer--;
     }
 

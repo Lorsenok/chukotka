@@ -26,6 +26,11 @@ public class ItemQuantityController : MonoBehaviour
         inventory.OnItemsChanged -= Check;
     }
 
+    private void Start()
+    {
+        Check();
+    }
+
     private void Check()
     {
         int cnt = 0;
