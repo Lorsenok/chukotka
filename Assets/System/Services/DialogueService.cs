@@ -8,7 +8,7 @@ public interface IDialogueSetter
 public class DialogueService : IDialogueSetter
 {
     public static Action<DialogueTree, Trigger> OnTreeSet { get; set; }
-    public static Action<int> OnDialogueEnd { get; set; }
+    public static Action OnDialogueEnd { get; set; }
 
     public void SetTree(DialogueTree tree, Trigger trigger)
     {

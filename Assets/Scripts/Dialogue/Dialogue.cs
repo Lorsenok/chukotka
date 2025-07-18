@@ -95,6 +95,7 @@ public class Dialogue : MonoBehaviour
     {
         if (curTree.keys.Length - 1 < curMessage)
         {
+            DialogueService.OnDialogueEnd?.Invoke();
             if (trigger != null) trigger.Action();
             isWorking = false;
             gameState.SetState(GameState.Game);

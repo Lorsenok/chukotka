@@ -23,7 +23,7 @@ public class NPCDialogueTrigger : MonoBehaviour
         active.enabled = true;
     }
 
-    private void OnEnd(int id)
+    private void OnEnd()
     {
         idle.enabled = true;
         active.enabled = false;
