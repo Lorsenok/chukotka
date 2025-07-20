@@ -17,7 +17,7 @@ public class TaskGiver : MonoBehaviour
         if (!collision.gameObject.GetComponent<Controler>()) return;
 
         foreach (Task task in taskGive) container.Tasks.Add(task);
-        foreach (Task task in taskTake) container.Tasks.Remove(task);
+        foreach (Task task in taskTake) if (container.Tasks.Contains(task)) container.Tasks.Remove(task);
         container.OnTasksChanged?.Invoke();
 
         Destroy(gameObject);

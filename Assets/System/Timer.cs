@@ -6,19 +6,19 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private string tagname;
-    [SerializeField] private bool repeatable;
+    [SerializeField] protected bool repeatable;
 
     public Action OnTimerEnd { get; set; }
 
-    public void StartTimer()
+    public virtual void StartTimer()
     {
         curTime = timeSet;
     }
 
     [SerializeField] protected float timeSet;
-    [SerializeField] private float curTime;
+    [SerializeField] protected float curTime;
 
-    private void Update()
+    public virtual void Update()
     {
         if (curTime > 0f) curTime -= Time.deltaTime;
         else

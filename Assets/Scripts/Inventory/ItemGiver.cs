@@ -18,7 +18,7 @@ public class ItemGiver : MonoBehaviour
         if (!collision.gameObject.GetComponent<Controler>()) return;
 
         foreach (Item item in itemGive) container.Items.Add(item);
-        foreach (Item item in itemGive) container.Items.Remove(item);
+        foreach (Item item in itemTake) if (container.Items.Contains(item)) container.Items.Remove(item);
         container.OnItemsChanged?.Invoke();
 
         Destroy(gameObject);

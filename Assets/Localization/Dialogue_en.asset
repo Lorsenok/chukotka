@@ -214,6 +214,14 @@ MonoBehaviour:
     m_Localized: The Hunter
     m_Metadata:
       m_Items: []
+  - m_Id: 4327844366602240
+    m_Localized: Well, you are free to go!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4327873261162496
+    m_Localized: ~gyuipeeeee~
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
