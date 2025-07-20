@@ -15,6 +15,7 @@ public class Duck : MonoBehaviour, IDamageble
     [SerializeField] private Rigidbody2D rg;
     [SerializeField] private float gravity;
     [SerializeField] private float speed;
+    [SerializeField] private GameObject particlesPrefab;
     public Vector3 direction;
 
     private void OnEnable()
@@ -34,6 +35,7 @@ public class Duck : MonoBehaviour, IDamageble
 
     public void GetDamage(float damage)
     {
+        OnCollisionEnter2D(null);
         OnDie?.Invoke();
         rg.gravityScale = gravity;
         enabled = false;
@@ -48,5 +50,10 @@ public class Duck : MonoBehaviour, IDamageble
     {
         spr.flipX = direction.x > 0f;
         transform.position += direction * Time.deltaTime * speed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Instantiate(particlesPrefab, transform.position, Quaternion.identity);
     }
 }

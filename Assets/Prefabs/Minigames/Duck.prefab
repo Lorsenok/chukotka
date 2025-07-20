@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 503
+  m_SortingOrder: 505
   m_Sprite: {fileID: -889331521, guid: 8544b8006d3dc234e9ebe3deea72d7d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -131,6 +131,7 @@ MonoBehaviour:
   rg: {fileID: -7924667312312536789}
   gravity: 1
   speed: 10
+  particlesPrefab: {fileID: 2181136554569465549, guid: a45f6fb29d485834eba7c263278b2272, type: 3}
   direction: {x: 0, y: 0, z: 0}
 --- !u!50 &-7924667312312536789
 Rigidbody2D:
