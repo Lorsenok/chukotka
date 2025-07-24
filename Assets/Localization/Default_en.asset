@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: Take (F)
     m_Metadata:
       m_Items: []
+  - m_Id: 9049776316043264
+    m_Localized: ~aNew item added to inventory~
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

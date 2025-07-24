@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: take
     m_Metadata:
       m_Items: []
+  - m_Id: 9049776316043264
+    m_Key: newitem
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
