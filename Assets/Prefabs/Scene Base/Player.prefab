@@ -292,7 +292,7 @@ MonoBehaviour:
   rg: {fileID: 1226351488987415359}
   spr: {fileID: 7628232522701512542}
   minSpeedForRunAnim: 0.1
-  fliplockSet: 0
+  fliplockSet: 0.1
   gameLayerSwitchAnimationDelay: {fileID: 2030695275406144610}
 --- !u!114 &2953897547763498807
 MonoBehaviour:

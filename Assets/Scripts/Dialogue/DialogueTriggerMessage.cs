@@ -18,7 +18,7 @@ public class DialogueTriggerMessage : PickableObject
 
     public override void OnEnter(GameObject obj)
     {
-        if (!obj.GetComponent<Controler>() || Mathf.Abs(obj.transform.position.z - transform.position.z) > maxZDif) return;
+        if (target != obj) return;
         
         isPlayerOn = true;
         base.OnEnter(obj);
@@ -34,7 +34,7 @@ public class DialogueTriggerMessage : PickableObject
 
     public override void OnLeave(GameObject obj)
     {
-        if (!obj.GetComponent<Controler>()) return;
+        if (target != obj) return;
 
         isPlayerOn = false;
         base.OnLeave(obj);

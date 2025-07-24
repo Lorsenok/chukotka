@@ -5,10 +5,13 @@ using Zenject;
 
 public class PickableObject : MonoBehaviour
 {
+    [SerializeField] protected GameObject target;
     [SerializeField] protected float maxZDif = 1f;
 
     protected InputSystem input;
     protected IGameState gameState;
+
+    protected Collider2D coll;
 
     [Inject]
     private void Init(IInputControler inputControler, IGameState gameState)
@@ -22,16 +25,16 @@ public class PickableObject : MonoBehaviour
     public virtual void OnEnter(GameObject obj)
     {
         if (gameState.GetCurrectState() != GameState.Game) return;
-        if (obj.TryGetComponent(out Controler controler))
+        if (obj == target)
         {
-            canBePicked = Mathf.Abs(obj.transform.position.z - transform.position.z) <= maxZDif;
+            canBePicked = true;
         }
     }
 
     public virtual void OnLeave(GameObject obj)
     {
         if (gameState.GetCurrectState() != GameState.Game) return;
-        if (obj.TryGetComponent(out Controler controler))
+        if (obj == target)
         {
             canBePicked = false;
         }
@@ -80,5 +83,15 @@ public class PickableObject : MonoBehaviour
     public virtual void Action()
     {
         
+    }
+
+    public virtual void Start()
+    {
+        coll = GetComponent<Collider2D>();
+    }
+
+    public virtual void Update()
+    {
+        coll.enabled = Mathf.Abs(target.transform.position.z - transform.position.z) <= maxZDif;
     }
 }
