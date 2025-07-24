@@ -209,6 +209,7 @@ MonoBehaviour:
   controlsDeadZone: 0.1
   deceleraitionDeadZone: 0.8
   jumpForse: 0
+  onLayerSwitchMovementBlock: {fileID: 2030695275406144610}
 --- !u!50 &1226351488987415359
 Rigidbody2D:
   serializedVersion: 5
@@ -381,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagname: layer switch animation delay
+  tagname: layer switch delay
   repeatable: 0
   timeSet: 1
   curTime: 0

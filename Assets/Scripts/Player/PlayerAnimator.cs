@@ -33,15 +33,13 @@ public class PlayerAnimator : MonoBehaviour
     private void OnEnable()
     {
         gameLayerSwitchAnimationDelay.OnTimerEnd += OnLayerSwitchDelayEnd;
-        inputSystem.Player.SwitchLayerDown.performed += OnLayerSwitch;
-        inputSystem.Player.SwitchLayerUp.performed += OnLayerSwitch;
+        GameLayersControler.OnLayerSwitch += OnLayerSwitch;
     }
 
     private void OnDisable()
     {
         gameLayerSwitchAnimationDelay.OnTimerEnd -= OnLayerSwitchDelayEnd;
-        inputSystem.Player.SwitchLayerDown.performed -= OnLayerSwitch;
-        inputSystem.Player.SwitchLayerUp.performed -= OnLayerSwitch;
+        GameLayersControler.OnLayerSwitch -= OnLayerSwitch;
     }
 
     private void OnLayerSwitchDelayEnd()
@@ -49,7 +47,7 @@ public class PlayerAnimator : MonoBehaviour
         isLayerSwitching = false;
     }
 
-    private void OnLayerSwitch(InputAction.CallbackContext context)
+    private void OnLayerSwitch()
     {
         isLayerSwitching = true;
         gameLayerSwitchAnimationDelay.StartTimer();

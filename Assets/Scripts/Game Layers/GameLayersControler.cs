@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,6 +7,7 @@ using Zenject;
 public class GameLayersControler : MonoBehaviour
 {
     public static int CurrentLayer { get; set; } = 0;
+    public static Action OnLayerSwitch { get; set; }
 
     [SerializeField] private int setLayerOnStart = 0;
     [SerializeField] private GameLayer[] layers;
@@ -43,13 +45,21 @@ public class GameLayersControler : MonoBehaviour
     private void OnSwitchUp(InputAction.CallbackContext context)
     {
         if (GameLayerSwitchBlock.BlockUp || state.GetCurrectState() != GameState.Game) return;
-        if (CurrentLayer < layers.Length - 1) CurrentLayer++;
+        if (CurrentLayer < layers.Length - 1)
+        {
+            CurrentLayer++;
+            OnLayerSwitch?.Invoke();
+        }
     }
 
     private void OnSwitchDown(InputAction.CallbackContext context)
     {
         if (GameLayerSwitchBlock.BlockDown || state.GetCurrectState() != GameState.Game) return;
-        if (CurrentLayer > 0) CurrentLayer--;
+        if (CurrentLayer > 0)
+        {
+            CurrentLayer--;
+            OnLayerSwitch?.Invoke();
+        }
     }
 
     private void OnEnable()

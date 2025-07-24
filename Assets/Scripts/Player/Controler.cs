@@ -30,6 +30,9 @@ public class Controler : MonoBehaviour
 
     [SerializeField] private float jumpForse;
 
+    [SerializeField] private Timer onLayerSwitchMovementBlock;
+    private bool isSwitching = false;
+
     private float curSpeedX = 0f;
     private float controlsX = 0f;
 
@@ -44,11 +47,26 @@ public class Controler : MonoBehaviour
     private void OnEnable()
     {
         input.Player.Jump.performed += Jump;
+        onLayerSwitchMovementBlock.OnTimerEnd += OnSwitchEnd;
+        GameLayersControler.OnLayerSwitch += OnSwitchStart;
     }
 
     private void OnDisable()
     {
         input.Player.Jump.performed -= Jump;
+        onLayerSwitchMovementBlock.OnTimerEnd -= OnSwitchEnd;
+        GameLayersControler.OnLayerSwitch -= OnSwitchStart;
+    }
+
+    private void OnSwitchEnd()
+    {
+        isSwitching = false;
+    }
+
+    private void OnSwitchStart()
+    {
+        isSwitching = true;
+        onLayerSwitchMovementBlock.StartTimer();
     }
 
     private void Move()
@@ -71,7 +89,7 @@ public class Controler : MonoBehaviour
         }
 
         curSpeedX = Mathf.Clamp(curSpeedX, -(speed + AdditionalSpeed), speed + AdditionalSpeed);
-        rg.linearVelocity = new Vector2(curSpeedX, rg.linearVelocityY);
+        rg.linearVelocityX = curSpeedX;
     }
 
     private void Update()
@@ -92,8 +110,12 @@ public class Controler : MonoBehaviour
         }
         else if (sound != null) sound.Stop();
 
-        if (CanMove) Move();
-        else if (sound != null) sound.Stop();
+        if (CanMove && !isSwitching) Move();
+        else
+        {
+            if (sound != null) sound.Stop();
+            rg.linearVelocityX = 0f;
+        }
     }
 
     private bool hasPressedJumpButton = false;
