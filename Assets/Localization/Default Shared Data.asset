@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: newitem
     m_Metadata:
       m_Items: []
+  - m_Id: 9261345566183424
+    m_Key: ducks
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

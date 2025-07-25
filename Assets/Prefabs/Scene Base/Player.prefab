@@ -317,7 +317,7 @@ MonoBehaviour:
   - {fileID: -284554859, guid: 469cfe016d57bf14fb5858d430ca4d73, type: 3}
   - {fileID: 984947537, guid: 469cfe016d57bf14fb5858d430ca4d73, type: 3}
   - {fileID: 607723335, guid: 469cfe016d57bf14fb5858d430ca4d73, type: 3}
-  timePerFrame: 0.1
+  timePerFrame: 0.15
   loop: 1
   curSprite: 0
 --- !u!114 &1102160502061187418
@@ -342,7 +342,7 @@ MonoBehaviour:
   - {fileID: 447856040, guid: 0cbbaf1ef7fd3064ab1f88d9d3bafaee, type: 3}
   - {fileID: 548497297, guid: 0cbbaf1ef7fd3064ab1f88d9d3bafaee, type: 3}
   - {fileID: -1876057741, guid: 0cbbaf1ef7fd3064ab1f88d9d3bafaee, type: 3}
-  timePerFrame: 0.1
+  timePerFrame: 0.1125
   loop: 1
   curSprite: 0
 --- !u!114 &4057524621664111513
@@ -367,7 +367,7 @@ MonoBehaviour:
   - {fileID: -1420880941, guid: 0f8c27ce2edab0d429306da5eb6d90ba, type: 3}
   - {fileID: 1326830407, guid: 0f8c27ce2edab0d429306da5eb6d90ba, type: 3}
   - {fileID: -1679845205, guid: 0f8c27ce2edab0d429306da5eb6d90ba, type: 3}
-  timePerFrame: 0.1
+  timePerFrame: 0.15
   loop: 1
   curSprite: 0
 --- !u!114 &2030695275406144610

@@ -42,11 +42,13 @@ public class Dialogue : MonoBehaviour
     private void OnEnable()
     {
         DialogueService.OnTreeSet += SetDialogueTree;
+        input.UI.Skip.performed += SkipByButton;
     }
 
     private void OnDisable()
     {
         DialogueService.OnTreeSet -= SetDialogueTree;
+        input.UI.Skip.performed -= SkipByButton;
     }
 
     private void SetDialogueTree(DialogueTree tree, Trigger trigger)
@@ -119,18 +121,13 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    private bool hasClicked = false;
+    private void SkipByButton(InputAction.CallbackContext context)
+    {
+        Skip();
+    }
+
     private void Update()
     {
         disableObject.SetActive(isWorking);
-        if (input.UI.Click.IsPressed() && !hasClicked)
-        {
-            hasClicked = true;
-        }
-        if (!input.UI.Click.IsPressed() && hasClicked)
-        {
-            hasClicked = false;
-            Skip();
-        }
     }
 }
