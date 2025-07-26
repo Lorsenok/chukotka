@@ -16,6 +16,11 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private DialogueMessage messageName;
     [SerializeField] private Image messageImage;
 
+    [Header("Panels Setup")]
+    [SerializeField] private Image[] panels;
+    [SerializeField] private float panelsSwitchSpeed;
+    [SerializeField] private float panelsTransperency = 0.7f;
+
     [Header("Choice Setup")]
     [SerializeField] private DialogueChoice choice;
     [SerializeField] private char choiceCommand;
@@ -29,6 +34,8 @@ public class Dialogue : MonoBehaviour
     private bool isWorking = false;
     private bool isChoice = false;
     private int curMessage = 1;
+
+    private int curPanel = 0;
 
     private IGameState gameState;
     private InputSystem input;
@@ -106,7 +113,7 @@ public class Dialogue : MonoBehaviour
 
         messageImage.transform.position = curTree.side[id] ? messageImageRightSidePos.position : messageImageLeftSidePos.position;
         messageImage.sprite = curTree.icon[id];
-        
+
         message.transform.position = curTree.side[id] ? messageRightSidePos.position : messageLeftSidePos.position;
 
         if (curTree.table.GetTable().GetEntry(curTree.keys[id]).Value[0] == choiceCommand)
@@ -129,5 +136,14 @@ public class Dialogue : MonoBehaviour
     private void Update()
     {
         disableObject.SetActive(isWorking);
+
+        if (curTree == null || curTree.keys.Length - 1 < curMessage) return;
+
+        for (int i = 0; i < panels.Length; i++)
+        {
+            panels[i].color = Color.Lerp(panels[i].color, i == curTree.panels[curMessage] ? 
+                new Color(panels[i].color.r, panels[i].color.g, panels[i].color.b, panelsTransperency) : 
+                new Color(panels[i].color.r, panels[i].color.g, panels[i].color.b, 0f), Time.deltaTime * panelsSwitchSpeed);
+        }
     }
 }
