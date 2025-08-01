@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44572da456367f43a8e19b17cbff47b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   maxZDif: 1
   messagePoint: {fileID: 1484211546583848363}
   messagePrefab: {fileID: 4050524605455622718, guid: 4392ccb951ed68e4da75ee7cb184138b, type: 3}
@@ -174,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawn:
   - {fileID: 2181136554569465549, guid: 594cd83b14c5bd642805d0b4fa72191b, type: 3}
+  - {fileID: 1359130480447200395, guid: 2f875f82964a9ee45b811f3a809fbf9b, type: 3}
   spawnOnThisPosition: 1
 --- !u!114 &358758201852780224
 MonoBehaviour:

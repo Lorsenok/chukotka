@@ -132,6 +132,7 @@ MonoBehaviour:
   gravity: 1
   speed: 7.5
   particlesPrefab: {fileID: 2181136554569465549, guid: a45f6fb29d485834eba7c263278b2272, type: 3}
+  soundPrefab: {fileID: 1359130480447200395, guid: 4a843396eb338d640a588142cf868e89, type: 3}
   direction: {x: 0, y: 0, z: 0}
 --- !u!50 &-7924667312312536789
 Rigidbody2D:

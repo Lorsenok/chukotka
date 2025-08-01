@@ -16,6 +16,7 @@ public class Duck : MonoBehaviour, IDamageble
     [SerializeField] private float gravity;
     [SerializeField] private float speed;
     [SerializeField] private GameObject particlesPrefab;
+    [SerializeField] private GameObject soundPrefab;
     public Vector3 direction;
 
     private void OnEnable()
@@ -35,6 +36,7 @@ public class Duck : MonoBehaviour, IDamageble
 
     public void GetDamage(float damage)
     {
+        Instantiate(soundPrefab);
         OnCollisionEnter2D(null);
         OnDie?.Invoke();
         rg.gravityScale = gravity;

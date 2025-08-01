@@ -51,6 +51,14 @@ MonoBehaviour:
     m_Key: ducks
     m_Metadata:
       m_Items: []
+  - m_Id: 11547466912321536
+    m_Key: sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11547522218414080
+    m_Key: music
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

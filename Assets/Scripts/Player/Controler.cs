@@ -14,7 +14,7 @@ public class Controler : MonoBehaviour
 
     public bool CanJump { get; set; } = false;
 
-    [SerializeField] private AudioSource sound;
+    [SerializeField] private AudioSource[] sound;
     [SerializeField] private float soundBlockTimeSet;
 
     private float curSoundBlockTime = 0f;
@@ -69,6 +69,26 @@ public class Controler : MonoBehaviour
         onLayerSwitchMovementBlock.StartTimer();
     }
 
+    private int curSound = 0;
+    private void PlaySound()
+    {
+        curSound++;
+        if (curSound == sound.Length) curSound = 0;
+
+        for (int i = 0; i < sound.Length; i++)
+        {
+            if (i == curSound) sound[i].Play();
+        }
+    }
+
+    private void StopSound()
+    {
+        foreach (var sound in sound)
+        {
+            sound.Stop();
+        }
+    }
+
     private void Move()
     {
         controlsX = input.Player.Move.ReadValue<Vector2>().x;
@@ -100,20 +120,15 @@ public class Controler : MonoBehaviour
             return;
         }
 
-        if (rg.linearVelocity.x > 0.1f | rg.linearVelocity.x < -0.1f && sound != null)
+        if (!sound[curSound].isPlaying && curSpeedX != 0f | isSwitching)
         {
-            if (!sound.isPlaying && curSoundBlockTime <= 0)
-            {
-                sound.Play();
-                curSoundBlockTime = soundBlockTimeSet;
-            }
+            PlaySound();
         }
-        else if (sound != null) sound.Stop();
 
         if (CanMove && !isSwitching) Move();
         else
         {
-            if (sound != null) sound.Stop();
+            if (sound != null && !isSwitching) StopSound();
             rg.linearVelocityX = 0f;
         }
     }
