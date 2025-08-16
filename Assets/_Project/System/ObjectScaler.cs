@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-[ExecuteInEditMode]
-public class ObjectScaler : MonoBehaviour
+public class ObjectScaler : MonoBehaviour // Generated with chatGPT (needs to be replaced!)
 {
     // Исходное разрешение (16:9)
     private const float ReferenceAspect = 16f / 9f;

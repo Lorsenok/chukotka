@@ -20,6 +20,8 @@ public class GrapableObject : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     protected InputSystem inputProvider;
 
+    protected Canvas parentCanvas;
+
     [Inject]
     private void Init(IInputControler input)
     {
@@ -38,7 +40,6 @@ public class GrapableObject : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public virtual void OnGrapStart()
     {
-        curPos = inputProvider.UI.MousePosition.ReadValue<Vector2>();
     }
 
     public virtual void OnGrapEnd()
@@ -49,7 +50,7 @@ public class GrapableObject : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public virtual void Start()
     {
-        pos.anchoredPosition = InitialPosition;
+        pos.localPosition = InitialPosition;
     }
 
     private Vector2 curPos = Vector2.zero;
@@ -84,13 +85,21 @@ public class GrapableObject : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
         if (hasTaken)
         {
-            curPos = Vector2.Lerp(curPos,
-                inputProvider.UI.MousePosition.ReadValue<Vector2>(), grapSpeed * Time.deltaTime);
-            pos.anchoredPosition = new Vector2(curPos.x - Screen.width / 2, curPos.y - Screen.height / 2);
+            if (parentCanvas == null) parentCanvas = GetComponentInParent<Canvas>();
+
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                parentCanvas.transform as RectTransform,
+                Input.mousePosition,
+                parentCanvas.worldCamera,
+                out Vector2 localPoint
+            );
+
+            pos.anchoredPosition = Vector2.Lerp(pos.anchoredPosition,
+                localPoint, grapSpeed * Time.deltaTime);
         }
         else
         {
-            pos.anchoredPosition = Vector2.Lerp(pos.anchoredPosition,
+            transform.localPosition = Vector2.Lerp(transform.localPosition,
                 InitialPosition, grapSpeed * Time.deltaTime);
         }
     }

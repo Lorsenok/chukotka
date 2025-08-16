@@ -9,6 +9,8 @@ public class InventoryCell : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public InventoryItemUI ItemObj { get; set; }
     public RectTransform ItemObjTransform { get; set; }
 
+    [SerializeField] private Vector3 offset;
+
     public void Update()
     {
         if (ItemObj != null && ItemObjTransform == null)
@@ -22,8 +24,7 @@ public class InventoryCell : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
         else
         {
-            ItemObj.InitialPosition =
-                transform.localPosition - new Vector3(Screen.width / 2f - ItemObjTransform.sizeDelta.x, -Screen.height / 2f + ItemObjTransform.sizeDelta.y, 0f);
+            ItemObj.InitialPosition = transform.localPosition + offset;
         }
     }
 

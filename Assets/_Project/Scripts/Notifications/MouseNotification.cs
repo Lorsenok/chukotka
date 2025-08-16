@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -43,9 +43,14 @@ public class MouseNotification : MonoBehaviour
         notifyItems.Remove(item);
     }
 
+    private RectTransform parentCanvas;
+
     private void Update()
     {
-        point.anchoredPosition = inputSystem.UI.MousePosition.ReadValue<Vector2>();
+        if (parentCanvas == null) parentCanvas = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
+
+        Vector2 diff = new Vector2(Screen.width, Screen.height) / parentCanvas.sizeDelta;
+        point.anchoredPosition = Input.mousePosition / diff;
 
         if (notifyItems.Count == 0 || inputSystem.UI.Click.IsPressed())
         {
