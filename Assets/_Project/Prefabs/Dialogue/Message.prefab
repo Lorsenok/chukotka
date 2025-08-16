@@ -84,7 +84,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1711790370992641596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,10 +110,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1867316389448112968}
     m_Modifications:
-    - target: {fileID: 518276950321337400, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
-      propertyPath: textLetterPrefab
-      value: 
-      objectReference: {fileID: 6036294573367149130, guid: 5237530f8ff5ce64c937196b53161dd1, type: 3}
+    - target: {fileID: 118453370433949019, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
+      propertyPath: curTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118453370433949019, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
+      propertyPath: timeSet
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4860987437675071143, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

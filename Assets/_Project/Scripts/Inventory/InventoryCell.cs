@@ -22,7 +22,6 @@ public class InventoryCell : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
         else
         {
-            Debug.Log("+");
             ItemObj.InitialPosition =
                 transform.localPosition - new Vector3(Screen.width / 2f - ItemObjTransform.sizeDelta.x, -Screen.height / 2f + ItemObjTransform.sizeDelta.y, 0f);
         }

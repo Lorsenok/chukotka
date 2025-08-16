@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rg: {fileID: 1159714260723656165}
-  power: 20
+  power: 10
   damage: 0
   forceAdditionalAngle: 270
   additionalRotate: 0
