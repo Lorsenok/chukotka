@@ -1237,7 +1237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d33ba32be3230b47b60d0d7b6f912e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultRatio: {x: 16, y: 9}
 --- !u!1 &1985296071
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,16 @@ public class DialogueMessage : MonoBehaviour
         if (curSym == CurText.Length) return;
         
         text.text += CurText[curSym];
+
+        if (CurText[curSym] == '<')
+        {
+            while (CurText[curSym] != '>')
+            {
+                curSym++;
+                text.text += CurText[curSym];
+            }
+        }
+
         curSym++;
     }
 

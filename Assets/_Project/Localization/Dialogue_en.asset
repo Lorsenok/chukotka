@@ -31,20 +31,22 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
-    m_Localized: "~rRyn'gyrgyng~ shines upon your path, child... But I see the shadows
-      of Kele already creeping toward the encampment.\r\nYou have torn the veil between
-      the worlds \u2014 now the Great Cold breathes down our necks.\r\n~rAwaken!~
-      Your spirit has wandered too long in the ice..."
+    m_Localized: "<color=red>Ryn'gyrgyng</color> shines upon your path, child...
+      But I see the shadows of Kele already creeping toward the encampment. You have
+      torn the veil between the worlds \u2014 now the Great Cold breathes down our
+      necks. <color=red>Awaken!</color> Your spirit has wandered too long in the
+      ice..."
     m_Metadata:
       m_Items: []
   - m_Id: 643025518546944
     m_Localized: 'Questions can wait. Now listen carefully: go to the elder of our
-      ~gencampment~. He is at the heart of the encampment. He has words for you.'
+      encampment. He is at the <color=green>heart of the encampment</color>. He has
+      words for you.'
     m_Metadata:
       m_Items: []
   - m_Id: 237707051487232
-    m_Localized: "~bWhere am I...?~ Before my eyes \u2014 shards of ice, black water...\r\nWho
-      are you?"
+    m_Localized: "<color=blue>Where am I...?</color> Before my eyes \u2014 shards
+      of ice, black water... Who are you?"
     m_Metadata:
       m_Items: []
   - m_Id: 643386824282112
@@ -52,18 +54,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 643406642368512
-    m_Localized: ~bSmaman~
+    m_Localized: <color=blue>Shaman</color>
     m_Metadata:
       m_Items: []
   - m_Id: 2913206492024832
-    m_Localized: ~rAh, the damned one has come! Because of your weakness, all the
-      amulets have cracked!~ The reindeer are thrashing like mad things, the air
-      has grown heavy, something terrible is approaching... ~rNow an enormous danger
-      looms over us!~
+    m_Localized: <color=red>Ah, the damned one has come! Because of your weakness,
+      all the amulets have cracked!</color> The reindeer are thrashing like mad things,
+      the air has grown heavy, something terrible is approaching... <color=red>Now
+      an enormous danger looms over us!</color>
     m_Metadata:
       m_Items: []
   - m_Id: 2914666168537088
-    m_Localized: Wait what
+    m_Localized: Wait, what are you talking about?
     m_Metadata:
       m_Items: []
   - m_Id: 2914788835151872
@@ -72,23 +74,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2915132415758336
-    m_Localized: '*14Okay man, what do i have to do?*15~rWHAT THE HELL ARE YOU TALKING
-      ABOUT?~'
+    m_Localized: '*14Alright, alright... okay. What do I need to do?*15<color=red>What
+      the hell are you talking about? Why are you insulting me? What did I do to
+      you?!</color>'
     m_Metadata:
       m_Items: []
   - m_Id: 2915678526722048
-    m_Localized: "You must prove you can atone for your guilt.\r\nThe sacred trees
-      have shed their branches \u2014 gather ten and bring them to me. Without them,
-      new protective charms cannot be made. The branches are scattered throughout
-      the encampment."
+    m_Localized: "You must prove you can atone for your guilt. The sacred trees have
+      shed their branches \u2014 gather ten and bring them to me. Without them, new
+      protective charms cannot be made. The branches are scattered throughout the
+      encampment."
     m_Metadata:
       m_Items: []
   - m_Id: 2915692988682240
-    m_Localized: "~rShut up!~ If you want to atone for your guilt \u2014 you'll work
-      like the damned now, and I don't care that you nearly got yourself killed by
-      your own stupidity. The sacred trees have shed their branches \u2014 gather
-      ten. Without them, new protective charms can't be made. The branches are scattered
-      throughout the encampment."
+    m_Localized: "<color=red>Shut up!</color> If you want to atone for your guilt
+      \u2014 you'll work like the damned now, and I don't care that you nearly got
+      yourself killed by your own stupidity. The sacred trees have shed their branches
+      \u2014 gather ten. Without them, new protective charms can't be made. The branches
+      are scattered throughout the encampment."
     m_Metadata:
       m_Items: []
   - m_Id: 2917006401425408
@@ -100,17 +103,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3201381835821056
-    m_Localized: '~bHmm...~ The branches took on a strange shape after your touch.
-      But... fine... It''s done. Now listen: the encampment stands on the edge of
-      an abyss.
-
-      Everyone must pull their weight - go to the wise ones or help
-      the hunter.'
+    m_Localized: '<color=blue>Hmm...</color> The branches took on a strange shape
+      after your touch. But... fine... It''s done. Now listen: the encampment stands
+      on the edge of an abyss. Everyone must pull their weight - go to the wise ones
+      or help the hunter.'
     m_Metadata:
       m_Items: []
   - m_Id: 3201720760750080
-    m_Localized: '*12Where do i find the wise ones?*13Where is the hunter?*14~gMaybe
-      finally you''ll explain why everyone looks at me like I''m a cursed or something?~'
+    m_Localized: '*12Where do I find the wise ones?*13Where is the hunter?*14<color=green>Maybe
+      finally you''ll explain why everyone looks at me like I''m cursed or something?</color>'
     m_Metadata:
       m_Items: []
   - m_Id: 3202564457582592
@@ -129,7 +130,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3246548840173568
-    m_Localized: ~rHell nah~, helllooooo! He-he-he :>
+    m_Localized: <color=red>Ooooh</color>, the crack has come! He-he-he :>
     m_Metadata:
       m_Items: []
   - m_Id: 3247036994244608
@@ -138,17 +139,17 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3247085199380480
     m_Localized: "I see two birds in your chest: one cries \u2018help me,\u2019 the
-      other\u2014\u2018I am guilty\u2019\u2026\r\nWhich one sings louder?\""
+      other\u2014\u2018I am guilty\u2019\u2026 Which one sings louder?"
     m_Metadata:
       m_Items: []
   - m_Id: 3247524544335872
-    m_Localized: "~rDamn sister!~ These are not ravens \u2014 it's a walrus and a
-      wolf!\r\nOne calls you to the icy water, the other... PLAYS WITH YOUR HEART!
-      HA-HA-HA!"
+    m_Localized: "Foolish sister! These are not birds \u2014 it's a walrus and a
+      wolf! One calls you to the icy water, the other... PLAYS WITH YOUR HEART! HA-HA-HA!"
     m_Metadata:
       m_Items: []
   - m_Id: 3247841386254336
-    m_Localized: ~rWhat the hell are you all even talking about?~ What is the point?
+    m_Localized: <color=red>What are you all even talking about?</color> What's the
+      point of these riddles?
     m_Metadata:
       m_Items: []
   - m_Id: 3248170974662656
@@ -156,7 +157,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3248520343408640
-    m_Localized: Well, i will go then...
+    m_Localized: Well, I'll be going away from here quickly then...
     m_Metadata:
       m_Items: []
   - m_Id: 3250257762537472
@@ -172,11 +173,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3282607292633088
-    m_Localized: So, The Elder sent you...
+    m_Localized: So, the Elder sent you...
     m_Metadata:
       m_Items: []
   - m_Id: 3282931512332288
-    m_Localized: Well yeah, is there something wrong about it?
+    m_Localized: Well yes, are you dissatisfied with something?
     m_Metadata:
       m_Items: []
   - m_Id: 3283085002887168
@@ -185,24 +186,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3283539904516096
-    m_Localized: '*15What are you talking about?*18Maybe this is the way...'
+    m_Localized: '*15What are you talking about?*18Maybe this is the spirits'' choice?'
     m_Metadata:
       m_Items: []
   - m_Id: 3283986950213632
-    m_Localized: Dont play stupid. ~rThis is your fault~
+    m_Localized: Don't play stupid. <color=red>This is your fault</color>
     m_Metadata:
       m_Items: []
   - m_Id: 3284187542802432
-    m_Localized: I-i-i really dont get it... im confused
+    m_Localized: I... I really don't understand anything... completely confused now
     m_Metadata:
       m_Items: []
   - m_Id: 3284485799759872
-    m_Localized: Alright, order is the order. Just take the bow and hunt some birds.
-      I need 12 feathers to make new amulet
+    m_Localized: Alright, an order is an order. Take the bow and shoot some birds.
+      I need 12 feathers for new amulets
     m_Metadata:
       m_Items: []
   - m_Id: 3284993352486912
-    m_Localized: I have never used the bow actually... well, lets try it
+    m_Localized: I've never shot a bow before... alright, let's get started
     m_Metadata:
       m_Items: []
   - m_Id: 3286020004859904
@@ -211,27 +212,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3287626037415936
-    m_Localized: The Hunter
+    m_Localized: The Hunter Umky
     m_Metadata:
       m_Items: []
   - m_Id: 4327844366602240
-    m_Localized: Well, you are free to go!
+    m_Localized: Alright, you may go!
     m_Metadata:
       m_Items: []
   - m_Id: 4327873261162496
-    m_Localized: ~gyuipeeeee~
+    m_Localized: <color=green>yuipeeeee</color>
     m_Metadata:
       m_Items: []
   - m_Id: 9320768535875584
-    m_Localized: "Take the feathers to the shaman. Perhaps he\u2019ll find a kind
-      word for you. I have nothing more to say."
+    m_Localized: Take the feathers to the shaman. Perhaps he'll find a kind word
+      for you. I have nothing more to say.
     m_Metadata:
       m_Items: []
   - m_Id: 9321048677634048
-    m_Localized: "I\u2019ve been scenting your trail \u2014 ~rblood and fear~ clinging
-      to it. Yet you\u2019re learning to move through our encampment anew. For that,
-      I say \u2018thank you,\u2019 though we both know these northern lands have
-      ~rno love for the weak~."
+    m_Localized: "I've been scenting your trail \u2014 <color=red>smell of blood
+      and fear</color> clinging to it. Yet you're learning to move through our encampment
+      anew. For that, I say \u2018thank you,\u2019 though we both know these northern
+      lands have <color=red>no love for the weak</color>."
     m_Metadata:
       m_Items: []
   - m_Id: 9322461004648448

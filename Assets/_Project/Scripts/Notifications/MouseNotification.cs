@@ -40,7 +40,7 @@ public class MouseNotification : MonoBehaviour
 
     private void OnItemExit(Item item)
     {
-        notifyItems.Remove(item);
+        if (notifyItems.Contains(item)) notifyItems.Remove(item);
     }
 
     private RectTransform parentCanvas;

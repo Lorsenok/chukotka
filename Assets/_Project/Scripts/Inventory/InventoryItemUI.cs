@@ -35,4 +35,12 @@ public class InventoryItemUI : GrapableObject
         base.OnPointerExit(eventData);
         MouseNotification.OnItemNotifExit?.Invoke(Item);
     }
+
+    private void OnDestroy()
+    {
+        if (gameObject.scene.isLoaded)
+        {
+            MouseNotification.OnItemNotifExit?.Invoke(Item);
+        }
+    }
 }

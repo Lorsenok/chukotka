@@ -47,7 +47,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9049776316043264
-    m_Localized: ~aNew item added to inventory~
+    m_Localized: <i>New item added to inventory</i>
     m_Metadata:
       m_Items: []
   - m_Id: 9261345566183424

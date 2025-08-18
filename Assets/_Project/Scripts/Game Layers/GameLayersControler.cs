@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using Zenject;
 
 public class GameLayersControler : MonoBehaviour
@@ -16,6 +17,13 @@ public class GameLayersControler : MonoBehaviour
 
     [SerializeField] private float zdistance;
     [SerializeField] private float ydistance;
+
+    [Header("UI")]
+    [SerializeField] private Image ArrowUp;
+    [SerializeField] private Image ArrowDown;
+    [SerializeField] private float changeColorSpeed;
+    [SerializeField] private Color colorFree;
+    [SerializeField] private Color colorBlocked;
 
     private List<List<Collider2D>> colliders = new List<List<Collider2D>>();
 
@@ -86,5 +94,11 @@ public class GameLayersControler : MonoBehaviour
                 colliders[i][j].enabled = i == CurrentLayer;
             }
         }
+
+        ArrowUp.color = Color.Lerp(ArrowUp.color, 
+            GameLayerSwitchBlock.BlockUp || CurrentLayer == layers.Length - 1 ? colorBlocked : colorFree, Time.deltaTime * speed);
+
+        ArrowDown.color = Color.Lerp(ArrowDown.color, 
+            GameLayerSwitchBlock.BlockDown || CurrentLayer == 0 ? colorBlocked : colorFree, Time.deltaTime * speed);
     }
 }
