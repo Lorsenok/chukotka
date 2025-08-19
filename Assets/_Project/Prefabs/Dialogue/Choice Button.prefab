@@ -333,8 +333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 4683736104075099677}
-  command: <color=red>
-  endCommand: </color>
+  command: <link="shake">
+  endCommand: </link>
   shakeIntensity: 12.5
   shakeSpeed: 12.5
 --- !u!114 &7172674836039314244
@@ -350,8 +350,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 4683736104075099677}
-  command: <color=blue>
-  endCommand: </color>
+  command: <link="wave">
+  endCommand: </link>
   shakeIntensity: 7.5
   shakeSpeed: 7.5
 --- !u!1 &2807542748492849258

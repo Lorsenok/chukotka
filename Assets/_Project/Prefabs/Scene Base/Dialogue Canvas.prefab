@@ -1049,8 +1049,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1211289184975979835}
-  command: <color=red>
-  endCommand: </color>
+  command: <link="shake">
+  endCommand: </link>
   shakeIntensity: 12.5
   shakeSpeed: 12.5
 --- !u!114 &1275573301996846362
@@ -1066,8 +1066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1211289184975979835}
-  command: <color=blue>
-  endCommand: </color>
+  command: <link="wave">
+  endCommand: </link>
   shakeIntensity: 7.5
   shakeSpeed: 7.5
 --- !u!224 &7995167719270479400 stripped
@@ -1263,8 +1263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 7088152288030907631}
-  command: <color=red>
-  endCommand: </color>
+  command: <link="shake">
+  endCommand: </link>
   shakeIntensity: 12.5
   shakeSpeed: 12.5
 --- !u!114 &7041863612091771299
@@ -1280,8 +1280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 7088152288030907631}
-  command: <color=blue>
-  endCommand: </color>
+  command: <link="wave">
+  endCommand: </link>
   shakeIntensity: 7.5
   shakeSpeed: 7.5
 --- !u!114 &6350360485041700195 stripped

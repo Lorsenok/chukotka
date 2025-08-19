@@ -8913,6 +8913,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275573301996846362, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
+      propertyPath: command
+      value: <link="wave">
+      objectReference: {fileID: 0}
+    - target: {fileID: 1275573301996846362, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
+      propertyPath: endCommand
+      value: </link>
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821755937736597651, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
+      propertyPath: command
+      value: <link="shake">
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821755937736597651, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
+      propertyPath: endCommand
+      value: </link>
+      objectReference: {fileID: 0}
     - target: {fileID: 1821755937736597651, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
       propertyPath: shakeSpeed
       value: 12.5
@@ -9006,12 +9022,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6391669720696729535, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
+      propertyPath: command
+      value: <link="shake">
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391669720696729535, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
+      propertyPath: endCommand
+      value: </link>
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391669720696729535, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
       propertyPath: shakeSpeed
       value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 6391669720696729535, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
       propertyPath: shakeIntensity
       value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041863612091771299, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
+      propertyPath: command
+      value: <link="wave">
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041863612091771299, guid: 71f4b19c577cf1b43a5e6e08b9015042, type: 3}
+      propertyPath: endCommand
+      value: </link>
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

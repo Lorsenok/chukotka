@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 6121693106671407000}
-  command: <color=blue>
-  endCommand: </color>
+  command: <link="wave">
+  endCommand: </link>
   shakeIntensity: 7.5
   shakeSpeed: 7.5
 --- !u!114 &4183378022484540708
@@ -266,10 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 6121693106671407000}
-  command: <color=red>
-  endCommand: </color>
-  shakeIntensity: 10
-  shakeSpeed: 10
+  command: <link="shake">
+  endCommand: </link>
+  shakeIntensity: 12.5
+  shakeSpeed: 12.5
 --- !u!224 &3084764280232754315 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4860987437675071143, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
