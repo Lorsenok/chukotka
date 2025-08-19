@@ -889,6 +889,17 @@
                     "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c7653c3-3203-4ccd-a2bd-c2797a4891fc",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
