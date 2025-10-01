@@ -35,8 +35,6 @@ public class Dialogue : MonoBehaviour
     private bool isChoice = false;
     private int curMessage = 1;
 
-    private int curPanel = 0;
-
     private IGameState gameState;
     private InputSystem input;
     [Inject]

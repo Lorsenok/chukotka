@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Dash",
+                    "type": "PassThrough",
+                    "id": "2e966ca8-b781-4447-ba40-5c722684cd8b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "SwitchLayerUp",
                     "type": "Button",
                     "id": "7574c633-0d5d-4418-b612-8a1651f12c99",
@@ -45,6 +54,15 @@
                     "name": "SwitchLayerDown",
                     "type": "Button",
                     "id": "0e4761d6-1a54-4bc7-8129-223c5e03b0d4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "92082802-fb08-40ce-bc72-c181b4045ca3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -219,6 +237,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d447fe47-159b-45bc-adc8-63878c394e4c",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f472577c-655f-4104-9fea-1ffc2af57353",
                     "path": "<Keyboard>/w",
                     "interactions": "",
@@ -236,6 +265,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SwitchLayerDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45a1cf46-37f2-4a5f-b5a7-88021e28d90d",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

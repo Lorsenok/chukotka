@@ -1,9 +1,10 @@
+using System;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour, IDamageble
 {
     [SerializeField] private Rigidbody2D rg;
-    [SerializeField] private float power;
+    public float Power { get; set; } = 20f;
     [SerializeField] private float damage;
     [SerializeField] private float forceAdditionalAngle;
     [SerializeField] private float additionalRotate;
@@ -11,18 +12,31 @@ public class Bullet : MonoBehaviour, IDamageble
     private void Start()
     {
         Vector3 dir = ProjMath.MoveTowardsAngle(360f - transform.eulerAngles.z - forceAdditionalAngle);
-        rg.AddForce(dir.normalized * power, ForceMode2D.Impulse);
+        rg.AddForce(dir.normalized * Power, ForceMode2D.Impulse);
     }
 
     private bool pin = false;
     private Vector3 pinPos;
     private float pinRotation;
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.TryGetComponent(out IDamageble damageble) && !pin)
+        bool pointed = false;
+        
+        if (other.gameObject.TryGetComponent(out IDamageble damageble) && !pin)
         {
+            pointed = true;
             damageble.GetDamage(damage);
-            transform.SetParent(collision.gameObject.transform);
+        }
+
+        if (other.gameObject.TryGetComponent(out Ground ground) && !pin)
+        {
+            pointed = true;
+        }
+
+        if (pointed)
+        {
+            transform.SetParent(other.gameObject.transform);
             rg.linearVelocity = Vector2.zero;
             rg.gravityScale = 0f;
             rg.freezeRotation = true;

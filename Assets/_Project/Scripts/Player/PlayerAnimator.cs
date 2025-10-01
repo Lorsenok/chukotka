@@ -18,8 +18,6 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private float fliplockSet;
     private float flipLock = 0f;
 
-    [SerializeField] private Timer gameLayerSwitchAnimationDelay;
-
     private IGameState gameState;
     private InputSystem inputSystem;
     [Inject] private void Init(IGameState state, IInputControler input)
@@ -32,29 +30,23 @@ public class PlayerAnimator : MonoBehaviour
 
     private void OnEnable()
     {
-        gameLayerSwitchAnimationDelay.OnTimerEnd += OnLayerSwitchDelayEnd;
         GameLayersControler.OnLayerSwitch += OnLayerSwitch;
     }
 
     private void OnDisable()
     {
-        gameLayerSwitchAnimationDelay.OnTimerEnd -= OnLayerSwitchDelayEnd;
         GameLayersControler.OnLayerSwitch -= OnLayerSwitch;
-    }
-
-    private void OnLayerSwitchDelayEnd()
-    {
-        isLayerSwitching = false;
     }
 
     private void OnLayerSwitch()
     {
         isLayerSwitching = true;
-        gameLayerSwitchAnimationDelay.StartTimer();
     }
 
     private void Update()
     {
+        bool isMoving = rg.linearVelocity.x > minSpeedForRunAnim | rg.linearVelocity.x < -minSpeedForRunAnim
+                        || rg.linearVelocity.y > minSpeedForRunAnim | rg.linearVelocity.y < -minSpeedForRunAnim;
         if (gameState.GetCurrectState() == GameState.Cutscene)
         {
             talk.enabled = true;
@@ -63,9 +55,9 @@ public class PlayerAnimator : MonoBehaviour
             return;
         }
         talk.enabled = false;
-        idle.enabled = rg.linearVelocity.x < minSpeedForRunAnim && rg.linearVelocity.x > -minSpeedForRunAnim && !isLayerSwitching;
+        idle.enabled = !isMoving && !isLayerSwitching;
         run.enabled = !idle.enabled;
-        if (rg.linearVelocity.x > minSpeedForRunAnim | rg.linearVelocity.x < -minSpeedForRunAnim && flipLock <= 0f)
+        if (isMoving && flipLock <= 0f)
         {
             spr.flipX = rg.linearVelocity.x < 0f;
             flipLock = fliplockSet;

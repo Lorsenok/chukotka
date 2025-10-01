@@ -6,7 +6,7 @@ using Zenject;
 public class PickableObject : MonoBehaviour
 {
     [SerializeField] protected GameObject target;
-    [SerializeField] protected float maxZDif = 1f;
+    [SerializeField] protected float maxYDif = 1f;
 
     protected InputSystem input;
     protected IGameState gameState;
@@ -92,6 +92,6 @@ public class PickableObject : MonoBehaviour
 
     public virtual void Update()
     {
-        coll.enabled = Mathf.Abs(target.transform.position.z - transform.position.z) <= maxZDif;
+        coll.enabled = Mathf.Abs(target.transform.position.z - transform.position.z) <= maxYDif;
     }
 }

@@ -10,7 +10,7 @@ public class GroundChecker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.GetComponent<Controler>())
+        if (collision.GetComponent<Ground>())
         {
             colliders.Add(collision);
         }
@@ -18,7 +18,7 @@ public class GroundChecker : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!collision.gameObject.GetComponent<Controler>())
+        if (collision.GetComponent<Ground>())
         {
             colliders.Remove(collision);
         }

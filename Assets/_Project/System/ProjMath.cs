@@ -71,6 +71,11 @@ public static class ProjMath
 
     public static Vector2 MousePosition()
     {
+        if (Camera.main == null)
+        {
+            Debug.LogError("No main camera found");
+            return Vector2.zero;
+        }
         return Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
     }
 }
