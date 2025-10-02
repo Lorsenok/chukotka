@@ -139,9 +139,11 @@ GameObject:
   - component: {fileID: 6523416788447923937}
   - component: {fileID: 3321353598892096416}
   - component: {fileID: 2785499110048398597}
+  - component: {fileID: 8752553636816379488}
   - component: {fileID: 6443837458819563267}
   - component: {fileID: 4035352908488688487}
   - component: {fileID: 4391691324269488327}
+  - component: {fileID: 2271052916398891454}
   - component: {fileID: 3918042494944787348}
   - component: {fileID: 1226351488987415359}
   - component: {fileID: 7909124019342510573}
@@ -247,7 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4695488004995d049a85376ec45e5590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerAdditions: []
+  controllerAdditions:
+  - {fileID: 8447217727549252497}
+  - {fileID: 3321353598892096416}
+  - {fileID: 8752553636816379488}
+  - {fileID: 2271052916398891454}
   sound:
   - {fileID: 6216584906487495804}
   - {fileID: 2613605872887805037}
@@ -260,19 +266,6 @@ MonoBehaviour:
   deceleration: 50
   controlsDeadZone: 0.1
   decelerationDeadZone: 0.3
-  combo: 4
-  curCombo: 0
-  comboTimer: {fileID: 4391691324269488327}
-  attackTimer: {fileID: 6443837458819563267}
-  perAttackTimer: {fileID: 4035352908488688487}
-  leftAttack: {fileID: 8729133154961079779}
-  rightAttack: {fileID: 8294101037761480325}
-  gun: {fileID: 2523724266072313102}
-  shootPower: 20
-  timeToLoadSet: 3
-  startTimeToLoad: 0.25
-  perLoadTimer: {fileID: 3918042494944787348}
-  loadSpeedMultiplier: 0.5
 --- !u!114 &4035255455280005234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +347,27 @@ MonoBehaviour:
   repeatable: 0
   timeSet: 1
   curTime: 0
+--- !u!114 &8752553636816379488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27db3fe5b20ab794db302bc4680cf273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 1226351488987415359}
+  speedMultiplier: 0.2
+  combo: 4
+  curCombo: 0
+  comboTimer: {fileID: 4391691324269488327}
+  attackTimer: {fileID: 6443837458819563267}
+  perAttackTimer: {fileID: 4035352908488688487}
+  leftAttack: {fileID: 8729133154961079779}
+  rightAttack: {fileID: 8294101037761480325}
 --- !u!114 &6443837458819563267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +416,26 @@ MonoBehaviour:
   repeatable: 0
   timeSet: 3
   curTime: 0
+--- !u!114 &2271052916398891454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75787763983970345837ae99aaa30454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllersBlock:
+  - {fileID: 8752553636816379488}
+  gun: {fileID: 2523724266072313102}
+  shootPower: 20
+  timeToLoadSet: 2.5
+  startTimeToLoad: 0.5
+  perLoadTimer: {fileID: 3918042494944787348}
+  loadSpeedMultiplier: 0.5
 --- !u!114 &3918042494944787348
 MonoBehaviour:
   m_ObjectHideFlags: 0
