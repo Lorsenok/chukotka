@@ -49,8 +49,8 @@ public class ControllerDash : ControllerAddition
         dashBlock = true;
         canDash = false;
         dashTimer.StartTimer();
-        if (rg.linearVelocityX > rgDeadZone) curDashPower += dashForce * Addition;
-        else if (rg.linearVelocityX < -rgDeadZone) curDashPower -= dashForce;
+        if (rg.linearVelocityX > rgDeadZone) curDashPower += dashForce + Addition;
+        else if (rg.linearVelocityX < -rgDeadZone) curDashPower -= dashForce + Addition;
     }
 
     private bool canDash = true;

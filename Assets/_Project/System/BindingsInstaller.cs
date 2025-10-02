@@ -12,5 +12,6 @@ public class BindingsInstaller : MonoInstaller
         Container.Bind<ISaver>().To<SaverService>().AsSingle();
         Container.Bind<IInventory>().To<InventoryService>().AsSingle();
         Container.Bind<ITaskContainer>().To<TaskService>().AsSingle();
+        Container.Bind<IAbilityContainer>().To<AbilityService>().AsSingle();
     }
 }
