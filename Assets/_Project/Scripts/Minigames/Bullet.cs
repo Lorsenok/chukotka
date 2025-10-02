@@ -26,6 +26,15 @@ public class Bullet : MonoBehaviour, IDamageble
         if (other.gameObject.TryGetComponent(out IDamageble damageble) && !pin)
         {
             pointed = true;
+            
+            transform.SetParent(other.gameObject.transform);
+            /*transform.localScale = 
+                new Vector3(
+                    transform.localScale.x / other.transform.localScale.x, 
+                    transform.localScale.y / other.transform.localScale.y, 
+                    transform.localScale.z / other.transform.localScale.z
+                );*/
+            
             damageble.GetDamage(damage);
         }
 
@@ -36,10 +45,10 @@ public class Bullet : MonoBehaviour, IDamageble
 
         if (pointed)
         {
-            transform.SetParent(other.gameObject.transform);
             rg.linearVelocity = Vector2.zero;
             rg.gravityScale = 0f;
             rg.freezeRotation = true;
+            
             pin = true;
             pinPos = transform.localPosition;
             pinRotation = transform.localEulerAngles.z;

@@ -9,7 +9,7 @@ public class MinigameEnterance : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Controler>())
+        if (collision.gameObject.GetComponent<Controller>())
         {
             fade.StartFade();
         }

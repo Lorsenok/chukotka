@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
+    public float SpeedMultiplier { get; set; } = 1f;
+    
     [SerializeField] private string tagname;
     [SerializeField] protected bool repeatable;
 
@@ -20,7 +22,7 @@ public class Timer : MonoBehaviour
 
     public virtual void Update()
     {
-        if (curTime > 0f) curTime -= Time.deltaTime;
+        if (curTime > 0f) curTime -= Time.deltaTime * SpeedMultiplier;
         else
         {
             OnTimerEnd?.Invoke();

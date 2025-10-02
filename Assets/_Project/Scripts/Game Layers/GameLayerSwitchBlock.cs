@@ -10,7 +10,7 @@ public class GameLayerSwitchBlock : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Controler>())
+        if (collision.gameObject.GetComponent<Controller>())
         {
             if (blockUp) BlockUp = true;
             if (blockDown) BlockDown = true;
@@ -19,7 +19,7 @@ public class GameLayerSwitchBlock : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Controler>())
+        if (collision.gameObject.GetComponent<Controller>())
         {
             if (blockUp) BlockUp = false;
             if (blockDown) BlockDown = false;

@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780d05e6ffb227a4eada687015e1cc67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 3636801805104331428}
+  main: {fileID: 8447217727549252497}
 --- !u!1 &3657978016914447784
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,8 +134,11 @@ GameObject:
   - component: {fileID: 752496441306215638}
   - component: {fileID: 7628232522701512542}
   - component: {fileID: 3636801805104331428}
-  - component: {fileID: 2785499110048398597}
+  - component: {fileID: 4035255455280005234}
+  - component: {fileID: 8447217727549252497}
   - component: {fileID: 6523416788447923937}
+  - component: {fileID: 3321353598892096416}
+  - component: {fileID: 2785499110048398597}
   - component: {fileID: 6443837458819563267}
   - component: {fileID: 4035352908488688487}
   - component: {fileID: 4391691324269488327}
@@ -244,23 +247,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4695488004995d049a85376ec45e5590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerAdditions: []
   sound:
   - {fileID: 6216584906487495804}
   - {fileID: 2613605872887805037}
   - {fileID: 6853469387135296411}
   soundBlockTimeSet: 0.3
+  soundDelayTimer: {fileID: 4035255455280005234}
   rg: {fileID: 1226351488987415359}
   acceleration: 150
   speed: 5
   deceleration: 50
   controlsDeadZone: 0.1
   decelerationDeadZone: 0.3
-  jumps: 1
-  jumpForce: 6
-  jumpBlockTimer: {fileID: 6523416788447923937}
-  dashForce: 10
-  dashForceExpireSpeed: 10
-  dashTimer: {fileID: 2785499110048398597}
   combo: 4
   curCombo: 0
   comboTimer: {fileID: 4391691324269488327}
@@ -274,7 +273,7 @@ MonoBehaviour:
   startTimeToLoad: 0.25
   perLoadTimer: {fileID: 3918042494944787348}
   loadSpeedMultiplier: 0.5
---- !u!114 &2785499110048398597
+--- !u!114 &4035255455280005234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,10 +285,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagname: dash block
-  repeatable: 0
-  timeSet: 1
+  tagname: sound delay
+  repeatable: 1
+  timeSet: 0.5
   curTime: 0
+--- !u!114 &8447217727549252497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cabb270379ff8cd4396cd49e5310c2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 1226351488987415359}
+  jumps: 1
+  jumpForce: 5
+  jumpBlockTimer: {fileID: 6523416788447923937}
 --- !u!114 &6523416788447923937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +320,39 @@ MonoBehaviour:
   tagname: jump block
   repeatable: 0
   timeSet: 0.3
+  curTime: 0
+--- !u!114 &3321353598892096416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b717d9981b2c82e4a9d69cfed1a597c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rg: {fileID: 1226351488987415359}
+  rgDeadZone: 0.1
+  dashForce: 10
+  dashForceExpireSpeed: 10
+  dashTimer: {fileID: 2785499110048398597}
+--- !u!114 &2785499110048398597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: dash block
+  repeatable: 0
+  timeSet: 1
   curTime: 0
 --- !u!114 &6443837458819563267
 MonoBehaviour:
@@ -882,7 +930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationOffset: 180
-  bulletPrefab: {fileID: 8871533527641693228, guid: 25e8eadac13a7a547b75ef511523ef89, type: 3}
+  bulletPrefab: {fileID: 8871533527641693228, guid: 873a6dff9b7fcff4da3c891013cccd0d, type: 3}
   bulletSpawnPoint: {fileID: 5021217292945992892}
 --- !u!1 &8294101037761480325
 GameObject:

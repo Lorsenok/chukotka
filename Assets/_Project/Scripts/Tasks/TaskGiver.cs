@@ -14,7 +14,7 @@ public class TaskGiver : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.GetComponent<Controler>()) return;
+        if (!collision.gameObject.GetComponent<Controller>()) return;
 
         foreach (Task task in taskGive) container.Tasks.Add(task);
         foreach (Task task in taskTake) if (container.Tasks.Contains(task)) container.Tasks.Remove(task);

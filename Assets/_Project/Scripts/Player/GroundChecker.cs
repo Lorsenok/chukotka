@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent (typeof(Collider2D))]
 public class GroundChecker : MonoBehaviour
 {
-    [SerializeField] private Controler main;
+    [SerializeField] private ControllerJump main;
 
     private List<Collider2D> colliders = new();
 
