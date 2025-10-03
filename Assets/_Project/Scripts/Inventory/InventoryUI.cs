@@ -4,13 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-/*
- * TODO:
- * Arrows dropping and arrows for inventory
- * Trading system
- * Fish!!!!1!1!11!11
-*/
-
 public class ItemWithCount
 {
     public int Count { get; set; } = 1;

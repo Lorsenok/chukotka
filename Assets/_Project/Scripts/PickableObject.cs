@@ -5,8 +5,7 @@ using Zenject;
 
 public class PickableObject : MonoBehaviour
 {
-    [SerializeField] protected GameObject target;
-    [SerializeField] protected float maxYDif = 1f;
+    protected GameObject target;
 
     protected InputSystem input;
     protected IGameState gameState;
@@ -88,10 +87,6 @@ public class PickableObject : MonoBehaviour
     public virtual void Start()
     {
         coll = GetComponent<Collider2D>();
-    }
-
-    public virtual void Update()
-    {
-        coll.enabled = Mathf.Abs(target.transform.position.z - transform.position.z) <= maxYDif;
+        target = FindObjectOfType<Controller>().gameObject;
     }
 }

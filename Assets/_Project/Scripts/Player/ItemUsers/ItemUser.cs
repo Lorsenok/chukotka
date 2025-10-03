@@ -13,7 +13,7 @@ public class ItemUser : MonoBehaviour
     
     protected IInventory inventory;
     [Inject]
-    protected virtual void Init(IInventory inventory)
+    private void Init(IInventory inventory)
     {
         this.inventory = inventory;
     }

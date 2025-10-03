@@ -35,7 +35,7 @@ public class DialogueTriggerMessage : PickableObject
     public override void OnLeave(GameObject obj)
     {
         if (target != obj) return;
-
+        
         isPlayerOn = false;
         base.OnLeave(obj);
         Destroy(lastMessage);

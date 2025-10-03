@@ -60,7 +60,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!114 &5961869662934649435
 MonoBehaviour:
@@ -117,6 +117,22 @@ PrefabInstance:
     - target: {fileID: 118453370433949019, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
       propertyPath: timeSet
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417580328589145524, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417580328589145524, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417580328589145524, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417580328589145524, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4860987437675071143, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
       propertyPath: m_Pivot.x

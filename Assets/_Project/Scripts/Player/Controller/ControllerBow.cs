@@ -1,10 +1,13 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
 
 public class ControllerBow : ControllerAddition
 {
+    public int Arrows { get; set; } = 5;
+    
     [SerializeField] private ControllerAddition[] controllersBlock;
     [SerializeField] private Gun gun;
     [SerializeField] private float shootPower = 20f;
@@ -13,6 +16,9 @@ public class ControllerBow : ControllerAddition
     private float curLoadTime = 0f;
     [SerializeField] private Timer perLoadTimer;
     [SerializeField] private float loadSpeedMultiplier;
+    
+    [Header("UI")]
+    [SerializeField] private TextMeshProUGUI text;
     
     private InputSystem input;
     private IGameState gameState;
@@ -48,6 +54,8 @@ public class ControllerBow : ControllerAddition
             curLoadTime += Time.deltaTime;
             curLoadTime = Mathf.Clamp(curLoadTime, 0f, timeToLoadSet);
         }
+
+        text.text = Arrows.ToString();
     }
 
     private bool isHoldingWhileLoad = false;
@@ -55,7 +63,7 @@ public class ControllerBow : ControllerAddition
     private void Shoot(InputAction.CallbackContext context)
     {
         isHoldingWhileLoad = !isHoldingWhileLoad;
-        if (isLoading) return;
+        if (isLoading || Arrows <= 0) return;
         isHolding = !isHolding;
         if (!isHoldingWhileLoad && isHolding)
         {
@@ -69,12 +77,28 @@ public class ControllerBow : ControllerAddition
             curLoadTime = 0f;
             perLoadTimer.StartTimer();
             isLoading = true;
+
+            Arrows--;
+            SaveArrows();
         }
+    }
+
+    public void SaveArrows()
+    {
+        PlayerPrefs.SetInt("arrows", Arrows);
     }
 
     private bool isLoading = false;
     private void OnLoadEnd()
     {
         isLoading = false;
+    }
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("arrows"))
+        {
+            Arrows = PlayerPrefs.GetInt("arrows");
+        }
     }
 }

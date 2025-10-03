@@ -8,11 +8,13 @@ public class Bullet : MonoBehaviour, IDamageble
     [SerializeField] private float damage;
     [SerializeField] private float forceAdditionalAngle;
     [SerializeField] private float additionalRotate;
-
+    [SerializeField] private ArrowItem arrowItem;
+    
     private void Start()
     {
         Vector3 dir = ProjMath.MoveTowardsAngle(360f - transform.eulerAngles.z - forceAdditionalAngle);
         rg.AddForce(dir.normalized * Power, ForceMode2D.Impulse);
+        arrowItem.enabled = false;
     }
 
     private bool pin = false;
@@ -36,6 +38,7 @@ public class Bullet : MonoBehaviour, IDamageble
                 );*/
             
             damageble.GetDamage(damage);
+            Destroy(gameObject);
         }
 
         if (other.gameObject.TryGetComponent(out Ground ground) && !pin)
@@ -52,6 +55,8 @@ public class Bullet : MonoBehaviour, IDamageble
             pin = true;
             pinPos = transform.localPosition;
             pinRotation = transform.localEulerAngles.z;
+
+            arrowItem.enabled = true;
         }
     }
 
