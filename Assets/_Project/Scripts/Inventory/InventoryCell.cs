@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,6 +11,8 @@ public class InventoryCell : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public RectTransform ItemObjTransform { get; set; }
 
     [SerializeField] private Vector3 offset;
+    public List<ItemType> allowedItemTypes;
+    public bool lockObjectToCanvas = true;
 
     public void Update()
     {
@@ -24,7 +27,7 @@ public class InventoryCell : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         }
         else
         {
-            ItemObj.InitialPosition = transform.localPosition + offset;
+            ItemObj.InitialPosition = transform.localPosition + offset + (lockObjectToCanvas ? Canvas.anchoredPosition : Vector3.zero);
         }
     }
 

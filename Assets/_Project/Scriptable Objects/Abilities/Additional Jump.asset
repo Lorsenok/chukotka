@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a30ecbb0256e742bcaa109b48e2e80, type: 3}
   m_Name: Additional Jump
   m_EditorClassIdentifier: 
-  jumps: 2
+  jumps: 1
   combo: 0
   dashPower: 0
   aceleration: 0

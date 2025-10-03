@@ -7,6 +7,7 @@ public class InventoryItemUI : GrapableObject
 
     public void Switch(InventoryCell cell)
     {
+        if (!cell.allowedItemTypes.Contains(CurCell.ItemObj.Item.type)) return;
         InventoryItemUI i = null;
         if (cell.ItemObj != null)
         {

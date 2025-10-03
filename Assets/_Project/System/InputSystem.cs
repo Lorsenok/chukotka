@@ -162,6 +162,24 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FirstMaterial"",
+                    ""type"": ""Button"",
+                    ""id"": ""c7cf8d6d-e9d7-48cb-8385-4c9d93080258"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SecondMaterial"",
+                    ""type"": ""Button"",
+                    ""id"": ""2522b4b6-be72-4c52-832a-c7dad60e8f89"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -382,6 +400,28 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ff8d28c8-a699-4e10-88b3-8fcc8dc0d899"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FirstMaterial"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eecbe176-9249-4176-a1da-37c2051fec97"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SecondMaterial"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1123,6 +1163,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_Player_SwitchLayerDown = m_Player.FindAction("SwitchLayerDown", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
+        m_Player_FirstMaterial = m_Player.FindAction("FirstMaterial", throwIfNotFound: true);
+        m_Player_SecondMaterial = m_Player.FindAction("SecondMaterial", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1228,6 +1270,8 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_SwitchLayerDown;
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Shoot;
+    private readonly InputAction m_Player_FirstMaterial;
+    private readonly InputAction m_Player_SecondMaterial;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1271,6 +1315,14 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Shoot".
         /// </summary>
         public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/FirstMaterial".
+        /// </summary>
+        public InputAction @FirstMaterial => m_Wrapper.m_Player_FirstMaterial;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/SecondMaterial".
+        /// </summary>
+        public InputAction @SecondMaterial => m_Wrapper.m_Player_SecondMaterial;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1321,6 +1373,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
+            @FirstMaterial.started += instance.OnFirstMaterial;
+            @FirstMaterial.performed += instance.OnFirstMaterial;
+            @FirstMaterial.canceled += instance.OnFirstMaterial;
+            @SecondMaterial.started += instance.OnSecondMaterial;
+            @SecondMaterial.performed += instance.OnSecondMaterial;
+            @SecondMaterial.canceled += instance.OnSecondMaterial;
         }
 
         /// <summary>
@@ -1356,6 +1414,12 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
+            @FirstMaterial.started -= instance.OnFirstMaterial;
+            @FirstMaterial.performed -= instance.OnFirstMaterial;
+            @FirstMaterial.canceled -= instance.OnFirstMaterial;
+            @SecondMaterial.started -= instance.OnSecondMaterial;
+            @SecondMaterial.performed -= instance.OnSecondMaterial;
+            @SecondMaterial.canceled -= instance.OnSecondMaterial;
         }
 
         /// <summary>
@@ -1756,6 +1820,20 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnShoot(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "FirstMaterial" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFirstMaterial(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SecondMaterial" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSecondMaterial(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

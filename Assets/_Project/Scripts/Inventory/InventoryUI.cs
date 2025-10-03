@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
+/*
+ * TODO:
+ * Arrows dropping and arrows for inventory
+ * Trading system
+ * Fish!!!!1!1!11!11
+*/
+
 public class ItemWithCount
 {
     public int Count { get; set; } = 1;
@@ -19,6 +26,7 @@ public class InventoryUI : GameMenu
 {
     [Header("Inventory")]
     [SerializeField] private Transform canvas;
+    [SerializeField] private Transform itemsSpawnCanvas;
     [SerializeField] private InventoryItemUI itemPrefab;
     [SerializeField] private InventoryCell[] gridPositions;
     [SerializeField] private GameObject countTextPrefab;
@@ -56,57 +64,69 @@ public class InventoryUI : GameMenu
         inventory.OnItemsChanged -= GridUpdate;
     }
 
-    private void GridUpdate()
+    private void GridUpdate() //this function was made with chatgpt and has to be remade later 
     {
-        gridFilled = new ItemWithCount[gridPositions.Length];
-        ItemWithCount[] filled = new ItemWithCount[inventory.Items.Count];
-
-        for (int i = 0; i < inventory.Items.Count; i++)
+        Dictionary<string, ItemWithCount> newItems = new();
+        foreach (Item item in inventory.Items)
         {
-            bool contains = false;
-            foreach (ItemWithCount item in filled)
+            if (newItems.TryGetValue(item.name, out var existing))
             {
-                if (item == null) continue;
-                if (item.Item.name == inventory.Items[i].name)
-                {
-                    item.Count++;
-                    contains = true;
-                }
+                existing.Count++;
             }
-            if (!contains) filled[i] = new ItemWithCount(inventory.Items[i]);
-        }
-
-        int y = 0;
-        for (int i = 0; i < filled.Length; i++)
-        {
-            if (filled[i] != null)
+            else
             {
-                gridFilled[y] = filled[i];
-                y++;
+                newItems[item.name] = new ItemWithCount(item);
             }
         }
 
-        foreach (InventoryItemUI obj in itemObjs)
+        foreach (var uiObj in itemObjs)
         {
-            Destroy(obj.gameObject);
+            if (uiObj.Item != null && newItems.TryGetValue(uiObj.Item.name, out var itemWithCount))
+            {
+                var text = uiObj.GetComponentInChildren<TextMeshProUGUI>();
+                if (text != null)
+                    text.text = itemWithCount.Count.ToString();
+
+                newItems.Remove(uiObj.Item.name);
+            }
+            else
+            {
+                Destroy(uiObj.gameObject);
+                uiObj.CurCell.ItemObj = null;
+            }
         }
 
-        itemObjs = new();
+        itemObjs.RemoveAll(obj => obj == null);
 
-        for (int i = 0; i < gridPositions.Length; i++)
+        foreach (var kvp in newItems)
         {
-            if (gridFilled[i] == null) continue;
+            ItemWithCount itemWithCount = kvp.Value;
 
-            InventoryItemUI obj = Instantiate(itemPrefab, gridPositions[i].transform.position, Quaternion.identity, canvas);
+            InventoryCell freeCell = System.Array.Find(gridPositions, c =>
+                c.ItemObj == null &&
+                c.allowedItemTypes != null && 
+                c.allowedItemTypes.Contains(itemWithCount.Item.type));
+
+            if (freeCell == null)
+            {
+                Debug.Log("Inventory cells are full, but there are still items");
+                continue;
+            }
+
+            InventoryItemUI obj = Instantiate(itemPrefab, freeCell.transform.position, Quaternion.identity, itemsSpawnCanvas);
             itemObjs.Add(obj);
-            obj.GetComponentInChildren<Image>().sprite = gridFilled[i].Item.sprite;
-            obj.CurCell = gridPositions[i];
-            obj.Item = gridFilled[i].Item;
-            Instantiate(countTextPrefab, obj.transform).GetComponentInChildren<TextMeshProUGUI>().text = gridFilled[i].Count.ToString();
+            obj.GetComponentInChildren<Image>().sprite = itemWithCount.Item.sprite;
+            obj.CurCell = freeCell;
+            obj.Item = itemWithCount.Item;
 
-            gridPositions[i].ItemObj = obj;
+            var countText = Instantiate(countTextPrefab, obj.transform).GetComponentInChildren<TextMeshProUGUI>();
+            countText.text = itemWithCount.Count.ToString();
+
+            freeCell.ItemObj = obj;
         }
     }
+
+
 
     /* Item storage testing
     public override void Update()
