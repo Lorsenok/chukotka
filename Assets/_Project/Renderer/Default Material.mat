@@ -98,7 +98,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _ExpireDistance: 5.3
+    - _ExpireDistance: 0
     - _ExpirePower: 10
     - _FadeDistance: 9999
     - _FadeEndDistance: 10
