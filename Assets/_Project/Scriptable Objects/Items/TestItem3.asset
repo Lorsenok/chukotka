@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb434fd5b06fa84284d07f5a13ec2c0, type: 3}
   m_Name: TestItem3
   m_EditorClassIdentifier: 
+  type: 0
   itemname:
     m_TableReference:
       m_TableCollectionName: GUID:fd6d628ff72d3e54483e9374500fd82d
@@ -30,7 +31,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   references:
     version: 2
     RefIds: []

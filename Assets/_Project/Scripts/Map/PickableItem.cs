@@ -14,7 +14,7 @@ public class PickableItem : DialogueTriggerMessage
     public override void Action()
     {
         base.Action();
-        if (!isPlayerOn) return;
+        if (!isPlayerOn || !InventoryUI.HasFreeSpaceFor(item.type) & !inventory.Items.Contains(item)) return;
         inventory.Items.Add(item);
         inventory.OnItemsChanged?.Invoke();
         Destroy(gameObject);

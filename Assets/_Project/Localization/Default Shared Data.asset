@@ -59,6 +59,10 @@ MonoBehaviour:
     m_Key: music
     m_Metadata:
       m_Items: []
+  - m_Id: 35033520928710656
+    m_Key: trade
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

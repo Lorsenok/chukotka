@@ -3,8 +3,8 @@ using UnityEngine.Localization;
 
 public enum ItemType
 {
-    Item,
-    Material
+    Item = 0,
+    Material = 1
 }
 
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptable Objects/Item")]

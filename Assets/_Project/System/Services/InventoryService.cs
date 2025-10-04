@@ -22,4 +22,18 @@ public class InventoryService : IInventory
         }
     }
     public Action OnItemsChanged { get; set; }
+
+    /*
+    public int ItemsQuantity()
+    {
+        List<Item> current = new List<Item>();
+        foreach (Item i in items)
+        {
+            if (!current.Contains(i))
+            {
+                current.Add(i);
+            }
+        }
+        return current.Count;
+    }*/
 }

@@ -17,12 +17,15 @@ public class ItemWithCount
 
 public class InventoryUI : GameMenu
 {
+    public static bool[] ItemsFree { get; set; }
+    
     [Header("Inventory")]
     [SerializeField] private Transform canvas;
     [SerializeField] private Transform itemsSpawnCanvas;
     [SerializeField] private InventoryItemUI itemPrefab;
     [SerializeField] private InventoryCell[] gridPositions;
     [SerializeField] private GameObject countTextPrefab;
+    [SerializeField] private ItemType lastItemType = ItemType.Material;
 
     private ItemWithCount[] gridFilled;
     private List<InventoryItemUI> itemObjs = new();
@@ -76,13 +79,14 @@ public class InventoryUI : GameMenu
         {
             if (uiObj.Item != null && newItems.TryGetValue(uiObj.Item.name, out var itemWithCount))
             {
+                if (uiObj == null) return;
                 var text = uiObj.GetComponentInChildren<TextMeshProUGUI>();
                 if (text != null)
                     text.text = itemWithCount.Count.ToString();
 
                 newItems.Remove(uiObj.Item.name);
             }
-            else
+            else if (uiObj != null)
             {
                 Destroy(uiObj.gameObject);
                 uiObj.CurCell.ItemObj = null;
@@ -119,6 +123,31 @@ public class InventoryUI : GameMenu
         }
     }
 
+    public override void Update()
+    {
+        base.Update();
+
+        ItemsFree = new bool[(int)lastItemType + 1];
+
+        foreach (var cell in gridPositions)
+        {
+            if (cell.ItemObj == null && cell.allowedItemTypes != null)
+            {
+                foreach (var allowedType in cell.allowedItemTypes)
+                {
+                    ItemsFree[(int)allowedType] = true;
+                }
+            }
+        }
+    }
+    
+    public static bool HasFreeSpaceFor(ItemType type)
+    {
+        if (ItemsFree == null || (int)type >= ItemsFree.Length)
+            return false;
+
+        return ItemsFree[(int)type];
+    }
 
 
     /* Item storage testing
