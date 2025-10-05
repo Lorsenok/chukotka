@@ -511,8 +511,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af15684836036f24f85e174ce1bd5f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpSet: 10
+  hpSet: 5
   maxHP: 10
+  saveHP: 1
+  saveHPKey: playerhp
 --- !u!114 &7909124019342510573
 MonoBehaviour:
   m_ObjectHideFlags: 0
