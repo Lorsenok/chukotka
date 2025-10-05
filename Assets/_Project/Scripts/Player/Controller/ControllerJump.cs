@@ -5,11 +5,10 @@ using Zenject;
 
 public class ControllerJump : ControllerAddition
 {
-    public bool CanJump { get; set; } = true;
-    
     private int curAdditionalJumps = 0;
 
     [SerializeField] private Rigidbody2D rg;
+    [SerializeField] private GroundChecker groundChecker;
     
     [SerializeField] private int jumps = 1;
     [SerializeField] private float jumpForce;
@@ -40,11 +39,11 @@ public class ControllerJump : ControllerAddition
     {
         if (Block) return;
         hasPressedJumpButton = !hasPressedJumpButton;
-        if (!CanJump & curAdditionalJumps <= 0 || !hasPressedJumpButton || jumpBlock) return;
+        if (!groundChecker.IsTouchingGround & curAdditionalJumps <= 0 || !hasPressedJumpButton || jumpBlock) return;
         jumpBlockTimer.StartTimer();
         jumpBlock = true;
         curAdditionalJumps--;
-        if (CanJump) curAdditionalJumps = jumps + Addition;
+        if (groundChecker.IsTouchingGround) curAdditionalJumps = jumps + Addition;
         rg.linearVelocityY = jumpForce;
     }
     

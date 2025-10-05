@@ -31,6 +31,14 @@ MonoBehaviour:
     m_Key: stickdes
     m_Metadata:
       m_Items: []
+  - m_Id: 33695012758740992
+    m_Key: fish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33695025018691584
+    m_Key: fishdes
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

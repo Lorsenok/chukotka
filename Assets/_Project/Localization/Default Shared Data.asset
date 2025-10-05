@@ -63,6 +63,14 @@ MonoBehaviour:
     m_Key: trade
     m_Metadata:
       m_Items: []
+  - m_Id: 35399309515022336
+    m_Key: heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35399453132185600
+    m_Key: noheal
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

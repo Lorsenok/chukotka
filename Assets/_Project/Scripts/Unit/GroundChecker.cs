@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent (typeof(Collider2D))]
 public class GroundChecker : MonoBehaviour
 {
-    [SerializeField] private ControllerJump main;
+    public bool IsTouchingGround { get; set; } = false;
 
     private List<Collider2D> colliders = new();
 
@@ -26,6 +26,6 @@ public class GroundChecker : MonoBehaviour
 
     private void FixedUpdate()
     {
-        main.CanJump = colliders.Count > 0;
+        IsTouchingGround = colliders.Count > 0;
     }
 }

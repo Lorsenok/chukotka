@@ -5,6 +5,7 @@ using Zenject;
 
 public class ItemUser : MonoBehaviour
 {
+    [SerializeField] private Transform target;
     [SerializeField] protected CellUser[] cellUsers;
     [SerializeField] protected Item item;
     [SerializeField] protected bool removeItemAfterUsing = true;
@@ -42,6 +43,11 @@ public class ItemUser : MonoBehaviour
     private void OnDelayEnd()
     {
         hasTimerEnded = true;
+    }
+
+    public virtual void Update()
+    {
+        transform.position = target.position;
     }
 
     public void OnEnable()

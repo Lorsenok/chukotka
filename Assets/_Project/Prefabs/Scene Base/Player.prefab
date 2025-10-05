@@ -122,7 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780d05e6ffb227a4eada687015e1cc67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 8447217727549252497}
 --- !u!1 &3657978016914447784
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,6 +146,7 @@ GameObject:
   - component: {fileID: 3918042494944787348}
   - component: {fileID: 5487415688942113801}
   - component: {fileID: 1226351488987415359}
+  - component: {fileID: 7916989941622342710}
   - component: {fileID: 7909124019342510573}
   - component: {fileID: 2953897547763498807}
   - component: {fileID: 1102160502061187418}
@@ -297,6 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rg: {fileID: 1226351488987415359}
+  groundChecker: {fileID: 3664343035539521266}
   jumps: 1
   jumpForce: 5
   jumpBlockTimer: {fileID: 6523416788447923937}
@@ -498,6 +499,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7916989941622342710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af15684836036f24f85e174ce1bd5f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpSet: 10
+  maxHP: 10
 --- !u!114 &7909124019342510573
 MonoBehaviour:
   m_ObjectHideFlags: 0
