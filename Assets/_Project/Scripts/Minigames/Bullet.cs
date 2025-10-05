@@ -1,14 +1,19 @@
 using System;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour, IDamageble
+public class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rg;
     public float Power { get; set; } = 20f;
-    [SerializeField] private float damage;
+    [SerializeField] private int damage;
     [SerializeField] private float forceAdditionalAngle;
     [SerializeField] private float additionalRotate;
     [SerializeField] private ArrowItem arrowItem;
+    
+    [SerializeField] private GameObject[] spawnOnDamage;
+    [SerializeField] private Transform spawnPoint;
+
+    [SerializeField] private float shakeOnDamage;
     
     private void Start()
     {
@@ -23,30 +28,20 @@ public class Bullet : MonoBehaviour, IDamageble
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        bool pointed = false;
+        if (other.GetComponentInChildren<Controller>() || other.isTrigger) return;
         
-        if (other.gameObject.TryGetComponent(out IDamageble damageble) && !pin)
+        if (other.gameObject.TryGetComponent(out DestroyableObject damageble) && !pin)
         {
-            pointed = true;
-            
-            transform.SetParent(other.gameObject.transform);
-            /*transform.localScale = 
-                new Vector3(
-                    transform.localScale.x / other.transform.localScale.x, 
-                    transform.localScale.y / other.transform.localScale.y, 
-                    transform.localScale.z / other.transform.localScale.z
-                );*/
-            
-            damageble.GetDamage(damage);
+            damageble.HP -= damage;
+            foreach (GameObject spawn in spawnOnDamage)
+            {
+                Instantiate(spawn, spawnPoint.position, spawn.transform.rotation);
+            }
+            CameraMovement.Shake(shakeOnDamage);
             Destroy(gameObject);
         }
 
         if (other.gameObject.TryGetComponent(out Ground ground) && !pin)
-        {
-            pointed = true;
-        }
-
-        if (pointed)
         {
             rg.linearVelocity = Vector2.zero;
             rg.gravityScale = 0f;
@@ -58,26 +53,6 @@ public class Bullet : MonoBehaviour, IDamageble
 
             arrowItem.enabled = true;
         }
-    }
-
-    private void OnEnable()
-    {
-        Minigame.OnMinigameEnd += Die;
-    }
-
-    private void OnDestroy()
-    {
-        Minigame.OnMinigameEnd -= Die;
-    }
-
-    public void GetDamage(float damage)
-    {
-        if (!pin) Destroy(gameObject);
-    }
-
-    public void Die()
-    {
-        GetDamage(0f);
     }
 
     private void Update()

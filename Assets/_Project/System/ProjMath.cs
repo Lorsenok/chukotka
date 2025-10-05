@@ -78,4 +78,9 @@ public static class ProjMath
         }
         return Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
     }
+
+    public static bool RandomChance(float chance)
+    {
+        return Random.value < chance;
+    }
 }

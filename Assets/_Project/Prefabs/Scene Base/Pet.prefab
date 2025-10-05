@@ -409,7 +409,7 @@ MonoBehaviour:
   deceleration: 10
   speed: 80
   acceleration: 50
-  jumpForce: 10
+  jumpForce: 5
   jumpDelayTimer: {fileID: 2790582102380298432}
   minDistanceToJump: 1
 --- !u!114 &2790582102380298432

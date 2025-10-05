@@ -42,6 +42,14 @@ MonoBehaviour:
     m_Localized: It smells :(
     m_Metadata:
       m_Items: []
+  - m_Id: 33744715525382144
+    m_Localized: Fluffy stuff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33744789508710400
+    m_Localized: Soft and fluffy, literally
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

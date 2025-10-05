@@ -87,6 +87,6 @@ public class PickableObject : MonoBehaviour
     public virtual void Start()
     {
         coll = GetComponent<Collider2D>();
-        target = FindObjectOfType<Controller>().gameObject;
+        target = FindObjectsByType<Controller>(FindObjectsSortMode.None)[0].gameObject;
     }
 }
