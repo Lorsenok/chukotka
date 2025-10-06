@@ -1466,11 +1466,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ffbf448987c724f8c8a6d5797d39bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreObjects:
+  - {fileID: 3657978016914447784}
   damage: 1
   spawnOnDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   spawnPoint: {fileID: 5919055825948904651}
   shakeOnDamage: 5
+  timerDelay: {fileID: 0}
 --- !u!114 &2419859390013650607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1660,11 +1663,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ffbf448987c724f8c8a6d5797d39bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreObjects:
+  - {fileID: 3657978016914447784}
   damage: 1
   spawnOnDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   spawnPoint: {fileID: 3244865298754977786}
   shakeOnDamage: 5
+  timerDelay: {fileID: 0}
 --- !u!114 &8772823518037742509
 MonoBehaviour:
   m_ObjectHideFlags: 0

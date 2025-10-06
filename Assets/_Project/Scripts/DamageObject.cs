@@ -1,22 +1,61 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DamageObject : MonoBehaviour
 {
+    [SerializeField] private GameObject[] ignoreObjects;
     [SerializeField] private int damage;
     [SerializeField] private GameObject[] spawnOnDamage;
     [SerializeField] private Transform spawnPoint;
+    [SerializeField] private bool spawnOnDamageObject;
     [SerializeField] private float shakeOnDamage;
+
+    [SerializeField] private Timer timerDelay;
+
+    private List<DestroyableObject> curCollisions = new List<DestroyableObject>();
     
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnEnable()
     {
-        other.TryGetComponent(out DestroyableObject obj);
-        if (obj == null) return;
+        if (timerDelay != null) timerDelay.OnTimerEnd += DelayedDamage;
+    }
+    
+    private void OnDisable()
+    {
+        if (timerDelay != null) timerDelay.OnTimerEnd -= DelayedDamage;
+    }
+
+    private void DelayedDamage()
+    {
+        foreach (var obj in curCollisions)
+        {
+            DealDamage(obj);
+        }
+    }
+
+    private void DealDamage(DestroyableObject obj)
+    {
         obj.HP -= damage;
         foreach (GameObject spawn in spawnOnDamage)
         {
-            Instantiate(spawn, spawnPoint.position, spawn.transform.rotation);
+            Instantiate(spawn, spawnOnDamageObject ? obj.transform.position : spawnPoint.position, spawn.transform.rotation);
         }
         CameraMovement.Shake(shakeOnDamage);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        other.TryGetComponent(out DestroyableObject obj);
+        if (obj == null || ignoreObjects.Contains(obj.gameObject)) return;
+        curCollisions.Add(obj);
+        DealDamage(obj);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        other.TryGetComponent(out DestroyableObject obj);
+        if (obj == null || ignoreObjects.Contains(obj.gameObject)) return; 
+        curCollisions.Remove(obj);
     }
 }

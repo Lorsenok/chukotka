@@ -6,8 +6,8 @@ public class Animal : TargetFollower
     [Header("Animal")]
     [SerializeField] private DestroyableObject destroyableObject;
     [SerializeField] private GameObject dropPrefab;
-    
-    [Header("Escaping")]
+
+    [Header("Escaping")] [SerializeField] private float escapeSpeedMultiplier = 1f;
     [SerializeField] private int hpWhenEscaping;
     [SerializeField] private Timer timeToEscape;
     [SerializeField] private GameObject[] spawnAfterEscapePrefabs;
@@ -52,7 +52,7 @@ public class Animal : TargetFollower
         }
         if (isEscaping)
         {
-            Move(-1f);
+            Move(-escapeSpeedMultiplier);
             if (groundChecker.IsTouchingGround && canJump) Jump();
         }
         else base.Update();

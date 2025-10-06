@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private Rigidbody2D rg;
     public float Power { get; set; } = 20f;
     [SerializeField] private int damage;
+    [SerializeField] private float damageBySpeedMultiplier = 1f;
+    private float additionalDamage = 0;
     [SerializeField] private float forceAdditionalAngle;
     [SerializeField] private float additionalRotate;
     [SerializeField] private ArrowItem arrowItem;
@@ -32,7 +34,7 @@ public class Bullet : MonoBehaviour
         
         if (other.gameObject.TryGetComponent(out DestroyableObject damageble) && !pin)
         {
-            damageble.HP -= damage;
+            damageble.HP -= damage + Mathf.RoundToInt(additionalDamage);
             foreach (GameObject spawn in spawnOnDamage)
             {
                 Instantiate(spawn, spawnPoint.position, spawn.transform.rotation);
@@ -62,6 +64,12 @@ public class Bullet : MonoBehaviour
             transform.localPosition = pinPos;
             transform.localEulerAngles = new Vector3(0f, 0f, pinRotation);
         }
-        else transform.eulerAngles = new Vector3(0f, 0f, ProjMath.RotateTowardsPosition(rg.linearVelocity.normalized) + additionalRotate);
+        else
+        {
+            transform.eulerAngles = new Vector3(0f, 0f,
+                ProjMath.RotateTowardsPosition(rg.linearVelocity.normalized) + additionalRotate);
+            
+            additionalDamage = Mathf.Max(additionalDamage, Vector2.Distance(rg.linearVelocity, Vector2.zero) * damageBySpeedMultiplier);
+        }
     }
 }
