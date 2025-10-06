@@ -192,6 +192,118 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 527bd17e17128a0459feca3d0bd644e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &417461764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417461769}
+  - component: {fileID: 417461768}
+  - component: {fileID: 417461767}
+  - component: {fileID: 417461766}
+  - component: {fileID: 417461765}
+  m_Layer: 0
+  m_Name: Raider Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &417461765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417461764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: change position delay
+  repeatable: 1
+  savekey: 
+  timeSet: 0.1
+  curTime: 0
+--- !u!114 &417461766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417461764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: start row delay
+  repeatable: 1
+  savekey: 
+  timeSet: 0.25
+  curTime: 0
+--- !u!114 &417461767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417461764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d497dfbe72a0fd4e9d98fb0c1b2a7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: spawn dealy
+  repeatable: 1
+  savekey: 
+  timeSet: 20
+  curTime: 5
+  timeSetMax: 50
+--- !u!114 &417461768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417461764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c04b317a3726a54bb75e283171c949e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
+  - {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
+  - {fileID: 4698977778594916722, guid: 37a17bac9333fdb4f9dfbcbe2b85997c, type: 3}
+  timerDelay: {fileID: 417461767}
+  rowDelay: {fileID: 417461766}
+  rowTimes: 3
+  maxEntities: 3
+  lockToTarget: 1
+  target: {fileID: 565257025}
+  maxRange: 4.5
+  minRange: 3
+  changePositionTimer: {fileID: 417461765}
+--- !u!4 &417461769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417461764}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426022760
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: 
   repeatable: 0
+  savekey: 
   timeSet: 0
   curTime: 0
 --- !u!1 &812415385
@@ -1507,13 +1620,14 @@ GameObject:
   - component: {fileID: 1543250985}
   - component: {fileID: 1543250984}
   - component: {fileID: 1543250986}
+  - component: {fileID: 1543250987}
   m_Layer: 0
   m_Name: Animal Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1543250983
 Transform:
   m_ObjectHideFlags: 0
@@ -1543,6 +1657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: spawn dealy
   repeatable: 1
+  savekey: 
   timeSet: 3
   curTime: 0
   timeSetMax: 6
@@ -1564,10 +1679,32 @@ MonoBehaviour:
   - {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
   - {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
   timerDelay: {fileID: 1543250984}
-  maxEntities: 3
-  range: 5
-  changePositionTimer: {fileID: 1543250986}
+  rowDelay: {fileID: 1543250986}
+  rowTimes: 3
+  maxEntities: 6
+  lockToTarget: 0
+  target: {fileID: 0}
+  maxRange: 5
+  minRange: 1
+  changePositionTimer: {fileID: 1543250987}
 --- !u!114 &1543250986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543250982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: start row delay
+  repeatable: 1
+  savekey: 
+  timeSet: 0.25
+  curTime: 0
+--- !u!114 &1543250987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1581,6 +1718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: change position delay
   repeatable: 1
+  savekey: 
   timeSet: 0.1
   curTime: 0
 --- !u!114 &1724326189 stripped
@@ -2454,6 +2592,112 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ceb7dc79401cb24490c51fb6600732e, type: 3}
+--- !u!1 &1971614288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971614290}
+  - component: {fileID: 1971614289}
+  - component: {fileID: 1971614291}
+  - component: {fileID: 1971614292}
+  m_Layer: 0
+  m_Name: Effect Giver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1971614289
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971614288}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1971614290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971614288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: -3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1971614291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971614288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2898a295c59734bbab2b99271bfa19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 1971614292}
+  properties: {fileID: 11400000, guid: b5f03b616a83fb04ca106cc2d0d2157e, type: 2}
+--- !u!114 &1971614292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971614288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c654562ce95a8134c81e137c9287965e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2000789076
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,6 +3678,8 @@ SceneRoots:
   - {fileID: 1251446052}
   - {fileID: 4441169468015739516}
   - {fileID: 7837509804770122889}
+  - {fileID: 417461769}
+  - {fileID: 1543250983}
   - {fileID: 933442200}
   - {fileID: 1755308510}
   - {fileID: 1843394547}
@@ -3444,4 +3690,4 @@ SceneRoots:
   - {fileID: 1136692222}
   - {fileID: 2005979092460441144}
   - {fileID: 812415386}
-  - {fileID: 1543250983}
+  - {fileID: 1971614290}

@@ -17,11 +17,19 @@ public class Timer : MonoBehaviour
         curTime = timeSet;
     }
 
+    [SerializeField] protected string savekey;
+
     [SerializeField] protected float timeSet;
     [SerializeField] protected float curTime;
 
+    public void Start()
+    {
+        if (PlayerPrefs.HasKey(savekey)) curTime = PlayerPrefs.GetFloat(savekey);
+    }
+
     public virtual void Update()
     {
+        if (savekey != "" && savekey != string.Empty) PlayerPrefs.SetFloat(savekey, curTime);
         if (curTime > 0f) curTime -= Time.deltaTime * SpeedMultiplier;
         else
         {

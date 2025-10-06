@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4068150867646179132}
   - component: {fileID: 5500761368291544682}
   - component: {fileID: 7535525609482521652}
+  - component: {fileID: -1031136933521986105}
   m_Layer: 0
   m_Name: Animal Fluf
   m_TagString: Untagged
@@ -282,6 +283,7 @@ MonoBehaviour:
   minDistanceToJump: 0
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab: {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
+  escapeSpeedMultiplier: 1
   hpWhenEscaping: 3
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
@@ -299,6 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: time to escape
   repeatable: 0
+  savekey: 
   timeSet: 5
   curTime: 0
 --- !u!114 &7535525609482521652
@@ -315,8 +318,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagname: jump delay
   repeatable: 0
+  savekey: 
   timeSet: 0.2
   curTime: 0
+--- !u!114 &-1031136933521986105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c3d429386b52746b3cb2002ad1d93a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spr: {fileID: 6334257619906543369}
+  autoSet: 1
+  set: {r: 1, g: 1, b: 1, a: 1}
+  speed: 5
 --- !u!1 &8466107372646631808
 GameObject:
   m_ObjectHideFlags: 0

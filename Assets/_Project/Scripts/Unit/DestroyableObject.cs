@@ -18,7 +18,7 @@ public class DestroyableObject : MonoBehaviour
         }
     }
 
-    private int hp = 0;
+    [SerializeField] private int hp = 0;
 
     [SerializeField] protected GameObject objectToDestroy;
     [SerializeField] protected int hpSet = 1;
