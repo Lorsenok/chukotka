@@ -6,6 +6,7 @@ using Zenject;
 public class ControllerAttack : ControllerAddition
 {
     [SerializeField] private Rigidbody2D rg;
+    [SerializeField, Range(0f, 1f)] private float controlsDeadZone = 0.1f;
     [SerializeField] private float speedMultiplier = 0.2f;
     [SerializeField] private int combo;
     [SerializeField] private int curCombo = 0;
@@ -44,7 +45,7 @@ public class ControllerAttack : ControllerAddition
 
     private void Update()
     {
-        if (rg.linearVelocityX != 0f) attackDir = Mathf.Sign(rg.linearVelocityX);
+        if (rg.linearVelocityX > controlsDeadZone || rg.linearVelocityX < -controlsDeadZone) attackDir = Mathf.Sign(rg.linearVelocityX);
         SpeedMultiplier = new Vector2(isAttacking ? speedMultiplier : 1f, 1f);
     }
 

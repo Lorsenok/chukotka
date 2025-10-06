@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8532950574090403787}
   - component: {fileID: 1210232591274148237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,10 +99,11 @@ GameObject:
   - component: {fileID: 7556257341124642839}
   - component: {fileID: 1159714260723656165}
   - component: {fileID: 8871533527641693228}
-  - component: {fileID: 9025270368433224626}
   - component: {fileID: 5380052121345373909}
-  m_Layer: 0
-  m_Name: Bullet
+  - component: {fileID: 1374177568427832504}
+  - component: {fileID: 7351819266188951884}
+  m_Layer: 7
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,36 +203,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rg: {fileID: 1159714260723656165}
-  ignoreController: 1
-  damage: 0
-  damageBySpeedMultiplier: 0.5
+  ignoreController: 0
+  damage: 1
+  damageBySpeedMultiplier: 0
   forceAdditionalAngle: 270
   additionalRotate: 0
-  arrowItem: {fileID: 9025270368433224626}
+  arrowItem: {fileID: 0}
   spawnOnDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   spawnPoint: {fileID: 2625249957812407564}
   shakeOnDamage: 3.5
---- !u!114 &9025270368433224626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3338925308973238584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a007fd3b18ee249ba84c9c034c4230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  messagePoint: {fileID: 7996524646193117645}
-  messagePrefab: {fileID: 4050524605455622718, guid: 4392ccb951ed68e4da75ee7cb184138b, type: 3}
-  table:
-    m_TableReference:
-      m_TableCollectionName: GUID:4527dfa1c61fdb7418ea379f86c6e012
-  messageTextKey: take
-  doubleMessage: 0
-  doubleMessageTextKey: 
 --- !u!114 &5380052121345373909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +225,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0871f748c48352f4593c03df6c2009ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1374177568427832504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3338925308973238584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9cb17762079174c9cce2ca3e3125f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 7351819266188951884}
+--- !u!114 &7351819266188951884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3338925308973238584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: destroy after
+  repeatable: 0
+  timeSet: 10
+  curTime: 10
 --- !u!1 &6143180298047076822
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7996524646193117645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2625249957812407564}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,6 +4,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rg;
+    [SerializeField] private bool ignoreController;
     public float Power { get; set; } = 20f;
     [SerializeField] private int damage;
     [SerializeField] private float damageBySpeedMultiplier = 1f;
@@ -21,7 +22,7 @@ public class Bullet : MonoBehaviour
     {
         Vector3 dir = ProjMath.MoveTowardsAngle(360f - transform.eulerAngles.z - forceAdditionalAngle);
         rg.AddForce(dir.normalized * Power, ForceMode2D.Impulse);
-        arrowItem.enabled = false;
+        if (arrowItem != null) arrowItem.enabled = false;
     }
 
     private bool pin = false;
@@ -30,7 +31,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponentInChildren<Controller>() || other.isTrigger) return;
+        if (other.GetComponentInChildren<Controller>() & ignoreController || other.isTrigger) return;
         
         if (other.gameObject.TryGetComponent(out DestroyableObject damageble) && !pin)
         {
@@ -53,7 +54,7 @@ public class Bullet : MonoBehaviour
             pinPos = transform.localPosition;
             pinRotation = transform.localEulerAngles.z;
 
-            arrowItem.enabled = true;
+            if (arrowItem != null) arrowItem.enabled = true;
         }
     }
 

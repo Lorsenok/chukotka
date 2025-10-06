@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6221011366409381235}
   - component: {fileID: 7537614129086474177}
   - component: {fileID: 4018833868461353898}
+  - component: {fileID: -3233290365505081479}
+  - component: {fileID: 4098558770097772571}
   m_Layer: 0
   m_Name: Stick Sound
   m_TagString: Untagged
@@ -145,3 +147,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3233290365505081479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359130480447200395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9cb17762079174c9cce2ca3e3125f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 4098558770097772571}
+--- !u!114 &4098558770097772571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359130480447200395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: destroy after
+  repeatable: 0
+  timeSet: 10
+  curTime: 10

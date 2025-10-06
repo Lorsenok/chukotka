@@ -169,7 +169,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2, y: 1}
+  m_Size: {x: 0.9, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &3684061691620053265
 MonoBehaviour:
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 5500761368291544682}
   - component: {fileID: 7535525609482521652}
   m_Layer: 0
-  m_Name: AnimalAngry
+  m_Name: Raider Melee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,7 +239,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.67, y: -2.67, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4308564803071460029}
@@ -291,7 +291,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 40
-  m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.8, g: 0.1344266, b: 0.043137264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -367,13 +367,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6, y: 1}
+  m_Size: {x: 50, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &4068150867646179132
 MonoBehaviour:
@@ -394,13 +394,13 @@ MonoBehaviour:
   deceleration: 10
   speed: 20
   acceleration: 30
-  jumpForce: 4
+  jumpForce: 3.5
   jumpDelayTimer: {fileID: 7535525609482521652}
   minDistanceToJump: 1
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab: {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
   escapeSpeedMultiplier: 0.15
-  hpWhenEscaping: 2
+  hpWhenEscaping: 0
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
 --- !u!114 &5500761368291544682

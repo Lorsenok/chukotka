@@ -4,6 +4,9 @@ using Zenject;
 
 public class Gun : MonoBehaviour
 {
+    public Transform Target { get; set; }
+    [SerializeField] private bool pinToMouse = true;
+    
     [SerializeField] private float rotationOffset;
     
     [SerializeField] private Bullet bulletPrefab;
@@ -15,7 +18,7 @@ public class Gun : MonoBehaviour
     }
     private void Update()
     {
-        Vector2 dir = new Vector2(transform.position.x, transform.position.y) - ProjMath.MousePosition();
+        Vector2 dir = new Vector2(transform.position.x, transform.position.y) - (pinToMouse ? ProjMath.MousePosition() : Target.position);
         transform.eulerAngles = new Vector3(0f, 0f, ProjMath.RotateTowardsPosition(dir.normalized) + rotationOffset);
     }
 }
