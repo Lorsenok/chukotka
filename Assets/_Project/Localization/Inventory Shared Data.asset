@@ -47,6 +47,14 @@ MonoBehaviour:
     m_Key: flufdes
     m_Metadata:
       m_Items: []
+  - m_Id: 34123998496284672
+    m_Key: plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34124045757702144
+    m_Key: platedes
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

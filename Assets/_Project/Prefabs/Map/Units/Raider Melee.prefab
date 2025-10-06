@@ -398,7 +398,7 @@ MonoBehaviour:
   jumpDelayTimer: {fileID: 7535525609482521652}
   minDistanceToJump: 1
   destroyableObject: {fileID: 5025325049783167554}
-  dropPrefab: {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
+  dropPrefab: {fileID: 2494444330949010391, guid: fd8f175775ddd0d4998620299f108fff, type: 3}
   escapeSpeedMultiplier: 0.15
   hpWhenEscaping: 0
   timeToEscape: {fileID: 5500761368291544682}

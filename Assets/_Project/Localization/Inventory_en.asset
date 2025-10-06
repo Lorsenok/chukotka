@@ -50,6 +50,14 @@ MonoBehaviour:
     m_Localized: Soft and fluffy, literally
     m_Metadata:
       m_Items: []
+  - m_Id: 34123998496284672
+    m_Localized: Plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34124045757702144
+    m_Localized: Shiny, just a piece of broken armor
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

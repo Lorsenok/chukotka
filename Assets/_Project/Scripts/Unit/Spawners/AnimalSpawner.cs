@@ -6,7 +6,8 @@ public class AnimalSpawner : Spawner
 {
     private Vector3 startPosition;
     [Header("Animal Spawner")]
-    [SerializeField] private float range;
+    [SerializeField] private float maxRange;
+    [SerializeField] private float minRange;
     [SerializeField] private Timer changePositionTimer;
 
     public override void OnEnable()
@@ -23,8 +24,9 @@ public class AnimalSpawner : Spawner
 
     private void OnPositionChange()
     {
+        float curRange = Random.Range(-maxRange, maxRange);
         transform.position =
-            new Vector3(startPosition.x + Random.Range(-range, range), startPosition.y, startPosition.z);
+            new Vector3(startPosition.x + curRange, startPosition.y, startPosition.z);
     }
 
     public void Start()
