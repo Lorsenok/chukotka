@@ -24,6 +24,7 @@ public class DestroyableObject : MonoBehaviour
 
     [SerializeField] private int hp = 0;
 
+    [SerializeField] protected bool destroyAfterDying = true;
     [SerializeField] protected GameObject objectToDestroy;
     [SerializeField] protected int hpSet = 1;
     [SerializeField] protected int maxHP = 1;
@@ -44,7 +45,8 @@ public class DestroyableObject : MonoBehaviour
         if (hp <= 0)
         {
             OnDie?.Invoke();
-            Destroy(objectToDestroy);
+            enabled = false;
+            if (destroyAfterDying) Destroy(objectToDestroy);
         }
     }
 }

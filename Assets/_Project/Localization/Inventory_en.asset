@@ -67,11 +67,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 34500222494171136
-    m_Localized: <color=green>USABLE</color> Wistle
+    m_Localized: <color=green>(USABLE)</color> Wistle
     m_Metadata:
       m_Items: []
   - m_Id: 34500483241467904
     m_Localized: You play on this thing so bad that it makes enemies suffer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34539707508449280
+    m_Localized: <color=blue>(PASSIVE)</color> Life Totem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34540410759012352
+    m_Localized: Saves your life from an anavoidable <color=red>death</color>
     m_Metadata:
       m_Items: []
   references:

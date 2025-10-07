@@ -156,6 +156,8 @@ GameObject:
   - component: {fileID: 6853469387135296411}
   - component: {fileID: 5633686456033540647}
   - component: {fileID: 1813912370867723303}
+  - component: {fileID: 4827099910807557395}
+  - component: {fileID: 3545388424585552150}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -280,6 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: sound delay
   repeatable: 1
   savekey: 
@@ -314,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: jump block
   repeatable: 0
   savekey: 
@@ -348,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: dash block
   repeatable: 0
   savekey: 
@@ -387,6 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: attack
   repeatable: 0
   savekey: 
@@ -404,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: attack delay
   repeatable: 0
   savekey: 
@@ -421,6 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: combo time
   repeatable: 0
   savekey: 
@@ -459,6 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: bow delay
   repeatable: 0
   savekey: 
@@ -520,11 +529,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  destroyAfterDying: 0
   objectToDestroy: {fileID: 0}
   hpSet: 10
   maxHP: 10
   saveHP: 1
   saveHPKey: playerhp
+  spawnAfterDamage: []
 --- !u!114 &7909124019342510573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +976,38 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.8125, y: 1.875}
   m_Direction: 0
+--- !u!114 &4827099910807557395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe60989e2e2cf642876d2121f558063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellChecker: {fileID: 3545388424585552150}
+  destroyableObject: {fileID: 7916989941622342710}
+  set: 10
+  spawnOnUse:
+  - {fileID: 8461508990194909022, guid: d2a863c7eaa1e8b4fa7afb582fee51b0, type: 3}
+  cameraShakePower: 50
+--- !u!114 &3545388424585552150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3493092cd3387e249b4d8e2d42ce530d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 6dcda4b21ece34a47abf1481648e45df, type: 2}
+  cells: []
 --- !u!1 &4773197948713730725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: effect time
   repeatable: 0
   savekey: 
@@ -1756,6 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: effect time
   repeatable: 0
   savekey: 

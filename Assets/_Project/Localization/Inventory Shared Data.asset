@@ -71,6 +71,14 @@ MonoBehaviour:
     m_Key: whistledes
     m_Metadata:
       m_Items: []
+  - m_Id: 34539707508449280
+    m_Key: totem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34540410759012352
+    m_Key: totemdes
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
