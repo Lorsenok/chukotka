@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class TargetFollower : MonoBehaviour
 {
+    public float SpeedMultiplier { get; set; } = 1f;
+    
     [SerializeField] protected Transform target;
     [SerializeField] protected Rigidbody2D rg;
     [SerializeField] protected GroundChecker groundChecker;
@@ -36,7 +38,7 @@ public class TargetFollower : MonoBehaviour
 
     public virtual void Move(float multiplier)
     {
-        rg.linearVelocityX += (target.position - transform.position).normalized.x * acceleration * Time.deltaTime * multiplier;
+        rg.linearVelocityX += (target.position - transform.position).normalized.x * acceleration * Time.deltaTime * multiplier * SpeedMultiplier;
         rg.linearVelocityX = Mathf.Clamp(rg.linearVelocityX, -speed, speed);
     }
 

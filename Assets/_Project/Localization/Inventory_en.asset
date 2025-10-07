@@ -66,6 +66,14 @@ MonoBehaviour:
     m_Localized: Makes your enemies bleed for 15s
     m_Metadata:
       m_Items: []
+  - m_Id: 34500222494171136
+    m_Localized: <color=green>USABLE</color> Wistle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34500483241467904
+    m_Localized: You play on this thing so bad that it makes enemies suffer
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

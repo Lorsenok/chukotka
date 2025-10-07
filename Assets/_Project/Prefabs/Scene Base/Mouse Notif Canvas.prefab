@@ -178,11 +178,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 118453370433949019, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
       propertyPath: curTime
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 118453370433949019, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
       propertyPath: timeSet
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 518276950321337400, guid: c66380697ddcdc94fa84b0db7f99f984, type: 3}
       propertyPath: textLetterPrefab

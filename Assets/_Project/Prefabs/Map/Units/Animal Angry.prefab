@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: damage delay
   repeatable: 1
   savekey: 
@@ -225,6 +226,7 @@ GameObject:
   - component: {fileID: 5500761368291544682}
   - component: {fileID: 7535525609482521652}
   - component: {fileID: -6585730592156180498}
+  - component: {fileID: 2223824031188991272}
   m_Layer: 0
   m_Name: Animal Angry
   m_TagString: Untagged
@@ -418,6 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: time to escape
   repeatable: 0
   savekey: 
@@ -435,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: jump delay
   repeatable: 0
   savekey: 
@@ -456,6 +460,18 @@ MonoBehaviour:
   autoSet: 1
   set: {r: 1, g: 1, b: 1, a: 1}
   speed: 5
+--- !u!114 &2223824031188991272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0871f748c48352f4593c03df6c2009ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8466107372646631808
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1414188339848404060}
   - component: {fileID: 8540503354746646810}
-  - component: {fileID: 2639370365332037289}
-  - component: {fileID: 6424298779222534124}
-  - component: {fileID: -9212862398010634833}
-  m_Layer: 7
-  m_Name: Bloody Effect Giver
+  - component: {fileID: -3491751396526552467}
+  - component: {fileID: 7450929714489425598}
+  - component: {fileID: 3839735507566992800}
+  - component: {fileID: 1129532205329315528}
+  m_Layer: 0
+  m_Name: Stun Effect Giver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +82,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2639370365332037289
+--- !u!114 &-3491751396526552467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,13 +91,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6397520517325308031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd06ef63712c8254e96c7428a1069cc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b2898a295c59734bbab2b99271bfa19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 6424298779222534124}
-  properties: {fileID: 11400000, guid: b5f03b616a83fb04ca106cc2d0d2157e, type: 2}
-  timerToDestroy: {fileID: 0}
---- !u!114 &6424298779222534124
+  effect: {fileID: 7450929714489425598}
+  properties: {fileID: 11400000, guid: be69c4d511f735b4c84c953330a4c130, type: 2}
+  timerToDestroy: {fileID: 3839735507566992800}
+--- !u!114 &7450929714489425598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,10 +106,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 6397520517325308031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c654562ce95a8134c81e137c9287965e, type: 3}
+  m_Script: {fileID: 11500000, guid: a55a969d9b89e2a429a5580c46f862e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-9212862398010634833
+--- !u!114 &3839735507566992800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397520517325308031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateLock: 1
+  tagname: 
+  repeatable: 0
+  savekey: 
+  timeSet: 0
+  curTime: 0.5
+--- !u!114 &1129532205329315528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
