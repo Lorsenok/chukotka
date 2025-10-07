@@ -14,6 +14,10 @@ public class DestroyableObject : MonoBehaviour
         set
         {
             if (saveHP) PlayerPrefs.SetInt(saveHPKey, hp);
+            foreach (var obj in spawnAfterDamage)
+            {
+                Instantiate(obj, transform.position, obj.transform.rotation);
+            }
             hp = value;
         }
     }
@@ -25,6 +29,7 @@ public class DestroyableObject : MonoBehaviour
     [SerializeField] protected int maxHP = 1;
     [SerializeField] protected bool saveHP = false;
     [SerializeField] protected string saveHPKey;
+    [SerializeField] protected GameObject[] spawnAfterDamage;
     
     public virtual void Start()
     {

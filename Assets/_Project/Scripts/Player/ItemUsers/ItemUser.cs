@@ -5,7 +5,7 @@ using Zenject;
 
 public class ItemUser : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    [SerializeField] protected Transform target;
     [SerializeField] protected CellUser[] cellUsers;
     [SerializeField] protected Item item;
     [SerializeField] protected bool removeItemAfterUsing = true;
@@ -35,7 +35,7 @@ public class ItemUser : MonoBehaviour
         Action();
     }
 
-    protected virtual void Action()
+    public virtual void Action()
     {
         
     }
@@ -50,8 +50,15 @@ public class ItemUser : MonoBehaviour
         transform.position = target.position;
     }
 
+    public void Start()
+    {
+        if (target == null) target = FindObjectsByType<Controller>(FindObjectsSortMode.None)[0].transform;
+    }
+
     public void OnEnable()
     {
+        if (cellUsers.Length == 0)  cellUsers = FindObjectsOfType<CellUser>();
+        
         delayTimer.OnTimerEnd += OnDelayEnd;
         foreach (CellUser cellUser in cellUsers)
         {

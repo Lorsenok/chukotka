@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 4860987437675071143}
   - component: {fileID: 518276950321337400}
   - component: {fileID: 118453370433949019}
+  - component: {fileID: 431191146713853215}
   m_Layer: 5
   m_Name: Dialogue Message
   m_TagString: Untagged
@@ -200,7 +201,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: time per symbols
   repeatable: 1
+  savekey: 
   timeSet: 0.05
   curTime: 0.05
+--- !u!114 &431191146713853215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8011909790720721607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0871f748c48352f4593c03df6c2009ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

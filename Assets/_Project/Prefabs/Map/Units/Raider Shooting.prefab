@@ -512,8 +512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af15684836036f24f85e174ce1bd5f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   objectToDestroy: {fileID: 4698977778594916722}
   hpSet: 6
   maxHP: 6
   saveHP: 0
   saveHPKey: 
+  spawnAfterDamage:
+  - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}

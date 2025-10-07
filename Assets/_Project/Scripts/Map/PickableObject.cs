@@ -23,7 +23,7 @@ public class PickableObject : MonoBehaviour
 
     public virtual void OnEnter(GameObject obj)
     {
-        if (gameState.GetCurrectState() != GameState.Game) return;
+        if (gameState.GetCurrentState() != GameState.Game) return;
         if (obj == target)
         {
             canBePicked = true;
@@ -32,7 +32,7 @@ public class PickableObject : MonoBehaviour
 
     public virtual void OnLeave(GameObject obj)
     {
-        if (gameState.GetCurrectState() != GameState.Game) return;
+        if (gameState.GetCurrentState() != GameState.Game) return;
         if (obj == target)
         {
             canBePicked = false;

@@ -373,8 +373,8 @@ MonoBehaviour:
   comboTimer: {fileID: 4391691324269488327}
   attackTimer: {fileID: 6443837458819563267}
   perAttackTimer: {fileID: 4035352908488688487}
-  leftAttack: {fileID: 8729133154961079779}
-  rightAttack: {fileID: 8294101037761480325}
+  leftAttack: {fileID: 1506920000662560620}
+  rightAttack: {fileID: 1003478224374119374}
 --- !u!114 &6443837458819563267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,6 +1341,7 @@ GameObject:
   - component: {fileID: 7630364170588677959}
   - component: {fileID: 2419859390013650607}
   - component: {fileID: 5377088096570222871}
+  - component: {fileID: 326766709151423603}
   m_Layer: 0
   m_Name: attack
   m_TagString: Untagged
@@ -1408,7 +1409,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1485,6 +1486,7 @@ MonoBehaviour:
   spawnOnDamageObject: 0
   shakeOnDamage: 5
   timerDelay: {fileID: 0}
+  effectTimer: {fileID: 326766709151423603}
 --- !u!114 &2419859390013650607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1525,6 +1527,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &326766709151423603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8294101037761480325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: effect time
+  repeatable: 0
+  savekey: 
+  timeSet: 15
+  curTime: 0
 --- !u!1 &8729133154961079779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1558,7 @@ GameObject:
   - component: {fileID: 1302839740376244418}
   - component: {fileID: 8772823518037742509}
   - component: {fileID: 7426212432781859548}
+  - component: {fileID: 8757336182906622941}
   m_Layer: 0
   m_Name: attack
   m_TagString: Untagged
@@ -1606,7 +1626,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1683,6 +1703,7 @@ MonoBehaviour:
   spawnOnDamageObject: 0
   shakeOnDamage: 5
   timerDelay: {fileID: 0}
+  effectTimer: {fileID: 8757336182906622941}
 --- !u!114 &8772823518037742509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1723,3 +1744,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &8757336182906622941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8729133154961079779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: effect time
+  repeatable: 0
+  savekey: 
+  timeSet: 15
+  curTime: 0

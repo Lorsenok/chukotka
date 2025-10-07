@@ -24,7 +24,7 @@ public class GameMenu : MonoBehaviour
 
     public virtual void Update()
     {
-        if (!isMenuOpen && blankMenu.Open) curState = gameState.GetCurrectState();
+        if (!isMenuOpen && blankMenu.Open) curState = gameState.GetCurrentState();
     }
 
     public virtual void OnEnable()

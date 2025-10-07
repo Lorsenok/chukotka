@@ -11,7 +11,7 @@ public enum GameState
 
 public interface IGameState
 {
-    GameState GetCurrectState();
+    GameState GetCurrentState();
     void SetState(GameState state);
 }
 
@@ -19,7 +19,7 @@ public class GameStateService : IGameState
 {
     private GameState curState;
 
-    public GameState GetCurrectState()
+    public GameState GetCurrentState()
     {
         return curState;
     }

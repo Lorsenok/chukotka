@@ -20,7 +20,7 @@ public abstract class Minigame : MonoBehaviour
     public virtual void StartGame()
     {
         gameObject.SetActive(true);
-        prevState = gameState.GetCurrectState();
+        prevState = gameState.GetCurrentState();
         gameState.SetState(state);
     }
 

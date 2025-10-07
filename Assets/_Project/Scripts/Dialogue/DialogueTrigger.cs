@@ -16,7 +16,7 @@ public class DialogueTrigger : DialogueTriggerMessage
     public override void Action()
     {
         base.Action();
-        if (gameState.GetCurrectState() == GameState.Game && isPlayerOn)
+        if (gameState.GetCurrentState() == GameState.Game && isPlayerOn)
         {
             dialogueSetter.SetTree(tree, trigger);
         }

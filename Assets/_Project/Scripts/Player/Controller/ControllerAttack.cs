@@ -13,8 +13,8 @@ public class ControllerAttack : ControllerAddition
     [SerializeField] private Timer comboTimer;
     [SerializeField] private Timer attackTimer;
     [SerializeField] private Timer perAttackTimer;
-    [SerializeField] private GameObject leftAttack;
-    [SerializeField] private GameObject rightAttack;
+    [SerializeField] private Collider2D leftAttack;
+    [SerializeField] private Collider2D rightAttack;
     private float attackDir = 1f;
     
     private InputSystem input;
@@ -71,16 +71,16 @@ public class ControllerAttack : ControllerAddition
         canAttack = false;
         perAttackTimer.StartTimer(); 
         attackTimer.StartTimer();
-        leftAttack.SetActive(attackDir < 0f);
-        rightAttack.SetActive(attackDir > 0f);
+        leftAttack.enabled = (attackDir < 0f);
+        rightAttack.enabled = (attackDir > 0f);
     }
 
     private bool isAttacking = false;
     private void OnAttackEnd()
     {
         isAttacking = false;
-        leftAttack.SetActive(false);
-        rightAttack.SetActive(false);
+        leftAttack.enabled = (false);
+        rightAttack.enabled = (false);
     }
 
     private bool canAttack = false;

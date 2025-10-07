@@ -111,7 +111,7 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
-        if (gameState.GetCurrectState() != GameState.Game)
+        if (gameState.GetCurrentState() != GameState.Game)
         {
             rg.linearVelocityX = 0f;
             return;

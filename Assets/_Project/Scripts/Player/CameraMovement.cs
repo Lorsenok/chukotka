@@ -36,7 +36,7 @@ public class CameraMovement : MonoBehaviour
     private void FixedUpdate()
     {
         curShakeOffset = Vector3.Lerp(curShakeOffset, Vector3.zero, shakeExpireSpeed * Time.deltaTime);
-        if (state.GetCurrectState() != stateLock) return;
+        if (state.GetCurrentState() != stateLock) return;
         Vector3 targetPos = target.position + offset;
         targetPos.y = ylock ? starty : transform.position.y;
         transform.position = Vector3.Lerp(transform.position, targetPos + curShakeOffset, speed * Time.deltaTime);

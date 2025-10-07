@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bleeding
   m_EditorClassIdentifier: 
   power: 1
-  duration: 5
+  duration: 3
