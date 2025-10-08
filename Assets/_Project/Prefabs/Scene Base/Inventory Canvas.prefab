@@ -141,7 +141,8 @@ MonoBehaviour:
   openButton: {fileID: 2947976828484553450}
   switchByEscape: 0
   state: 4
-  canvas: {fileID: 6247093711537981012}
+  canvas: {fileID: 2115799098125923828}
+  panel: {fileID: 6247093711537981012}
   itemsSpawnCanvas: {fileID: 6496880900526374149}
   itemPrefab: {fileID: 7255650423447059082, guid: 5514a29a12caf8140a210d39d2f09dd6, type: 3}
   gridPositions:
@@ -211,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: 18.5}
+  targetIsCamera: 1
 --- !u!1 &826316212243149184
 GameObject:
   m_ObjectHideFlags: 0

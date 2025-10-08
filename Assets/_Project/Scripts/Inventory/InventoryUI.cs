@@ -20,7 +20,8 @@ public class InventoryUI : GameMenu
     public static bool[] ItemsFree { get; set; }
     
     [Header("Inventory")]
-    [SerializeField] private Transform canvas;
+    [SerializeField] private Canvas canvas;
+    [SerializeField] private Transform panel;
     [SerializeField] private Transform itemsSpawnCanvas;
     [SerializeField] private InventoryItemUI itemPrefab;
     [SerializeField] private InventoryCell[] gridPositions;
@@ -40,9 +41,11 @@ public class InventoryUI : GameMenu
 
     private void Start()
     {
+        canvas.worldCamera = Camera.main;
+        
         for (int i = 0; i < gridPositions.Length; i++)
         {
-            gridPositions[i].Canvas = canvas.GetComponent<RectTransform>();
+            gridPositions[i].Canvas = panel.GetComponent<RectTransform>();
         }
 
         GridUpdate();

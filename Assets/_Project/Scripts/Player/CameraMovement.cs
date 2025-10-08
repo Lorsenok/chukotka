@@ -31,6 +31,9 @@ public class CameraMovement : MonoBehaviour
     private void Start()
     {
         starty = transform.position.y;
+        Vector3 targetPos = target.position + offset;
+        targetPos.y = ylock ? starty : transform.position.y;
+        transform.position = targetPos;
     }
 
     private void FixedUpdate()

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5785e3929aded3344a86bf7475f41ead, type: 3}
-  m_Name: Test Trade Item
+  m_Name: Fish Trade
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: e9628809024d6bb4ea84cbd396f68dc9, type: 2}
-  itemForTrade: {fileID: 11400000, guid: 4f3db4de5748b8848b51c9ebfe070f0d, type: 2}
+  item: {fileID: 11400000, guid: faf2dc5bcfda33d4785ecafedacf9367, type: 2}
+  itemForTrade: {fileID: 11400000, guid: be15635bed4faf64da6986fa80d281f1, type: 2}

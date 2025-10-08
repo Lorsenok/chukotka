@@ -7,28 +7,28 @@ public class Trigger : MonoBehaviour //Idk how to do it in another way actually
     public static Action<int> TriggerById { get; set; }
     public static Action TriggerAll { get; set; }
 
-    [SerializeField] private int id = -1;
-    [SerializeField] private GameObject[] spawnObjects;
-    [SerializeField] private GameObject[] spawnObjectsPos;
-    [SerializeField] private GameObject[] enableObjects;
-    [SerializeField] private GameObject[] disableObjects;
-    [SerializeField] private GameObject[] destroyObjects;
+    [SerializeField] protected int id = -1;
+    [SerializeField] protected GameObject[] spawnObjects;
+    [SerializeField] protected GameObject[] spawnObjectsPos;
+    [SerializeField] protected GameObject[] enableObjects;
+    [SerializeField] protected GameObject[] disableObjects;
+    [SerializeField] protected GameObject[] destroyObjects;
 
-    [SerializeField] private int activateAnotherTriggerId = -1;
+    [SerializeField] protected int activateAnotherTriggerId = -1;
 
-    private void OnEnable()
+    public virtual void OnEnable()
     {
         TriggerAll += Action;
         TriggerById += ActionById;
     }
 
-    private void OnDisable()
+    public virtual void OnDisable()
     {
         TriggerAll -= Action;
         TriggerById -= ActionById;
     }
 
-    public void Action()
+    public virtual void Action()
     {
         foreach (var obj in spawnObjects)
         {

@@ -464,7 +464,7 @@ MonoBehaviour:
   spr: {fileID: 6334257619906543369}
   autoSet: 1
   set: {r: 1, g: 1, b: 1, a: 1}
-  speed: 5
+  speed: 2.5
 --- !u!114 &-8437260921589478668
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,6 @@ public class BootstrapSceneChanger : MonoBehaviour
 
     private void Start()
     {
-        sceneChanger.ChangeScene(nextSceneName);
+        sceneChanger.ChangeScene(nextSceneName, SceneStartType.center);
     }
 }
