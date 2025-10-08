@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 605ab5409d2e67b4bad5a9aaefc6d1d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grapSpeed: 5
+  grapSpeed: 20
   image: {fileID: 8917421975784410662}
   pos: {fileID: 6032205601676243341}
 --- !u!114 &-6371404842422581264
