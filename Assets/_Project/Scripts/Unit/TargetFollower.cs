@@ -25,6 +25,11 @@ public class TargetFollower : MonoBehaviour
     [SerializeField] protected CustomAnimator move;
     [SerializeField] protected SpriteRenderer spr;
     [SerializeField] protected float minVelocityToMove;
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
     
     public virtual void OnEnable()
     {

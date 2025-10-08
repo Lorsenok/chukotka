@@ -14,9 +14,12 @@ public class DestroyableObject : MonoBehaviour
         set
         {
             if (saveHP) PlayerPrefs.SetInt(saveHPKey, hp);
-            foreach (var obj in spawnAfterDamage)
+            if (hp > value)
             {
-                Instantiate(obj, transform.position, obj.transform.rotation);
+                foreach (var obj in spawnAfterDamage)
+                {
+                    Instantiate(obj, transform.position, obj.transform.rotation);
+                }
             }
             hp = value;
         }

@@ -5,7 +5,9 @@ public class Pet : DialogueTriggerMessage
 {
     private DestroyableObject destroyableObject;
     [SerializeField] private Item itemForUse;
+    [SerializeField] private GameObject[] spawnOnUseItem;
     [SerializeField] private int heal;
+    [SerializeField] private TargetFollower targetFollower;
     
     private IInventory inventory;
     [Inject]
@@ -23,6 +25,7 @@ public class Pet : DialogueTriggerMessage
     {
         base.Start();
         destroyableObject = target.gameObject.GetComponent<DestroyableObject>();
+        targetFollower.SetTarget(FindObjectsByType<Controller>(FindObjectsSortMode.None)[0].transform);
     }
     
     public override void Action()
@@ -32,5 +35,9 @@ public class Pet : DialogueTriggerMessage
         inventory.Items.Remove(itemForUse);
         inventory.OnItemsChanged?.Invoke();
         destroyableObject.HP += heal;
+        foreach (var spawn in spawnOnUseItem)
+        {
+            Instantiate(spawn, transform.position, spawn.transform.rotation);
+        }
     }
 }

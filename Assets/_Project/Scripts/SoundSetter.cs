@@ -4,6 +4,7 @@ public class SoundSetter : MonoBehaviour
 {
     [SerializeField] private AudioSource[] sounds;
     [SerializeField] private AudioSource[] music;
+    [SerializeField] private float multiplier = 1f;
 
     private void Awake()
     {
@@ -20,12 +21,12 @@ public class SoundSetter : MonoBehaviour
     {
         foreach (var sound in sounds)
         {
-            sound.volume = Config.Sound;
+            sound.volume = Config.Sound * multiplier;
         }
 
         foreach (var music in music)
         {
-            music.volume = Config.Music;
+            music.volume = Config.Music * multiplier;
         }
     }
 }

@@ -16,6 +16,7 @@ public class ControllerBow : ControllerAddition
     private float curLoadTime = 0f;
     [SerializeField] private Timer perLoadTimer;
     [SerializeField] private float loadSpeedMultiplier;
+    [SerializeField] private GameObject[] spawnOnShoot;
     
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI text;
@@ -77,6 +78,11 @@ public class ControllerBow : ControllerAddition
             curLoadTime = 0f;
             perLoadTimer.StartTimer();
             isLoading = true;
+
+            foreach (GameObject obj in spawnOnShoot)
+            {
+                Instantiate(obj, transform.position, obj.transform.rotation);
+            }
 
             Arrows--;
             SaveArrows();

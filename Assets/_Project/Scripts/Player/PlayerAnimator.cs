@@ -45,8 +45,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private void Update()
     {
-        bool isMoving = rg.linearVelocity.x > minSpeedForRunAnim | rg.linearVelocity.x < -minSpeedForRunAnim
-                        || rg.linearVelocity.y > minSpeedForRunAnim | rg.linearVelocity.y < -minSpeedForRunAnim;
+        bool isMoving = rg.linearVelocity.x > minSpeedForRunAnim | rg.linearVelocity.x < -minSpeedForRunAnim;
         if (gameState.GetCurrentState() == GameState.Cutscene)
         {
             talk.enabled = true;

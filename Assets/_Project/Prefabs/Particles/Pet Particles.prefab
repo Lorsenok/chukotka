@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2041877470132927724}
   - component: {fileID: 6707078905739913962}
   m_Layer: 0
-  m_Name: DamageParticles
+  m_Name: Pet Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0, b: 0, a: 1}
+      maxColor: {r: 0.38318795, g: 0.60500145, b: 0.745283, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

@@ -15,7 +15,7 @@ public class DialogueMessage : MonoBehaviour
 
     private void OnTimerEnd()
     {
-        if (curSym == CurText.Length) return;
+        if (curSym >= CurText.Length) return;
         
         text.text += CurText[curSym];
 

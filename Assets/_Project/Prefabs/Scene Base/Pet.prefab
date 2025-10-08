@@ -54,7 +54,11 @@ MonoBehaviour:
   doubleMessage: 1
   doubleMessageTextKey: noheal
   itemForUse: {fileID: 11400000, guid: faf2dc5bcfda33d4785ecafedacf9367, type: 2}
+  spawnOnUseItem:
+  - {fileID: 1359130480447200395, guid: cdae2544dd370dd48ae71b40124f85c3, type: 3}
+  - {fileID: 2181136554569465549, guid: f0edd4ddbc2bfdd4aad2d68e904cf4ae, type: 3}
   heal: 1
+  targetFollower: {fileID: 366702161343247526}
 --- !u!61 &9150714379145835766
 BoxCollider2D:
   m_ObjectHideFlags: 0
