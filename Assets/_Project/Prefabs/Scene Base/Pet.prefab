@@ -99,7 +99,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &2564853708057538122
 GameObject:
@@ -128,7 +128,7 @@ Transform:
   m_GameObject: {fileID: 2564853708057538122}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.619, z: 0}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -178,7 +178,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.96, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &5309430258203204775
 MonoBehaviour:
@@ -237,6 +237,8 @@ GameObject:
   - component: {fileID: 1184131261235590079}
   - component: {fileID: 366702161343247526}
   - component: {fileID: 2790582102380298432}
+  - component: {fileID: 5791665234605276985}
+  - component: {fileID: 8200958204273365472}
   m_Layer: 8
   m_Name: Pet
   m_TagString: Untagged
@@ -306,7 +308,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 45
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -1819977306, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -355,13 +357,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.65625, y: 1.25}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.67, y: 1.27}
   m_EdgeRadius: 0
 --- !u!50 &1184131261235590079
 Rigidbody2D:
@@ -405,13 +407,17 @@ MonoBehaviour:
   target: {fileID: 0}
   rg: {fileID: 1184131261235590079}
   groundChecker: {fileID: 5309430258203204775}
-  minDistance: 3.5
+  minDistance: 3
   deceleration: 10
   speed: 80
   acceleration: 50
   jumpForce: 5
   jumpDelayTimer: {fileID: 2790582102380298432}
   minDistanceToJump: 1
+  idle: {fileID: 5791665234605276985}
+  move: {fileID: 8200958204273365472}
+  spr: {fileID: 663601553081523855}
+  minVelocityToMove: 0.1
 --- !u!114 &2790582102380298432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +430,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateLock: 1
   tagname: jump delay
   repeatable: 0
+  savekey: 
   timeSet: 1
   curTime: 0
+--- !u!114 &5791665234605276985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903398780076614845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spr: {fileID: 663601553081523855}
+  sprites:
+  - {fileID: -1819977306, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
+  - {fileID: -1337270824, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
+  - {fileID: 1013973138, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
+  - {fileID: 1530365451, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
+  - {fileID: -1934148157, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
+  - {fileID: 82357043, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
+  - {fileID: -1772774316, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
+  - {fileID: 275232612, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
+  timePerFrame: 0.1
+  loop: 1
+  curSprite: 0
+--- !u!114 &8200958204273365472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5903398780076614845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spr: {fileID: 663601553081523855}
+  sprites:
+  - {fileID: -1765262827, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}
+  - {fileID: 283589070, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}
+  - {fileID: -1564684460, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}
+  - {fileID: 787072847, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}
+  - {fileID: 1486664055, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}
+  - {fileID: 2144722323, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}
+  - {fileID: 2009413002, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}
+  - {fileID: -1558227190, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}
+  timePerFrame: 0.1
+  loop: 1
+  curSprite: 0

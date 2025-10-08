@@ -169,7 +169,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.2, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &3684061691620053265
 MonoBehaviour:
@@ -402,6 +402,10 @@ MonoBehaviour:
   jumpForce: 4
   jumpDelayTimer: {fileID: 7535525609482521652}
   minDistanceToJump: 1
+  idle: {fileID: 0}
+  move: {fileID: 0}
+  spr: {fileID: 0}
+  minVelocityToMove: 0
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab: {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
   escapeSpeedMultiplier: 0.15
@@ -564,6 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
+  destroyAfterDying: 1
   objectToDestroy: {fileID: 4698977778594916722}
   hpSet: 6
   maxHP: 6
@@ -571,3 +576,4 @@ MonoBehaviour:
   saveHPKey: 
   spawnAfterDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
+  - {fileID: 1359130480447200395, guid: e751efc145c24be4aa76bbd4ad2f21c6, type: 3}

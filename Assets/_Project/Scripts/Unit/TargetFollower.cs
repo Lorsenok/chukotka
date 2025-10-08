@@ -20,6 +20,12 @@ public class TargetFollower : MonoBehaviour
     [SerializeField] protected Timer jumpDelayTimer;
     [SerializeField] protected float minDistanceToJump;
     
+    [Header("Animation")]
+    [SerializeField] protected CustomAnimator idle;
+    [SerializeField] protected CustomAnimator move;
+    [SerializeField] protected SpriteRenderer spr;
+    [SerializeField] protected float minVelocityToMove;
+    
     public virtual void OnEnable()
     {
         jumpDelayTimer.OnTimerEnd += OnJumpDelayEnd;
@@ -36,17 +42,26 @@ public class TargetFollower : MonoBehaviour
         canJump = true;
     }
 
-    public virtual void Move(float multiplier)
+    public void Move(float multiplier)
     {
         rg.linearVelocityX += (target.position - transform.position).normalized.x * acceleration * Time.deltaTime * multiplier * SpeedMultiplier;
         rg.linearVelocityX = Mathf.Clamp(rg.linearVelocityX, -speed, speed);
     }
 
-    public virtual void Jump()
+    public void Jump()
     {
         rg.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         canJump = false;
         jumpDelayTimer.StartTimer();
+    }
+
+    private float ignoreAnimationsTime = 0f;
+    private CustomAnimator lastAnimator;
+    public void PullOtherAnimation(CustomAnimator animator, float time)
+    {
+        lastAnimator = animator;
+        animator.enabled = true;
+        ignoreAnimationsTime = time;
     }
 
     public virtual void Update()
@@ -61,5 +76,17 @@ public class TargetFollower : MonoBehaviour
         {
             Jump();
         }
+
+        if (ignoreAnimationsTime > 0f)
+        {
+            ignoreAnimationsTime -= Time.deltaTime;
+            return;
+        }
+
+        if (lastAnimator != null) lastAnimator.enabled = false;
+        bool isMoving = rg.linearVelocityX > minVelocityToMove || rg.linearVelocityX < -minVelocityToMove;
+        if (idle != null) idle.enabled = !isMoving;
+        if (move != null) move.enabled = isMoving;
+        if (spr != null && isMoving) spr.flipX = rg.linearVelocityX < 0f;
     }
 }
