@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
 
     public void Start()
     {
-        if (PlayerPrefs.HasKey(savekey)) curTime = PlayerPrefs.GetFloat(savekey);
+        if (PlayerPrefs.HasKey(savekey)) curTime = (float)GameSaver.Load(savekey, typeof(float));
     }
 
     public virtual void Update()
@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
             return;
         }
         if (stateLock != GameState.Any && gameState.GetCurrentState() != stateLock) return;
-        if (savekey != "" && savekey != string.Empty) PlayerPrefs.SetFloat(savekey, curTime);
+        if (savekey != "" && savekey != string.Empty) GameSaver.Save(savekey, curTime);
         if (curTime > 0f) curTime -= Time.deltaTime * SpeedMultiplier;
         else
         {

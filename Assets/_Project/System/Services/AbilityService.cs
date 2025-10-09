@@ -19,16 +19,16 @@ public class AbilityService : IAbilityContainer
     {
         Abilities.Add(ability);
         
-        PlayerPrefs.SetInt("curabs", Abilities.Count);
+        GameSaver.Save("curabs", Abilities.Count);
 
         string id = Abilities.Count.ToString();
-        PlayerPrefs.SetInt(id + "_jumps", ability.Jumps);
-        PlayerPrefs.SetInt(id + "_combo", ability.Combo);
-        PlayerPrefs.SetInt(id + "_dash", ability.DashPower);
+        GameSaver.Save(id + "_jumps", ability.Jumps);
+        GameSaver.Save(id + "_combo", ability.Combo);
+        GameSaver.Save(id + "_dash", ability.DashPower);
         
-        PlayerPrefs.SetFloat(id + "_ac", ability.Aceleration);
-        PlayerPrefs.SetFloat(id + "_speed", ability.Speed);
-        PlayerPrefs.SetFloat(id + "_dec", ability.Deceleration);
+        GameSaver.Save(id + "_ac", ability.Aceleration);
+        GameSaver.Save(id + "_speed", ability.Speed);
+        GameSaver.Save(id + "_dec", ability.Deceleration);
         
         OnAbilitiesChanged?.Invoke();
     }
@@ -41,13 +41,13 @@ public class AbilityService : IAbilityContainer
         {
             AbilityObject ability = new();
             
-            ability.Jumps =  PlayerPrefs.GetInt(i.ToString() + "_jumps");
-            ability.Combo = PlayerPrefs.GetInt(i.ToString() + "_combo");
-            ability.DashPower = PlayerPrefs.GetInt(i.ToString() + "_dash");
+            ability.Jumps =  (int)GameSaver.Load(i.ToString() + "_jumps", typeof(int));
+            ability.Combo = (int)GameSaver.Load(i.ToString() + "_combo", typeof(int));
+            ability.DashPower = (int)GameSaver.Load(i.ToString() + "_dash", typeof(int));
             
-            ability.Aceleration = PlayerPrefs.GetFloat(i.ToString() + "_ac");
-            ability.Speed = PlayerPrefs.GetFloat(i.ToString() + "_speed");
-            ability.Deceleration = PlayerPrefs.GetFloat(i.ToString() + "_dec");
+            ability.Aceleration = (float)GameSaver.Load(i.ToString() + "_ac", typeof(float));
+            ability.Speed = (float)GameSaver.Load(i.ToString() + "_speed", typeof(float));
+            ability.Deceleration = (float)GameSaver.Load(i.ToString() + "_dec", typeof(float));
             
             Abilities.Add(ability);
             OnAbilitiesChanged?.Invoke();

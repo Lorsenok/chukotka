@@ -91,7 +91,7 @@ public class ControllerBow : ControllerAddition
 
     public void SaveArrows()
     {
-        PlayerPrefs.SetInt("arrows", Arrows);
+        GameSaver.Save("arrows", Arrows);
     }
 
     private bool isLoading = false;
@@ -104,7 +104,7 @@ public class ControllerBow : ControllerAddition
     {
         if (PlayerPrefs.HasKey("arrows"))
         {
-            Arrows = PlayerPrefs.GetInt("arrows");
+            Arrows = (int)GameSaver.Load("arrows", typeof(int));
         }
     }
 }

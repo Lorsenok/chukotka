@@ -34,15 +34,14 @@ public class InventoryService : IInventory
     {
         ItemList itemList = new ItemList { Items = items };
         string json = JsonUtility.ToJson(itemList);
-        PlayerPrefs.SetString(SAVE_KEY, json);
-        PlayerPrefs.Save();
+        GameSaver.Save(SAVE_KEY, json);
     }
 
     private void LoadItems()
     {
         if (PlayerPrefs.HasKey(SAVE_KEY))
         {
-            string json = PlayerPrefs.GetString(SAVE_KEY);
+            string json = (string)GameSaver.Load(SAVE_KEY, typeof(string));
             ItemList itemList = JsonUtility.FromJson<ItemList>(json);
             items = itemList.Items ?? new List<Item>();
         }

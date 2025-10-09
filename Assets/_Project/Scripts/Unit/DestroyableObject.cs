@@ -13,7 +13,7 @@ public class DestroyableObject : MonoBehaviour
         }
         set
         {
-            if (saveHP) PlayerPrefs.SetInt(saveHPKey, hp);
+            if (saveHP) GameSaver.Save(saveHPKey, hp);
             if (hp > value)
             {
                 foreach (var obj in spawnAfterDamage)
@@ -39,7 +39,7 @@ public class DestroyableObject : MonoBehaviour
     {
         if (objectToDestroy == null) objectToDestroy = gameObject;
         hp = hpSet;
-        if (PlayerPrefs.HasKey(saveHPKey) && saveHP) hp = PlayerPrefs.GetInt(saveHPKey);
+        if (PlayerPrefs.HasKey(saveHPKey) && saveHP) hp = (int)GameSaver.Load(saveHPKey, typeof(int));
     }
 
     public virtual void Update()

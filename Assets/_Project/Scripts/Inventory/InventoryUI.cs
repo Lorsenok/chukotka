@@ -120,8 +120,7 @@ public class InventoryUI : GameMenu
         try
         {
             string json = ExportGridMappingJson();
-            PlayerPrefs.SetString(PlayerPrefsKey, json);
-            PlayerPrefs.Save();
+            GameSaver.Save(PlayerPrefsKey, json);
         }
         catch (Exception e)
         {
@@ -131,7 +130,9 @@ public class InventoryUI : GameMenu
 
     private bool TryLoadGridMappingFromPlayerPrefs()
     {
-        string json = PlayerPrefs.GetString(PlayerPrefsKey, string.Empty);
+        string json = string.Empty;
+        if (PlayerPrefs.HasKey(PlayerPrefsKey)) json = (string)GameSaver.Load(PlayerPrefsKey, typeof(string));
+        
         if (string.IsNullOrEmpty(json))
             return false;
 
