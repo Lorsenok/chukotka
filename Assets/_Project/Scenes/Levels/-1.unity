@@ -267,6 +267,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: change position delay
   repeatable: 1
+  setOnStart: 0
   savekey: 
   timeSet: 0.1
   curTime: 0
@@ -285,6 +286,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: start row delay
   repeatable: 1
+  setOnStart: 0
   savekey: 
   timeSet: 0.25
   curTime: 0
@@ -303,10 +305,11 @@ MonoBehaviour:
   stateLock: 1
   tagname: spawn dealy
   repeatable: 1
+  setOnStart: 0
   savekey: raider
-  timeSet: 20
-  curTime: 30
-  timeSetMax: 50
+  timeSet: 50
+  curTime: 100
+  timeSetMax: 100
 --- !u!114 &417461768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,10 +979,11 @@ MonoBehaviour:
   stateLock: 1
   tagname: spawn dealy
   repeatable: 1
+  setOnStart: 0
   savekey: animal
-  timeSet: 6
+  timeSet: 12
   curTime: 0
-  timeSetMax: 20
+  timeSetMax: 27
 --- !u!114 &1543250985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1021,6 +1025,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: start row delay
   repeatable: 1
+  setOnStart: 0
   savekey: 
   timeSet: 0.25
   curTime: 0
@@ -1039,6 +1044,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: change position delay
   repeatable: 1
+  setOnStart: 0
   savekey: 
   timeSet: 0.1
   curTime: 0

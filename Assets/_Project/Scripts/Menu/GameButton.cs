@@ -81,7 +81,7 @@ public class GameButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         switch (action)
         {
             case GameButtonAction.StartScene:
-                sceneChanger.ChangeScene(index, SceneStartType.center); break;
+                sceneChanger.ChangeScene(index, SceneStartType.center, saveTransition:false); break;
             case GameButtonAction.ChangeMenu:
                 menuManager.MenuOpen(index); break;
             case GameButtonAction.ExitGame:

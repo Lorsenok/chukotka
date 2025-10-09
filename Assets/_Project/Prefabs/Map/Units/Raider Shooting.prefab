@@ -196,7 +196,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0
-  MaxDistance: 4
+  MaxDistance: 3
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: sound delay
   repeatable: 1
+  setOnStart: 1
   savekey: 
   timeSet: 3
   curTime: 0
@@ -545,6 +546,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: time to escape
   repeatable: 0
+  setOnStart: 0
   savekey: 
   timeSet: 5
   curTime: 0
@@ -563,6 +565,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: jump delay
   repeatable: 0
+  setOnStart: 0
   savekey: 
   timeSet: 1
   curTime: 0
@@ -597,6 +600,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: shoot delay
   repeatable: 1
+  setOnStart: 0
   savekey: 
   timeSet: 4
   curTime: 5

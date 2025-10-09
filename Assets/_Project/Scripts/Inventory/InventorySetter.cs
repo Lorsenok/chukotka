@@ -14,11 +14,12 @@ public class InventorySetter : MonoBehaviour
         this.inventory = inventory;
     }
 
-    private void Awake()
+    private void OnEnable()
     {
         if (enabled)
         {
             inventory.Items = items;
+            inventory.OnItemsChanged?.Invoke();
         }
     }
 }

@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameState stateLock = GameState.Game;
     [SerializeField] private string tagname;
     [SerializeField] protected bool repeatable;
+    [SerializeField] private bool setOnStart = false;
 
     public Action OnTimerEnd { get; set; }
 
@@ -33,6 +34,10 @@ public class Timer : MonoBehaviour
     public void Start()
     {
         if (PlayerPrefs.HasKey(savekey)) curTime = (float)GameSaver.Load(savekey, typeof(float));
+        if (curTime <= 0f && setOnStart)
+        {
+            StartTimer();
+        }
     }
 
     public virtual void Update()
