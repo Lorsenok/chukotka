@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         List<int> ids = new List<int>();
         for (int i = 0; i < spawned.Count - 1; i++)
         {
-            if (!spawned[i]) ids.Add(i);
+            if (!spawned[i].gameObject) ids.Add(i);
         }
         foreach (int id in ids)
         {
