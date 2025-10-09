@@ -16,6 +16,9 @@ public class InventorySetter : MonoBehaviour
 
     private void Awake()
     {
-        inventory.Items = items;
+        if (enabled)
+        {
+            inventory.Items = items;
+        }
     }
 }

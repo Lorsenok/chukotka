@@ -10,30 +10,51 @@ public interface IInventory
 
 public class InventoryService : IInventory
 {
-    private List<Item> items;
+    private const string SAVE_KEY = "InventoryItems";
+    private List<Item> items = new List<Item>();
 
     public List<Item> Items
     {
-        get { return items; }
+        get => items;
         set
         {
             items = value;
-            OnItemsChanged?.Invoke();
         }
     }
+
     public Action OnItemsChanged { get; set; }
 
-    /*
-    public int ItemsQuantity()
+    public InventoryService()
     {
-        List<Item> current = new List<Item>();
-        foreach (Item i in items)
+        LoadItems();
+        OnItemsChanged += SaveItems;
+    }
+
+    private void SaveItems()
+    {
+        ItemList itemList = new ItemList { Items = items };
+        string json = JsonUtility.ToJson(itemList);
+        PlayerPrefs.SetString(SAVE_KEY, json);
+        PlayerPrefs.Save();
+    }
+
+    private void LoadItems()
+    {
+        if (PlayerPrefs.HasKey(SAVE_KEY))
         {
-            if (!current.Contains(i))
-            {
-                current.Add(i);
-            }
+            string json = PlayerPrefs.GetString(SAVE_KEY);
+            ItemList itemList = JsonUtility.FromJson<ItemList>(json);
+            items = itemList.Items ?? new List<Item>();
         }
-        return current.Count;
-    }*/
+        else
+        {
+            items = new List<Item>();
+        }
+    }
+
+    [System.Serializable]
+    private class ItemList
+    {
+        public List<Item> Items;
+    }
 }

@@ -2436,6 +2436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene UI Base
       objectReference: {fileID: 0}
+    - target: {fileID: 1074066486265126717, guid: 567ed00884eea7d448eea1a23aecd3f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2823308294320390369, guid: 567ed00884eea7d448eea1a23aecd3f7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
