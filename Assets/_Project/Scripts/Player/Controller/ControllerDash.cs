@@ -10,6 +10,12 @@ public class ControllerDash : ControllerAddition
     [SerializeField] private float dashForce;
     [SerializeField] private float dashForceExpireSpeed;
     [SerializeField] private Timer dashTimer;
+    
+    [Header("Animation")]
+    [SerializeField] private CustomAnimatorController animController;
+    [SerializeField] private string dashAnim;
+    [SerializeField] private float dashAnimTime;
+    
     private float curDashPower = 0f;
     
     private InputSystem input;
@@ -51,6 +57,8 @@ public class ControllerDash : ControllerAddition
         dashTimer.StartTimer();
         if (rg.linearVelocityX > rgDeadZone) curDashPower += dashForce + Addition;
         else if (rg.linearVelocityX < -rgDeadZone) curDashPower -= dashForce + Addition;
+        else return;
+        animController.PullAnimation(dashAnim, dashAnimTime);
     }
 
     private bool canDash = true;

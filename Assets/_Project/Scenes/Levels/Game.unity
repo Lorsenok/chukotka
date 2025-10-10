@@ -371,6 +371,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 752496441306215638, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
   m_PrefabInstance: {fileID: 4441169468015739516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &573190108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7647428656764415270, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+  m_PrefabInstance: {fileID: 4441169468015739516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c46948491a93d48a925977cff1f250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &678656804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  priority: 0
+  animname: default
   spr: {fileID: 1781661030}
   sprites:
   - {fileID: 1376209864, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
@@ -1721,6 +1734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  priority: 0
+  animname: default
   spr: {fileID: 1781661030}
   sprites:
   - {fileID: 1887553903, guid: e552e874c9f9d394e9ad4c15c67956ae, type: 3}
@@ -2067,6 +2082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  priority: 0
+  animname: default
   spr: {fileID: 1918007875}
   sprites:
   - {fileID: -614790164, guid: 058f8d332d42b214da42a9c51f195faf, type: 3}
@@ -2092,6 +2109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  priority: 0
+  animname: default
   spr: {fileID: 1918007875}
   sprites:
   - {fileID: 727760714, guid: e922449e922ebc64d93c4362127578e1, type: 3}
@@ -2468,9 +2487,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2271052916398891454, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: holdAnim
+      value: hold
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271052916398891454, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: shootAnim
+      value: shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271052916398891454, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: shootAnimTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271052916398891454, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: animController
+      value: 
+      objectReference: {fileID: 573190108}
+    - target: {fileID: 2271052916398891454, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: loadSpeedMultiplier
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3657978016914447784, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021217292945992892, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.226
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029960554125154850, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: animname
+      value: hold
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -21,6 +21,13 @@ public class ControllerBow : ControllerAddition
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI text;
     
+    [Header("Animations")]
+    [SerializeField] private CustomAnimatorController animController;
+    [SerializeField] private string holdAnim;
+    [SerializeField] private float holdAnimTime = 0.1f;
+    [SerializeField] private string shootAnim;
+    [SerializeField] private float shootAnimTime;
+    
     private InputSystem input;
     private IGameState gameState;
     [Inject] private void Init(IInputControler inputControler, IGameState gameState)
@@ -52,6 +59,7 @@ public class ControllerBow : ControllerAddition
         
         if (isHolding)
         {
+            animController.PullAnimation(holdAnim, holdAnimTime);
             curLoadTime += Time.deltaTime;
             curLoadTime = Mathf.Clamp(curLoadTime, 0f, timeToLoadSet);
         }
@@ -86,6 +94,7 @@ public class ControllerBow : ControllerAddition
 
             Arrows--;
             SaveArrows();
+            animController.PullAnimation(shootAnim, shootAnimTime);
         }
     }
 

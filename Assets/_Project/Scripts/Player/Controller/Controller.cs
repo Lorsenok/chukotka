@@ -29,6 +29,16 @@ public class Controller : MonoBehaviour
 
     [SerializeField, Range(0f, 1f)] private float controlsDeadZone = 0.1f;
     [SerializeField, Range(0f, 1f)] private float decelerationDeadZone = 0.05f;
+
+    [Header("Animation")] 
+    [SerializeField] private SpriteRenderer spr;
+    [SerializeField] private CustomAnimatorController animController;
+    [SerializeField] private string idleAnim;
+    [SerializeField] private float idleAnimTime = 0.1f;
+    [SerializeField] private string runAnim;
+    [SerializeField] private float runAnimTime = 0.1f;
+    [SerializeField] private string cutsceneAnim;
+    [SerializeField] private float cutsceneAnimTime = 0.1f;
     
     private InputSystem input;
     private IGameState gameState;
@@ -113,11 +123,23 @@ public class Controller : MonoBehaviour
     {
         if (gameState.GetCurrentState() != GameState.Game)
         {
+            if (gameState.GetCurrentState() == GameState.Cutscene) 
+                animController.PullAnimation(cutsceneAnim, cutsceneAnimTime);
             rg.linearVelocityX = 0f;
             return;
         }
 
-        if (CanMove) Move();
+        if (CanMove)
+        {
+            Move();
+
+            if (rg.linearVelocityX > controlsDeadZone || rg.linearVelocityX < -controlsDeadZone)
+            {
+                spr.flipX = rg.linearVelocityX < 0f;
+                animController.PullAnimation(runAnim, runAnimTime);
+            }
+            else animController.PullAnimation(idleAnim, idleAnimTime);
+        }
         else
         {
             if (sound != null) StopSound();

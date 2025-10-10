@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f8c27ce2edab0d429306da5eb6d90ba
+guid: 0cd03ef949c1b0242ae39c5e04c78499
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_0"
+      name: take-Sheet_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 53
         y: 1
-        width: 27
-        height: 60
+        width: 28
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1af20cf61f5c25468ef93bf3792652a
-      internalID: 656525668
+      spriteID: 784272e6a14ebb249ae178d9d71df9bc
+      internalID: 194293609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_1"
+      name: take-Sheet_1
       rect:
         serializedVersion: 2
-        x: 63
+        x: 190
         y: 1
-        width: 27
-        height: 60
+        width: 41
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05a525c3bbd473a4185ebe77eab0940f
-      internalID: 527340920
+      spriteID: a17e7562f25d826438b89092b4dfee50
+      internalID: -568552743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_2"
+      name: take-Sheet_2
       rect:
         serializedVersion: 2
-        x: 115
+        x: 328
         y: 1
-        width: 27
-        height: 60
+        width: 37
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee1f3f8f5f8b44b42b86cf7c05e1f57c
-      internalID: 1380690145
+      spriteID: 720535e2dd7df174e9517ecab66f52f1
+      internalID: -2116218021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_3"
+      name: take-Sheet_3
       rect:
         serializedVersion: 2
-        x: 166
+        x: 466
         y: 1
-        width: 27
-        height: 60
+        width: 32
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04ea7e1204908e54a86dd4b01d9cb69b
-      internalID: -1558213165
+      spriteID: ded5fdea10dff394fa0c66b2875f84ce
+      internalID: 458358883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_4"
+      name: take-Sheet_4
       rect:
         serializedVersion: 2
-        x: 217
+        x: 605
         y: 1
-        width: 27
-        height: 60
+        width: 28
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c32fbd4f7e208f4fbf575d6c1646208
-      internalID: -48612776
+      spriteID: 479374db9b71f894e98d1f09a63dae3e
+      internalID: 300401297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_5"
+      name: take-Sheet_5
       rect:
         serializedVersion: 2
-        x: 267
+        x: 743
         y: 1
-        width: 27
-        height: 60
+        width: 26
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aec797fbbe6f93c4085072b12ae42050
-      internalID: -1420880941
+      spriteID: b8f73bbb90e984c449604e62dfee5d14
+      internalID: -226626961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_6"
+      name: take-Sheet_6
       rect:
         serializedVersion: 2
-        x: 318
+        x: 881
         y: 1
-        width: 27
-        height: 60
+        width: 26
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,30 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ccf80e25ea9a3d4bab1a2f83be91bb5
-      internalID: 1326830407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_7"
-      rect:
-        serializedVersion: 2
-        x: 369
-        y: 1
-        width: 27
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9008ecff24a11924386adb903075f07a
-      internalID: -1679845205
+      spriteID: 7b808d5fe4bd9f54680487d878295250
+      internalID: -1007284196
       vertices: []
       indices: 
       edges: []
@@ -276,7 +254,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f1f23891a2d90a44ca083e0911293605
+    spriteID: 6b457ccf2bb56be4594bae19788bccc1
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +266,13 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_0": 656525668
-      "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_1": 527340920
-      "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_2": 1380690145
-      "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_3": -1558213165
-      "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_4": -48612776
-      "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_5": -1420880941
-      "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_6": 1326830407
-      "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440_7": -1679845205
+      take-Sheet_0: 194293609
+      take-Sheet_1: -568552743
+      take-Sheet_2: -2116218021
+      take-Sheet_3: 458358883
+      take-Sheet_4: 300401297
+      take-Sheet_5: -226626961
+      take-Sheet_6: -1007284196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d13223075aa108748a2da728f97efa31
+guid: 0ba4a371d7c1f06409c2f55182eb3488
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_0"
+      name: walk-Sheet_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 50
         y: 1
-        width: 40
-        height: 59
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06b75426f278ab446a37865bc657ae1d
-      internalID: 877758605
+      spriteID: ac0ef2a96b7ea654686e26bdc15fd4cc
+      internalID: 1700288870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_1"
+      name: walk-Sheet_1
       rect:
         serializedVersion: 2
-        x: 63
+        x: 185
         y: 1
-        width: 40
-        height: 59
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fb811808115ace46924db089f364f9b
-      internalID: 338982143
+      spriteID: 0848ba3e7dbb2e04698af3773af8850c
+      internalID: 1152192378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_2"
+      name: walk-Sheet_2
       rect:
         serializedVersion: 2
-        x: 114
+        x: 325
         y: 1
-        width: 40
-        height: 59
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,19 +156,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de1bf38d30bac2a4290d47aa6d7124d7
-      internalID: 1749687174
+      spriteID: a2e85ee16083f4e4a8c2e2e19c87315b
+      internalID: -795322609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_3"
+      name: walk-Sheet_3
       rect:
         serializedVersion: 2
-        x: 164
+        x: 465
         y: 1
-        width: 40
+        width: 35
         height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -178,19 +178,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3899a4211b9b9794b8ca08d920ba560b
-      internalID: -1197926765
+      spriteID: 678b4dd94e4fc0d4f93803bcfc1a593a
+      internalID: 1328931622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_4"
+      name: walk-Sheet_4
       rect:
         serializedVersion: 2
-        x: 215
+        x: 603
         y: 1
-        width: 40
+        width: 35
         height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -200,19 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d336f12fd59fa8498ab63ec3d21340f
-      internalID: 1138208909
+      spriteID: 78cba68d630a62a4fa21d0d0babb7e33
+      internalID: -527799611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_5"
+      name: walk-Sheet_5
       rect:
         serializedVersion: 2
-        x: 266
+        x: 741
         y: 1
-        width: 40
+        width: 35
         height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc59707fba4ac2c418d131852ed3afee
-      internalID: 457488096
+      spriteID: b29bcde3986879c43bf817d71e9a7e11
+      internalID: -1878887976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_6"
+      name: walk-Sheet_6
       rect:
         serializedVersion: 2
-        x: 318
+        x: 877
         y: 1
-        width: 40
-        height: 59
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c29577c00b038b45ae3157e06c76737
-      internalID: 1837283863
+      spriteID: c7b2ccc96984ced43b52faa7c1be50cb
+      internalID: 1306667697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_7"
+      name: walk-Sheet_7
       rect:
         serializedVersion: 2
-        x: 369
+        x: 1015
         y: 1
-        width: 40
-        height: 59
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,30 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2f84fe247a127b43bc0c73189170471
-      internalID: -1350377670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_8"
-      rect:
-        serializedVersion: 2
-        x: 420
-        y: 1
-        width: 39
-        height: 59
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 296eb9cd8b5c54c4c8e740e3386b98bd
-      internalID: -743033747
+      spriteID: fc96e38bbcd72f445af67170ce96dc0b
+      internalID: -982059707
       vertices: []
       indices: 
       edges: []
@@ -298,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4911c54efda42ac449203e3d33b6b9f9
+    spriteID: 3a34ff0bdff5fd24483c1b94fe61ea99
     internalID: 0
     vertices: []
     indices: 
@@ -310,15 +288,14 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_0": 877758605
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_1": 338982143
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_2": 1749687174
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_3": -1197926765
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_4": 1138208909
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_5": 457488096
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_6": 1837283863
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_7": -1350377670
-      "\u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435_8": -743033747
+      walk-Sheet_0: 1700288870
+      walk-Sheet_1: 1152192378
+      walk-Sheet_2: -795322609
+      walk-Sheet_3: 1328931622
+      walk-Sheet_4: -527799611
+      walk-Sheet_5: -1878887976
+      walk-Sheet_6: 1306667697
+      walk-Sheet_7: -982059707
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

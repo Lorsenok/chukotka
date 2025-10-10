@@ -13,6 +13,11 @@ public class ControllerJump : ControllerAddition
     [SerializeField] private int jumps = 1;
     [SerializeField] private float jumpForce;
     [SerializeField] private Timer jumpBlockTimer;
+
+    [Header("Animation")] [SerializeField] private float animVelocityMin = 0.1f;
+    [SerializeField] private CustomAnimatorController animController;
+    [SerializeField] private string jumpAnim;
+    [SerializeField] private float jumpAnimTime;
     
     private InputSystem input;
     private IGameState gameState;
@@ -34,6 +39,7 @@ public class ControllerJump : ControllerAddition
         jumpBlockTimer.OnTimerEnd -= OnJumpBlock;
     }
 
+    private bool hasJumped = false;
     private bool hasPressedJumpButton = false;
     private void Jump(InputAction.CallbackContext context)
     {
@@ -45,6 +51,22 @@ public class ControllerJump : ControllerAddition
         curAdditionalJumps--;
         if (groundChecker.IsTouchingGround) curAdditionalJumps = jumps + Addition;
         rg.linearVelocityY = jumpForce;
+        
+        animController.PullAnimation(jumpAnim, jumpAnimTime);
+        animController.ResetAnimation();
+        hasJumped = true;
+    }
+
+    public void Update()
+    {
+        if (!hasJumped) return;
+        hasJumped = !(groundChecker.IsTouchingGround & !jumpBlock);
+        if (!hasJumped)
+        {
+            animController.ResetController();
+            return;
+        }
+        animController.PullAnimation(jumpAnim, jumpAnimTime);
     }
     
     private bool jumpBlock = false;

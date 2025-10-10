@@ -16,6 +16,13 @@ public class ControllerAttack : ControllerAddition
     [SerializeField] private Collider2D leftAttack;
     [SerializeField] private Collider2D rightAttack;
     [SerializeField] private GameObject[] spawnOnDamage;
+    
+    [Header("Animations")]
+    [SerializeField] private CustomAnimatorController animController;
+    [SerializeField] private string[] attackAnims;
+    [SerializeField] private float attackAnimTime;
+    private int curAttackAnim = 0;
+    
     private float attackDir = 1f;
     
     private InputSystem input;
@@ -74,6 +81,10 @@ public class ControllerAttack : ControllerAddition
         attackTimer.StartTimer();
         leftAttack.enabled = (attackDir < 0f);
         rightAttack.enabled = (attackDir > 0f);
+        
+        animController.PullAnimation(attackAnims[curAttackAnim], attackAnimTime);
+        curAttackAnim++;
+        if (curAttackAnim >= attackAnims.Length) curAttackAnim = 0;
 
         foreach (GameObject obj in spawnOnDamage)
         {
