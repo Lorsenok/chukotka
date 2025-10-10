@@ -52,7 +52,6 @@ public class ControllerBow : ControllerAddition
     private void Update()
     {
         SpeedMultiplier = new Vector2(isHolding ? loadSpeedMultiplier : 1.0f, 1f);
-        spr.flipX = input.UI.MousePosition.ReadValue<Vector2>().x < Screen.width / 2;
 
         foreach (var controller in controllersBlock)
         {
@@ -61,6 +60,7 @@ public class ControllerBow : ControllerAddition
         
         if (isHolding)
         {
+            spr.flipX = input.UI.MousePosition.ReadValue<Vector2>().x < Screen.width / 2;
             animController.PullAnimation(holdAnim, holdAnimTime);
             curLoadTime += Time.deltaTime;
             curLoadTime = Mathf.Clamp(curLoadTime, 0f, timeToLoadSet);

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda0f21d9ade8fb4b98a74fe6decb48e, type: 3}
   m_Name: Attack Stun
   m_EditorClassIdentifier: 
-  power: 0
-  duration: 0.25
+  power: 0.1
+  duration: 0.5

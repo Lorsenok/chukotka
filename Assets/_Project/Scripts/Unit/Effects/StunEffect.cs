@@ -9,11 +9,14 @@ public class StunEffect : Effect
     {
         base.Start();
         target = GetComponent<TargetFollower>();
+        if (target != null)
+            target.Stop();
     }
 
     public override void Update()
     {
-        if (target != null) target.SpeedMultiplier = Properties.power;
+        if (target != null)
+            target.SpeedMultiplier = Properties.power;
         base.Update();
     }
 

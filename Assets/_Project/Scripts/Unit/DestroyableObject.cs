@@ -13,7 +13,7 @@ public class DestroyableObject : MonoBehaviour
         }
         set
         {
-            if (saveHP) GameSaver.Save(saveHPKey, hp);
+            if (saveHP) GameSaver.Save(saveHPKey, value);
             if (hp > value)
             {
                 foreach (var obj in spawnAfterDamage)

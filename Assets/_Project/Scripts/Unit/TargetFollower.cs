@@ -47,6 +47,11 @@ public class TargetFollower : MonoBehaviour
         canJump = true;
     }
 
+    public void Stop()
+    {
+        rg.linearVelocityX = 0f;
+    }
+
     public void Move(float multiplier)
     {
         rg.linearVelocityX += (target.position - transform.position).normalized.x * acceleration * Time.deltaTime * multiplier * SpeedMultiplier;

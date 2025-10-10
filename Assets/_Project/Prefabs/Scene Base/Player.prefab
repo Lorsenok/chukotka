@@ -441,7 +441,7 @@ MonoBehaviour:
   repeatable: 0
   setOnStart: 0
   savekey: 
-  timeSet: 0.4
+  timeSet: 0.2
   curTime: 0
 --- !u!114 &4035352908488688487
 MonoBehaviour:
@@ -460,7 +460,7 @@ MonoBehaviour:
   repeatable: 0
   setOnStart: 0
   savekey: 
-  timeSet: 0.25
+  timeSet: 0.2
   curTime: 0
 --- !u!114 &4391691324269488327
 MonoBehaviour:
@@ -1962,7 +1962,7 @@ GameObject:
   - component: {fileID: 5377088096570222871}
   - component: {fileID: 326766709151423603}
   - component: {fileID: 7633001348394390233}
-  - component: {fileID: 8693881478985335813}
+  - component: {fileID: 6062525240357132515}
   m_Layer: 0
   m_Name: attack
   m_TagString: Untagged
@@ -2179,10 +2179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2898a295c59734bbab2b99271bfa19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 8693881478985335813}
+  effect: {fileID: 6062525240357132515}
   properties: {fileID: 11400000, guid: b6f0c85562f483b468b26a4547cfca69, type: 2}
   timerToDestroy: {fileID: 0}
---- !u!114 &8693881478985335813
+--- !u!114 &6062525240357132515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2191,7 +2191,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8294101037761480325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ba0dd104d6d4b429e07091c8fb2852, type: 3}
+  m_Script: {fileID: 11500000, guid: a55a969d9b89e2a429a5580c46f862e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8729133154961079779
