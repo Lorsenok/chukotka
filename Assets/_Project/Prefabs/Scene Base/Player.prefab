@@ -501,10 +501,11 @@ MonoBehaviour:
   timeToLoadSet: 2.5
   startTimeToLoad: 0.5
   perLoadTimer: {fileID: 3918042494944787348}
-  loadSpeedMultiplier: 0.01
+  loadSpeedMultiplier: 0
   spawnOnShoot:
   - {fileID: 1359130480447200395, guid: 45ec221230d687a46add7dc9a74660ba, type: 3}
   text: {fileID: 5190697081753120947}
+  spr: {fileID: 8470496989516437212}
   animController: {fileID: 7647428656764415270}
   holdAnim: hold
   holdAnimTime: 0.1
@@ -1385,6 +1386,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pinToMouse: 1
   rotationOffset: 180
+  rotationLocks:
+  - 0
+  - 180
   bulletPrefab: {fileID: 8871533527641693228, guid: 873a6dff9b7fcff4da3c891013cccd0d, type: 3}
   bulletSpawnPoint: {fileID: 5021217292945992892}
 --- !u!1 &5868474791745221930

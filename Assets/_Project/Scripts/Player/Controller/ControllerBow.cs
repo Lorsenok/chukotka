@@ -20,8 +20,9 @@ public class ControllerBow : ControllerAddition
     
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI text;
-    
+
     [Header("Animations")]
+    [SerializeField] private SpriteRenderer spr;
     [SerializeField] private CustomAnimatorController animController;
     [SerializeField] private string holdAnim;
     [SerializeField] private float holdAnimTime = 0.1f;
@@ -51,6 +52,7 @@ public class ControllerBow : ControllerAddition
     private void Update()
     {
         SpeedMultiplier = new Vector2(isHolding ? loadSpeedMultiplier : 1.0f, 1f);
+        spr.flipX = input.UI.MousePosition.ReadValue<Vector2>().x < Screen.width / 2;
 
         foreach (var controller in controllersBlock)
         {
