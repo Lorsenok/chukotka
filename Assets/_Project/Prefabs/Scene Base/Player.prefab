@@ -501,10 +501,15 @@ MonoBehaviour:
   timeToLoadSet: 2.5
   startTimeToLoad: 0.5
   perLoadTimer: {fileID: 3918042494944787348}
-  loadSpeedMultiplier: 0.5
+  loadSpeedMultiplier: 0.01
   spawnOnShoot:
   - {fileID: 1359130480447200395, guid: 45ec221230d687a46add7dc9a74660ba, type: 3}
   text: {fileID: 5190697081753120947}
+  animController: {fileID: 7647428656764415270}
+  holdAnim: hold
+  holdAnimTime: 0.1
+  shootAnim: shoot
+  shootAnimTime: 0.25
 --- !u!114 &3918042494944787348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,7 +1365,7 @@ Transform:
   m_GameObject: {fileID: 5155285802242899226}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.226, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1853,7 +1858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 7
-  animname: bow
+  animname: hold
   spr: {fileID: 8470496989516437212}
   sprites:
   - {fileID: 975413573, guid: af8db85c5f929f64795430b705f6f748, type: 3}
