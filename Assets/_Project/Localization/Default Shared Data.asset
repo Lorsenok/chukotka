@@ -59,6 +59,10 @@ MonoBehaviour:
     m_Key: music
     m_Metadata:
       m_Items: []
+  - m_Id: 37309417023070208
+    m_Key: shake
+    m_Metadata:
+      m_Items: []
   - m_Id: 35033520928710656
     m_Key: trade
     m_Metadata:
@@ -69,6 +73,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 35399453132185600
     m_Key: noheal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37311794350383104
+    m_Key: postprocessing
     m_Metadata:
       m_Items: []
   m_Metadata:

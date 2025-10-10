@@ -19,6 +19,7 @@ public class CameraMovement : MonoBehaviour
     private static Vector3 curShakeOffset;
     public static void Shake(float power, bool z = false)
     {
+        power *= Config.ShakePower;
         curShakeOffset = new Vector3(
             Random.Range(-power, power),
             Random.Range(-power, power),

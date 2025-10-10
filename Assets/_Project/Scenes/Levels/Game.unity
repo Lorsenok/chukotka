@@ -2497,11 +2497,27 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 583666820330546169, guid: 567ed00884eea7d448eea1a23aecd3f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 882031455046394477, guid: 567ed00884eea7d448eea1a23aecd3f7, type: 3}
       propertyPath: m_Name
       value: Scene UI Base
       objectReference: {fileID: 0}
     - target: {fileID: 2823308294320390369, guid: 567ed00884eea7d448eea1a23aecd3f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166230846571850425, guid: 567ed00884eea7d448eea1a23aecd3f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073196307611356205, guid: 567ed00884eea7d448eea1a23aecd3f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332801705902355028, guid: 567ed00884eea7d448eea1a23aecd3f7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
