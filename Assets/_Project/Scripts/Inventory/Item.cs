@@ -10,6 +10,8 @@ public enum ItemType
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptable Objects/Item")]
 public class Item : ScriptableObject
 {
+    public string id;
+    
     public ItemType type = ItemType.Item;
     public LocalizedString itemname;
     public LocalizedString description;

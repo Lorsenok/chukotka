@@ -82,6 +82,14 @@ MonoBehaviour:
     m_Localized: Saves your life from an anavoidable <color=red>death</color>
     m_Metadata:
       m_Items: []
+  - m_Id: 35581307105828864
+    m_Localized: Tooltip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35581431643103232
+    m_Localized: Literally just a test tooltip
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

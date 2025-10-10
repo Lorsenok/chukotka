@@ -1,20 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Localization;
+using UnityEngine.UI;
 using Zenject;
 
 public class MouseNotification : MonoBehaviour
 {
+    private class NotifItem
+    {
+        public LocalizedString itemname;
+        public LocalizedString description;
+    }
+    
     public static Action<Item> OnItemNotifEnter { get; set; }
     public static Action<Item> OnItemNotifExit { get; set; }
 
-    private List<Item> notifyItems = new List<Item>();
+    private List<NotifItem> notifyItems = new List<NotifItem>();
 
+    [Header("Main")]
     [SerializeField] private RectTransform point;
     [SerializeField] private DialogueMessage nameMessage;
     [SerializeField] private DialogueMessage descriptionMessage;
-
+    
+    [Header("Panel")]
+    [SerializeField] private Image panel;
+    [SerializeField] private Color panelColorAppear;
+    [SerializeField] private Color panelColorDisappear;
+    [SerializeField] private float panelColorChangeSpeed;
+    
     private InputSystem inputSystem;
     [Inject] private void Init(IInputControler inputControler)
     {
@@ -35,12 +51,21 @@ public class MouseNotification : MonoBehaviour
 
     private void OnItemEnter(Item item)
     {
-        notifyItems.Add(item);
+        NotifItem notifItem = new NotifItem();
+        notifItem.itemname = item.itemname;
+        notifItem.description = item.description;
+        notifyItems.Add(notifItem);
     } 
 
     private void OnItemExit(Item item)
     {
-        if (notifyItems.Contains(item)) notifyItems.Remove(item);
+        foreach (NotifItem i in notifyItems.ToList())
+        {
+            if (i.itemname == item.itemname && i.description == item.description)
+            {
+                notifyItems.Remove(i);
+            }
+        }
     }
 
     private RectTransform parentCanvas;
@@ -52,7 +77,11 @@ public class MouseNotification : MonoBehaviour
         Vector2 diff = new Vector2(Screen.width, Screen.height) / parentCanvas.sizeDelta;
         point.anchoredPosition = Input.mousePosition / diff;
 
-        if (notifyItems.Count == 0 || inputSystem.UI.Click.IsPressed())
+        bool isOnItem = !(notifyItems.Count == 0 || inputSystem.UI.Click.IsPressed());
+        
+        panel.color = Color.Lerp(panel.color, isOnItem ? panelColorAppear : panelColorDisappear, panelColorChangeSpeed * Time.deltaTime);
+        
+        if (!isOnItem)
         {
             nameMessage.Clear();
             descriptionMessage.Clear();
