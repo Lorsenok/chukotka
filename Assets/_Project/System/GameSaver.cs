@@ -45,7 +45,6 @@ public static class GameSaver
     public static void Save(string key, object value)
     {
         if (StopAllSaves) return;
-        Debug.Log("+");
         bool isSaveDone = LocalSave(key, value);
         if (!isSaveDone) return;
 

@@ -6359,10 +6359,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Raider Shooting
       objectReference: {fileID: 0}
-    - target: {fileID: 6070558217051209298, guid: 37a17bac9333fdb4f9dfbcbe2b85997c, type: 3}
-      propertyPath: rotationOffset
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
