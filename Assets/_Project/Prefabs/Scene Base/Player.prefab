@@ -335,7 +335,7 @@ MonoBehaviour:
   rg: {fileID: 1226351488987415359}
   groundChecker: {fileID: 3664343035539521266}
   jumps: 1
-  jumpForce: 6.5
+  jumpForce: 5
   jumpBlockTimer: {fileID: 6523416788447923937}
   animController: {fileID: 7647428656764415270}
   jumpAnim: jump
@@ -373,8 +373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rg: {fileID: 1226351488987415359}
   rgDeadZone: 0.1
-  dashForce: 10
-  dashForceExpireSpeed: 2
+  dashForce: 6
+  dashForceExpireSpeed: 3
   dashTimer: {fileID: 2785499110048398597}
   animController: {fileID: 7647428656764415270}
   dashAnim: dash
