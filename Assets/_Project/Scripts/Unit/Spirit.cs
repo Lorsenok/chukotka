@@ -26,6 +26,7 @@ public class Spirit : MonoBehaviour //govno yebanoye
     
     [Header("After Animation")]
     [SerializeField] private GameObject[] enableObjects;
+    [SerializeField] private Timer destroyTimer;
     
     private bool isWorking = false;
 
@@ -34,6 +35,7 @@ public class Spirit : MonoBehaviour //govno yebanoye
         flashDelayTimer.OnTimerEnd += OnFlash;
         shakeDelayTimer.OnTimerEnd += OnShake;
         stopPlayerTimer.OnTimerEnd += OnStopPlayerEnd;
+        destroyTimer.OnTimerEnd += OnDone;
     }
 
     private void OnDisable()
@@ -41,13 +43,23 @@ public class Spirit : MonoBehaviour //govno yebanoye
         flashDelayTimer.OnTimerEnd -= OnFlash;
         shakeDelayTimer.OnTimerEnd -= OnShake;
         stopPlayerTimer.OnTimerEnd -= OnStopPlayerEnd;
+        destroyTimer.OnTimerEnd -= OnDone;
     }
 
+    private void OnDone()
+    {
+        if (isWorking) Destroy(gameObject);
+    }
+    
     private void OnStopPlayerEnd()
     {
         if (isWorking)
         {
             player.CanMove = true;
+            foreach (GameObject obj in enableObjects)
+            {
+                obj.SetActive(true);
+            }
         }
     }
 
@@ -80,6 +92,7 @@ public class Spirit : MonoBehaviour //govno yebanoye
             player.CanMove = false;
             isWorking = true;
             stopPlayerTimer.StartTimer();
+            destroyTimer.StartTimer();
             stopTrigger.enabled = false;
         }
     }

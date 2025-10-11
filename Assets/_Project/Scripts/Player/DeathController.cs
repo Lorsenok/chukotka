@@ -26,6 +26,7 @@ public class DeathController : ControllerAddition
         if (!hasPlayerDied) return;
         deathConfirmed = true;
         timeAfterDeath.StartTimer();
+        GameSaver.StopAllSaves = true;
         timeBeforeDeath.enabled = false;
         animController.PullAnimation(anim, animTime);
         foreach (ControllerAddition c in blockControllers)

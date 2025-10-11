@@ -53,7 +53,7 @@ public class SceneChangerService : ISceneChanger
 
     public void LoadGame()
     {
-        GameSaver.StopAllSaves = true;
+        GameSaver.StopAllSaves = false;
         GameSaver.LoadGlobalSave();
         string sceneName = (string)GameSaver.Load("sceneName", typeof(string));
         if (string.IsNullOrEmpty(sceneName))
@@ -65,5 +65,6 @@ public class SceneChangerService : ISceneChanger
             sceneName,
             (SceneStartType)GameSaver.Load("sceneStart", typeof(int))
             );
+        GameSaver.StopAllSaves = true;
     }
 }

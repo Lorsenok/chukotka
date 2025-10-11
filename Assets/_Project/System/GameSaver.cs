@@ -45,6 +45,7 @@ public static class GameSaver
     public static void Save(string key, object value)
     {
         if (StopAllSaves) return;
+        Debug.Log("+");
         bool isSaveDone = LocalSave(key, value);
         if (!isSaveDone) return;
 
@@ -94,7 +95,6 @@ public static class GameSaver
             Save(globalSaveKeys[i], value);
         }
 
-        StopAllSaves = false;
         PlayerPrefs.Save();
     }
 

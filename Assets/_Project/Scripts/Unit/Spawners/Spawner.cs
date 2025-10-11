@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] protected GameObject[] prefabs;
+    [SerializeField] protected GameObject[] startSpawnPrefabs;
+    protected int curStartSpawnedPrefabs = 0;
     [SerializeField] protected Timer timerDelay;
     [SerializeField] protected Timer rowDelay;
     [SerializeField] protected int rowTimes = 1;
@@ -15,7 +17,7 @@ public class Spawner : MonoBehaviour
     
     protected List<GameObject> spawned = new List<GameObject>();
     
-    public virtual void Spawn()
+    public void Spawn()
     {
         List<int> ids = new List<int>();
         for (int i = 0; i < spawned.Count - 1; i++)
@@ -30,6 +32,11 @@ public class Spawner : MonoBehaviour
         if (spawned.Count >= maxEntities) return;
         
         int rand = Random.Range(0, prefabs.Length);
+        if (curStartSpawnedPrefabs > 0)
+        {
+            rand = curStartSpawnedPrefabs;
+            curStartSpawnedPrefabs--;
+        }
         spawned.Add(Instantiate(prefabs[rand], transform.position, Quaternion.identity));
     }
 
@@ -55,5 +62,10 @@ public class Spawner : MonoBehaviour
     {
         timerDelay.OnTimerEnd -= OnDelayEnd;
         rowDelay.OnTimerEnd -= OnRowDelayEnd;
+    }
+
+    public void Awake()
+    {
+        curStartSpawnedPrefabs = startSpawnPrefabs.Length - 1;
     }
 }

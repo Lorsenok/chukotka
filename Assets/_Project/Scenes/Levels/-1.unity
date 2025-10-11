@@ -326,6 +326,7 @@ MonoBehaviour:
   - {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
   - {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
   - {fileID: 4698977778594916722, guid: 37a17bac9333fdb4f9dfbcbe2b85997c, type: 3}
+  startSpawnPrefabs: []
   timerDelay: {fileID: 417461767}
   rowDelay: {fileID: 417461766}
   rowTimes: 3
@@ -6275,6 +6276,7 @@ MonoBehaviour:
   - {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
   - {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
   - {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
+  startSpawnPrefabs: []
   timerDelay: {fileID: 1543250984}
   rowDelay: {fileID: 1543250986}
   rowTimes: 3
@@ -6378,6 +6380,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8862871770183115443, guid: 93e3cb77da48e6a4fbb5a11f899c58cd, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 565257025}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

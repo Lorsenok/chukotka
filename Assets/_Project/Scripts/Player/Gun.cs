@@ -39,6 +39,7 @@ public class Gun : MonoBehaviour
     }
     private void Update()
     {
+        if (Target == null) return;
         Vector2 dir = new Vector2(transform.position.x, transform.position.y) - (pinToMouse ? ProjMath.MousePosition() : Target.position);
         float rotation = ProjMath.RotateTowardsPosition(dir.normalized);
         if (rotationLocks.Length > 0)
