@@ -335,7 +335,7 @@ MonoBehaviour:
   rg: {fileID: 1226351488987415359}
   groundChecker: {fileID: 3664343035539521266}
   jumps: 1
-  jumpForce: 5
+  jumpForce: 6.5
   jumpBlockTimer: {fileID: 6523416788447923937}
   animController: {fileID: 7647428656764415270}
   jumpAnim: jump

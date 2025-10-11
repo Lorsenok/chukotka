@@ -33,8 +33,8 @@ public class CameraMovement : MonoBehaviour
     {
         starty = transform.position.y;
         Vector3 targetPos = target.position + offset;
-        targetPos.y = ylock ? starty : transform.position.y;
-        transform.position = targetPos;
+        targetPos.y = ylock ? starty : target.position.y;
+        transform.position = targetPos + offset;
     }
 
     private void FixedUpdate()
@@ -42,7 +42,7 @@ public class CameraMovement : MonoBehaviour
         curShakeOffset = Vector3.Lerp(curShakeOffset, Vector3.zero, shakeExpireSpeed * Time.deltaTime);
         if (state.GetCurrentState() != stateLock) return;
         Vector3 targetPos = target.position + offset;
-        targetPos.y = ylock ? starty : transform.position.y;
+        targetPos.y = ylock ? starty : targetPos.y;
         transform.position = Vector3.Lerp(transform.position, targetPos + curShakeOffset, speed * Time.deltaTime);
     }
 }
