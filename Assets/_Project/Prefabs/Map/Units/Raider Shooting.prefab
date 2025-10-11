@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinToMouse: 0
-  rotationOffset: 195
+  rotationOffset: 200
+  rotationLocks: []
   bulletPrefab: {fileID: 8871533527641693228, guid: ba148f00799972942a5aa042d40aa36e, type: 3}
   bulletSpawnPoint: {fileID: 6622975954953924963}
 --- !u!1 &1492350563732979404
