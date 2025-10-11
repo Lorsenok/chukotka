@@ -132,13 +132,6 @@ public class Controller : MonoBehaviour
         if (CanMove)
         {
             Move();
-
-            if (rg.linearVelocityX > controlsDeadZone || rg.linearVelocityX < -controlsDeadZone)
-            {
-                spr.flipX = rg.linearVelocityX < 0f;
-                animController.PullAnimation(runAnim, runAnimTime);
-            }
-            else animController.PullAnimation(idleAnim, idleAnimTime);
         }
         else
         {
@@ -146,5 +139,12 @@ public class Controller : MonoBehaviour
             rg.linearVelocityX = 0f;
         }
 
+        
+        if (rg.linearVelocityX > controlsDeadZone || rg.linearVelocityX < -controlsDeadZone)
+        {
+            spr.flipX = rg.linearVelocityX < 0f;
+            animController.PullAnimation(runAnim, runAnimTime);
+        }
+        else animController.PullAnimation(idleAnim, idleAnimTime);
     }
 }
