@@ -180,6 +180,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: sound delay
   repeatable: 1
+  setOnStart: 0
   savekey: 
   timeSet: 3
   curTime: 0
@@ -392,6 +393,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: damage delay
   repeatable: 1
+  setOnStart: 0
   savekey: 
   timeSet: 1
   curTime: 0
@@ -582,9 +584,9 @@ MonoBehaviour:
   rg: {fileID: 8562508034808083614}
   groundChecker: {fileID: 488353455212627502}
   minDistance: 0
-  deceleration: 10
-  speed: 20
-  acceleration: 30
+  deceleration: 8
+  speed: 16
+  acceleration: 24
   jumpForce: 4
   jumpDelayTimer: {fileID: 7535525609482521652}
   minDistanceToJump: 1
@@ -593,7 +595,8 @@ MonoBehaviour:
   spr: {fileID: 0}
   minVelocityToMove: 0
   destroyableObject: {fileID: 5025325049783167554}
-  dropPrefab: {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
+  dropPrefab:
+  - {fileID: 2494444330949010391, guid: 6f73825348bf7d1499e72344661a1aae, type: 3}
   escapeSpeedMultiplier: 0.15
   hpWhenEscaping: 2
   timeToEscape: {fileID: 5500761368291544682}
@@ -613,6 +616,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: time to escape
   repeatable: 0
+  setOnStart: 0
   savekey: 
   timeSet: 5
   curTime: 0
@@ -631,6 +635,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: jump delay
   repeatable: 0
+  setOnStart: 0
   savekey: 
   timeSet: 1
   curTime: 0

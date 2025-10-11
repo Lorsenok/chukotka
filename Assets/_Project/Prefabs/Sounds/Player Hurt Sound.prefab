@@ -52,7 +52,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 4018833868461353898}
   music: []
-  multiplier: 0.25
+  multiplier: 0.1
 --- !u!82 &4018833868461353898
 AudioSource:
   m_ObjectHideFlags: 0
@@ -178,6 +178,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: destroy after
   repeatable: 0
+  setOnStart: 0
   savekey: 
   timeSet: 10
   curTime: 10

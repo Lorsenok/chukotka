@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Attack Stun
   m_EditorClassIdentifier: 
   power: 0.1
-  duration: 0.5
+  duration: 0.2

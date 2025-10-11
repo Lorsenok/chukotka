@@ -90,6 +90,22 @@ MonoBehaviour:
     m_Localized: Literally just a test tooltip
     m_Metadata:
       m_Items: []
+  - m_Id: 35997589596790784
+    m_Localized: Mocha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35997624187215872
+    m_Localized: Some kind of folk medicine i guess, it smells(
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36020714225000448
+    m_Localized: Meat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36020768616734720
+    m_Localized: Meaaaaaattttt
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

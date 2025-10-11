@@ -398,9 +398,9 @@ MonoBehaviour:
   rg: {fileID: 8562508034808083614}
   groundChecker: {fileID: 488353455212627502}
   minDistance: 0
-  deceleration: 10
-  speed: 20
-  acceleration: 30
+  deceleration: 6.5
+  speed: 13
+  acceleration: 19.5
   jumpForce: 3.5
   jumpDelayTimer: {fileID: 7535525609482521652}
   minDistanceToJump: 1
@@ -409,7 +409,9 @@ MonoBehaviour:
   spr: {fileID: 0}
   minVelocityToMove: 0
   destroyableObject: {fileID: 5025325049783167554}
-  dropPrefab: {fileID: 2494444330949010391, guid: fd8f175775ddd0d4998620299f108fff, type: 3}
+  dropPrefab:
+  - {fileID: 8568828300960335298, guid: 6ed060be2df2af44ebbb579ef2f1daeb, type: 3}
+  - {fileID: 2494444330949010391, guid: fd8f175775ddd0d4998620299f108fff, type: 3}
   escapeSpeedMultiplier: 0.15
   hpWhenEscaping: 0
   timeToEscape: {fileID: 5500761368291544682}

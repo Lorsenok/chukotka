@@ -19,7 +19,7 @@ public class CustomAnimatorController : MonoBehaviour
 
     public void ResetAnimation()
     {
-        curanim.Reset();
+        if (curanim != null) curanim.Reset();
     }
 
     public void ResetController()

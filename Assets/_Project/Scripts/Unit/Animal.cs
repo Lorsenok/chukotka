@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
+using Random = System.Random;
 
 public class Animal : TargetFollower
 {
     [Header("Animal")]
     [SerializeField] private DestroyableObject destroyableObject;
-    [SerializeField] private GameObject dropPrefab;
+    [SerializeField] private GameObject[] dropPrefab;
 
     [Header("Escaping")] [SerializeField] private float escapeSpeedMultiplier = 1f;
     [SerializeField] private int hpWhenEscaping;
@@ -68,6 +69,10 @@ public class Animal : TargetFollower
 
     private void Drop()
     {
-        if (dropPrefab != null) Instantiate(dropPrefab, transform.position, dropPrefab.transform.rotation);
+        if (dropPrefab.Length != 0)
+        {
+            int rand = UnityEngine.Random.Range(0, dropPrefab.Length);
+            Instantiate(dropPrefab[rand], transform.position, dropPrefab[rand].transform.rotation);
+        }
     }
 }

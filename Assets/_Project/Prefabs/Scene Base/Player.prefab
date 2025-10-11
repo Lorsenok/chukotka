@@ -376,6 +376,8 @@ MonoBehaviour:
   dashForce: 6
   dashForceExpireSpeed: 3
   dashTimer: {fileID: 2785499110048398597}
+  gravitySet: 0
+  minDashForceToGravitySet: 1
   animController: {fileID: 7647428656764415270}
   dashAnim: dash
   dashAnimTime: 0.4
@@ -483,7 +485,7 @@ MonoBehaviour:
   repeatable: 0
   setOnStart: 0
   savekey: 
-  timeSet: 3
+  timeSet: 0.2
   curTime: 0
 --- !u!114 &2271052916398891454
 MonoBehaviour:

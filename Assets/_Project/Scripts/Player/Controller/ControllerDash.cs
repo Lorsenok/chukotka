@@ -10,6 +10,8 @@ public class ControllerDash : ControllerAddition
     [SerializeField] private float dashForce;
     [SerializeField] private float dashForceExpireSpeed;
     [SerializeField] private Timer dashTimer;
+    [SerializeField] private float gravitySet;
+    [SerializeField] private float minDashForceToGravitySet = 0.1f;
     
     [Header("Animation")]
     [SerializeField] private CustomAnimatorController animController;
@@ -42,7 +44,8 @@ public class ControllerDash : ControllerAddition
     {
         if (rg.linearVelocityY == 0f) canDash = true;
         curDashPower = Mathf.Lerp(curDashPower, 0f, Time.deltaTime * dashForceExpireSpeed);
-
+        rg.linearVelocityY = Mathf.Abs(curDashPower) > minDashForceToGravitySet ? gravitySet : rg.linearVelocityY;
+        
         AdditionalSpeed = new Vector2(curDashPower, 0f);
     }
 
