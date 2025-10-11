@@ -12,12 +12,15 @@ public class TextLocalize : MonoBehaviour
 
     private void Translate(Locale locale)
     {
+        if (table == null) return;
+        if (table.GetTable() == null) return;
+        if (table.GetTable().GetEntry(key) == null) return;
         text.text = table.GetTable().GetEntry(key).Value;
     }
 
     private void Start()
     {
-        text.text = table.GetTable().GetEntry(key).Value;
+        Translate(null);
     }
 
     private void OnEnable()
