@@ -24,6 +24,9 @@ public class Spirit : MonoBehaviour //govno yebanoye
     [SerializeField] private Timer flashDelayTimer;
     [SerializeField] private int flashCount;
     
+    [Header("After Animation")]
+    [SerializeField] private GameObject[] enableObjects;
+    
     private bool isWorking = false;
 
     private void OnEnable()

@@ -455,7 +455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 5
-  offset: {x: 0, y: 1.9, z: -10}
-  ylock: 0
+  offset: {x: 0, y: 0, z: -10}
+  ylock: 1
   stateLock: 1
   shakeExpireSpeed: 20
