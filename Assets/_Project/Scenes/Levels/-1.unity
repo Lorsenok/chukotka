@@ -6324,6 +6324,17 @@ MonoBehaviour:
   savekey: 
   timeSet: 0.1
   curTime: 0
+--- !u!114 &1561337242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4035255455280005234, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+  m_PrefabInstance: {fileID: 4441169468015739516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1644833366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6520,7 +6531,7 @@ Transform:
   m_GameObject: {fileID: 1733851100}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.32, y: -0.34, z: 0}
+  m_LocalPosition: {x: -3.32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6829,7 +6840,7 @@ Transform:
   m_GameObject: {fileID: 1836445467}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11, y: -0.34, z: 0}
+  m_LocalPosition: {x: -11, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7245,10 +7256,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2785499110048398597, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: timeSet
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321353598892096416, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: dashForceExpireSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3657978016914447784, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6523416788447923937, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: timeSet
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523416788447923937, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: setOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447217727549252497, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447217727549252497, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: jumpAnimTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447217727549252497, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: jumpBlockTimer
+      value: 
+      objectReference: {fileID: 1561337242}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
