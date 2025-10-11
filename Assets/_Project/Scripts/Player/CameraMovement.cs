@@ -9,6 +9,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private bool ylock = true;
     [SerializeField] private GameState stateLock = GameState.Game;
     [SerializeField] private float shakeExpireSpeed;
+    [SerializeField] private float minX = -999;
+    [SerializeField] private float maxX = 999;
     
     private IGameState state;
     [Inject] private void Init(IGameState state)
@@ -34,6 +36,7 @@ public class CameraMovement : MonoBehaviour
         starty = transform.position.y;
         Vector3 targetPos = target.position + offset;
         targetPos.y = ylock ? starty : target.position.y;
+        targetPos.x = Mathf.Clamp(targetPos.x, minX, maxX);
         transform.position = targetPos + offset;
     }
 
@@ -43,6 +46,7 @@ public class CameraMovement : MonoBehaviour
         if (state.GetCurrentState() != stateLock) return;
         Vector3 targetPos = target.position + offset;
         targetPos.y = ylock ? starty : targetPos.y;
+        targetPos.x = Mathf.Clamp(targetPos.x, minX, maxX);
         transform.position = Vector3.Lerp(transform.position, targetPos + curShakeOffset, speed * Time.deltaTime);
     }
 }

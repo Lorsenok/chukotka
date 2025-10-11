@@ -459,3 +459,5 @@ MonoBehaviour:
   ylock: 1
   stateLock: 1
   shakeExpireSpeed: 20
+  minX: -999
+  maxX: 999

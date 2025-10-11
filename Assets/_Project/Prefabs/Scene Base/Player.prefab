@@ -357,7 +357,7 @@ MonoBehaviour:
   repeatable: 0
   setOnStart: 0
   savekey: 
-  timeSet: 0.3
+  timeSet: 0.5
   curTime: 0
 --- !u!114 &3321353598892096416
 MonoBehaviour:
@@ -374,7 +374,7 @@ MonoBehaviour:
   rg: {fileID: 1226351488987415359}
   rgDeadZone: 0.1
   dashForce: 10
-  dashForceExpireSpeed: 10
+  dashForceExpireSpeed: 2
   dashTimer: {fileID: 2785499110048398597}
   animController: {fileID: 7647428656764415270}
   dashAnim: dash
@@ -396,7 +396,7 @@ MonoBehaviour:
   repeatable: 0
   setOnStart: 0
   savekey: 
-  timeSet: 1
+  timeSet: 2
   curTime: 0
 --- !u!114 &8752553636816379488
 MonoBehaviour:

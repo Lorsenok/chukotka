@@ -15,7 +15,7 @@ public class SceneSwitchTrigger : Trigger
         this.sceneChanger = sceneChanger;
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.GetComponent<Controller>())
         {
