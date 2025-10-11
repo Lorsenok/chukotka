@@ -14,7 +14,7 @@ public class ControllerJump : ControllerAddition
     [SerializeField] private float jumpForce;
     [SerializeField] private Timer jumpBlockTimer;
 
-    [Header("Animation")] [SerializeField] private float animVelocityMin = 0.1f;
+    [Header("Animation")]
     [SerializeField] private CustomAnimatorController animController;
     [SerializeField] private string jumpAnim;
     [SerializeField] private float jumpAnimTime;

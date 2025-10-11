@@ -11,6 +11,8 @@ public static class GameSaver
     private static List<string> globalSaveKeys = new List<string>();
     private static List<Type> globalSaveTypes = new List<Type>();
 
+    public static bool StopAllSaves { get; set; } = false;
+    
     static GameSaver()
     {
         LoadGlobalSaveMetadata();
@@ -42,6 +44,7 @@ public static class GameSaver
 
     public static void Save(string key, object value)
     {
+        if (StopAllSaves) return;
         bool isSaveDone = LocalSave(key, value);
         if (!isSaveDone) return;
 
@@ -74,6 +77,7 @@ public static class GameSaver
 
     public static void GlobalSave()
     {
+        if (StopAllSaves) return;
         for (int i = 0; i < globalSaveKeys.Count; i++)
         {
             LocalSave(globalSaveIndex + globalSaveKeys[i], Load(globalSaveKeys[i], globalSaveTypes[i]));
@@ -90,6 +94,7 @@ public static class GameSaver
             Save(globalSaveKeys[i], value);
         }
 
+        StopAllSaves = false;
         PlayerPrefs.Save();
     }
 

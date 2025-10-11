@@ -229,6 +229,9 @@ GameObject:
   - component: {fileID: 4827099910807557395}
   - component: {fileID: 3545388424585552150}
   - component: {fileID: 872060715640361464}
+  - component: {fileID: 8560075882393440171}
+  - component: {fileID: 6733686695633511560}
+  - component: {fileID: 3429901607127689561}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -276,6 +279,7 @@ MonoBehaviour:
   - {fileID: 3321353598892096416}
   - {fileID: 8752553636816379488}
   - {fileID: 2271052916398891454}
+  - {fileID: 8560075882393440171}
   sound:
   - {fileID: 6216584906487495804}
   - {fileID: 2613605872887805037}
@@ -332,7 +336,6 @@ MonoBehaviour:
   jumps: 1
   jumpForce: 5
   jumpBlockTimer: {fileID: 6523416788447923937}
-  animVelocityMin: 0.1
   animController: {fileID: 7647428656764415270}
   jumpAnim: jump
   jumpAnimTime: 0.05
@@ -409,7 +412,7 @@ MonoBehaviour:
   rg: {fileID: 1226351488987415359}
   controlsDeadZone: 0.1
   speedMultiplier: 0.2
-  combo: 4
+  combo: 3
   curCombo: 0
   comboTimer: {fileID: 4391691324269488327}
   attackTimer: {fileID: 6443837458819563267}
@@ -981,6 +984,67 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3657978016914447784}
   m_Enabled: 1
+--- !u!114 &8560075882393440171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8480623b42ff5d2419f9f2de00865002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBeforeDeath: {fileID: 6733686695633511560}
+  timeAfterDeath: {fileID: 3429901607127689561}
+  player: {fileID: 7916989941622342710}
+  blockControllers:
+  - {fileID: 8447217727549252497}
+  - {fileID: 3321353598892096416}
+  - {fileID: 8752553636816379488}
+  - {fileID: 2271052916398891454}
+  animController: {fileID: 7647428656764415270}
+  anim: death
+  animTime: 999
+--- !u!114 &6733686695633511560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateLock: 4
+  tagname: time before death
+  repeatable: 0
+  setOnStart: 0
+  savekey: 
+  timeSet: 0.1
+  curTime: 0
+--- !u!114 &3429901607127689561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateLock: 4
+  tagname: time after death
+  repeatable: 0
+  setOnStart: 0
+  savekey: 
+  timeSet: 3
+  curTime: 0
 --- !u!1 &4620911821029657225
 GameObject:
   m_ObjectHideFlags: 0

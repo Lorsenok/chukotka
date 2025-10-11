@@ -51,6 +51,7 @@ public class SceneChangerService : ISceneChanger
 
     public void LoadGame()
     {
+        GameSaver.StopAllSaves = true;
         GameSaver.LoadGlobalSave();
         string sceneName = (string)GameSaver.Load("sceneName", typeof(string));
         if (string.IsNullOrEmpty(sceneName))
