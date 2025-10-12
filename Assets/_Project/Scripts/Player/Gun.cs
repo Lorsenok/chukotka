@@ -42,17 +42,19 @@ public class Gun : MonoBehaviour
     public void Shoot(float power)
     {
         Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.transform.rotation).Power = power;
-        animController.PullAnimation(shootAnim, shootAnimTime);
+        if (animController != null) animController.PullAnimation(shootAnim, shootAnimTime);
     }
     private void Update()
     {
-        if (Target == null) return;
+        if (Target == null && !pinToMouse) return;
         
         Vector2 dir = new Vector2(transform.position.x, transform.position.y) - (pinToMouse ? ProjMath.MousePosition() : Target.position);
         float rotation = ProjMath.RotateTowardsPosition(dir.normalized);
-        Debug.Log(rotation);
+        
+        Vector3 targetPos = Target == null ? ProjMath.MousePosition() : Target.position;
+        
         if (rotationLocks.Length > 0)
             rotation = FindClosestRotation(rotation);
-        transform.eulerAngles = new Vector3(0f, 0f, rotation + rotationOffset + (Target.position.x > transform.position.x ? rotationOffsetByX : -rotationOffsetByX));
+        transform.eulerAngles = new Vector3(0f, 0f, rotation + rotationOffset + (targetPos.x > transform.position.x ? rotationOffsetByX : -rotationOffsetByX));
     }
 }
