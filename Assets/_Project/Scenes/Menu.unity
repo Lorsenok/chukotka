@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   action: 1
-  index: Game
+  index: Cutscene1
   menuManager: {fileID: 0}
 --- !u!1 &1227492465
 GameObject:

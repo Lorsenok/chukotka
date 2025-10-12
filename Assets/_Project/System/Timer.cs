@@ -8,7 +8,6 @@ public class Timer : MonoBehaviour
 {
     public float SpeedMultiplier { get; set; } = 1f;
 
-    [SerializeField] private GameState stateLock = GameState.Game;
     [SerializeField] private string tagname;
     [SerializeField] protected bool repeatable;
     [SerializeField] private bool setOnStart = false;
@@ -42,12 +41,6 @@ public class Timer : MonoBehaviour
 
     public virtual void Update()
     {
-        if (gameState == null)
-        {
-            Debug.LogError(name + " cant get access to gameState");
-            return;
-        }
-        if (stateLock != GameState.Any && gameState.GetCurrentState() != stateLock) return;
         if (savekey != "" && savekey != string.Empty) GameSaver.Save(savekey, curTime);
         if (curTime > 0f) curTime -= Time.deltaTime * SpeedMultiplier;
         else

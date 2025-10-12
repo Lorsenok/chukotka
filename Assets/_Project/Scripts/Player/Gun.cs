@@ -50,6 +50,7 @@ public class Gun : MonoBehaviour
         
         Vector2 dir = new Vector2(transform.position.x, transform.position.y) - (pinToMouse ? ProjMath.MousePosition() : Target.position);
         float rotation = ProjMath.RotateTowardsPosition(dir.normalized);
+        Debug.Log(rotation);
         if (rotationLocks.Length > 0)
             rotation = FindClosestRotation(rotation);
         transform.eulerAngles = new Vector3(0f, 0f, rotation + rotationOffset + (Target.position.x > transform.position.x ? rotationOffsetByX : -rotationOffsetByX));
