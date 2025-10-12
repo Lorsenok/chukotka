@@ -594,8 +594,8 @@ MonoBehaviour:
   hp: 0
   destroyAfterDying: 0
   objectToDestroy: {fileID: 0}
-  hpSet: 10
-  maxHP: 10
+  hpSet: 20
+  maxHP: 20
   saveHP: 1
   saveHPKey: playerhp
   spawnAfterDamage:
@@ -2166,7 +2166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreObjects:
   - {fileID: 3657978016914447784}
-  damage: 1
+  damage: 3
   spawnOnDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   spawnPoint: {fileID: 5919055825948904651}
@@ -2414,7 +2414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignoreObjects:
   - {fileID: 3657978016914447784}
-  damage: 1
+  damage: 3
   spawnOnDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   spawnPoint: {fileID: 3244865298754977786}

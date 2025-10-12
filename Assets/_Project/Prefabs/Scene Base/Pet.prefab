@@ -57,7 +57,7 @@ MonoBehaviour:
   spawnOnUseItem:
   - {fileID: 1359130480447200395, guid: cdae2544dd370dd48ae71b40124f85c3, type: 3}
   - {fileID: 2181136554569465549, guid: f0edd4ddbc2bfdd4aad2d68e904cf4ae, type: 3}
-  heal: 1
+  heal: 6
   targetFollower: {fileID: 366702161343247526}
 --- !u!61 &9150714379145835766
 BoxCollider2D:
@@ -437,6 +437,7 @@ MonoBehaviour:
   stateLock: 1
   tagname: jump delay
   repeatable: 0
+  setOnStart: 0
   savekey: 
   timeSet: 1
   curTime: 0
@@ -452,6 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  priority: 0
+  animname: default
   spr: {fileID: 663601553081523855}
   sprites:
   - {fileID: -1819977306, guid: d33f1c48a73b65441bea6c998cb2e66b, type: 3}
@@ -477,6 +480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  priority: 0
+  animname: default
   spr: {fileID: 663601553081523855}
   sprites:
   - {fileID: -1765262827, guid: 437f24c48385dba448f3b7f01220c3b0, type: 3}

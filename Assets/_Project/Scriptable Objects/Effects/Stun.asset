@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Stun
   m_EditorClassIdentifier: 
   power: 0
-  duration: 5
+  duration: 12

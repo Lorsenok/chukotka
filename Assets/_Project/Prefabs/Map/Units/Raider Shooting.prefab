@@ -605,8 +605,8 @@ MonoBehaviour:
   repeatable: 1
   setOnStart: 0
   savekey: 
-  timeSet: 4
-  curTime: 5
+  timeSet: 1.5
+  curTime: 3
 --- !u!114 &4899564259587974400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,8 +729,8 @@ MonoBehaviour:
   hp: 0
   destroyAfterDying: 1
   objectToDestroy: {fileID: 4698977778594916722}
-  hpSet: 6
-  maxHP: 6
+  hpSet: 10
+  maxHP: 10
   saveHP: 0
   saveHPKey: 
   spawnAfterDamage:
