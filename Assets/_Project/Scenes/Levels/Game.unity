@@ -9278,9 +9278,12 @@ GameObject:
   - component: {fileID: 2087796334}
   - component: {fileID: 2087796333}
   - component: {fileID: 2087796332}
-  - component: {fileID: 2087796331}
   - component: {fileID: 2087796330}
   - component: {fileID: 2087796329}
+  - component: {fileID: 2087796331}
+  - component: {fileID: 2087796337}
+  - component: {fileID: 2087796336}
+  - component: {fileID: 2087796335}
   m_Layer: 0
   m_Name: Dialogue Trigger
   m_TagString: Untagged
@@ -9339,17 +9342,32 @@ MonoBehaviour:
   - d1p1
   - d1p2
   - d1p3
+  - d1p4
+  - d1p5
+  - d1p6
+  - d1p7
+  - d1p8
   namekeys:
-  - d1name2
-  - d1name1
-  - d1name2
+  - name2
+  - name1
+  - name2
+  - name1
+  - name2
+  - name1
+  - name2
+  - name2
   icon:
   - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
-  - {fileID: -904974794, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
   - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
-  side: 010001
-  nextId: 010000000200000003000000
-  panels: 010000000100000001000000
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
+  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
+  side: 0100010001000101
+  nextId: 0100000002000000030000000400000005000000060000000700000008000000
+  panels: 0100000001000000010000000100000001000000010000000100000001000000
 --- !u!114 &2087796332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9370,7 +9388,7 @@ MonoBehaviour:
   messageTextKey: ask3
   doubleMessage: 0
   doubleMessageTextKey: 
-  tree: {fileID: 2087796331}
+  tree: {fileID: 2087796337}
   trigger: {fileID: 2087796329}
 --- !u!61 &2087796333
 BoxCollider2D:
@@ -9434,6 +9452,150 @@ Transform:
   - {fileID: 1197062287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087796335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087796328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c61ee3f0dff424c835dc0686061060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  table:
+    m_TableReference:
+      m_TableCollectionName: GUID:766e6e7cba28b3b4987097e58b7e1ae3
+  keys:
+  - d4p1
+  - d4p2
+  - d4p3
+  - d4p4
+  - d4p5
+  - d4p6
+  - d4p7
+  - d4p8
+  - d4p9
+  - d4p10
+  - d4p11
+  - d4p12
+  - d4p13
+  namekeys:
+  - name1
+  - name3
+  - name1
+  - name3
+  - name1
+  - name3
+  - name1
+  - name3
+  - name1
+  - name3
+  - name3
+  - name1
+  - name3
+  icon:
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  side: 00010001000100010001010001
+  nextId: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
+  panels: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+--- !u!114 &2087796336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087796328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c61ee3f0dff424c835dc0686061060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  table:
+    m_TableReference:
+      m_TableCollectionName: GUID:766e6e7cba28b3b4987097e58b7e1ae3
+  keys:
+  - d3p1
+  - d3p2
+  - d3p3
+  - d3p4
+  namekeys:
+  - name1
+  - name3
+  - name1
+  - name3
+  icon:
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  side: 00010001
+  nextId: 01000000020000000300000004000000
+  panels: 01000000010000000100000001000000
+--- !u!114 &2087796337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087796328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c61ee3f0dff424c835dc0686061060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  table:
+    m_TableReference:
+      m_TableCollectionName: GUID:766e6e7cba28b3b4987097e58b7e1ae3
+  keys:
+  - d2p1
+  - d2p2
+  - d2p3
+  - d2p4
+  - d2p5
+  - d2p6
+  - d2p7
+  - d2p8
+  - d2p9
+  - d2p10
+  namekeys:
+  - name3
+  - name1
+  - name3
+  - name1
+  - name3
+  - name1
+  - name3
+  - name3
+  - name1
+  - name3
+  icon:
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
+  - {fileID: 201913988, guid: 6accf97e7a9f7f04d8cf35e3cbae4f2a, type: 3}
+  side: 01000100010001010001
+  nextId: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
+  panels: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
 --- !u!1001 &1172122662116425947
 PrefabInstance:
   m_ObjectHideFlags: 0
