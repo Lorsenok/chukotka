@@ -76,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 1492350563732979404}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 6350410096284095680}
   - component: {fileID: 4899564259587974400}
   - component: {fileID: 8677854411487331091}
+  - component: {fileID: 2868786170649745539}
   m_Layer: 0
   m_Name: Raider Shooting
   m_TagString: Untagged
@@ -363,7 +364,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.67, y: -2.67, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5928441006030108544}
@@ -416,8 +417,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 40
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.8, g: 0.1344266, b: 0.043137264, a: 1}
+  m_Sprite: {fileID: -1790616055, guid: 6550c4e9a2ac037438da4671bec55c1a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -492,7 +493,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.21875, y: 1.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -534,6 +535,14 @@ MonoBehaviour:
   hpWhenEscaping: 0
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
+  flip: 0
+  animController: {fileID: 0}
+  idleAnim: idle
+  idleAnimTime: 0.1
+  walkAnim: walk
+  walkAnimTime: 0.1
+  jumpAnim: jump
+  jumpAnimTime: 0.5
 --- !u!114 &5500761368291544682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,6 +644,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0871f748c48352f4593c03df6c2009ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2868786170649745539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c46948491a93d48a925977cff1f250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animators: []
 --- !u!1 &8466107372646631808
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +685,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3480739057512430398}
@@ -736,3 +758,7 @@ MonoBehaviour:
   spawnAfterDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   - {fileID: 1359130480447200395, guid: c17f71eb1e912594bb6ffb4e12d61639, type: 3}
+  spawnAfterDestroy: []
+  animController: {fileID: 0}
+  getDamageAnim: 
+  getDamageAnimTime: 0

@@ -5388,6 +5388,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4068150867646179132, guid: 37a17bac9333fdb4f9dfbcbe2b85997c, type: 3}
+      propertyPath: flip
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4698977778594916722, guid: 37a17bac9333fdb4f9dfbcbe2b85997c, type: 3}
       propertyPath: m_Name
       value: Raider Shooting
@@ -7792,11 +7796,6 @@ Transform:
   - {fileID: 1689506933}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1374982973 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-  m_PrefabInstance: {fileID: 1568183282}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1393423436
 GameObject:
   m_ObjectHideFlags: 0
@@ -8276,81 +8275,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Raider Melee
       objectReference: {fileID: 0}
-    - target: {fileID: 5025325049783167554, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      propertyPath: dieAnim
-      value: die
-      objectReference: {fileID: 0}
-    - target: {fileID: 5025325049783167554, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      propertyPath: dieAnimTime
-      value: 999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5025325049783167554, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      propertyPath: getDamageAnim
-      value: hit
-      objectReference: {fileID: 0}
-    - target: {fileID: 5025325049783167554, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      propertyPath: animController
-      value: 
-      objectReference: {fileID: 1568183285}
-    - target: {fileID: 5025325049783167554, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      propertyPath: getDamageAnimTime
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745146676619401190, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      propertyPath: animators.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8745146676619401190, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      propertyPath: 'animators.Array.data[3]'
-      value: 
-      objectReference: {fileID: 1568183298}
-    - target: {fileID: 8745146676619401190, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      propertyPath: 'animators.Array.data[4]'
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1568183298}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
---- !u!114 &1568183285 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8745146676619401190, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-  m_PrefabInstance: {fileID: 1568183282}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374982973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c46948491a93d48a925977cff1f250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &1568183286 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6334257619906543369, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-  m_PrefabInstance: {fileID: 1568183282}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1568183298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374982973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  priority: 4
-  animname: hit
-  spr: {fileID: 1568183286}
-  sprites: []
-  timePerFrame: 0.3
-  loop: 0
-  curSprite: 0
 --- !u!1 &1689506932
 GameObject:
   m_ObjectHideFlags: 0

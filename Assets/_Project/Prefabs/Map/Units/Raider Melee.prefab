@@ -192,6 +192,9 @@ MonoBehaviour:
   shakeOnDamage: 6
   timerDelay: {fileID: 2318846243298551186}
   effectTimer: {fileID: 0}
+  animController: {fileID: 8745146676619401190}
+  attackAnim: damage
+  attackAnimTime: 0.45
 --- !u!114 &2318846243298551186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +235,8 @@ GameObject:
   - component: {fileID: 6991258344441638691}
   - component: {fileID: 4117801837987035450}
   - component: {fileID: 4253550019511564131}
+  - component: {fileID: 4010159816988773925}
+  - component: {fileID: 5306033761709094957}
   m_Layer: 0
   m_Name: Raider Melee
   m_TagString: Untagged
@@ -420,7 +425,7 @@ MonoBehaviour:
   hpWhenEscaping: 0
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
-  flip: 1
+  flip: 0
   animController: {fileID: 8745146676619401190}
   idleAnim: idle
   idleAnimTime: 0.1
@@ -510,6 +515,8 @@ MonoBehaviour:
   - {fileID: 6991258344441638691}
   - {fileID: 4117801837987035450}
   - {fileID: 4253550019511564131}
+  - {fileID: 4010159816988773925}
+  - {fileID: 5306033761709094957}
 --- !u!114 &6991258344441638691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,6 +596,53 @@ MonoBehaviour:
   - {fileID: -1068530725, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
   - {fileID: -792171095, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
   - {fileID: -1681968453, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
+  timePerFrame: 0.1
+  loop: 0
+  curSprite: 0
+--- !u!114 &4010159816988773925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 3
+  animname: damage
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: -154839906, guid: 993e6a33984505b468b93079321b9aa6, type: 3}
+  - {fileID: 11149918, guid: 993e6a33984505b468b93079321b9aa6, type: 3}
+  - {fileID: 1454945783, guid: 993e6a33984505b468b93079321b9aa6, type: 3}
+  - {fileID: 2126864344, guid: 993e6a33984505b468b93079321b9aa6, type: 3}
+  - {fileID: 979046150, guid: 993e6a33984505b468b93079321b9aa6, type: 3}
+  timePerFrame: 0.1
+  loop: 0
+  curSprite: 0
+--- !u!114 &5306033761709094957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 4
+  animname: hit
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: 1949353958, guid: 1f31bc69d1be29f48ba01f2495b930c1, type: 3}
+  - {fileID: 1544448724, guid: 1f31bc69d1be29f48ba01f2495b930c1, type: 3}
+  - {fileID: 2008085760, guid: 1f31bc69d1be29f48ba01f2495b930c1, type: 3}
+  - {fileID: -405018694, guid: 1f31bc69d1be29f48ba01f2495b930c1, type: 3}
   timePerFrame: 0.1
   loop: 0
   curSprite: 0
@@ -880,3 +934,7 @@ MonoBehaviour:
   spawnAfterDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   - {fileID: 1359130480447200395, guid: c17f71eb1e912594bb6ffb4e12d61639, type: 3}
+  spawnAfterDestroy: []
+  animController: {fileID: 8745146676619401190}
+  getDamageAnim: hit
+  getDamageAnimTime: 0.35

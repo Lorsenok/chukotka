@@ -48,6 +48,12 @@ public class DamageObject : MonoBehaviour
 
     [SerializeField] private Timer timerDelay;
     [SerializeField] private Timer effectTimer;
+    
+    [Header("Animation")]
+    [SerializeField] private CustomAnimatorController animController;
+    [SerializeField] private string attackAnim;
+    [SerializeField] private float attackAnimTime;
+    
     private bool giveEffect = false;
     
     private List<DestroyableObject> curCollisions = new List<DestroyableObject>();
@@ -74,6 +80,7 @@ public class DamageObject : MonoBehaviour
 
     private void DealDamage(DestroyableObject obj)
     {
+        if (animController != null) animController.PullAnimation(attackAnim, attackAnimTime);
         obj.HP -= damage;
         foreach (GameObject spawn in spawnOnDamage)
         {
