@@ -443,9 +443,9 @@ MonoBehaviour:
   hpWhenEscaping: 6
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
-  flip: 0
-  minSpeedX: 0.25
-  animController: {fileID: 0}
+  flip: 1
+  minSpeedX: 0
+  animController: {fileID: 1022220381131382507}
   idleAnim: idle
   idleAnimTime: 0.1
   walkAnim: walk
