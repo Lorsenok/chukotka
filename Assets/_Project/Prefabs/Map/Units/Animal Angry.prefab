@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d497dfbe72a0fd4e9d98fb0c1b2a7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: sound delay
   repeatable: 1
   setOnStart: 0
@@ -378,6 +377,9 @@ MonoBehaviour:
   shakeOnDamage: 6
   timerDelay: {fileID: 2318846243298551186}
   effectTimer: {fileID: 0}
+  animController: {fileID: 0}
+  attackAnim: 
+  attackAnimTime: 0
 --- !u!114 &2318846243298551186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,7 +392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: damage delay
   repeatable: 1
   setOnStart: 0
@@ -484,8 +485,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 40
-  m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
-  m_Color: {r: 0.8, g: 0.1344266, b: 0.043137264, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 63c2c822443d2084e9c4277d06f72537, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -560,7 +561,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 1.9375, y: 1.21875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -592,7 +593,7 @@ MonoBehaviour:
   minDistanceToJump: 1
   idle: {fileID: 0}
   move: {fileID: 0}
-  spr: {fileID: 0}
+  spr: {fileID: 6334257619906543369}
   minVelocityToMove: 0
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab:
@@ -601,6 +602,15 @@ MonoBehaviour:
   hpWhenEscaping: 4
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
+  flip: 0
+  minSpeedX: 0.25
+  animController: {fileID: 0}
+  idleAnim: idle
+  idleAnimTime: 0.1
+  walkAnim: walk
+  walkAnimTime: 0.1
+  jumpAnim: 
+  jumpAnimTime: 0
 --- !u!114 &5500761368291544682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,7 +623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: time to escape
   repeatable: 0
   setOnStart: 0
@@ -632,7 +641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: jump delay
   repeatable: 0
   setOnStart: 0
@@ -768,3 +776,7 @@ MonoBehaviour:
   spawnAfterDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   - {fileID: 1359130480447200395, guid: e751efc145c24be4aa76bbd4ad2f21c6, type: 3}
+  spawnAfterDestroy: []
+  animController: {fileID: 0}
+  getDamageAnim: 
+  getDamageAnimTime: 0

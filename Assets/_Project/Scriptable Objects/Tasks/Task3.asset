@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25329afd7438d3344ab1deea4613c687, type: 3}
   m_Name: Task3
   m_EditorClassIdentifier: 
-  taskId: 2
+  taskId: 0
   description:
     m_TableReference:
       m_TableCollectionName: GUID:9b7eb2a5917530f4ca4ec194f810e879
     m_TableEntryReference:
-      m_KeyId: 2596997322067968
+      m_KeyId: 34071702768967680
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

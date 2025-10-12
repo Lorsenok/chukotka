@@ -7,6 +7,24 @@ public class Trigger : MonoBehaviour //Idk how to do it in another way actually
     public static Action<int> TriggerById { get; set; }
     public static Action TriggerAll { get; set; }
 
+    private static int progression = 0;
+
+    public static int Progression
+    {
+        get
+        {
+            return progression;
+        }
+
+        set
+        {
+            PlayerPrefs.SetInt("progression", value);
+            progression = value;
+        }
+    }
+    
+    public static Action OnProgressionChanged { get; set; }
+
     [SerializeField] protected int id = -1;
     [SerializeField] protected GameObject[] spawnObjects;
     [SerializeField] protected GameObject[] spawnObjectsPos;
@@ -16,6 +34,8 @@ public class Trigger : MonoBehaviour //Idk how to do it in another way actually
 
     [SerializeField] protected int activateAnotherTriggerId = -1;
 
+    [SerializeField] protected int progressionSet = -1;
+    
     public virtual void OnEnable()
     {
         TriggerAll += Action;
@@ -56,6 +76,11 @@ public class Trigger : MonoBehaviour //Idk how to do it in another way actually
         }
 
         if (activateAnotherTriggerId != -1) TriggerById?.Invoke(activateAnotherTriggerId);
+        if (progressionSet != -1)
+        {
+            Progression = progressionSet;
+            OnProgressionChanged?.Invoke();
+        }
     }
 
     public void ActionById(int id)
