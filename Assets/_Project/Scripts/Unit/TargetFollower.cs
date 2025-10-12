@@ -58,7 +58,7 @@ public class TargetFollower : MonoBehaviour
         rg.linearVelocityX = Mathf.Clamp(rg.linearVelocityX, -speed, speed);
     }
 
-    public void Jump()
+    public virtual void Jump()
     {
         rg.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         canJump = false;

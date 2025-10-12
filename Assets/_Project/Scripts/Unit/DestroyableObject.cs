@@ -20,6 +20,8 @@ public class DestroyableObject : MonoBehaviour
                 {
                     Instantiate(obj, transform.position, obj.transform.rotation);
                 }
+                
+                if (animController != null) animController.PullAnimation(getDamageAnim, getDamageAnimTime);
             }
             hp = value;
         }
@@ -34,6 +36,12 @@ public class DestroyableObject : MonoBehaviour
     [SerializeField] protected bool saveHP = false;
     [SerializeField] protected string saveHPKey;
     [SerializeField] protected GameObject[] spawnAfterDamage;
+    [SerializeField] protected GameObject[] spawnAfterDestroy;
+    
+    [Header("Animations")]
+    [SerializeField] private CustomAnimatorController animController;
+    [SerializeField] private string getDamageAnim;
+    [SerializeField] private float getDamageAnimTime;
     
     public virtual void Start()
     {

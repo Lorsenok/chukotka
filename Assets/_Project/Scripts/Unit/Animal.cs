@@ -12,6 +12,16 @@ public class Animal : TargetFollower
     [SerializeField] private int hpWhenEscaping;
     [SerializeField] private Timer timeToEscape;
     [SerializeField] private GameObject[] spawnAfterEscapePrefabs;
+    
+    [Header("Custom Animator")]
+    [SerializeField] private bool flip = false;
+    [SerializeField] private CustomAnimatorController animController;
+    [SerializeField] private string idleAnim;
+    [SerializeField] private float idleAnimTime;
+    [SerializeField] private string walkAnim;
+    [SerializeField] private float walkAnimTime;
+    [SerializeField] private string jumpAnim;
+    [SerializeField] private float jumpAnimTime;
 
     private bool isEscaping = false;
     
@@ -45,7 +55,13 @@ public class Animal : TargetFollower
 
     public override void Update()
     {
-        if (!agr) return;
+        if (destroyableObject.HP <= 0) return;
+        bool isMoving = rg.linearVelocityX > minVelocityToMove || rg.linearVelocityX < -minVelocityToMove;
+        if (!agr)
+        {
+            if (animController != null) animController.PullAnimation(walkAnim, walkAnimTime);
+            return;
+        }
         if (destroyableObject.HP <= hpWhenEscaping && !isEscaping)
         {
             isEscaping = true;
@@ -57,6 +73,18 @@ public class Animal : TargetFollower
             if (groundChecker.IsTouchingGround && canJump) Jump();
         }
         else base.Update();
+
+        if (isMoving && animController != null)
+        {
+            animController.PullAnimation(walkAnim, walkAnimTime);
+            spr.flipX = rg.linearVelocityX < 0f ? flip : !flip;
+        }
+    }
+
+    public override void Jump()
+    {
+        base.Jump();
+        if (animController !=null) animController.PullAnimation(jumpAnim, jumpAnimTime);
     }
 
     private void OnEscape()

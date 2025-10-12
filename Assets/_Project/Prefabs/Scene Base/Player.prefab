@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 2635163876739332795}
   destroyableObject: {fileID: 7916989941622342710}
-  orighp: 10
+  orighp: 20
   speed: 5
 --- !u!1 &4773197948713730725
 GameObject:

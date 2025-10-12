@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1492350563732979404}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -169,7 +169,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9, y: 1}
+  m_Size: {x: 0.9, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &3684061691620053265
 MonoBehaviour:
@@ -228,6 +228,10 @@ GameObject:
   - component: {fileID: 7535525609482521652}
   - component: {fileID: 8782318647453233342}
   - component: {fileID: -8437260921589478668}
+  - component: {fileID: 8745146676619401190}
+  - component: {fileID: 6991258344441638691}
+  - component: {fileID: 4117801837987035450}
+  - component: {fileID: 4253550019511564131}
   m_Layer: 0
   m_Name: Raider Melee
   m_TagString: Untagged
@@ -245,7 +249,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.67, y: -2.67, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4308564803071460029}
@@ -298,8 +302,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 40
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.8, g: 0.1344266, b: 0.043137264, a: 1}
+  m_Sprite: {fileID: -357930132, guid: 0fb0f99ffcfdb174e8d5d72272a606d8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -374,7 +378,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.21875, y: 1.78125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -406,7 +410,7 @@ MonoBehaviour:
   minDistanceToJump: 1
   idle: {fileID: 0}
   move: {fileID: 0}
-  spr: {fileID: 0}
+  spr: {fileID: 6334257619906543369}
   minVelocityToMove: 0
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab:
@@ -416,6 +420,14 @@ MonoBehaviour:
   hpWhenEscaping: 0
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
+  flip: 1
+  animController: {fileID: 8745146676619401190}
+  idleAnim: idle
+  idleAnimTime: 0.1
+  walkAnim: walk
+  walkAnimTime: 0.1
+  jumpAnim: jump
+  jumpAnimTime: 0.5
 --- !u!114 &5500761368291544682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +494,104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0871f748c48352f4593c03df6c2009ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8745146676619401190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c46948491a93d48a925977cff1f250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animators:
+  - {fileID: 6991258344441638691}
+  - {fileID: 4117801837987035450}
+  - {fileID: 4253550019511564131}
+--- !u!114 &6991258344441638691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  animname: walk
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: -1065847687, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -1516047729, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -1817206652, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -1656338069, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -844839975, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: 494320764, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: 192980047, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -1221844841, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -352839423, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  timePerFrame: 0.1
+  loop: 1
+  curSprite: 0
+--- !u!114 &4117801837987035450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 1
+  animname: walk
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: -1065847687, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -1516047729, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -1817206652, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -1656338069, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -844839975, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: 494320764, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: 192980047, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -1221844841, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  - {fileID: -352839423, guid: ba4ddc0b1580f034d8f8a7132927e3ed, type: 3}
+  timePerFrame: 0.1
+  loop: 1
+  curSprite: 0
+--- !u!114 &4253550019511564131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 2
+  animname: jump
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: -66101749, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
+  - {fileID: 858070704, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
+  - {fileID: 1965101260, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
+  - {fileID: 319454905, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
+  - {fileID: -1068530725, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
+  - {fileID: -792171095, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
+  - {fileID: -1681968453, guid: db2ce89298f7f9942b72843ef59d28c6, type: 3}
+  timePerFrame: 0.1
+  loop: 0
+  curSprite: 0
 --- !u!1 &5192710759750865662
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +856,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &5025325049783167554
 MonoBehaviour:
