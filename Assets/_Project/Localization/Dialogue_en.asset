@@ -31,222 +31,535 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
-    m_Localized: "<color=red>Ryn'gyrgyng</color> shines upon your path, child...
-      But I see the shadows of Kele already creeping toward the encampment. You have
-      torn the veil between the worlds \u2014 now the Great Cold breathes down our
-      necks. <color=red>Awaken!</color> Your spirit has wandered too long in the
-      ice..."
+    m_Localized: <i><color="red">Ettyk</color></i>, my boy! How are you getting on?
     m_Metadata:
       m_Items: []
   - m_Id: 643025518546944
-    m_Localized: 'Questions can wait. Now listen carefully: go to the elder of our
-      encampment. He is at the <color=green>heart of the encampment</color>. He has
-      words for you.'
+    m_Localized: "<link=\"shake\"><color=\"red\">Tann\u2019ytan</color></link> again
+      \u2014 outsiders have come! If only we knew what they want this time\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 237707051487232
-    m_Localized: "<color=blue>Where am I...?</color> Before my eyes \u2014 shards
-      of ice, black water... Who are you?"
+    m_Localized: "Ettyk, <i><color=\"red\">itligin</color></i>. I found tracks near
+      the camp. Long, as if a bear were walking on its hind legs. But it\u2019s not
+      an animal, I can feel it."
     m_Metadata:
       m_Items: []
   - m_Id: 643386824282112
-    m_Localized: Chu
+    m_Localized: Those ones? What, have they come for our souls again? They say their
+      armor is made from a special bone?
     m_Metadata:
       m_Items: []
   - m_Id: 643406642368512
-    m_Localized: <color=blue>Shaman</color>
+    m_Localized: "True, true. That armor makes them invulnerable even to shamans.
+      Maybe that\u2019s why they eat mushrooms\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 2913206492024832
-    m_Localized: <color=red>Ah, the damned one has come! Because of your weakness,
-      all the amulets have cracked!</color> The reindeer are thrashing like mad things,
-      the air has grown heavy, something terrible is approaching... <color=red>Now
-      an enormous danger looms over us!</color>
+    m_Localized: "Mushrooms? <i><color=\"red\">And they don\u2019t get poisoned by
+      them?</color></i>"
     m_Metadata:
       m_Items: []
   - m_Id: 2914666168537088
-    m_Localized: Wait, what are you talking about?
+    m_Localized: Yes. They eat them and even praise them. I saw it myself when I
+      was a lad. A wondrous sight!
     m_Metadata:
       m_Items: []
   - m_Id: 2914788835151872
-    m_Localized: Either you fix everything you've wrought, or the encampment will
-      banish you forever as accursed.
+    m_Localized: "Go to the hunter. Tell him to be on guard \u2014 they may prowl
+      in the forest. And they\u2019re very fond of ambushes!"
     m_Metadata:
       m_Items: []
   - m_Id: 2915132415758336
-    m_Localized: '*14Alright, alright... okay. What do I need to do?*15<color=red>What
-      the hell are you talking about? Why are you insulting me? What did I do to
-      you?!</color>'
+    m_Localized: "Ah, you\u2019ve come! What do you need this time?"
     m_Metadata:
       m_Items: []
   - m_Id: 2915678526722048
-    m_Localized: "You must prove you can atone for your guilt. The sacred trees have
-      shed their branches \u2014 gather ten and bring them to me. Without them, new
-      protective charms cannot be made. The branches are scattered throughout the
-      encampment."
+    m_Localized: "The shaman sent me to you. He says tann\u2019ytan are near. He
+      asked you to be more careful \u2014 they\u2019re in the woods and may set an
+      ambush!"
     m_Metadata:
       m_Items: []
   - m_Id: 2915692988682240
-    m_Localized: "<color=red>Shut up!</color> If you want to atone for your guilt
-      \u2014 you'll work like the damned now, and I don't care that you nearly got
-      yourself killed by your own stupidity. The sacred trees have shed their branches
-      \u2014 gather ten. Without them, new protective charms can't be made. The branches
-      are scattered throughout the encampment."
+    m_Localized: "Those \u201Cthings\u201D?"
     m_Metadata:
       m_Items: []
   - m_Id: 2917006401425408
-    m_Localized: The Elder
+    m_Localized: "Tann\u2019ytan? Nonsense! Tell the shaman to eat less <i><color=\"red\">vatak</color></i>.
+      Soon he\u2019ll start seeing <i><color=\"red\">fly-agaric women</color></i>.
+      They say the more fly-agarics you eat, the more women you\u2019ll see!"
     m_Metadata:
       m_Items: []
   - m_Id: 3165914054610944
-    m_Localized: Not enough sticks
+    m_Localized: "Ha \u2014 you talk, and then you\u2019ll complain when someone
+      grabs you from under the snow by the collar! I saw the tracks myself, I\u2019m
+      not lying."
     m_Metadata:
       m_Items: []
   - m_Id: 3201381835821056
-    m_Localized: '<color=blue>Hmm...</color> The branches took on a strange shape
-      after your touch. But... fine... It''s done. Now listen: the encampment stands
-      on the edge of an abyss. Everyone must pull their weight - go to the wise ones
-      or help the hunter.'
+    m_Localized: "<i><color=\"red\">Ga</color></i>. Alright, don\u2019t shout. But
+      such tracks aren\u2019t left only by them. Neighboring tribes have also started
+      walking on those things."
     m_Metadata:
       m_Items: []
   - m_Id: 3201720760750080
-    m_Localized: '*12Where do I find the wise ones?*13Where is the hunter?*14<color=green>Maybe
-      finally you''ll explain why everyone looks at me like I''m cursed or something?</color>'
+    m_Localized: <i><color="red">Gereglyn</color></i>? What?!
     m_Metadata:
       m_Items: []
   - m_Id: 3202564457582592
-    m_Localized: "No idea. They're always wandering around the encampment. Find them
-      yourself \u2013 I won't be keeping you company on this one."
+    m_Localized: "Don\u2019t you know? Those long flat sticks whose tracks you probably
+      saw. They say they glide well on the snow and your foot doesn\u2019t sink.
+      If only we had such!"
     m_Metadata:
       m_Items: []
   - m_Id: 3202892804476928
-    m_Localized: "Old Man Umky is preparing for the hunt right now. He'll likely
-      be near his yaranga \u2014 it's in the northern part of the encampment."
+    m_Localized: "Alright, since you\u2019ve come \u2014 help gather the catch. The
+      snares got tangled somewhere and there are no extra hands. Your tann\u2019ytan
+      business, ha-ha?"
     m_Metadata:
       m_Items: []
   - m_Id: 3203393117835264
-    m_Localized: By the name of great Kurkyl, leave already! I am truly not ready
-      to answer this question now.
+    m_Localized: "I\u2019ll help, but how am I supposed to run fast like that?"
     m_Metadata:
       m_Items: []
   - m_Id: 3246548840173568
-    m_Localized: <color=red>Ooooh</color>, the crack has come! He-he-he :>
+    m_Localized: "Ga, I\u2019ll help you! Look, you need to do it like this\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 3247036994244608
-    m_Localized: Wha...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3247085199380480
-    m_Localized: "I see two birds in your chest: one cries \u2018help me,\u2019 the
-      other\u2014\u2018I am guilty\u2019\u2026 Which one sings louder?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3247524544335872
-    m_Localized: "Foolish sister! These are not birds \u2014 it's a walrus and a
-      wolf! One calls you to the icy water, the other... PLAYS WITH YOUR HEART! HA-HA-HA!"
+    m_Localized: <i><color="red">Inniy, look</color></i>! I found your snares!
     m_Metadata:
       m_Items: []
   - m_Id: 3247841386254336
-    m_Localized: <color=red>What are you all even talking about?</color> What's the
-      point of these riddles?
+    m_Localized: "Here they are \u2014 they were lying nearby. And you were still
+      laughing at me!"
     m_Metadata:
       m_Items: []
   - m_Id: 3248170974662656
-    m_Localized: Ha! The blind man cannot leave the blizzard
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3248520343408640
-    m_Localized: Well, I'll be going away from here quickly then...
+    m_Localized: "Ha, indeed. Thank you! These pelts will last us a long time. Now
+      go to the elder, I\u2019ll sort things out from here."
     m_Metadata:
       m_Items: []
   - m_Id: 3250257762537472
-    m_Localized: Grandmother Tynek
+    m_Localized: "I was helping the shaman\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 3250240800772096
-    m_Localized: Grandmother Ayna
+    m_Localized: "Ah, you\u2019ve come, you cursed one! Where have you been roaming?"
     m_Metadata:
       m_Items: []
   - m_Id: 3269075188666368
-    m_Localized: Hello! Are you the hunter?
+    m_Localized: "The old fool who\u2019s lost his mind?"
     m_Metadata:
       m_Items: []
   - m_Id: 3282607292633088
-    m_Localized: So, the Elder sent you...
+    m_Localized: "<link=\"shake\"><color=\"red\">Don\u2019t you dare call him that!</color></link>
+      He may be old, but he\u2019s wiser than all of us!"
     m_Metadata:
       m_Items: []
   - m_Id: 3282931512332288
-    m_Localized: Well yes, are you dissatisfied with something?
+    m_Localized: "Aha \u2014 when he doesn\u2019t eat fly-agarics! Why did you come
+      to me?"
     m_Metadata:
       m_Items: []
   - m_Id: 3283085002887168
-    m_Localized: 'Then tell me this: why do some return from that terrible place,
-      while others are doomed to a cold death?'
+    m_Localized: "Hunter Tanat told me to come to you. We gathered furs \u2014 enough
+      to clothe the whole camp for the winter!"
     m_Metadata:
       m_Items: []
   - m_Id: 3283539904516096
-    m_Localized: '*15What are you talking about?*18Maybe this is the spirits'' choice?'
+    m_Localized: "At least you did something sensible. Alright, I don\u2019t have
+      time to dally. Some outsiders are loitering near the village; they should be
+      driven off."
     m_Metadata:
       m_Items: []
   - m_Id: 3283986950213632
-    m_Localized: Don't play stupid. <color=red>This is your fault</color>
+    m_Localized: "It\u2019s tann\u2019ytan! The shaman said it was them \u2014 he
+      knew it!"
     m_Metadata:
       m_Items: []
   - m_Id: 3284187542802432
-    m_Localized: I... I really don't understand anything... completely confused now
+    m_Localized: "<link=\"shake\"><color=\"red\">I know what he\u2019s teaching you,
+      pup, and he thinks I won\u2019t notice. Don\u2019t think you\u2019ll get away
+      with this.</color></link> There are no tann\u2019ytan in the village, understand?
+      Just outsiders!"
     m_Metadata:
       m_Items: []
   - m_Id: 3284485799759872
-    m_Localized: Alright, an order is an order. Take the bow and shoot some birds.
-      I need 12 feathers for new amulets
+    m_Localized: <link="shake"><color="red">Since you fancy yourself so clever, go
+      and deal with them yourself!</color></link>
     m_Metadata:
       m_Items: []
   - m_Id: 3284993352486912
-    m_Localized: I've never shot a bow before... alright, let's get started
+    m_Localized: "And who will cry for you, runt? Go and don\u2019t bother me! We\u2019ll
+      see how your shamanic power saves you. Or will you fling your seal-hide in
+      front of yourself?"
     m_Metadata:
       m_Items: []
   - m_Id: 3286020004859904
-    m_Localized: "And to me, it seems those who returned are guilty of the others\u2019
-      deaths."
+    m_Localized: "You\u2019re sending me to certain death!"
     m_Metadata:
       m_Items: []
   - m_Id: 3287626037415936
-    m_Localized: The Hunter Umky
+    m_Localized: What is this? Where did you get them?
     m_Metadata:
       m_Items: []
   - m_Id: 4327844366602240
-    m_Localized: Alright, you may go!
+    m_Localized: Back? What do you need? Why are you so battered?
     m_Metadata:
       m_Items: []
   - m_Id: 4327873261162496
-    m_Localized: <color=green>yuipeeeee</color>
+    m_Localized: "This is an enormous rarity. That very bone\u2026 <i>zhileza</i>\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 9320768535875584
-    m_Localized: Take the feathers to the shaman. Perhaps he'll find a kind word
-      for you. I have nothing more to say.
+    m_Localized: "<link=\"shake\"><color=\"red\">From the tann\u2019ytan?</color></link>
+      Admit it now \u2014 it was them, wasn\u2019t it?"
     m_Metadata:
       m_Items: []
   - m_Id: 9321048677634048
-    m_Localized: "I've been scenting your trail \u2014 <color=red>smell of blood
-      and fear</color> clinging to it. Yet you're learning to move through our encampment
-      anew. For that, I say \u2018thank you,\u2019 though we both know these northern
-      lands have <color=red>no love for the weak</color>."
+    m_Localized: "No! The thing is in no way connected to the tann\u2019ytan; this
+      <i>zhileza</i> is simply very rare."
     m_Metadata:
       m_Items: []
   - m_Id: 9322461004648448
-    m_Localized: "Now listen close, the way birds heed summer\u2019s first whisper:
-      we need a new idol for the yaranga. What you\u2019ve gathered should suffice."
+    m_Localized: May I go now?
     m_Metadata:
       m_Items: []
   - m_Id: 9353744976007168
-    m_Localized: Here it is! I think it looks kinda not bad :P
+    m_Localized: "What? Oh, yes, yes. Go, visit the wise ones \u2014 they have business
+      with you. And drop by the hunter, maybe he\u2019s finished with the pelts.
+      Off you go to him!"
     m_Metadata:
       m_Items: []
   - m_Id: 9354230315700224
-    m_Localized: "As the wise say: \u2018There is no limit to perfection.\u2019 You\u2019ve
-      worked well. You may rest for now."
+    m_Localized: "You can keep this <i>zhileza</i>. I have no use for it. Tanat will
+      give you lots of fish for it, and the shaman can make those\u2026 <i>things</i>
+      of yours."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561407307776
+    m_Localized: Ettyk, itligin!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561478610944
+    m_Localized: "<link=\"wave\"><color=\"blue\">Evil Vykwan man, evil and stupid!
+      Don\u2019t listen to him, Kotka \u2014 I won\u2019t let you be harmed.</color></link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561478610945
+    m_Localized: "<link=\"wave\"><color=\"blue\">This is the very bone from which
+      tann\u2019ytan make their armor! It truly doesn\u2019t break or bend! I\u2019ll
+      take it to the elder \u2014 let him only try to say it wasn\u2019t them!</color></link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561478610946
+    m_Localized: I took them from the outsiders who were wandering near the camp.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561478610947
+    m_Localized: "I fought the outsiders at the edge of the camp. They were tann\u2019ytan,
+      absolutely! They were like in the shaman\u2019s tales \u2014 <link=\"wave\"><color=\"blue\">clad
+      in bone, with walrus-like mustaches</color></link>. But the elder still doesn\u2019t
+      believe me!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805248
+    m_Localized: "The elder doesn\u2019t want to alarm the people unnecessarily.
+      Imagine what would happen if he said that these\u2026 these <i><color=\"red\">kytn\xE9vet</color></i>
+      were roaming around the camp!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805249
+    m_Localized: "And what? <link=\"shake\"><color=\"red\">He\u2019s lying! I killed
+      a man for the first time! He sent me to my doom!</color></link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805250
+    m_Localized: "But don\u2019t say that. Remember, ears are everywhere. If you
+      keep shouting across the camp \u2014 he may truly wish you dead as a slanderer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805251
+    m_Localized: "But you do believe me, don\u2019t you?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805252
+    m_Localized: "I trust my own eyes and ears. So I won\u2019t believe you or the
+      elder until I see it myself."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805253
+    m_Localized: "I have a <i>zhileza</i>. I found it with them. It\u2019s the one
+      \u2014 that very bone! You fought the tann\u2019ytan, can you recognize it?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805254
+    m_Localized: "I can, but I need time. And time is precious now. We must fill
+      our stores of game. There\u2019s almost no food in the camp, lest famine occur.
+      It was an unlucky year. Ever since the deer fell on its side at <i><color=\"red\">Pyghetti</color></i>,
+      we\u2019ve been living all year\u2026 on our side, sucking our paws like foxes!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805255
+    m_Localized: "Let me go hunting for now, and you look at this\u2026 zhileza?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805256
+    m_Localized: "Ha, go. We need two meat. And if you happen to find a zhileza in
+      the forest \u2014 bring it too, two plastines. If these really were tann\u2019ytan,
+      surely it\u2019s in the woods."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805257
+    m_Localized: Tanat, look how much game I brought down in the forest! And I found
+      a zhileza!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805258
+    m_Localized: "Well done! I haven\u2019t been sitting idle here either."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805259
+    m_Localized: "Well then\u2026 is that it?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805260
+    m_Localized: "I didn\u2019t want to believe it. But yes. My heart feels that
+      something is wrong here. Don\u2019t tell anyone about it for now \u2014 keep
+      it to yourself. And if the Tann\u2019ytan show up again, come to me \u2014
+      I\u2019ll help you deal with them. For now, take this \u2014 in a time of trouble,
+      the totem will protect your life. If you use it up, come back to me. I\u2019ll
+      give you another one, if you manage to find more zhyleza."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805261
+    m_Localized: Thank you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805262
+    m_Localized: "Wait a bit \u2014 there\u2019s nothing to thank me for yet. Better
+      go to the wise ones. Quietly warn them that tann\u2019ytan were near the camp.
+      They won\u2019t tell anyone unnecessarily, and their experience is worth more
+      than mine."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805263
+    m_Localized: Ettyk, wise ones! The elder said that you need my help.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805264
+    m_Localized: "Look, sister! The broken one has come! And how fearsome! Not long
+      ago he hadn\u2019t even crawled out from under the sled."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805265
+    m_Localized: Ha! Now I can drive anyone under the sled if I need to!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805266
+    m_Localized: "Marvelous, marvelous! I met five zhileza walruses, slaughtered
+      them and didn\u2019t even notice!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805267
+    m_Localized: "\u2026Pardon?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805268
+    m_Localized: "We forgive you! But we won\u2019t let you go back!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805269
+    m_Localized: "Help, little friend, find it \u2014 search the outskirts!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805270
+    m_Localized: What am I supposed to find?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805271
+    m_Localized: "The spirits say the tann\u2019ytan dropped a great evil near the
+      camp. They dropped it and enclosed it in a transparent sphere!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805272
+    m_Localized: "Find that heap of evil quickly \u2014 otherwise the whole camp
+      will perish!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805273
+    m_Localized: "Tann\u2019ytan? You already know about them? Hunter Tanat told
+      me to tell you about them \u2014 I fought them and defeated them!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805274
+    m_Localized: "You defeated them, but didn\u2019t finish them. Go, find that sphere.
+      But don\u2019t break it, be careful!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805275
+    m_Localized: <link="wave"><color="blue">Oh, the wise ones are strange! They seem
+      wise, but like small children.</color></link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805276
+    m_Localized: <link="wave"><color="blue">And here it is! That wondrous sphere!</color></link>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805277
+    m_Localized: What kind of sphere is this? And why is some kind of pelt lying
+      inside it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805278
+    m_Localized: "When I was little \u2014 five winters old \u2014 the tann\u2019ytan
+      came to us too. Their warriors were killed, and then they found such a sphere.
+      They opened it and took out a pelt. After that it was as if the whole camp
+      was cursed. <link=\"shake\"><color=\"red\">People fell ill and died.</color></link>
+      The skin at first was covered with spots, and then they coughed up blood. See
+      these pits on my face? Marks of an evil fate. All my brothers and sisters died,
+      and only these marks remained on me. These marks have been with me for sixty
+      winters. Fear what the tann\u2019ytan leave behind! Their gifts are deadly!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805279
+    m_Localized: My sister is right. Take this sphere to the shaman. He will figure
+      out what to do with it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805280
+    m_Localized: You truly did well! This deed is far more important than fighting
+      outsiders. Could it be that Vytrytva has given you a second spirit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805281
+    m_Localized: "Me\u2026 me like Vytrytva? Like a hero?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805282
+    m_Localized: "What did you think? A hero is not one who beats the weak \u2014
+      a hero is one who helps people!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805283
+    m_Localized: "Did you know that Vytrytva was my ancestor? My clan comes from
+      him. As a reward for your bravery I\u2019ll tell you my family\u2019s secret
+      \u2014 how he defeated his enemies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805284
+    m_Localized: Oh-oh! The Kele are angry! Run to the shaman, and be careful not
+      to break this sphere! If you break it, all will be lost!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805285
+    m_Localized: Itligin! Itligin, we are in danger!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805286
+    m_Localized: "Yes, I feel it. I have an uneasy feeling. Evil is coming from beneath
+      the ground. As if someone left an amulet there\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805287
+    m_Localized: An amulet? What kind?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805288
+    m_Localized: "I don\u2019t know what kind, only it seems broken. Bad waves come
+      from it\u2026 <link=\"shake\"><color=\"red\">The earth trembles.</color></link>
+      If you find anything, bring it to me."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805289
+    m_Localized: "All this \u2014 earthquakes and such \u2014 because of some amulet?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805290
+    m_Localized: "Anything\u2019s possible. Better be safe \u2014 replenish your
+      supplies, take everything you need. In such places anything can happen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805291
+    m_Localized: You saved everyone today, Chu!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805292
+    m_Localized: You did a noble deed!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805293
+    m_Localized: "Indeed \u2014 no one will drive him under the sled anymore!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805294
+    m_Localized: Well done! Vykwan, will you say something?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805295
+    m_Localized: "Ah, yes. Mmm\u2026 well done. But the camp is still in danger.
+      Something could always happen\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805296
+    m_Localized: Sister! Sister, where are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805297
+    m_Localized: "Don\u2019t scatter! Stay together! Tanat, are you here?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805298
+    m_Localized: Yes!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805299
+    m_Localized: "Find Tynek! Make sure people don\u2019t disperse. Trouble is coming,
+      trouble is coming\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805300
+    m_Localized: What happened?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805301
+    m_Localized: "Oh\u2026 oh\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805302
+    m_Localized: "Itligin? Ettuvyi, what\u2019s wrong with you \u2014 are you alive?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805303
+    m_Localized: "Destruction has come to the camp. It happened long ago, and it
+      seems to have repeated. My teacher\u2019s teacher told it to him, and he to
+      me. The Kele stole the sun, stars and moon. It seems you angered them greatly
+      today, so they\u2019ve taken revenge."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805304
+    m_Localized: And what is to be done?! What did they do then?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805305
+    m_Localized: "That time the shaman himself descended into the realm of the Kele
+      and took the lights from them. But I am weak\u2026 I won\u2019t find the way\u2026
+      <link=\"shake\"><color=\"red\">we will perish\u2026</color></link>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805306
+    m_Localized: "Then I\u2019ll find it!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805307
+    m_Localized: You?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34643561482805308
+    m_Localized: "Yes! They\u2019ll regret having crossed me \u2014 <link=\"shake\"><color=\"red\">I
+      haven\u2019t even beaten them enough today!</color></link> Itligin, how does
+      one get into the realm of the Kele?"
     m_Metadata:
       m_Items: []
   references:
