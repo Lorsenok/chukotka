@@ -15,6 +15,7 @@ public class Animal : TargetFollower
     
     [Header("Custom Animator")]
     [SerializeField] private bool flip = false;
+    [SerializeField] private float minSpeedX = 0.25f;
     [SerializeField] private CustomAnimatorController animController;
     [SerializeField] private string idleAnim;
     [SerializeField] private float idleAnimTime;
@@ -59,7 +60,6 @@ public class Animal : TargetFollower
         bool isMoving = rg.linearVelocityX > minVelocityToMove || rg.linearVelocityX < -minVelocityToMove;
         if (!agr)
         {
-            if (animController != null) animController.PullAnimation(walkAnim, walkAnimTime);
             return;
         }
         if (destroyableObject.HP <= hpWhenEscaping && !isEscaping)
@@ -74,10 +74,15 @@ public class Animal : TargetFollower
         }
         else base.Update();
 
-        if (isMoving && animController != null)
+        spr.flipX = target.position.x < transform.position.x ? flip : !flip;
+        
+        if (isMoving && animController != null && Mathf.Abs(rg.linearVelocityX) > minSpeedX && Vector2.Distance(transform.position, target.position) > minDistance)
         {
             animController.PullAnimation(walkAnim, walkAnimTime);
-            spr.flipX = rg.linearVelocityX < 0f ? flip : !flip;
+        }
+        else if (animController != null)
+        {
+            animController.PullAnimation(idleAnim, idleAnimTime);
         }
     }
 

@@ -426,6 +426,7 @@ MonoBehaviour:
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
   flip: 0
+  minSpeedX: 0.25
   animController: {fileID: 8745146676619401190}
   idleAnim: idle
   idleAnimTime: 0.1
@@ -621,7 +622,7 @@ MonoBehaviour:
   - {fileID: 2126864344, guid: 993e6a33984505b468b93079321b9aa6, type: 3}
   - {fileID: 979046150, guid: 993e6a33984505b468b93079321b9aa6, type: 3}
   timePerFrame: 0.1
-  loop: 0
+  loop: 1
   curSprite: 0
 --- !u!114 &5306033761709094957
 MonoBehaviour:
