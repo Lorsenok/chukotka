@@ -45,10 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinToMouse: 0
-  rotationOffset: 200
+  rotationOffset: 180
+  rotationOffsetByX: 20
   rotationLocks: []
   bulletPrefab: {fileID: 8871533527641693228, guid: ba148f00799972942a5aa042d40aa36e, type: 3}
   bulletSpawnPoint: {fileID: 6622975954953924963}
+  animController: {fileID: 2868786170649745539}
+  shootAnim: damage
+  shootAnimTime: 0.35
 --- !u!1 &1492350563732979404
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +351,10 @@ GameObject:
   - component: {fileID: 4899564259587974400}
   - component: {fileID: 8677854411487331091}
   - component: {fileID: 2868786170649745539}
+  - component: {fileID: 2995852399572425890}
+  - component: {fileID: 2829451710047870696}
+  - component: {fileID: 7248719166572953232}
+  - component: {fileID: 1178375553494106839}
   m_Layer: 0
   m_Name: Raider Shooting
   m_TagString: Untagged
@@ -525,7 +533,7 @@ MonoBehaviour:
   minDistanceToJump: 1
   idle: {fileID: 0}
   move: {fileID: 0}
-  spr: {fileID: 0}
+  spr: {fileID: 6334257619906543369}
   minVelocityToMove: 0
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab:
@@ -536,7 +544,8 @@ MonoBehaviour:
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
   flip: 0
-  animController: {fileID: 0}
+  minSpeedX: 1
+  animController: {fileID: 2868786170649745539}
   idleAnim: idle
   idleAnimTime: 0.1
   walkAnim: walk
@@ -656,7 +665,107 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c46948491a93d48a925977cff1f250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animators: []
+  animators:
+  - {fileID: 2995852399572425890}
+  - {fileID: 2829451710047870696}
+  - {fileID: 7248719166572953232}
+  - {fileID: 1178375553494106839}
+--- !u!114 &2995852399572425890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  animname: idle
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: -1790616055, guid: 6550c4e9a2ac037438da4671bec55c1a, type: 3}
+  - {fileID: -546131069, guid: 6550c4e9a2ac037438da4671bec55c1a, type: 3}
+  - {fileID: 1898120373, guid: 6550c4e9a2ac037438da4671bec55c1a, type: 3}
+  - {fileID: -1997329112, guid: 6550c4e9a2ac037438da4671bec55c1a, type: 3}
+  timePerFrame: 0.1
+  loop: 1
+  curSprite: 0
+--- !u!114 &2829451710047870696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 1
+  animname: walk
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: 984558632, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  - {fileID: -288119241, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  - {fileID: -1010371920, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  - {fileID: -495364299, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  - {fileID: 694579218, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  - {fileID: 711200249, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  - {fileID: -411863613, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  - {fileID: -1438523534, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  - {fileID: 201712641, guid: 1c6710f57cf3ba54ca102f17b493ec28, type: 3}
+  timePerFrame: 0.1
+  loop: 1
+  curSprite: 0
+--- !u!114 &7248719166572953232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 2
+  animname: hit
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: -1655253489, guid: 425eb4ddd7eb571428e51d05ecaafbea, type: 3}
+  - {fileID: 796871399, guid: 425eb4ddd7eb571428e51d05ecaafbea, type: 3}
+  - {fileID: 1174033274, guid: 425eb4ddd7eb571428e51d05ecaafbea, type: 3}
+  timePerFrame: 0.1
+  loop: 0
+  curSprite: 0
+--- !u!114 &1178375553494106839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 3
+  animname: damage
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: -528684343, guid: 1bee0f9ce76cf1046ad333ac5e32523d, type: 3}
+  - {fileID: 1970134094, guid: 1bee0f9ce76cf1046ad333ac5e32523d, type: 3}
+  - {fileID: -799939422, guid: 1bee0f9ce76cf1046ad333ac5e32523d, type: 3}
+  - {fileID: 1326971158, guid: 1bee0f9ce76cf1046ad333ac5e32523d, type: 3}
+  timePerFrame: 0.1
+  loop: 0
+  curSprite: 0
 --- !u!1 &8466107372646631808
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +868,6 @@ MonoBehaviour:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   - {fileID: 1359130480447200395, guid: c17f71eb1e912594bb6ffb4e12d61639, type: 3}
   spawnAfterDestroy: []
-  animController: {fileID: 0}
-  getDamageAnim: 
-  getDamageAnimTime: 0
+  animController: {fileID: 2868786170649745539}
+  getDamageAnim: hit
+  getDamageAnimTime: 0.35
