@@ -30,6 +30,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Animation: 0
+    - _Distortion: 0.15
     - _Edge: 0.409
     - _Octaves: 6
     m_Colors:

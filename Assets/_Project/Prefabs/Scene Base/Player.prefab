@@ -312,7 +312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: sound delay
   repeatable: 1
   setOnStart: 0
@@ -351,7 +350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: jump block
   repeatable: 0
   setOnStart: 0
@@ -392,7 +390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: dash block
   repeatable: 0
   setOnStart: 0
@@ -441,7 +438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: attack
   repeatable: 0
   setOnStart: 0
@@ -460,7 +456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: attack delay
   repeatable: 0
   setOnStart: 0
@@ -479,7 +474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: combo time
   repeatable: 0
   setOnStart: 0
@@ -528,7 +522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: bow delay
   repeatable: 0
   setOnStart: 0
@@ -963,7 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellChecker: {fileID: 3545388424585552150}
   destroyableObject: {fileID: 7916989941622342710}
-  set: 10
+  set: 999
   spawnOnUse:
   - {fileID: 8461508990194909022, guid: d2a863c7eaa1e8b4fa7afb582fee51b0, type: 3}
   - {fileID: 1359130480447200395, guid: 0ba9e1f0c899c564c9c6656080c06cff, type: 3}
@@ -1025,7 +1018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 4
   tagname: time before death
   repeatable: 0
   setOnStart: 0
@@ -1044,7 +1036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 4
   tagname: time after death
   repeatable: 0
   setOnStart: 0
@@ -2237,7 +2228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: effect time
   repeatable: 0
   setOnStart: 0
@@ -2488,7 +2478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: effect time
   repeatable: 0
   setOnStart: 0

@@ -57,7 +57,13 @@ public class ItemUser : MonoBehaviour
 
     public void OnEnable()
     {
-        if (cellUsers.Length == 0)  cellUsers = FindObjectsOfType<CellUser>();
+        if (cellUsers.Length == 0)  cellUsers = FindObjectsByType<CellUser>(FindObjectsSortMode.None);
+        if (cellUsers.Length == 0)
+        {
+            Debug.LogError("No cell users to get!");
+            enabled = false;
+            return;
+        }
         
         delayTimer.OnTimerEnd += OnDelayEnd;
         foreach (CellUser cellUser in cellUsers)

@@ -14,6 +14,7 @@ public class DestroyableObject : MonoBehaviour
         set
         {
             if (saveHP) GameSaver.Save(saveHPKey, value);
+            if (value < 0 && hp == 0) return;
             if (hp > value)
             {
                 foreach (var obj in spawnAfterDamage)
@@ -24,6 +25,7 @@ public class DestroyableObject : MonoBehaviour
                 if (animController != null) animController.PullAnimation(getDamageAnim, getDamageAnimTime);
             }
             hp = value;
+            hp = Mathf.Clamp(hp, 0, maxHP);
         }
     }
 
