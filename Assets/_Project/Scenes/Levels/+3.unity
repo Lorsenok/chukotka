@@ -1715,7 +1715,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2494444330949010391, guid: 3a3750bdbd662ea4f856b1357b598943, type: 3}
       propertyPath: m_Name
-      value: Mocha
+      value: A jar with a substance
       objectReference: {fileID: 0}
     - target: {fileID: 5150772368694641527, guid: 3a3750bdbd662ea4f856b1357b598943, type: 3}
       propertyPath: m_LocalPosition.x

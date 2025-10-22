@@ -761,8 +761,8 @@ MonoBehaviour:
   startSpawnPrefabs: []
   timerDelay: {fileID: 417461767}
   rowDelay: {fileID: 417461766}
-  rowTimes: 3
-  maxEntities: 3
+  rowTimes: 1
+  maxEntities: 1
   lockToTarget: 1
   target: {fileID: 565257025}
   maxRange: 4.5
@@ -7721,7 +7721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2494444330949010391, guid: 3a3750bdbd662ea4f856b1357b598943, type: 3}
       propertyPath: m_Name
-      value: Mocha
+      value: A jar with a substance
       objectReference: {fileID: 0}
     - target: {fileID: 5150772368694641527, guid: 3a3750bdbd662ea4f856b1357b598943, type: 3}
       propertyPath: m_LocalPosition.x
