@@ -189,6 +189,15 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Feed"",
+                    ""type"": ""Button"",
+                    ""id"": ""99e0075a-03c3-493f-840e-9e0cb8dcbb3c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -442,6 +451,17 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Dialogue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8d730be1-3aa9-444d-89bc-1d59585df1d3"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Feed"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1186,6 +1206,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
         m_Player_FirstMaterial = m_Player.FindAction("FirstMaterial", throwIfNotFound: true);
         m_Player_SecondMaterial = m_Player.FindAction("SecondMaterial", throwIfNotFound: true);
+        m_Player_Feed = m_Player.FindAction("Feed", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1294,6 +1315,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Shoot;
     private readonly InputAction m_Player_FirstMaterial;
     private readonly InputAction m_Player_SecondMaterial;
+    private readonly InputAction m_Player_Feed;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1349,6 +1371,10 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/SecondMaterial".
         /// </summary>
         public InputAction @SecondMaterial => m_Wrapper.m_Player_SecondMaterial;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Feed".
+        /// </summary>
+        public InputAction @Feed => m_Wrapper.m_Player_Feed;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1408,6 +1434,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @SecondMaterial.started += instance.OnSecondMaterial;
             @SecondMaterial.performed += instance.OnSecondMaterial;
             @SecondMaterial.canceled += instance.OnSecondMaterial;
+            @Feed.started += instance.OnFeed;
+            @Feed.performed += instance.OnFeed;
+            @Feed.canceled += instance.OnFeed;
         }
 
         /// <summary>
@@ -1452,6 +1481,9 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
             @SecondMaterial.started -= instance.OnSecondMaterial;
             @SecondMaterial.performed -= instance.OnSecondMaterial;
             @SecondMaterial.canceled -= instance.OnSecondMaterial;
+            @Feed.started -= instance.OnFeed;
+            @Feed.performed -= instance.OnFeed;
+            @Feed.canceled -= instance.OnFeed;
         }
 
         /// <summary>
@@ -1873,6 +1905,13 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSecondMaterial(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Feed" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFeed(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
