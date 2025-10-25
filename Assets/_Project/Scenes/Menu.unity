@@ -1780,6 +1780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Settings
       objectReference: {fileID: 0}
+    - target: {fileID: 5542373234200136718, guid: 760e0c838deb195449fff9dfd6d8fa74, type: 3}
+      propertyPath: m_text
+      value: English
+      objectReference: {fileID: 0}
     - target: {fileID: 6489213313540915977, guid: 760e0c838deb195449fff9dfd6d8fa74, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

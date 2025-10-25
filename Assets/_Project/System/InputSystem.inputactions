@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Dialogue",
+                    "type": "Button",
+                    "id": "44dadfb2-d210-4b86-81ec-d8bdb50fbecb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Use",
                     "type": "PassThrough",
                     "id": "85be95af-0d84-4d35-ae9c-0f9e40753436",
@@ -336,6 +345,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SecondMaterial",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a426351-c69d-4ecb-9103-4017f837a80a",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dialogue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
