@@ -6,6 +6,8 @@ public class NewGameButton : GameButton
     {
         if (!isMouseOn) return;
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("GameOn", 1);
+        PlayerPrefs.Save();
         base.Action();
     }
 }
