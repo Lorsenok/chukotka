@@ -20,7 +20,7 @@ public class SceneChangerService : ISceneChanger
     public static SceneStartType SceneStart { get; private set; } = SceneStartType.center;
 
     private static string SaveIgnore = "Menu"; // Костыль ванючий
-    
+
     public void ChangeScene(string sceneName, SceneStartType sceneStart = SceneStartType.center, bool instantSkip = false, bool saveTransition = true)
     {
         bool sceneExists = false;
@@ -34,20 +34,20 @@ public class SceneChangerService : ISceneChanger
 
         if (!sceneExists)
         {
-            Debug.LogError("There is no scene by name: " +  sceneName);
+            Debug.LogError("There is no scene by name: " + sceneName);
             return;
         }
-        
+
         OnSceneChange?.Invoke(sceneName);
         SceneStart = sceneStart;
-        
+
         if (saveTransition && sceneName != SaveIgnore)
         {
             GameSaver.Save("sceneStart", (int)sceneStart);
             GameSaver.Save("sceneName", sceneName);
             GameSaver.GlobalSave();
         }
-        
+
         if (instantSkip) SceneManager.LoadScene(sceneName);
     }
 

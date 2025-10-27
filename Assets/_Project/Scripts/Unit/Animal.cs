@@ -1,111 +1,80 @@
-using System;
 using UnityEngine;
-using Random = System.Random;
 
 public class Animal : TargetFollower
 {
-    [Header("Animal")]
+    [Header("Animal Settings")]
     [SerializeField] private DestroyableObject destroyableObject;
     [SerializeField] private GameObject[] dropPrefab;
 
-    [Header("Escaping")] [SerializeField] private float escapeSpeedMultiplier = 1f;
+    [Header("Escape")]
+    [SerializeField] private float escapeSpeedMultiplier = 1f;
     [SerializeField] private int hpWhenEscaping;
     [SerializeField] private Timer timeToEscape;
     [SerializeField] private GameObject[] spawnAfterEscapePrefabs;
-    
-    [Header("Custom Animator")]
-    [SerializeField] private bool flip = false;
-    [SerializeField] private float minSpeedX = 0.25f;
-    [SerializeField] private CustomAnimatorController animController;
-    [SerializeField] private string idleAnim;
-    [SerializeField] private float idleAnimTime;
-    [SerializeField] private string walkAnim;
-    [SerializeField] private float walkAnimTime;
-    [SerializeField] private string jumpAnim;
-    [SerializeField] private float jumpAnimTime;
 
     private bool isEscaping = false;
-    
-    private bool agr = false;
+    private bool aggro = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<Controller>())
-        {
-            agr = true;
-        }
+        if (other.GetComponent<Controller>())
+            aggro = true;
     }
 
-    public override void OnEnable()
+    protected override void OnEnable()
     {
         base.OnEnable();
-        destroyableObject.OnDie += Drop;
-        timeToEscape.OnTimerEnd += OnEscape;
+        if (destroyableObject != null) destroyableObject.OnDie += Drop;
+        if (timeToEscape != null) timeToEscape.OnTimerEnd += OnEscape;
     }
 
-    public override void OnDisable()
+    protected override void OnDisable()
     {
         base.OnDisable();
-        destroyableObject.OnDie -= Drop;
-        timeToEscape.OnTimerEnd -= OnEscape;
+        if (destroyableObject != null) destroyableObject.OnDie -= Drop;
+        if (timeToEscape != null) timeToEscape.OnTimerEnd -= OnEscape;
     }
 
     private void Start()
     {
-        target = FindObjectsByType<Controller>(FindObjectsSortMode.None)[0].transform;
+        if (target == null)
+            target = FindFirstObjectByType<Controller>().transform;
     }
 
-    public override void Update()
+    protected override void Update()
     {
-        if (destroyableObject.HP <= 0) return;
-        bool isMoving = rg.linearVelocityX > minVelocityToMove || rg.linearVelocityX < -minVelocityToMove;
-        if (!agr)
-        {
-            return;
-        }
+        if (destroyableObject != null && destroyableObject.HP <= 0) return;
+        if (!aggro) return;
+
         if (destroyableObject.HP <= hpWhenEscaping && !isEscaping)
         {
             isEscaping = true;
-            timeToEscape.StartTimer();
+            if (timeToEscape != null) timeToEscape.StartTimer();
         }
-        if (isEscaping)
-        {
-            Move(-escapeSpeedMultiplier);
-            if (groundChecker.IsTouchingGround && canJump) Jump();
-        }
-        else base.Update();
 
-        spr.flipX = target.position.x < transform.position.x ? flip : !flip;
-        
-        if (isMoving && animController != null && Mathf.Abs(rg.linearVelocityX) > minSpeedX && Vector2.Distance(transform.position, target.position) > minDistance)
-        {
-            animController.PullAnimation(walkAnim, walkAnimTime);
-        }
-        else if (animController != null)
-        {
-            animController.PullAnimation(idleAnim, idleAnimTime);
-        }
+        if (isEscaping)
+            rg.linearVelocity = new Vector2(-escapeSpeedMultiplier * speed, rg.linearVelocity.y);
+        else
+            base.Update();
     }
 
-    public override void Jump()
+    protected override void Jump(float jumpHeight)
     {
-        base.Jump();
-        if (animController !=null) animController.PullAnimation(jumpAnim, jumpAnimTime);
+        base.Jump(jumpHeight);
     }
 
     private void OnEscape()
     {
         if (!isEscaping) return;
-        foreach (GameObject obj in spawnAfterEscapePrefabs) 
-            Instantiate(obj, transform.position, obj.transform.rotation);
+        foreach (var obj in spawnAfterEscapePrefabs)
+            Instantiate(obj, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
     private void Drop()
     {
-        if (dropPrefab.Length != 0)
-        {
-            int rand = UnityEngine.Random.Range(0, dropPrefab.Length);
-            Instantiate(dropPrefab[rand], transform.position, dropPrefab[rand].transform.rotation);
-        }
+        if (dropPrefab.Length == 0) return;
+        int rand = Random.Range(0, dropPrefab.Length);
+        Instantiate(dropPrefab[rand], transform.position, dropPrefab[rand].transform.rotation);
     }
 }
