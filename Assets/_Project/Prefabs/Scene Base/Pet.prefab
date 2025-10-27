@@ -425,13 +425,13 @@ MonoBehaviour:
   target: {fileID: 0}
   rg: {fileID: 1184131261235590079}
   groundChecker: {fileID: 5309430258203204775}
-  speed: 70
-  acceleration: 20
+  minDistance: 2.5
   deceleration: 20
-  minDistance: 3
-  minDistanceToJump: 1
-  jumpForce: 5
+  speed: 100
+  acceleration: 100
+  jumpForce: 0
   jumpDelayTimer: {fileID: 2790582102380298432}
+  minDistanceToJump: 0
   idle: {fileID: 5791665234605276985}
   move: {fileID: 8200958204273365472}
   spr: {fileID: 663601553081523855}

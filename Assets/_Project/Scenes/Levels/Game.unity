@@ -9915,15 +9915,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 366702161343247526, guid: 18470204cd544f44a82498bf8fbe6831, type: 3}
       propertyPath: speed
-      value: 70
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 366702161343247526, guid: 18470204cd544f44a82498bf8fbe6831, type: 3}
       propertyPath: minDistance
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 366702161343247526, guid: 18470204cd544f44a82498bf8fbe6831, type: 3}
       propertyPath: acceleration
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 366702161343247526, guid: 18470204cd544f44a82498bf8fbe6831, type: 3}
       propertyPath: deceleration
