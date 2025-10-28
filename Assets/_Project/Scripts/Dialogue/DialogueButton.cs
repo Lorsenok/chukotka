@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogueButton : GameButton
 {
     public int Id { get; set; }
-    public static Action<int> OnButtonPressed { get; set; }
+    public new static Action<int> OnButtonPressed { get; set; }
 
     [SerializeField] private Timer blockTimer;
 

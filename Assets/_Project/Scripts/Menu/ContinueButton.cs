@@ -9,6 +9,7 @@ public class ContinueButton : GameButton
 
     private void Awake()
     {
+        
         button = GetComponent<Button>() ?? GetComponentInParent<Button>();
 
     }
