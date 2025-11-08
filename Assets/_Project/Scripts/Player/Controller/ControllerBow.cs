@@ -6,7 +6,7 @@ using Zenject;
 
 public class ControllerBow : ControllerAddition
 {
-    public int Arrows { get; set; } = 5;
+    public int Arrows { get; set; } = 500;
     
     [SerializeField] private ControllerAddition[] controllersBlock;
     [SerializeField] private Gun gun;

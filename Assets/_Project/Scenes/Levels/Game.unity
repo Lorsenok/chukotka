@@ -7919,6 +7919,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1480331798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4035255455280005234, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+  m_PrefabInstance: {fileID: 4441169468015739516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1503053211
 GameObject:
   m_ObjectHideFlags: 0
@@ -9791,9 +9802,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2271052916398891454, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: perLoadTimer
+      value: 
+      objectReference: {fileID: 1480331798}
+    - target: {fileID: 2271052916398891454, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: timeToLoadSet
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271052916398891454, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: startTimeToLoad
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523724266072313102, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: rotationOffset
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523724266072313102, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: rotationOffsetByX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523724266072313102, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: rotationLocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2523724266072313102, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: 'rotationLocks.Array.data[0]'
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3657978016914447784, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3918042494944787348, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
+      propertyPath: timeSet
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8166586318459894427, guid: dd728e26c8f1b5e4486f4229cb82a679, type: 3}
       propertyPath: inputActions

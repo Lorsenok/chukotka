@@ -498,8 +498,8 @@ MonoBehaviour:
   - {fileID: 8447217727549252497}
   gun: {fileID: 2523724266072313102}
   shootPower: 20
-  timeToLoadSet: 2.5
-  startTimeToLoad: 0.5
+  timeToLoadSet: 2
+  startTimeToLoad: 0.3
   perLoadTimer: {fileID: 3918042494944787348}
   loadSpeedMultiplier: 0
   spawnOnShoot:
@@ -527,7 +527,7 @@ MonoBehaviour:
   repeatable: 0
   setOnStart: 0
   savekey: 
-  timeSet: 3
+  timeSet: 2
   curTime: 0
 --- !u!114 &5487415688942113801
 MonoBehaviour:
@@ -1464,9 +1464,7 @@ MonoBehaviour:
   pinToMouse: 1
   rotationOffset: 180
   rotationOffsetByX: 0
-  rotationLocks:
-  - 0
-  - 180
+  rotationLocks: []
   bulletPrefab: {fileID: 8871533527641693228, guid: 873a6dff9b7fcff4da3c891013cccd0d, type: 3}
   bulletSpawnPoint: {fileID: 5021217292945992892}
   animController: {fileID: 0}
