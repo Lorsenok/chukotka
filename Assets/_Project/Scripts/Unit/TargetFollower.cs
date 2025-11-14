@@ -26,9 +26,16 @@ public class TargetFollower : MonoBehaviour
     [SerializeField] protected SpriteRenderer spr;
     [SerializeField] protected float minVelocityToMove;
 
+    protected bool isPassive = false;
+
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
+    }
+
+    public void SetPassive(bool value)
+    {
+        isPassive = value;
     }
 
     public virtual void OnEnable()
@@ -49,13 +56,16 @@ public class TargetFollower : MonoBehaviour
 
     public void Stop()
     {
-        rg.linearVelocityX = 0f;
+        rg.linearVelocity = new Vector2(0f, rg.linearVelocity.y);
     }
 
     public void Move(float multiplier)
     {
-        rg.linearVelocityX += (target.position - transform.position).normalized.x * acceleration * Time.deltaTime * multiplier * SpeedMultiplier;
-        rg.linearVelocityX = Mathf.Clamp(rg.linearVelocityX, -speed, speed);
+        if (target == null) return;
+        rg.linearVelocity = new Vector2(
+            Mathf.Clamp(rg.linearVelocity.x + (target.position - transform.position).normalized.x * acceleration * Time.deltaTime * multiplier * SpeedMultiplier, -speed, speed),
+            rg.linearVelocity.y
+        );
     }
 
     public virtual void Jump()
@@ -76,16 +86,21 @@ public class TargetFollower : MonoBehaviour
 
     public virtual void Update()
     {
-        rg.linearVelocityX = Mathf.Lerp(rg.linearVelocityX, 0f, deceleration * Time.deltaTime);
-        if (Vector2.Distance(transform.position, target.position) > minDistance)
+        if (isPassive)
         {
-            Move(1f);
+            rg.linearVelocity = new Vector2(0f, rg.linearVelocity.y);
+            if (idle != null) idle.enabled = true;
+            if (move != null) move.enabled = false;
+            return;
         }
 
-        if (canJump && groundChecker.IsTouchingGround && target.position.y - transform.position.y >= minDistanceToJump)
-        {
+        rg.linearVelocity = new Vector2(Mathf.Lerp(rg.linearVelocity.x, 0f, deceleration * Time.deltaTime), rg.linearVelocity.y);
+
+        if (target != null && Vector2.Distance(transform.position, target.position) > minDistance)
+            Move(1f);
+
+        if (target != null && canJump && groundChecker.IsTouchingGround && target.position.y - transform.position.y >= minDistanceToJump)
             Jump();
-        }
 
         if (ignoreAnimationsTime > 0f)
         {
@@ -94,9 +109,9 @@ public class TargetFollower : MonoBehaviour
         }
 
         if (lastAnimator != null) lastAnimator.enabled = false;
-        bool isMoving = rg.linearVelocityX > minVelocityToMove || rg.linearVelocityX < -minVelocityToMove;
+        bool isMoving = rg.linearVelocity.x > minVelocityToMove || rg.linearVelocity.x < -minVelocityToMove;
         if (idle != null) idle.enabled = !isMoving;
         if (move != null) move.enabled = isMoving;
-        if (spr != null && isMoving) spr.flipX = rg.linearVelocityX < 0f;
+        if (spr != null && isMoving) spr.flipX = rg.linearVelocity.x < 0f;
     }
 }
