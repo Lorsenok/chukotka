@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private GameObject[] spawnOnDamage;
     [SerializeField] private Transform spawnPoint;
 
-    [SerializeField] private float shakeOnDamage;
+    [SerializeField] private VisualAction visualActionOnDamage;
     
     private void Start()
     {
@@ -40,7 +40,7 @@ public class Bullet : MonoBehaviour
             {
                 Instantiate(spawn, spawnPoint.position, spawn.transform.rotation);
             }
-            CameraMovement.Shake(shakeOnDamage);
+            VisualActionsHandler.Action(visualActionOnDamage);
             Destroy(gameObject);
         }
 
