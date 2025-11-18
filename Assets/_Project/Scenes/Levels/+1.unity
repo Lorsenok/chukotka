@@ -1325,7 +1325,6 @@ GameObject:
   - component: {fileID: 1117652883}
   - component: {fileID: 1117652882}
   - component: {fileID: 1117652881}
-  - component: {fileID: 1117652880}
   - component: {fileID: 1117652879}
   - component: {fileID: 1117652878}
   - component: {fileID: 1117652877}
@@ -1480,51 +1479,6 @@ MonoBehaviour:
   side: 01000100010001010001
   nextId: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
   panels: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
---- !u!114 &1117652880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117652876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c61ee3f0dff424c835dc0686061060, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  table:
-    m_TableReference:
-      m_TableCollectionName: GUID:766e6e7cba28b3b4987097e58b7e1ae3
-  keys:
-  - d1p1
-  - d1p2
-  - d1p3
-  - d1p4
-  - d1p5
-  - d1p6
-  - d1p7
-  - d1p8
-  namekeys:
-  - name2
-  - name1
-  - name2
-  - name1
-  - name2
-  - name1
-  - name2
-  - name2
-  icon:
-  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
-  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
-  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
-  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
-  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
-  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
-  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
-  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
-  side: 0100010001000101
-  nextId: 0100000002000000030000000400000005000000060000000700000008000000
-  panels: 0100000001000000010000000100000001000000010000000100000001000000
 --- !u!114 &1117652881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,7 +1499,7 @@ MonoBehaviour:
   destroyObjects:
   - {fileID: 1117652876}
   activateAnotherTriggerId: -1
-  progressionSet: 1
+  progressionSet: 2
 --- !u!114 &1117652882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1578,7 +1532,7 @@ MonoBehaviour:
   messageTextKey: ask3
   doubleMessage: 0
   doubleMessageTextKey: 
-  tree: {fileID: 1117652880}
+  tree: {fileID: 1117652879}
   trigger: {fileID: 1117652881}
 --- !u!61 &1117652884
 BoxCollider2D:
