@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: -8093134736279752238}
   - component: {fileID: 2587851915584610749}
   m_Layer: 0
-  m_Name: Mocha
+  m_Name: A jar with a substance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   doubleMessage: 0
   doubleMessageTextKey: 
   item: {fileID: 11400000, guid: a2ba491896b42ef45982063542101fec, type: 2}
-  savekey: mocha
+  savekey: A jar with a substance
 --- !u!114 &-8093134736279752238
 MonoBehaviour:
   m_ObjectHideFlags: 0
