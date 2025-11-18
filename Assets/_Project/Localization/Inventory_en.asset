@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 33695025018691584
-    m_Localized: It smells :(
+    m_Localized: Fresh fish
     m_Metadata:
       m_Items: []
   - m_Id: 33744715525382144
@@ -95,7 +95,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 35997624187215872
-    m_Localized: A small glass vial containing a thick, cloudy liquid with a piece of skin inside, emitting a strange odor.\nThey say that the wisest know how to use it for its intended purpose.
+    m_Localized: A small glass vial containing a thick, cloudy liquid with a piece
+      of skin inside, emitting a strange odor.\nThey say that the wisest know how
+      to use it for its intended purpose.
     m_Metadata:
       m_Items: []
   - m_Id: 36020714225000448

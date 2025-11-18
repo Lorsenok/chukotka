@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 1022220381131382507}
   - component: {fileID: 9081938253999711420}
   - component: {fileID: 4911382896185564891}
+  - component: {fileID: 6309472268596862853}
   m_Layer: 0
   m_Name: Animal Fluf
   m_TagString: Untagged
@@ -464,7 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: time to escape
   repeatable: 0
   setOnStart: 0
@@ -483,7 +483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: jump delay
   repeatable: 0
   setOnStart: 0
@@ -581,6 +580,26 @@ MonoBehaviour:
   timePerFrame: 0.1
   loop: 1
   curSprite: 0
+--- !u!114 &6309472268596862853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc553e580b0cc640beb95922d777875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  detectionRadius: 5
+  escapePoints: []
+  flyUpVelocity: 5
+  flightSpeedMultiplier: 2.5
+  flyToPointTolerance: 0.5
+  ascendTime: 0.5
+  restoreDelay: 0.5
 --- !u!1 &8466107372646631808
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,13 +691,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af15684836036f24f85e174ce1bd5f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  destroyAfterDying: 1
-  objectToDestroy: {fileID: 4698977778594916722}
   hpSet: 6
   maxHP: 6
   saveHP: 0
   saveHPKey: 
+  destroyAfterDying: 1
+  objectToDestroy: {fileID: 4698977778594916722}
   spawnAfterDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   - {fileID: 1359130480447200395, guid: fbaa977dc0dc1054c8ebef8ccd0cc9a4, type: 3}

@@ -15,6 +15,7 @@ public class DialogueTriggerMessage : PickableObject
     protected GameObject lastMessage;
 
     protected bool isPlayerOn = false;
+    public bool IsPlayerOn => isPlayerOn;
 
     public override void OnEnter(GameObject obj)
     {

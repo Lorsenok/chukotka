@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Dialogue",
+                    "type": "Button",
+                    "id": "44dadfb2-d210-4b86-81ec-d8bdb50fbecb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Use",
                     "type": "PassThrough",
                     "id": "85be95af-0d84-4d35-ae9c-0f9e40753436",
@@ -90,6 +99,15 @@
                     "name": "SecondMaterial",
                     "type": "Button",
                     "id": "2522b4b6-be72-4c52-832a-c7dad60e8f89",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Feed",
+                    "type": "Button",
+                    "id": "99e0075a-03c3-493f-840e-9e0cb8dcbb3c",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -336,6 +354,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "SecondMaterial",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a426351-c69d-4ecb-9103-4017f837a80a",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d730be1-3aa9-444d-89bc-1d59585df1d3",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Feed",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

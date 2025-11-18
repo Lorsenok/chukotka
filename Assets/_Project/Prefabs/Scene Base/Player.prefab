@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 8560075882393440171}
   - component: {fileID: 6733686695633511560}
   - component: {fileID: 3429901607127689561}
+  - component: {fileID: 4829893623997062717}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -497,8 +498,8 @@ MonoBehaviour:
   - {fileID: 8447217727549252497}
   gun: {fileID: 2523724266072313102}
   shootPower: 20
-  timeToLoadSet: 2.5
-  startTimeToLoad: 0.5
+  timeToLoadSet: 2
+  startTimeToLoad: 0.3
   perLoadTimer: {fileID: 3918042494944787348}
   loadSpeedMultiplier: 0
   spawnOnShoot:
@@ -526,7 +527,7 @@ MonoBehaviour:
   repeatable: 0
   setOnStart: 0
   savekey: 
-  timeSet: 3
+  timeSet: 2
   curTime: 0
 --- !u!114 &5487415688942113801
 MonoBehaviour:
@@ -583,13 +584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af15684836036f24f85e174ce1bd5f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  destroyAfterDying: 0
-  objectToDestroy: {fileID: 0}
   hpSet: 20
   maxHP: 20
   saveHP: 1
   saveHPKey: playerhp
+  destroyAfterDying: 0
+  objectToDestroy: {fileID: 0}
   spawnAfterDamage:
   - {fileID: 1359130480447200395, guid: 483e913378b11b445bb8be904490b045, type: 3}
   spawnAfterDestroy: []
@@ -1006,6 +1006,7 @@ MonoBehaviour:
   animController: {fileID: 7647428656764415270}
   anim: death
   animTime: 999
+  fullHP: 100
 --- !u!114 &6733686695633511560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1042,6 +1043,22 @@ MonoBehaviour:
   savekey: 
   timeSet: 3
   curTime: 0
+--- !u!114 &4829893623997062717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a069b30d2cc8e945acc62d9a45e6bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcs:
+  - {fileID: 0}
+  - {fileID: 0}
+  inputActions: {fileID: -944628639613478452, guid: e806b2e9157ad5940b02024ab1527b74, type: 3}
 --- !u!1 &4620911821029657225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 2635163876739332795}
   destroyableObject: {fileID: 7916989941622342710}
-  orighp: 20
   speed: 5
 --- !u!1 &4773197948713730725
 GameObject:
@@ -1448,9 +1464,7 @@ MonoBehaviour:
   pinToMouse: 1
   rotationOffset: 180
   rotationOffsetByX: 0
-  rotationLocks:
-  - 0
-  - 180
+  rotationLocks: []
   bulletPrefab: {fileID: 8871533527641693228, guid: 873a6dff9b7fcff4da3c891013cccd0d, type: 3}
   bulletSpawnPoint: {fileID: 5021217292945992892}
   animController: {fileID: 0}
