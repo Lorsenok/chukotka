@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 509390718490245088}
   - component: {fileID: 6992829736261515386}
   - component: {fileID: 9150714379145835766}
+  - component: {fileID: 3471534174219094415}
   m_Layer: 7
   m_Name: pet
   m_TagString: Untagged
@@ -105,6 +106,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3471534174219094415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721981660926148763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e5dbf72e6edea47b642d2c0d53920d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pet: {fileID: 6992829736261515386}
 --- !u!1 &2564853708057538122
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,13 +425,13 @@ MonoBehaviour:
   target: {fileID: 0}
   rg: {fileID: 1184131261235590079}
   groundChecker: {fileID: 5309430258203204775}
-  minDistance: 3
-  deceleration: 10
-  speed: 80
-  acceleration: 50
-  jumpForce: 5
+  minDistance: 2.5
+  deceleration: 20
+  speed: 100
+  acceleration: 100
+  jumpForce: 0
   jumpDelayTimer: {fileID: 2790582102380298432}
-  minDistanceToJump: 1
+  minDistanceToJump: 0
   idle: {fileID: 5791665234605276985}
   move: {fileID: 8200958204273365472}
   spr: {fileID: 663601553081523855}
@@ -434,7 +448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: jump delay
   repeatable: 0
   setOnStart: 0

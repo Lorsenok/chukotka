@@ -8,11 +8,11 @@ public class Animal : TargetFollower
     [SerializeField] private DestroyableObject destroyableObject;
     [SerializeField] private GameObject[] dropPrefab;
 
-    [Header("Escaping")] [SerializeField] private float escapeSpeedMultiplier = 1f;
+    [Header("Escaping")][SerializeField] private float escapeSpeedMultiplier = 1f;
     [SerializeField] private int hpWhenEscaping;
     [SerializeField] private Timer timeToEscape;
     [SerializeField] private GameObject[] spawnAfterEscapePrefabs;
-    
+
     [Header("Custom Animator")]
     [SerializeField] private bool flip = false;
     [SerializeField] private float minSpeedX = 0.25f;
@@ -25,7 +25,7 @@ public class Animal : TargetFollower
     [SerializeField] private float jumpAnimTime;
 
     private bool isEscaping = false;
-    
+
     private bool agr = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -75,7 +75,7 @@ public class Animal : TargetFollower
         else base.Update();
 
         spr.flipX = target.position.x < transform.position.x ? flip : !flip;
-        
+
         if (isMoving && animController != null && Mathf.Abs(rg.linearVelocityX) > minSpeedX && Vector2.Distance(transform.position, target.position) > minDistance)
         {
             animController.PullAnimation(walkAnim, walkAnimTime);
@@ -89,13 +89,13 @@ public class Animal : TargetFollower
     public override void Jump()
     {
         base.Jump();
-        if (animController !=null) animController.PullAnimation(jumpAnim, jumpAnimTime);
+        if (animController != null) animController.PullAnimation(jumpAnim, jumpAnimTime);
     }
 
     private void OnEscape()
     {
         if (!isEscaping) return;
-        foreach (GameObject obj in spawnAfterEscapePrefabs) 
+        foreach (GameObject obj in spawnAfterEscapePrefabs)
             Instantiate(obj, transform.position, obj.transform.rotation);
         Destroy(gameObject);
     }

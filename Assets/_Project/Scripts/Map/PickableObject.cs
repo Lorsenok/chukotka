@@ -70,7 +70,7 @@ public class PickableObject : MonoBehaviour
     }
 
     private bool isButtonPressed = false;
-    private void OnPickupButton(InputAction.CallbackContext context)
+    protected virtual void OnPickupButton(InputAction.CallbackContext context)
     {
         isButtonPressed = !isButtonPressed;
         if (!isButtonPressed)
