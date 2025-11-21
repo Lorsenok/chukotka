@@ -440,6 +440,7 @@ MonoBehaviour:
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab:
   - {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
+  - {fileID: 2494444330949010391, guid: 6f73825348bf7d1499e72344661a1aae, type: 3}
   escapeSpeedMultiplier: 1
   hpWhenEscaping: 6
   timeToEscape: {fileID: 5500761368291544682}
@@ -596,9 +597,9 @@ MonoBehaviour:
   detectionRadius: 5
   escapePoints: []
   flyUpVelocity: 5
-  flightSpeedMultiplier: 2.5
-  flyToPointTolerance: 0.5
   ascendTime: 0.5
+  flightSpeedMultiplier: 2.5
+  landingSmoothing: 2
   restoreDelay: 0.5
 --- !u!1 &8466107372646631808
 GameObject:
