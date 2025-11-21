@@ -323,7 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d497dfbe72a0fd4e9d98fb0c1b2a7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: sound delay
   repeatable: 1
   setOnStart: 1
@@ -331,6 +330,37 @@ MonoBehaviour:
   timeSet: 3
   curTime: 0
   timeSetMax: 10
+--- !u!1 &3505601856371279826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8767343442660385478}
+  m_Layer: 0
+  m_Name: lootSpawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8767343442660385478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3505601856371279826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.081, y: -0.546, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3480739057512430398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4698977778594916722
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +409,7 @@ Transform:
   - {fileID: 4308564803071460029}
   - {fileID: 7010961739415614335}
   - {fileID: 6622975954953924963}
+  - {fileID: 8767343442660385478}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6334257619906543369
@@ -539,6 +570,7 @@ MonoBehaviour:
   dropPrefab:
   - {fileID: 8568828300960335298, guid: 6ed060be2df2af44ebbb579ef2f1daeb, type: 3}
   - {fileID: 2494444330949010391, guid: fd8f175775ddd0d4998620299f108fff, type: 3}
+  lootSpawnpoint: {fileID: 8767343442660385478}
   escapeSpeedMultiplier: 0.15
   hpWhenEscaping: 0
   timeToEscape: {fileID: 5500761368291544682}
@@ -564,7 +596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: time to escape
   repeatable: 0
   setOnStart: 0
@@ -583,7 +614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: jump delay
   repeatable: 0
   setOnStart: 0
@@ -618,7 +648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: shoot delay
   repeatable: 1
   setOnStart: 0
@@ -857,13 +886,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af15684836036f24f85e174ce1bd5f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  destroyAfterDying: 1
-  objectToDestroy: {fileID: 4698977778594916722}
   hpSet: 10
   maxHP: 10
   saveHP: 0
   saveHPKey: 
+  destroyAfterDying: 1
+  objectToDestroy: {fileID: 4698977778594916722}
   spawnAfterDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   - {fileID: 1359130480447200395, guid: c17f71eb1e912594bb6ffb4e12d61639, type: 3}

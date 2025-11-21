@@ -7,6 +7,7 @@ public class Animal : TargetFollower
     [Header("Animal")]
     [SerializeField] private DestroyableObject destroyableObject;
     [SerializeField] private GameObject[] dropPrefab;
+    [SerializeField] private Transform lootSpawnpoint;
 
     [Header("Escaping")][SerializeField] private float escapeSpeedMultiplier = 1f;
     [SerializeField] private int hpWhenEscaping;
@@ -105,7 +106,15 @@ public class Animal : TargetFollower
         if (dropPrefab.Length != 0)
         {
             int rand = UnityEngine.Random.Range(0, dropPrefab.Length);
-            Instantiate(dropPrefab[rand], transform.position, dropPrefab[rand].transform.rotation);
+            if (lootSpawnpoint != null)
+            {
+                Instantiate(dropPrefab[rand], lootSpawnpoint.position, dropPrefab[rand].transform.rotation);
+            }
+            else
+            {
+                Instantiate(dropPrefab[rand], transform.position, dropPrefab[rand].transform.rotation);
+            }
+
         }
     }
 }
