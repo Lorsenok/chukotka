@@ -30,71 +30,71 @@ MonoBehaviour:
     m_Localized: Talk (F)
     m_Metadata:
       m_Items: []
-  - m_Id: 237422656704512
-    m_Localized: "\u0415ttryk, my boy! How are you doing?"
+  - m_Id: 3201381835821056
+    m_Localized: Every life has value, Chu. Tanat, our hunter, knows this better
+      than anyone. Go to him and help him.
     m_Metadata:
       m_Items: []
-  - m_Id: 643025518546944
-    m_Localized: "Those tannytan, the outsiders, have come again! If only we knew
-      what they want this time\u2026"
+  - m_Id: 2917006401425408
+    m_Localized: "You\u2019re young and foolish still. A Chukchi doesn\u2019t live
+      by strength alone. Five people died on that whale hunt, and you want even more
+      blood spilled."
     m_Metadata:
       m_Items: []
-  - m_Id: 237707051487232
-    m_Localized: "Ettyk, Ytlygun. What happened to me? My head is foggy\u2026"
+  - m_Id: 3165914054610944
+    m_Localized: "But they\u2019re tannytan! Why pity them?"
     m_Metadata:
       m_Items: []
-  - m_Id: 643386824282112
-    m_Localized: "And you don\u2019t remember anything\u2026"
+  - m_Id: 2915678526722048
+    m_Localized: "Then I\u2019ll drive them away myself! They have no place here\u2014I
+      can defeat any enemy!"
     m_Metadata:
       m_Items: []
-  - m_Id: 643406642368512
-    m_Localized: Remember what?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2913206492024832
-    m_Localized: The gods are angry with us, so angry! You fell into the ocean while
-      we were hunting the whale, and Kotka saved you. Sedna grew furious and overturned
-      the boat with our best hunters. They brought you ashore half-dead.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2914666168537088
-    m_Localized: What will happen to the camp now?
+  - m_Id: 2915132415758336
+    m_Localized: "Who knows what they want. The elder tried to speak with them, but
+      it was useless. Ah, Sedna took our kindest ermechin far too soon\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 2914788835151872
+    m_Localized: "Terrible things you say, Ettuvyi! Why would the outsiders need
+      us? There\u2019s nothing left to take, if your words are true."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2914666168537088
     m_Localized: "Hard times have come. We don\u2019t have enough working hands.
       The fish have left the rivers, and the forest has fewer animals. We cannot
       even think of going to sea\u2014the gods are wrathful and send storms. And
       now tannytan in bone armor have come to the village, lurking nearby\u2026"
     m_Metadata:
       m_Items: []
-  - m_Id: 2915132415758336
-    m_Localized: "Terrible things you say, Ettuvyi! Why would the outsiders need
-      us? There\u2019s nothing left to take, if your words are true."
+  - m_Id: 2913206492024832
+    m_Localized: What will happen to the camp now?
     m_Metadata:
       m_Items: []
-  - m_Id: 2915678526722048
-    m_Localized: "Who knows what they want. The elder tried to speak with them, but
-      it was useless. Ah, Sedna took our kindest ermechin far too soon\u2026"
+  - m_Id: 643406642368512
+    m_Localized: The gods are angry with us, so angry! You fell into the ocean while
+      we were hunting the whale, and Kotka saved you. Sedna grew furious and overturned
+      the boat with our best hunters. They brought you ashore half-dead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643386824282112
+    m_Localized: Remember what?
     m_Metadata:
       m_Items: []
   - m_Id: 2915692988682240
     m_Localized: "Those \u201Cthings\u201D?"
     m_Metadata:
       m_Items: []
-  - m_Id: 2917006401425408
-    m_Localized: "Then I\u2019ll drive them away myself! They have no place here\u2014I
-      can defeat any enemy!"
+  - m_Id: 643025518546944
+    m_Localized: "And you don\u2019t remember anything\u2026"
     m_Metadata:
       m_Items: []
-  - m_Id: 3165914054610944
-    m_Localized: "You\u2019re young and foolish still. A Chukchi doesn\u2019t live
-      by strength alone. Five people died on that whale hunt, and you want even more
-      blood spilled."
+  - m_Id: 237707051487232
+    m_Localized: "Ettyk, Ytlygun. What happened to me? My head is foggy\u2026"
     m_Metadata:
       m_Items: []
-  - m_Id: 3201381835821056
-    m_Localized: "But they\u2019re tannytan! Why pity them?"
+  - m_Id: 237422656704512
+    m_Localized: "\u0415ttryk, my boy! How are you doing?"
     m_Metadata:
       m_Items: []
   - m_Id: 3201720760750080
@@ -689,11 +689,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 34676296761888768
     m_Localized: Tynek
-    m_Metadata:
-      m_Items: []
-  - m_Id: 49671051443470336
-    m_Localized: Every life has value, Chu. Tanat, our hunter, knows this better
-      than anyone. Go to him and help him.
     m_Metadata:
       m_Items: []
   references:
