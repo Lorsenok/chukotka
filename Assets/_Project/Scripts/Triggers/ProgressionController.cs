@@ -1,22 +1,14 @@
-using System;
 using UnityEngine;
 
 public class ProgressionController : MonoBehaviour
 {
-    [SerializeField] private int progression;
+    [Header("Progression Settings")]
+    [SerializeField] private int targetProgression;
+    [SerializeField] private bool unlockForever;
     [SerializeField] private bool doEnableOnProgression = true;
-    [SerializeField] private GameObject objToControl;
 
-    private void CheckProgression()
-    {
-        int curProg = PlayerPrefs.HasKey("progression") ? (int)GameSaver.Load("progression", typeof(int)) : Trigger.Progression;
-        
-        bool act = curProg == progression
-            ? doEnableOnProgression
-            : !doEnableOnProgression;
-            
-        objToControl.SetActive(act);
-    }
+    [Header("Object To Control")]
+    [SerializeField] private GameObject objToControl;
     
     private void Awake()
     {
@@ -27,5 +19,32 @@ public class ProgressionController : MonoBehaviour
     private void OnDestroy()
     {
         Trigger.OnProgressionChanged -= CheckProgression;
+    }
+    
+    private void CheckProgression()
+    {
+        int current = GetCurrentProgression();
+        bool active = ShouldBeActive(current);
+        
+        if (objToControl == null) 
+            return;
+        
+        objToControl.SetActive(active);
+    }
+    
+    private int GetCurrentProgression()
+    {
+        if (PlayerPrefs.HasKey("progression"))
+            return (int)GameSaver.Load("progression", typeof(int));
+
+        return Trigger.Progression;
+    }
+    
+    private bool ShouldBeActive(int current)
+    {
+        if (unlockForever)
+            return current >= targetProgression ? doEnableOnProgression : !doEnableOnProgression;
+
+        return current == targetProgression ? doEnableOnProgression : !doEnableOnProgression;
     }
 }
