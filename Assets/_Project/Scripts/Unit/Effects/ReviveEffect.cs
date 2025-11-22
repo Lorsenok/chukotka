@@ -8,7 +8,7 @@ public class ReviveEffect : MonoBehaviour //It's not even an effect, should be f
     [SerializeField] private DestroyableObject destroyableObject;
     [SerializeField] private int set = 10;
     [SerializeField] private GameObject[] spawnOnUse;
-    [SerializeField] private float cameraShakePower;
+    [SerializeField] private VisualAction visualAction;
     
     private IInventory inventory;
     [Inject]
@@ -29,6 +29,6 @@ public class ReviveEffect : MonoBehaviour //It's not even an effect, should be f
         {
             Instantiate(obj, destroyableObject.transform.position, obj.transform.rotation);
         }
-        CameraMovement.Shake(cameraShakePower);
+        VisualActionsHandler.Action(visualAction);
     }
 }

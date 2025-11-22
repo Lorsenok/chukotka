@@ -249,7 +249,6 @@ GameObject:
   - component: {fileID: 6334257619906543369}
   - component: {fileID: 8562508034808083614}
   - component: {fileID: 6938430988228396623}
-  - component: {fileID: 4068150867646179132}
   - component: {fileID: 5500761368291544682}
   - component: {fileID: 7535525609482521652}
   - component: {fileID: -1031136933521986105}
@@ -257,7 +256,11 @@ GameObject:
   - component: {fileID: 1022220381131382507}
   - component: {fileID: 9081938253999711420}
   - component: {fileID: 4911382896185564891}
-  - component: {fileID: 6309472268596862853}
+  - component: {fileID: 6278722010941273891}
+  - component: {fileID: 8068558652106071531}
+  - component: {fileID: 4570883430831221604}
+  - component: {fileID: 2042772848013348005}
+  - component: {fileID: 3404604098965821951}
   m_Layer: 0
   m_Name: Animal Fluf
   m_TagString: Untagged
@@ -409,50 +412,8 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 6, y: 1}
+  m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4068150867646179132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4698977778594916722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 982f741a64f04bd408bb7703da5c904e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  rg: {fileID: 8562508034808083614}
-  groundChecker: {fileID: 488353455212627502}
-  minDistance: 0
-  deceleration: 6.5
-  speed: 3.25
-  acceleration: 4.875
-  jumpForce: 2.5
-  jumpDelayTimer: {fileID: 7535525609482521652}
-  minDistanceToJump: 0
-  idle: {fileID: 0}
-  move: {fileID: 0}
-  spr: {fileID: 6334257619906543369}
-  minVelocityToMove: 0
-  destroyableObject: {fileID: 5025325049783167554}
-  dropPrefab:
-  - {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
-  escapeSpeedMultiplier: 1
-  hpWhenEscaping: 6
-  timeToEscape: {fileID: 5500761368291544682}
-  spawnAfterEscapePrefabs: []
-  flip: 1
-  minSpeedX: 0
-  animController: {fileID: 1022220381131382507}
-  idleAnim: idle
-  idleAnimTime: 0.1
-  walkAnim: walk
-  walkAnimTime: 10
-  jumpAnim: 
-  jumpAnimTime: 0
 --- !u!114 &5500761368291544682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,7 +541,7 @@ MonoBehaviour:
   timePerFrame: 0.1
   loop: 1
   curSprite: 0
---- !u!114 &6309472268596862853
+--- !u!114 &6278722010941273891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -589,17 +550,117 @@ MonoBehaviour:
   m_GameObject: {fileID: 4698977778594916722}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc553e580b0cc640beb95922d777875, type: 3}
+  m_Script: {fileID: 11500000, guid: 401eb216e6d5e90468b8ab176c170a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
-  detectionRadius: 5
-  escapePoints: []
-  flyUpVelocity: 5
-  flightSpeedMultiplier: 2.5
-  flyToPointTolerance: 0.5
-  ascendTime: 0.5
-  restoreDelay: 0.5
+  agr: 0
+  destroyableObject: {fileID: 5025325049783167554}
+  flyHeight: 1
+  speed: 2
+  switchDelayTimer: {fileID: 8068558652106071531}
+  animController: {fileID: 0}
+  idleAnim: 
+  idleAnimTime: 0
+  flyAnim: 
+  flyAnimTime: 0
+--- !u!114 &8068558652106071531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: switch point block
+  repeatable: 0
+  setOnStart: 0
+  savekey: 
+  timeSet: 1.5
+  curTime: 0
+--- !u!114 &4570883430831221604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982f741a64f04bd408bb7703da5c904e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  rg: {fileID: 8562508034808083614}
+  groundChecker: {fileID: 488353455212627502}
+  minDistance: 0
+  deceleration: 0
+  speed: 0
+  acceleration: 0
+  jumpForce: 0
+  jumpDelayTimer: {fileID: 2042772848013348005}
+  minDistanceToJump: 0
+  idle: {fileID: 0}
+  move: {fileID: 0}
+  spr: {fileID: 6334257619906543369}
+  minVelocityToMove: 0
+  destroyableObject: {fileID: 5025325049783167554}
+  dropPrefab:
+  - {fileID: 2494444330949010391, guid: 6f73825348bf7d1499e72344661a1aae, type: 3}
+  - {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
+  lootSpawnpoint: {fileID: 3480739057512430398}
+  escapeSpeedMultiplier: 1
+  hpWhenEscaping: 5
+  timeToEscape: {fileID: 3404604098965821951}
+  spawnAfterEscapePrefabs: []
+  flip: 0
+  minSpeedX: 0.25
+  animController: {fileID: 0}
+  idleAnim: 
+  idleAnimTime: 0
+  walkAnim: 
+  walkAnimTime: 0
+  jumpAnim: 
+  jumpAnimTime: 0
+--- !u!114 &2042772848013348005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: jump timer
+  repeatable: 0
+  setOnStart: 0
+  savekey: 
+  timeSet: 0
+  curTime: 0
+--- !u!114 &3404604098965821951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: escape timer
+  repeatable: 0
+  setOnStart: 0
+  savekey: 
+  timeSet: 10
+  curTime: 10
 --- !u!1 &8466107372646631808
 GameObject:
   m_ObjectHideFlags: 0

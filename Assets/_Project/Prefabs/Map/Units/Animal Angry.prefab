@@ -374,7 +374,7 @@ MonoBehaviour:
   - {fileID: 1359130480447200395, guid: e751efc145c24be4aa76bbd4ad2f21c6, type: 3}
   spawnPoint: {fileID: 4923585957773397637}
   spawnOnDamageObject: 1
-  shakeOnDamage: 6
+  visualActionOnDamage: {fileID: 11400000, guid: 0602c7b5b8e1d304f95f326ae9398987, type: 2}
   timerDelay: {fileID: 2318846243298551186}
   effectTimer: {fileID: 0}
   animController: {fileID: 0}
@@ -766,13 +766,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af15684836036f24f85e174ce1bd5f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  destroyAfterDying: 1
-  objectToDestroy: {fileID: 4698977778594916722}
   hpSet: 10
   maxHP: 10
   saveHP: 0
   saveHPKey: 
+  destroyAfterDying: 1
+  objectToDestroy: {fileID: 4698977778594916722}
   spawnAfterDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   - {fileID: 1359130480447200395, guid: e751efc145c24be4aa76bbd4ad2f21c6, type: 3}

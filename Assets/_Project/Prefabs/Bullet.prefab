@@ -211,7 +211,7 @@ MonoBehaviour:
   spawnOnDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   spawnPoint: {fileID: 2625249957812407564}
-  shakeOnDamage: 3.5
+  visualActionOnDamage: {fileID: 11400000, guid: 9b34b2ac1782f994689394a5f92abee2, type: 2}
 --- !u!114 &9025270368433224626
 MonoBehaviour:
   m_ObjectHideFlags: 0
