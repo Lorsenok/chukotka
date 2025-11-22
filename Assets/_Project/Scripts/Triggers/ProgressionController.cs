@@ -25,6 +25,10 @@ public class ProgressionController : MonoBehaviour
     {
         int current = GetCurrentProgression();
         bool active = ShouldBeActive(current);
+        
+        if (objToControl == null) 
+            return;
+        
         objToControl.SetActive(active);
     }
     
