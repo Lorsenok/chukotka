@@ -1,12 +1,12 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FPSDisplay : MonoBehaviour
 {
     private const int NormalFrameRate = 50;
     private const string FPSPrefix = "FPS: ";
     
-    [SerializeField] private Text fpsText;
+    [SerializeField] private TMP_Text fpsText;
     [SerializeField] private float updateInterval = 0.2f;
     [SerializeField] private Color normalColor = Color.green;
     [SerializeField] private Color lowFpsColor = Color.red;
