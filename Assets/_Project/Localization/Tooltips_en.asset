@@ -19,31 +19,30 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 4314882048
-    m_Localized: "the mistress of the ocean depths, who grants or takes away the
-      hunters\u2019 bounty. When her hair is tangled, the sea grows angry, and only
-      respect and offerings can appease her."
+    m_Localized: "Ettyk \u2014 a traditional Chukchi greeting."
     m_Metadata:
       m_Items: []
   - m_Id: 1062055436288
-    m_Localized: "That\u2019s what the Chukchi call outsiders\u2014those who do not
-      belong to their land or traditions.\r"
+    m_Localized: "Ytlygun (father) \u2014 a respectful form of address toward an
+      older, wiser person, someone old enough to be one\u2019s father."
     m_Metadata:
       m_Items: []
   - m_Id: 1167152111616
-    m_Localized: Bogatyrs, mighty warrior-heroes whose strength and courage come
-      from ancient legends.
+    m_Localized: "Sedna \u2014 mistress of the deep sea who grants or withholds the
+      hunters\u2019 catch; when her hair is tangled, the sea grows wrathful, and
+      only respect and offerings can calm her."
     m_Metadata:
       m_Items: []
   - m_Id: 4413535019008
-    m_Localized: Sedna
+    m_Localized: Ettyk
     m_Metadata:
       m_Items: []
   - m_Id: 4437308334080
-    m_Localized: "Tanny\u2019tan"
+    m_Localized: Ytlygun
     m_Metadata:
       m_Items: []
   - m_Id: 4462432215040
-    m_Localized: Bogatyr
+    m_Localized: Sedna
     m_Metadata:
       m_Items: []
   references:
