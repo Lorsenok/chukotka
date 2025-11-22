@@ -45,6 +45,24 @@ MonoBehaviour:
     m_Localized: Sedna
     m_Metadata:
       m_Items: []
+  - m_Id: 24673436352512
+    m_Localized: "Tann\u2019ytan \u2014 an outsider, an enemy; originally used for
+      people not of Chukchi land or customs\u2014such as the Koryaks or Russians."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24668709371904
+    m_Localized: "Tann\u2019ytan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25007051292672
+    m_Localized: "Ermechin \u2014 mighty warrior-heroes whose strength and bravery
+      come from ancient legends."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24971949162496
+    m_Localized: Ermechin
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
