@@ -8241,7 +8241,7 @@ MonoBehaviour:
   _itemsToPutDown: []
   _itemsToPickUp:
   - {fileID: 11400000, guid: faf2dc5bcfda33d4785ecafedacf9367, type: 2}
-  _isUsedOnStart: 0
+  _isUsedOnStart: 1
 --- !u!1 &1503053211
 GameObject:
   m_ObjectHideFlags: 0
