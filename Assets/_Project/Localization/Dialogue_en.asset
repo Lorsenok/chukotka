@@ -97,7 +97,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
-    m_Localized: <color=red>Ettyk</color>, my boy! How are you doing?
+    m_Localized: <link="t1"><color=red>Ettyk</color></link>, my boy! How are you
+      doing?
     m_Metadata:
       m_Items: []
   - m_Id: 3201720760750080
