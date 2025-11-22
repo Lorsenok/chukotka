@@ -236,7 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5fecce3a2d8ee48a770d51400d7cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progression: 1
+  targetProgression: 1
+  unlockForever: 1
   doEnableOnProgression: 1
   objToControl: {fileID: 812415385}
 --- !u!4 &28134615
@@ -266,7 +267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5fecce3a2d8ee48a770d51400d7cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progression: 0
+  targetProgression: 0
+  unlockForever: 0
   doEnableOnProgression: 1
   objToControl: {fileID: 2087796328}
 --- !u!1 &95843865
