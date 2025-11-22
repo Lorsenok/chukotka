@@ -138,9 +138,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
-    m_Localized: "<link=\"t1\"><color=red>\u0415\u0442\u0442\u044B\u043A</color></link>,
+    m_Localized: "<link=\"t1\"><color=red><u>\u0415\u0442\u0442\u044B\u043A</u></color></link>,
       \u043C\u0430\u043B\u044C\u0447\u0438\u043A \u043C\u043E\u0439! \u041A\u0430\u043A
-      \u0442\u0432\u043E\u0438 \u0434\u0435\u043B\u0430?"
+      \u0442\u0432\u043E\u0438 \u0434\u0435\u043B\u0430?\n<link=\"t1\"><color=#d0b36f><u>\u0422\u0423\u041B\u0422\u0418\u041F</u></color></link>"
     m_Metadata:
       m_Items: []
   - m_Id: 3201720760750080
