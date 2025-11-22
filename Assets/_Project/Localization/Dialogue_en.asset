@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237245732573184
-    m_Localized: Talk (F)
+    m_Localized: Talk (T)
     m_Metadata:
       m_Items: []
   - m_Id: 3201381835821056
@@ -52,19 +52,21 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2915132415758336
     m_Localized: "Who knows what they want. The elder tried to speak with them, but
-      it was useless. Ah, Sedna took our kindest ermechin far too soon\u2026"
+      it was useless. Ah, <color=red>ermechin</color> far too soon\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 2914788835151872
-    m_Localized: "Terrible things you say, Ettuvyi! Why would the outsiders need
-      us? There\u2019s nothing left to take, if your words are true."
+    m_Localized: "Terrible things you say, <color=red>Ettuvyi</color>! Why would
+      the outsiders need us? There\u2019s nothing left to take, if your words are
+      true."
     m_Metadata:
       m_Items: []
   - m_Id: 2914666168537088
     m_Localized: "Hard times have come. We don\u2019t have enough working hands.
       The fish have left the rivers, and the forest has fewer animals. We cannot
       even think of going to sea\u2014the gods are wrathful and send storms. And
-      now tannytan in bone armor have come to the village, lurking nearby\u2026"
+      now <color=red>tannytan</color> in bone armor have come to the village, lurking
+      nearby\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 2913206492024832
@@ -73,8 +75,9 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 643406642368512
     m_Localized: The gods are angry with us, so angry! You fell into the ocean while
-      we were hunting the whale, and Kotka saved you. Sedna grew furious and overturned
-      the boat with our best hunters. They brought you ashore half-dead.
+      we were hunting the whale, and Kotka saved you. <color=red>Sedna</color> grew
+      furious and overturned the boat with our best hunters. They brought you ashore
+      half-dead.
     m_Metadata:
       m_Items: []
   - m_Id: 643386824282112
@@ -90,11 +93,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237707051487232
-    m_Localized: "Ettyk, Ytlygun. What happened to me? My head is foggy\u2026"
+    m_Localized: "Ettyk, <color=red>Ytlygun</color>. What happened to me? My head
+      is foggy\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
-    m_Localized: "\u0415ttryk, my boy! How are you doing?"
+    m_Localized: <color=red>Ettyk</color>, my boy! How are you doing?
     m_Metadata:
       m_Items: []
   - m_Id: 3201720760750080
