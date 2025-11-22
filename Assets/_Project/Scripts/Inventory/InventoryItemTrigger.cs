@@ -8,6 +8,8 @@ public class InventoryItemTrigger : Trigger
 
     [Tooltip("Что достать из инвентаря")] [SerializeField]
     private Item[] _itemsToPickUp;
+    
+    [SerializeField] private bool _isUsedOnStart;
 
     private IInventory _inventory;
 
@@ -16,12 +18,19 @@ public class InventoryItemTrigger : Trigger
     {
         _inventory = inventory;
     }
+    
+    private void Start()
+    {
+        if (_isUsedOnStart) 
+            Action();
+    }
 
     public override void Action()
     {
         foreach (Item item in _itemsToPutDown)
         {
             _inventory.Items.Add(item);
+            _inventory.OnItemsChanged?.Invoke();
         }
         
         foreach (Item item in _itemsToPickUp)

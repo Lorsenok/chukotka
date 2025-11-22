@@ -2103,8 +2103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5260fd02d304684f8455d6a36792b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: d185aeb8d4d188041917acd1c4aa4926, type: 2}
-  quantity: 3
+  item: {fileID: 11400000, guid: be15635bed4faf64da6986fa80d281f1, type: 2}
+  quantity: 1
   trigger: {fileID: 5149895623339482723}
 --- !u!114 &5149895623339482723
 MonoBehaviour:

@@ -1521,8 +1521,9 @@ MonoBehaviour:
   activateAnotherTriggerId: -1
   progressionSet: 5
   _itemsToPutDown:
-  - {fileID: 11400000, guid: 6dcda4b21ece34a47abf1481648e45df, type: 2}
+  - {fileID: 11400000, guid: faf2dc5bcfda33d4785ecafedacf9367, type: 2}
   _itemsToPickUp: []
+  _isUsedOnStart: 1
 --- !u!4 &1080108371
 Transform:
   m_ObjectHideFlags: 0
