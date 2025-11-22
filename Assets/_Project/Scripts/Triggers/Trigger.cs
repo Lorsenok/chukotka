@@ -20,6 +20,7 @@ public class Trigger : MonoBehaviour //Idk how to do it in another way actually
         {
             PlayerPrefs.SetInt("progression", value);
             progression = value;
+            Debug.Log("Progression set to " + value);
         }
     }
     

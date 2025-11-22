@@ -261,6 +261,7 @@ Transform:
   - {fileID: 5021217292945992892}
   - {fileID: 8669668968449818086}
   - {fileID: 9158772057908258883}
+  - {fileID: 5601284305180647124}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3636801805104331428
@@ -1470,6 +1471,38 @@ MonoBehaviour:
   animController: {fileID: 0}
   shootAnim: 
   shootAnimTime: 0
+--- !u!1 &5431911601794777893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5601284305180647124}
+  m_Layer: 6
+  m_Name: InventoryController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5601284305180647124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431911601794777893}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4821946334208084778}
+  m_Father: {fileID: 752496441306215638}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5868474791745221930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2058,74 @@ MonoBehaviour:
   timePerFrame: 0.15
   loop: 0
   curSprite: 0
+--- !u!1 &7245221650597220062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4821946334208084778}
+  - component: {fileID: 1826845236281743363}
+  - component: {fileID: 5149895623339482723}
+  m_Layer: 6
+  m_Name: Quest1ChikenMeat3pcs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4821946334208084778
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245221650597220062}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5601284305180647124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826845236281743363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245221650597220062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5260fd02d304684f8455d6a36792b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: d185aeb8d4d188041917acd1c4aa4926, type: 2}
+  quantity: 3
+  trigger: {fileID: 5149895623339482723}
+--- !u!114 &5149895623339482723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7245221650597220062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f399bc969697724ebffdcf687fa568a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: -1
+  spawnObjects: []
+  spawnObjectsPos: []
+  enableObjects: []
+  disableObjects: []
+  destroyObjects: []
+  activateAnotherTriggerId: -1
+  progressionSet: 3
 --- !u!1 &8294101037761480325
 GameObject:
   m_ObjectHideFlags: 0
