@@ -44,7 +44,7 @@ public class DamageObject : MonoBehaviour
     [SerializeField] private GameObject[] spawnOnDamage;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private bool spawnOnDamageObject;
-    [SerializeField] private float shakeOnDamage;
+    [SerializeField] private VisualAction visualActionOnDamage;
 
     [SerializeField] private Timer timerDelay;
     [SerializeField] private Timer effectTimer;
@@ -86,7 +86,7 @@ public class DamageObject : MonoBehaviour
         {
             Instantiate(spawn, spawnOnDamageObject ? obj.transform.position : spawnPoint.position, spawn.transform.rotation);
         }
-        CameraMovement.Shake(shakeOnDamage);
+        VisualActionsHandler.Action(visualActionOnDamage);
         if (giveEffect) EffectGiver.AddComponent(obj.gameObject, curEffect, EffectProps);
     }
 

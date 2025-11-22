@@ -213,7 +213,7 @@ MonoBehaviour:
   spawnOnDamage:
   - {fileID: 2181136554569465549, guid: 83aa7095ba0fa7a4c82db87828f36a19, type: 3}
   spawnPoint: {fileID: 2625249957812407564}
-  shakeOnDamage: 3.5
+  visualActionOnDamage: {fileID: 11400000, guid: 9b34b2ac1782f994689394a5f92abee2, type: 2}
 --- !u!114 &5380052121345373909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: destroy after
   repeatable: 0
   setOnStart: 0
@@ -270,15 +269,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af15684836036f24f85e174ce1bd5f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
-  destroyAfterDying: 1
-  objectToDestroy: {fileID: 0}
   hpSet: 1
   maxHP: 1
   saveHP: 0
   saveHPKey: 
+  destroyAfterDying: 1
+  objectToDestroy: {fileID: 0}
   spawnAfterDamage:
   - {fileID: 2181136554569465549, guid: 594cd83b14c5bd642805d0b4fa72191b, type: 3}
+  spawnAfterDestroy: []
+  animController: {fileID: 0}
+  getDamageAnim: 
+  getDamageAnimTime: 0
 --- !u!1 &6143180298047076822
 GameObject:
   m_ObjectHideFlags: 0

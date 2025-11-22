@@ -4,6 +4,7 @@ Shader "Unlit/Spirit"
     {
         _MainTex ("Particle Texture", 2D) = "white" {}
         _Color ("Tint", Color) = (1,1,1,1)
+        _Distortion ("Distortion Power", Float) = 0.1
         _Octaves ("Octaves", Float) = 6
         _Animation ("Animation", Range(0, 1)) = 0
         _AnimationTiling ("Animation Tiling", Vector) = (1, 1, 0, 0)
@@ -23,6 +24,8 @@ Shader "Unlit/Spirit"
             sampler2D _MainTex;
             fixed4 _Color;
             float4 _MainTex_ST;
+
+            float _Distortion;
 
             float _Octaves;
 
@@ -93,7 +96,7 @@ Shader "Unlit/Spirit"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                i.uv.x += sin(i.pos.y * 6) * 0.1;
+                i.uv.x += sin(i.pos.y * 6) * _Distortion;
                 fixed4 col = tex2D(_MainTex, i.uv);
                 float n = floor(fbm(i.uv) * 8) / 8;
                 col *= float4(n, n, n, 1.0);
