@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 6733686695633511560}
   - component: {fileID: 3429901607127689561}
   - component: {fileID: 4829893623997062717}
+  - component: {fileID: 5779913988638142597}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -545,6 +546,7 @@ MonoBehaviour:
   dash: {fileID: 3321353598892096416}
   combo: {fileID: 8752553636816379488}
   controller: {fileID: 3636801805104331428}
+  skillsUnlocker: {fileID: 5779913988638142597}
 --- !u!50 &1226351488987415359
 Rigidbody2D:
   serializedVersion: 5
@@ -1059,6 +1061,24 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   inputActions: {fileID: -944628639613478452, guid: e806b2e9157ad5940b02024ab1527b74, type: 3}
+--- !u!114 &5779913988638142597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657978016914447784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbce01acbb99c7a4a8b985b86aa21ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlockDoubleJumpAt: 1
+  unlockDashAt: 2
+  unlockComboAt: 3
+  canDoubleJump: 0
+  canDash: 0
+  canCombo: 0
 --- !u!1 &4620911821029657225
 GameObject:
   m_ObjectHideFlags: 0
