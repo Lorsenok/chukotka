@@ -11,6 +11,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float shakeExpireSpeed;
     [SerializeField] private float minX = -999;
     [SerializeField] private float maxX = 999;
+    [SerializeField] private float borderOffset = 7.25f;
     
     private IGameState state;
     [Inject] private void Init(IGameState state)
@@ -46,7 +47,7 @@ public class CameraMovement : MonoBehaviour
         if (state.GetCurrentState() != stateLock) return;
         Vector3 targetPos = target.position + offset;
         targetPos.y = ylock ? starty : targetPos.y;
-        targetPos.x = Mathf.Clamp(targetPos.x, minX, maxX);
+        targetPos.x = Mathf.Clamp(targetPos.x, BorderController.MinDistance + borderOffset, BorderController.MaxDistance - borderOffset);
         transform.position = Vector3.Lerp(transform.position, targetPos + curShakeOffset, speed * Time.deltaTime);
     }
 }

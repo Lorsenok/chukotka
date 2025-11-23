@@ -30,7 +30,9 @@ public class AnimalSpawner : Spawner
     {
         int maxIterations = 100;
         float curRange = 0f;
-        while (curRange < minRange && curRange > -minRange)
+        while (curRange < minRange & curRange > -minRange ||
+               startPosition.x + curRange > BorderController.MaxDistance |
+               startPosition.x + curRange < BorderController.MinDistance)
         {
             curRange = Random.Range(-maxRange, maxRange);
             maxIterations--;
@@ -52,6 +54,7 @@ public class AnimalSpawner : Spawner
     public void Update()
     {
         if (!lockToTarget) return;
+        if (!target) target = FindObjectsByType<Controller>(FindObjectsSortMode.None)[0].transform;
         startPosition = target.position;
     }
 }

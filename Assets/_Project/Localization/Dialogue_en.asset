@@ -30,76 +30,75 @@ MonoBehaviour:
     m_Localized: Talk (T)
     m_Metadata:
       m_Items: []
-  - m_Id: 237422656704512
-    m_Localized: <i><color="red">Ettyk</color></i>, my boy! How are you getting on?
+  - m_Id: 3201381835821056
+    m_Localized: Every life has value, Chu. Tanat, our hunter, knows this better
+      than anyone. Go to him and help him.
     m_Metadata:
       m_Items: []
-  - m_Id: 643025518546944
-    m_Localized: "<link=\"shake\"><color=\"red\">Tann\u2019ytan</color></link> again
-      \u2014 outsiders have come! If only we knew what they want this time\u2026"
+  - m_Id: 2917006401425408
+    m_Localized: "You\u2019re young and foolish still. A Chukchi doesn\u2019t live
+      by strength alone. Five people died on that whale hunt, and you want even more
+      blood spilled."
     m_Metadata:
       m_Items: []
-  - m_Id: 237707051487232
-    m_Localized: "Ettyk, <i><color=\"red\">itligin</color></i>. I found tracks near
-      the camp. Long, as if a bear were walking on its hind legs. But it\u2019s not
-      an animal, I can feel it."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 643386824282112
-    m_Localized: Those ones? What, have they come for our souls again? They say their
-      armor is made from a special bone?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 643406642368512
-    m_Localized: "True, true. That armor makes them invulnerable even to shamans.
-      Maybe that\u2019s why they eat mushrooms\u2026"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2913206492024832
-    m_Localized: "Mushrooms? <i><color=\"red\">And they don\u2019t get poisoned by
-      them?</color></i>"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2914666168537088
-    m_Localized: Yes. They eat them and even praise them. I saw it myself when I
-      was a lad. A wondrous sight!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2914788835151872
-    m_Localized: "Go to the hunter. Tell him to be on guard \u2014 they may prowl
-      in the forest. And they\u2019re very fond of ambushes!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2915132415758336
-    m_Localized: "Ah, you\u2019ve come! What do you need this time?"
+  - m_Id: 3165914054610944
+    m_Localized: "But they\u2019re tannytan! Why pity them?"
     m_Metadata:
       m_Items: []
   - m_Id: 2915678526722048
-    m_Localized: "The shaman sent me to you. He says tann\u2019ytan are near. He
-      asked you to be more careful \u2014 they\u2019re in the woods and may set an
-      ambush!"
+    m_Localized: "Then I\u2019ll drive them away myself! They have no place here\u2014I
+      can defeat any enemy!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2915132415758336
+    m_Localized: "Who knows what they want. The elder tried to speak with them, but
+      it was useless. Ah, <color=red>ermechin</color> far too soon\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2914788835151872
+    m_Localized: "Terrible things you say, Ettuvy! Why would the outsiders need us?
+      There\u2019s nothing left to take, if your words are true."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2914666168537088
+    m_Localized: "Hard times have come. We don\u2019t have enough working hands.
+      The fish have left the rivers, and the forest has fewer animals. We cannot
+      even think of going to sea\u2014the gods are wrathful and send storms. And
+      now <color=red>tannytan</color> in bone armor have come to the village, lurking
+      nearby\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2913206492024832
+    m_Localized: What will happen to the camp now?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643406642368512
+    m_Localized: The gods are angry with us, so angry! You fell into the ocean while
+      we were hunting the whale, and Kotka saved you. <color=red>Sedna</color> grew
+      furious and overturned the boat with our best hunters. They brought you ashore
+      half-dead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643386824282112
+    m_Localized: Remember what?
     m_Metadata:
       m_Items: []
   - m_Id: 2915692988682240
     m_Localized: "Those \u201Cthings\u201D?"
     m_Metadata:
       m_Items: []
-  - m_Id: 2917006401425408
-    m_Localized: "Tann\u2019ytan? Nonsense! Tell the shaman to eat less <i><color=\"red\">vatak</color></i>.
-      Soon he\u2019ll start seeing <i><color=\"red\">fly-agaric women</color></i>.
-      They say the more fly-agarics you eat, the more women you\u2019ll see!"
+  - m_Id: 643025518546944
+    m_Localized: "And you don\u2019t remember anything\u2026"
     m_Metadata:
       m_Items: []
-  - m_Id: 3165914054610944
-    m_Localized: "Ha \u2014 you talk, and then you\u2019ll complain when someone
-      grabs you from under the snow by the collar! I saw the tracks myself, I\u2019m
-      not lying."
+  - m_Id: 237707051487232
+    m_Localized: "Ettyk, <color=red>Ytlygun</color>. What happened to me? My head
+      is foggy\u2026"
     m_Metadata:
       m_Items: []
-  - m_Id: 3201381835821056
-    m_Localized: "<i><color=\"red\">Ga</color></i>. Alright, don\u2019t shout. But
-      such tracks aren\u2019t left only by them. Neighboring tribes have also started
-      walking on those things."
+  - m_Id: 237422656704512
+    m_Localized: <link="t1"><color=red>Ettyk</color></link>, my boy! How are you
+      doing?
     m_Metadata:
       m_Items: []
   - m_Id: 3201720760750080
