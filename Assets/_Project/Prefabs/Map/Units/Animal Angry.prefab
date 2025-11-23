@@ -598,9 +598,10 @@ MonoBehaviour:
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab:
   - {fileID: 2494444330949010391, guid: 6f73825348bf7d1499e72344661a1aae, type: 3}
+  lootSpawnpoint: {fileID: 0}
   escapeSpeedMultiplier: 0.15
   hpWhenEscaping: 4
-  timeToEscape: {fileID: 5500761368291544682}
+  timeToEscape: {fileID: 0}
   spawnAfterEscapePrefabs: []
   flip: 0
   minSpeedX: 0.25

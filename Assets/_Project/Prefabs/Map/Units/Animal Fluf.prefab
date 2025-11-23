@@ -614,7 +614,7 @@ MonoBehaviour:
   lootSpawnpoint: {fileID: 3480739057512430398}
   escapeSpeedMultiplier: 1
   hpWhenEscaping: 5
-  timeToEscape: {fileID: 3404604098965821951}
+  timeToEscape: {fileID: 0}
   spawnAfterEscapePrefabs: []
   flip: 0
   minSpeedX: 0.25
