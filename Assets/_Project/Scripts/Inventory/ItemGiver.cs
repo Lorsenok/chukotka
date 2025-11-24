@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Xml.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -15,11 +17,19 @@ public class ItemGiver : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.GetComponent<Controller>()) return;
+        if (!collision.gameObject.GetComponent<Controller>()) 
+            return;
 
-        foreach (Item item in itemGive) container.Items.Add(item);
-        foreach (Item item in itemTake) if (container.Items.Contains(item)) container.Items.Remove(item);
-        container.OnItemsChanged?.Invoke();
+        foreach (Item item in itemGive)
+        {
+            container.AddItem(item);
+        }
+        
+        foreach (Item item in itemTake)
+        {
+            if (container.Items.Contains(item)) 
+                container.RemoveItem(item);
+        }
 
         Destroy(gameObject);
     }

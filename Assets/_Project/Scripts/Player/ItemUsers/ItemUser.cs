@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -25,8 +23,7 @@ public class ItemUser : MonoBehaviour
 
         if (removeItemAfterUsing)
         {
-            inventory.Items.Remove(item);
-            inventory.OnItemsChanged?.Invoke();
+            inventory.RemoveItem(item);
         }
         
         hasTimerEnded = false;

@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -23,8 +24,7 @@ public class PickableItem : DialogueTriggerMessage
     {
         base.Action();
         if (!isPlayerOn || !InventoryUI.HasFreeSpaceFor(item.type) & !inventory.Items.Contains(item)) return;
-        inventory.Items.Add(item);
-        inventory.OnItemsChanged?.Invoke();
+        inventory.AddItem(item);
         if (!string.IsNullOrEmpty(savekey)) GameSaver.Save(savekey, 1);
         Destroy(gameObject);
     }

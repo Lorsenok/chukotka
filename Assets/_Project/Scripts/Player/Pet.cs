@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -55,8 +56,7 @@ public class Pet : DialogueTriggerMessage
 
         if (destroyableObject == null || destroyableObject.HP <= 0) return;
 
-        inventory.Items.Remove(itemForUse);
-        inventory.OnItemsChanged?.Invoke();
+        inventory.RemoveItem(itemForUse);
 
         destroyableObject.HP += heal;
 

@@ -18,8 +18,7 @@ public class InventorySetter : MonoBehaviour
     {
         if (enabled)
         {
-            inventory.Items = items;
-            inventory.OnItemsChanged?.Invoke();
+            inventory.AddRangeItems(items);
         }
     }
 }

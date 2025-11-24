@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -36,8 +37,7 @@ public class TradeCellButton : GameButton
         
         if (!inventory.Items.Contains(ItemForTrade) || !InventoryUI.HasFreeSpaceFor(Item.type) & !hasItem) return;
         
-        inventory.Items.Remove(ItemForTrade);
-        inventory.Items.Add(Item);
-        inventory.OnItemsChanged?.Invoke();
+        inventory.RemoveItem(ItemForTrade);
+        inventory.AddItem(Item);
     }
 }

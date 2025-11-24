@@ -4,35 +4,49 @@ using UnityEngine;
 
 public interface IInventory
 {
-    List<Item> Items { get; set; }
-    Action OnItemsChanged { get; set; }
+    public event Action OnItemsChanged;
+    IReadOnlyList<Item> Items { get; }
+    void AddItem(Item item);
+    void AddRangeItems(List<Item> items);
+    void RemoveItem(Item item);
 }
 
 public class InventoryService : IInventory
 {
     private const string SAVE_KEY = "InventoryItems";
-    private List<Item> items = new List<Item>();
+    private List<Item> _items = new List<Item>();
 
-    public List<Item> Items
-    {
-        get => items;
-        set
-        {
-            items = value;
-        }
-    }
-
-    public Action OnItemsChanged { get; set; }
-
+    public event Action OnItemsChanged;
+    
+    public IReadOnlyList<Item> Items => _items;
+    
     public InventoryService()
     {
         LoadItems();
         OnItemsChanged += SaveItems;
     }
 
+    public void AddItem(Item item)
+    {
+        _items.Add(item);
+        OnItemsChanged?.Invoke();
+    }
+
+    public void AddRangeItems(List<Item> items)
+    {
+        _items.AddRange(items);
+        OnItemsChanged?.Invoke(); 
+    }
+
+    public void RemoveItem(Item item)
+    {
+        _items.Remove(item);
+        OnItemsChanged?.Invoke();
+    }
+
     private void SaveItems()
     {
-        ItemList itemList = new ItemList { Items = items };
+        ItemList itemList = new ItemList { Items = _items };
         string json = JsonUtility.ToJson(itemList);
         GameSaver.Save(SAVE_KEY, json);
     }
@@ -43,11 +57,11 @@ public class InventoryService : IInventory
         {
             string json = (string)GameSaver.Load(SAVE_KEY, typeof(string));
             ItemList itemList = JsonUtility.FromJson<ItemList>(json);
-            items = itemList.Items ?? new List<Item>();
+            _items = itemList.Items ?? new List<Item>();
         }
         else
         {
-            items = new List<Item>();
+            _items = new List<Item>();
         }
     }
 

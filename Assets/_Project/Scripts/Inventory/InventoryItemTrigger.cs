@@ -29,13 +29,12 @@ public class InventoryItemTrigger : Trigger
     {
         foreach (Item item in _itemsToPutDown)
         {
-            _inventory.Items.Add(item);
-            _inventory.OnItemsChanged?.Invoke();
+            _inventory.AddItem(item);
         }
         
         foreach (Item item in _itemsToPickUp)
         {
-            _inventory.Items.Remove(item);
+            _inventory.RemoveItem(item);
         }
         
         base.Action();

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Zenject;
 
@@ -19,10 +18,11 @@ public class ReviveEffect : MonoBehaviour //It's not even an effect, should be f
     
     private void Update()
     {
-        if (!cellChecker.HasItem || destroyableObject.HP > 0) return;
+        if (!cellChecker.HasItem || destroyableObject.HP > 0) 
+            return;
+        
         GameSaver.StopAllSaves = false;
-        inventory.Items.Remove(cellChecker.item);
-        inventory.OnItemsChanged?.Invoke();
+        inventory.RemoveItem(cellChecker.item);
         destroyableObject.HP = set;
         destroyableObject.enabled = true;
         foreach (var obj in spawnOnUse)
