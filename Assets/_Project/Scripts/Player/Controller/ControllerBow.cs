@@ -6,7 +6,7 @@ using Zenject;
 
 public class ControllerBow : ControllerAddition
 {
-    public int Arrows { get; set; } = 500;
+    public int Arrows { get; set; } = 10;
     
     [SerializeField] private ControllerAddition[] controllersBlock;
     [SerializeField] private Gun gun;
@@ -73,8 +73,15 @@ public class ControllerBow : ControllerAddition
     private bool isHolding = false;
     private void Shoot(InputAction.CallbackContext context)
     {
+
+        if (!gun || !gun.gameObject.activeInHierarchy) return;
+
+        Controller playerController = GetComponent<Controller>();
+        if (playerController != null && !playerController.CanMove) return;
+
         isHoldingWhileLoad = !isHoldingWhileLoad;
         if (isLoading || Arrows <= 0) return;
+
         isHolding = !isHolding;
         if (!isHoldingWhileLoad && isHolding)
         {
@@ -99,6 +106,7 @@ public class ControllerBow : ControllerAddition
             animController.PullAnimation(shootAnim, shootAnimTime);
         }
     }
+
 
     public void SaveArrows()
     {

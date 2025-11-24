@@ -8,7 +8,6 @@ using Zenject;
 public class Controller : MonoBehaviour
 {
     public bool CanMove { get; set; } = true;
-    
     public float AdditionalSpeed { get; set; } = 0f;
     public float AdditionalAcceleration { get; set; } = 0f;
     public float AdditionalDeceleration { get; set; } = 0f;

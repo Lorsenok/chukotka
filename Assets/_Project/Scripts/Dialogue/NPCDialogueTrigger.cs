@@ -4,6 +4,7 @@ public class NPCDialogueTrigger : MonoBehaviour
 {
     [SerializeField] private CustomAnimator idle;
     [SerializeField] private CustomAnimator active;
+    [SerializeField] private Controller playerController; 
 
     public void OnEnable()
     {
@@ -21,11 +22,17 @@ public class NPCDialogueTrigger : MonoBehaviour
     {
         idle.enabled = false;
         active.enabled = true;
+
+        if (playerController)
+            playerController.CanMove = false;
     }
 
     private void OnEnd()
     {
         idle.enabled = true;
         active.enabled = false;
+
+        if (playerController)
+            playerController.CanMove = true;
     }
 }

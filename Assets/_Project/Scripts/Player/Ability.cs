@@ -16,7 +16,7 @@ public class Ability : ScriptableObject
 
 public class AbilityObject
 {
-    public void SetAbility(Ability ability)
+    public AbilityObject(Ability ability)
     {
         Jumps = ability.jumps;
         Combo = ability.combo;
