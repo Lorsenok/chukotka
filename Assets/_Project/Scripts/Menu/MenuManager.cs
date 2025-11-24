@@ -8,36 +8,23 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] Menu[] menus;
 
-    private Controller playerController;
-
     public void Awake()
     {
         Instance = this;
-
-        // Найти контроллер игрока один раз при старте
-        playerController = FindAnyObjectByType<Controller>();
     }
 
     public void MenuOpen(string menuName)
     {
-        bool anyMenuOpened = false;
-
-        for (int i = 0; i < menus.Length; i++)
+        foreach (var t in menus)
         {
-            if (menus[i].MenuName == menuName)
+            if (t.MenuName == menuName)
             {
-                menus[i].ChangeState(true);
-                anyMenuOpened = true;   
+                t.ChangeState(true);
             }
-            else if (menus[i].Open)
+            else if (t.Open)
             {
-                menus[i].ChangeState(false);
+                t.ChangeState(false);
             }
-        }
-
-        if (playerController != null)
-        {
-            playerController.CanMove = !anyMenuOpened;
         }
     }
 }
