@@ -149,7 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fd3bf904eff3c40935f1b529709f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsDatabase: []
+  itemsDatabase:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 63ca6c56cfc3aba46a35bd4de8be9a3f, type: 2}
+  - {fileID: 11400000, guid: 9cfea776c53b0f849aa6fda6540b44ca, type: 2}
+  - {fileID: 11400000, guid: 9b4a36fe2a47d5942b018cb1b5477796, type: 2}
 --- !u!1 &8011909790720721607
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: time per symbols
   repeatable: 1
   setOnStart: 0
