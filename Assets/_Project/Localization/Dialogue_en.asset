@@ -52,7 +52,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2915132415758336
     m_Localized: "Who knows what they want. The elder tried to speak with them, but
-      it was useless. Ah, <color=red>ermechin</color> far too soon\u2026"
+      it was useless. Ah, <link=\"t5\"><color=red><u>ermechin</u></color></link>
+      far too soon\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 2914788835151872
@@ -64,8 +65,8 @@ MonoBehaviour:
     m_Localized: "Hard times have come. We don\u2019t have enough working hands.
       The fish have left the rivers, and the forest has fewer animals. We cannot
       even think of going to sea\u2014the gods are wrathful and send storms. And
-      now <color=red>tannytan</color> in bone armor have come to the village, lurking
-      nearby\u2026"
+      now <link=\"t4\"><color=red><u>tannytan</u></color></link> in bone armor have
+      come to the village, lurking nearby\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 2913206492024832
@@ -74,9 +75,9 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 643406642368512
     m_Localized: The gods are angry with us, so angry! You fell into the ocean while
-      we were hunting the whale, and Kotka saved you. <color=red>Sedna</color> grew
-      furious and overturned the boat with our best hunters. They brought you ashore
-      half-dead.
+      we were hunting the whale, and Kotka saved you. <link="t3"><color=red><u>Sedna</u></color></link>
+      grew furious and overturned the boat with our best hunters. They brought you
+      ashore half-dead.
     m_Metadata:
       m_Items: []
   - m_Id: 643386824282112
@@ -92,13 +93,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 237707051487232
-    m_Localized: "Ettyk, <color=red>Ytlygun</color>. What happened to me? My head
-      is foggy\u2026"
+    m_Localized: "Ettyk, <link=\"t2\"><color=red><u>Ytlygun</u></color></link>. What
+      happened to me? My head is foggy\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
-    m_Localized: <link="t1"><color=red>Ettyk</color></link>, my boy! How are you
-      doing?
+    m_Localized: <link="t1"><color=red><u>Ettyk</u></color></link>, my boy! How are
+      you doing?
     m_Metadata:
       m_Items: []
   - m_Id: 3201720760750080
