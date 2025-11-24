@@ -17,7 +17,7 @@ public class AbilitiesControler : MonoBehaviour
     } 
     private void Start() 
     { 
-        container?.Load(); Set();  
+        Set();  
     } 
     private void OnDestroy() 
     { 
@@ -42,8 +42,5 @@ public class AbilitiesControler : MonoBehaviour
             controller.AdditionalSpeed += ability.Speed; 
             controller.AdditionalDeceleration += ability.Deceleration; 
         } 
-        jump.enabled = jump.Addition > 0; 
-        dash.enabled = dash.Addition > 0; 
-        combo.enabled = combo.Addition > 0; 
     } 
 }
