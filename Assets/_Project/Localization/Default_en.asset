@@ -82,6 +82,10 @@ MonoBehaviour:
     m_Localized: Post Processing
     m_Metadata:
       m_Items: []
+  - m_Id: 53536012914122752
+    m_Localized: "A/D \u2014 move left and right\nSpace \u2014 jump\nV \u2014 attack"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
