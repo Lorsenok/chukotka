@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3803160147480576
-    m_Localized: TAB to open quests
+    m_Localized: <b>TAB to open quests</b>
     m_Metadata:
       m_Items: []
   - m_Id: 6326634388738048
@@ -83,7 +83,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 53536012914122752
-    m_Localized: "A/D \u2014 move left and right\nSpace \u2014 jump\nV \u2014 attack"
+    m_Localized: "<b>A/D \u2014 move left and right\nSpace \u2014 jump\nV \u2014
+      attack</b>"
     m_Metadata:
       m_Items: []
   references:
