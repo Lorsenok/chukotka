@@ -7710,6 +7710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1863114745}
   - component: {fileID: 1863114744}
+  - component: {fileID: 1863114748}
   - component: {fileID: 1863114747}
   - component: {fileID: 1863114746}
   m_Layer: 0
@@ -7782,6 +7783,22 @@ MonoBehaviour:
   unlockForever: 0
   doEnableOnProgression: 1
   objToControl: {fileID: 1187549574}
+--- !u!114 &1863114748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863114743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5fecce3a2d8ee48a770d51400d7cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetProgression: 2
+  unlockForever: 0
+  doEnableOnProgression: 1
+  objToControl: {fileID: 1357912779}
 --- !u!1 &2028609771
 GameObject:
   m_ObjectHideFlags: 0
