@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8075534390037528334}
-  - component: {fileID: 8862871770183115443}
+  - component: {fileID: 1718852536639904713}
   - component: {fileID: 4545734127478284985}
   - component: {fileID: 4953357933006877013}
   - component: {fileID: 6355445941073532604}
@@ -29,13 +29,13 @@ Transform:
   m_GameObject: {fileID: 221532398621977413}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.26, y: 2.26, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7015825950217216712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8862871770183115443
+--- !u!114 &1718852536639904713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,23 +44,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 221532398621977413}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c04b317a3726a54bb75e283171c949e, type: 3}
+  m_Script: {fileID: 11500000, guid: ea87a4b870c33fe4caddba6d3954a499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
   - {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
   - {fileID: 4698977778594916722, guid: 37a17bac9333fdb4f9dfbcbe2b85997c, type: 3}
   startSpawnPrefabs: []
   timerDelay: {fileID: 4545734127478284985}
   rowDelay: {fileID: 4953357933006877013}
-  rowTimes: 3
-  maxEntities: 3
-  lockToTarget: 1
-  target: {fileID: 0}
-  maxRange: 4.5
-  minRange: 3
-  changePositionTimer: {fileID: 6355445941073532604}
+  rowTimes: 6
+  maxEntities: 10
 --- !u!114 &4545734127478284985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,7 +67,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d497dfbe72a0fd4e9d98fb0c1b2a7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: spawn dealy
   repeatable: 1
   setOnStart: 0
@@ -93,7 +86,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: start row delay
   repeatable: 1
   setOnStart: 0
@@ -112,7 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: change position delay
   repeatable: 1
   setOnStart: 0
@@ -5210,7 +5201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: stop player
   repeatable: 0
   setOnStart: 0
@@ -5229,7 +5219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: shake delay
   repeatable: 1
   setOnStart: 0
@@ -5248,7 +5237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: flash delay
   repeatable: 1
   setOnStart: 0
@@ -5267,7 +5255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateLock: 1
   tagname: 
   repeatable: 0
   setOnStart: 0
