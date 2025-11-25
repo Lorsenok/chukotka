@@ -1,3 +1,25 @@
+public class QuestManager
+{
+    private readonly QuestFactory _factory;
+    private QuestInstance _currentQuest;
+
+    public QuestManager()
+    {
+        _factory = new QuestFactory();
+    }
+
+    public void StartQuest(QuestConfig config)
+    {
+        _currentQuest = _factory.CreateQuest(config);
+        _currentQuest.Start();
+    }
+
+    public void Debug()
+    {
+        UnityEngine.Debug.Log("sdkjfsdfsdof42");
+    }
+}
+
 // using UnityEngine;
 // using System.Collections.Generic;
 //

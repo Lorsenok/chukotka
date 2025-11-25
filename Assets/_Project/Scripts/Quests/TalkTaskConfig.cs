@@ -9,5 +9,7 @@ public class TalkTaskConfig : TaskConfig
     public string NpcId => _npcId;
     public string DialogId => dialogId;
     
-    public override TaskInstance CreateInstance() => new TalkTaskInstance(this);
+    
+    //todo fix constructor
+    public override TaskInstance CreateInstance() => new TalkTaskInstance(this, new NpcRegistry());
 }
