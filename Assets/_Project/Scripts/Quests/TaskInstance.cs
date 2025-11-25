@@ -2,13 +2,12 @@ using System;
 
 public abstract class TaskInstance : IDisposable
 {
-    public readonly TaskConfig Config;
-
-    protected TaskInstance(TaskConfig config)
-    {
-        Config = config;
-    }
-
+    protected string _description;
+    protected TaskType _taskType;
+    
+    public string GetDescription() => _description;
+    public TaskType GetTaskType() => _taskType;
+    
     // Вызывается при старте задачи.
     public abstract void Start();
 

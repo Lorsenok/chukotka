@@ -5,6 +5,6 @@ using UnityEngine;
 public class QuestConfig : ScriptableObject
 {
     public string questId;
-    public string questTitle;
+    public string questDescription;
     public List<TaskConfig> tasks = new List<TaskConfig>();
 }

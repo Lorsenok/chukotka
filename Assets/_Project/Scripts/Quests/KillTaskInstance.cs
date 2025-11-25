@@ -3,7 +3,7 @@ public class KillTaskInstance : TaskInstance
     private int _current;
     private readonly KillTaskConfig _config;
 
-    public KillTaskInstance(KillTaskConfig config) : base(config)
+    public KillTaskInstance(KillTaskConfig config)
     {
         _config = config;
     }

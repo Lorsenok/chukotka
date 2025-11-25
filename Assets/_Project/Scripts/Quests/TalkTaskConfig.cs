@@ -8,8 +8,4 @@ public class TalkTaskConfig : TaskConfig
 
     public string NpcId => _npcId;
     public string DialogId => dialogId;
-    
-    
-    //todo fix constructor
-    public override TaskInstance CreateInstance() => new TalkTaskInstance(this, new NpcRegistry());
 }

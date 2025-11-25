@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 public class QuestInstance : IDisposable
 {
-    private readonly QuestConfig _config;
     private readonly List<TaskInstance> _taskInstances;
     private int _currentTaskIndex = -1;
+    private string _id;
+    private string _description;
 
-    public QuestInstance(QuestConfig config)
+    public QuestInstance(string id,  string description, List<TaskInstance> taskInstances)
     {
-        _config = config;
-        _taskInstances = new List<TaskInstance>(_config.tasks.Count);
-        foreach (var t in _config.tasks)
-            _taskInstances.Add(t.CreateInstance());
+        _id = id;
+        _description = description;
+        _taskInstances = new List<TaskInstance>(taskInstances);
     }
 
     public void Start()

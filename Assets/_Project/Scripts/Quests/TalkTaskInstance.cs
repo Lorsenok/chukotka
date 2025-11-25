@@ -1,13 +1,15 @@
 public class TalkTaskInstance : TaskInstance
 {
-    private readonly TalkTaskConfig _cfg;
-    private readonly NpcRegistry _registry;
+    private string _npcId;
+    private string _dialogId;
     private bool _done;
 
-    public TalkTaskInstance(TalkTaskConfig cfg, NpcRegistry registry) : base(cfg)
+    public TalkTaskInstance(string npcId, string dialogId, string description)
     {
-        _cfg = cfg;
-        _registry = registry;
+        _npcId = npcId;
+        _dialogId = dialogId;
+        _description = description;
+        _taskType = TaskType.Talk;
     }
 
     public override void Start()
@@ -18,7 +20,7 @@ public class TalkTaskInstance : TaskInstance
 
     private void OnDialogueCompleted(string npcId)
     {
-        if (npcId == _cfg.NpcId)
+        //if (npcId == _cfg.NpcId)
             _done = true;
     }
 

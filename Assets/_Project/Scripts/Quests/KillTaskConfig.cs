@@ -7,5 +7,4 @@ public class KillTaskConfig : TaskConfig
     public string targetEnemyId;
     public int requiredCount = 1;
 
-    public override TaskInstance CreateInstance() => new KillTaskInstance(this);
 }

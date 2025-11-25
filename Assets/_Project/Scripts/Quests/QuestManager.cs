@@ -1,16 +1,22 @@
+using System.Collections.Generic;
+using Zenject;
+
 public class QuestManager
 {
-    private readonly QuestFactory _factory;
+    private QuestFactory _factory;
     private QuestInstance _currentQuest;
+    
+    private List<QuestInstance> _quests;
 
-    public QuestManager()
+    [Inject]
+    public void Construct(QuestLineConfig config)
     {
-        _factory = new QuestFactory();
+        _factory = new QuestFactory(config);
     }
 
-    public void StartQuest(QuestConfig config)
+    public void StartQuest()
     {
-        _currentQuest = _factory.CreateQuest(config);
+        _quests = _factory.CreateQuests();
         _currentQuest.Start();
     }
 
@@ -75,7 +81,7 @@ public class QuestManager
 //         if (_currentQuestIndex < _questInstances.Count)
 //         {
 //             _questInstances[_currentQuestIndex].Start();
-//             Debug.Log($"Quest started: {questLine.quests[_currentQuestIndex].questTitle}");
+//             Debug.Log($"Quest started: {questLine.quests[_currentQuestIndex].questDescription}");
 //         }
 //         else
 //         {

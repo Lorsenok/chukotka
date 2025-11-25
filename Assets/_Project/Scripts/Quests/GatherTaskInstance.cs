@@ -3,7 +3,7 @@ public class GatherTaskInstance : TaskInstance
     private int _current;
     private readonly GatherTaskConfig _config;
 
-    public GatherTaskInstance(GatherTaskConfig config) : base(config)
+    public GatherTaskInstance(GatherTaskConfig config)
     {
         _config = config;
     }
