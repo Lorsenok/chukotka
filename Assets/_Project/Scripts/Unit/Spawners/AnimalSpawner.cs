@@ -4,11 +4,9 @@ using Random = UnityEngine.Random;
 
 public class AnimalSpawner : MonoBehaviour
 {
-    [Header("Prefabs & Tags")]
-    [SerializeField] private GameObject birdPrefab;
-    [SerializeField] private string birdTag = "Bird"; 
-    [SerializeField] private GameObject wolfPrefab;
-    [SerializeField] private string wolfTag = "Wolf";
+    [Header("Prefabs & Tags")] 
+    [SerializeField] private GameObject animalPrefab;
+    [SerializeField] private string animalTag = "Wolf";
 
     [Header("Spawn area")]
     [SerializeField] private bool lockToTarget = false;
@@ -18,17 +16,11 @@ public class AnimalSpawner : MonoBehaviour
     [SerializeField] private float startCheckDelay = 1f;
 
     [Header("Timers")]
-    [SerializeField] private float birdCheckInterval = 30f;  
-    [SerializeField] private int birdSpawn = 6;          
-    [SerializeField] private int birdSpawnMin = 1;           
-    [SerializeField] private int birdSpawnMax = 3;
-
-    [SerializeField] private float wolfCheckInterval = 30f;  
-    [SerializeField] private int wolfSpawn = 2;          
+    [SerializeField] private float animalCheckInterval = 30f;  
+    [SerializeField] private int animalSpawn = 2;          
 
     private Vector3 startPosition;
-    private Coroutine birdRoutine;
-    private Coroutine wolfRoutine;
+    private Coroutine animalRoutine;
 
     private void Start()
     {
@@ -39,38 +31,18 @@ public class AnimalSpawner : MonoBehaviour
     private IEnumerator StartRoutinesDelayed(float delay)
     {
         yield return new WaitForSeconds(delay);
-        birdRoutine = StartCoroutine(BirdChecker());
-        wolfRoutine = StartCoroutine(WolfChecker());
+        animalRoutine = StartCoroutine(AnimalChecker());
     }
-
-    private IEnumerator BirdChecker()
+    private IEnumerator AnimalChecker()
     {
         while (true)
         {
-            int current = CountByTag(birdTag);
-            if (current < birdSpawn)
+            int current = CountByTag(animalTag);
+            if (current < animalSpawn)
             {
-                int toSpawn = Random.Range(birdSpawnMin, birdSpawnMax + 1);
-                for (int i = 0; i < toSpawn; i++)
-                {
-                    Vector3 pos = GetValidSpawnPosition();
-                    SpawnPrefab(birdPrefab, pos);
-                }
+                SpawnPrefab(animalPrefab, GetValidSpawnPosition());
             }
-            yield return new WaitForSeconds(birdCheckInterval);
-        }
-    }
-
-    private IEnumerator WolfChecker()
-    {
-        while (true)
-        {
-            int current = CountByTag(wolfTag);
-            if (current < wolfSpawn)
-            {
-                SpawnPrefab(wolfPrefab, GetValidSpawnPosition());
-            }
-            yield return new WaitForSeconds(wolfCheckInterval);
+            yield return new WaitForSeconds(animalCheckInterval);
         }
     }
 
@@ -130,13 +102,6 @@ public class AnimalSpawner : MonoBehaviour
 
     private void OnDisable()
     {
-        if (birdRoutine != null) StopCoroutine(birdRoutine);
-        if (wolfRoutine != null) StopCoroutine(wolfRoutine);
-    }
-
-    public void OnPositionChange()
-    {
-        startPosition = GetValidSpawnPosition();
-        transform.position = startPosition;
+        if (animalRoutine != null) StopCoroutine(animalRoutine);
     }
 }
