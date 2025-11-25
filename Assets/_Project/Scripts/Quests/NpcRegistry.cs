@@ -1,9 +1,24 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class NpcRegistry : MonoBehaviour
 {
-    private readonly Dictionary<int, NPCDialogueController> _npcs = new();
+    [Inject]
+    private readonly QuestDialogEvents _dialogEvents;
+    
+    private readonly Dictionary<string, NPCDialogueController> _npcs = new();
+
+    private void OnEnable()
+    {
+        _dialogEvents.OnDialogActivated += CheckActivateDialog;
+    }
+
+    private void OnDisable()
+    {
+        _dialogEvents.OnDialogActivated -= CheckActivateDialog;
+    }
 
     public void RegisterNpc(NPCDialogueController npc)
     {
@@ -14,7 +29,10 @@ public class NpcRegistry : MonoBehaviour
     {
         _npcs.Remove(npc.NpcId);
     }
-
-    public bool TryGetNpc(int npcId, out NPCDialogueController npc)
-        => _npcs.TryGetValue(npcId, out npc);
+    
+    private void CheckActivateDialog(TalkTaskInstance instance)
+    {
+        if (_npcs.TryGetValue(instance.NpcId, out var npc))
+            npc.ActivateDialog(instance);
+    }
 }

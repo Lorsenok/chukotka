@@ -11,7 +11,7 @@ public class KillTaskInstance : TaskInstance
     public override void Start()
     {
         _current = 0;
-        GameEvents.EnemyKilled += OnEnemyKilled;
+        //QuestDialogEvents.EnemyKilled += OnEnemyKilled;
     }
 
     private void OnEnemyKilled(string enemyId)
@@ -24,7 +24,7 @@ public class KillTaskInstance : TaskInstance
 
     public override void Stop()
     {
-        GameEvents.EnemyKilled -= OnEnemyKilled;
+        //QuestDialogEvents.EnemyKilled -= OnEnemyKilled;
     }
 
     public override bool IsCompleted => _current >= _config.requiredCount;

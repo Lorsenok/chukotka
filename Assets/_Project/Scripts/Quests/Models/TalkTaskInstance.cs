@@ -1,11 +1,18 @@
 public class TalkTaskInstance : TaskInstance
 {
+    private readonly QuestDialogEvents _dialogEvents;
+    
     private string _npcId;
     private string _dialogId;
     private bool _done;
 
-    public TalkTaskInstance(string npcId, string dialogId, string description)
+    public string NpcId => _npcId;
+    public string DialogId => _dialogId;
+    public bool Done => _done;
+
+    public TalkTaskInstance(QuestDialogEvents dialogEvents, string npcId, string dialogId, string description)
     {
+        _dialogEvents = dialogEvents;
         _npcId = npcId;
         _dialogId = dialogId;
         _description = description;
@@ -15,10 +22,10 @@ public class TalkTaskInstance : TaskInstance
     public override void Start()
     {
         _done = false;
-        GameEvents.DialogueCompleted += OnDialogueCompleted;
+        _dialogEvents.OnDialogCompleted += OnDialogCompleted;
     }
 
-    private void OnDialogueCompleted(string npcId)
+    private void OnDialogCompleted(TalkTaskInstance instance)
     {
         //if (npcId == _cfg.NpcId)
             _done = true;
@@ -28,7 +35,7 @@ public class TalkTaskInstance : TaskInstance
 
     public override void Stop()
     {
-        GameEvents.DialogueCompleted -= OnDialogueCompleted;
+        _dialogEvents.OnDialogCompleted -= OnDialogCompleted;
     }
 
     public override bool IsCompleted => _done;

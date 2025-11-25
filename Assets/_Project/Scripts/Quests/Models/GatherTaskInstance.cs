@@ -11,7 +11,7 @@ public class GatherTaskInstance : TaskInstance
     public override void Start()
     {
         _current = 0;
-        GameEvents.ItemCollected += OnItemCollected;
+        //QuestDialogEvents.ItemCollected += OnItemCollected;
     }
 
     private void OnItemCollected(string itemId)
@@ -24,7 +24,7 @@ public class GatherTaskInstance : TaskInstance
 
     public override void Stop()
     {
-        GameEvents.ItemCollected -= OnItemCollected;
+        //QuestDialogEvents.ItemCollected -= OnItemCollected;
     }
 
     public override bool IsCompleted => _current >= _config.requiredCount;

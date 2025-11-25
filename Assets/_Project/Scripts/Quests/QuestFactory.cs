@@ -1,8 +1,12 @@
 using System.Collections.Generic;
+using Zenject;
 
 public class QuestFactory
 {
     private readonly QuestLineConfig _config;
+    
+    [Inject]
+    private readonly QuestDialogEvents _dialogEvents;
     
     public QuestFactory(QuestLineConfig config)
     {
@@ -45,6 +49,6 @@ public class QuestFactory
     
     private TalkTaskInstance CreateTalkTask(TalkTaskConfig config)
     {
-        return new TalkTaskInstance(config.NpcId, config.DialogId, config.Description);
+        return new TalkTaskInstance(_dialogEvents, config.NpcId, config.DialogId, config.Description);
     }
 }

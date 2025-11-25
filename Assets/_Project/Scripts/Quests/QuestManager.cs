@@ -27,6 +27,7 @@ public class QuestManager : IInitializable
     
     private void StartQuest()
     {
+        _currentQuest = _quests[0];
         _currentQuest.Start();
     }
 }

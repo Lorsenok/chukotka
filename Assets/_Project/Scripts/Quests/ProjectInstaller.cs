@@ -8,6 +8,8 @@ public class ProjectInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<QuestLineConfig>().FromInstance(questLine).AsSingle().NonLazy();
+        
+        Container.Bind<QuestDialogEvents>().AsSingle().NonLazy();
         Container.BindInterfacesTo<QuestManager>().AsSingle().NonLazy();
     }
 }
