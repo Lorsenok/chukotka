@@ -4,13 +4,13 @@ using Zenject;
 public class QuestFactory
 {
     private readonly QuestLineConfig _config;
-    
-    [Inject]
+
     private readonly QuestDialogEvents _dialogEvents;
     
-    public QuestFactory(QuestLineConfig config)
+    public QuestFactory(QuestLineConfig config, QuestDialogEvents questDialogEvents)
     {
         _config = config;
+        _dialogEvents = questDialogEvents;
     }
     
     public List<QuestInstance> CreateQuests()

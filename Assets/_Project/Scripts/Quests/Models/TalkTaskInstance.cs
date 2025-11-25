@@ -22,7 +22,7 @@ public class TalkTaskInstance : TaskInstance
     public override void Start()
     {
         _done = false;
-        _dialogEvents.OnDialogCompleted += OnDialogCompleted;
+        _dialogEvents.ActivateDialog(this);
     }
 
     private void OnDialogCompleted(TalkTaskInstance instance)

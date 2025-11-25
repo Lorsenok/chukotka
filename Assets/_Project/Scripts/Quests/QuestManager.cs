@@ -9,9 +9,9 @@ public class QuestManager : IInitializable
     private List<QuestInstance> _quests;
 
     [Inject]
-    public void Construct(QuestLineConfig config)
+    public void Construct(QuestLineConfig config, QuestDialogEvents dialogEvents)
     {
-        _factory = new QuestFactory(config);
+        _factory = new QuestFactory(config, dialogEvents);
     }
 
     public void Debug()
