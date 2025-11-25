@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Task1Talk
   m_EditorClassIdentifier: 
   Description: "\u041F\u043E\u0433\u043E\u0432\u043E\u0440\u0438 \u0441 \u0448\u0430\u043C\u0430\u043D\u043E\u043C"
+  TaskType: 0
   _npcId: "\u0428\u0430\u043C\u0430\u043D"
-  dialogId: 
+  dialogId: q1d1
