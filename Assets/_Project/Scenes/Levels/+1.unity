@@ -645,20 +645,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c04b317a3726a54bb75e283171c949e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-  - {fileID: 4698977778594916722, guid: 0fa496b9e43ed0442b9d45213644846f, type: 3}
-  - {fileID: 4698977778594916722, guid: 37a17bac9333fdb4f9dfbcbe2b85997c, type: 3}
-  startSpawnPrefabs: []
-  timerDelay: {fileID: 417461767}
-  rowDelay: {fileID: 417461766}
-  rowTimes: 3
-  maxEntities: 3
+  birdPrefab: {fileID: 0}
+  birdTag: Bird
+  wolfPrefab: {fileID: 0}
+  wolfTag: Wolf
   lockToTarget: 1
   target: {fileID: 565257025}
   maxRange: 4.5
   minRange: 3
-  changePositionTimer: {fileID: 417461765}
+  startCheckDelay: 1
+  birdCheckInterval: 30
+  birdSpawn: 6
+  birdSpawnMin: 1
+  birdSpawnMax: 3
+  wolfCheckInterval: 30
+  wolfSpawn: 2
 --- !u!4 &417461769
 Transform:
   m_ObjectHideFlags: 0
@@ -7271,16 +7272,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1543250983}
   - component: {fileID: 1543250985}
-  - component: {fileID: 1543250984}
-  - component: {fileID: 1543250986}
-  - component: {fileID: 1543250987}
   m_Layer: 0
   m_Name: Animal Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1543250983
 Transform:
   m_ObjectHideFlags: 0
@@ -7296,25 +7294,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1543250984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543250982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d497dfbe72a0fd4e9d98fb0c1b2a7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagname: spawn dealy
-  repeatable: 1
-  setOnStart: 0
-  savekey: animal
-  timeSet: 12
-  curTime: 0
-  timeSetMax: 27
 --- !u!114 &1543250985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7327,57 +7306,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c04b317a3726a54bb75e283171c949e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 4698977778594916722, guid: c7e0bb3b1c64be649b8ee513eda357f3, type: 3}
-  - {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
-  - {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
-  - {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
-  startSpawnPrefabs: []
-  timerDelay: {fileID: 1543250984}
-  rowDelay: {fileID: 1543250986}
-  rowTimes: 3
-  maxEntities: 6
-  lockToTarget: 0
-  target: {fileID: 0}
-  maxRange: 10
-  minRange: 1
-  changePositionTimer: {fileID: 1543250987}
---- !u!114 &1543250986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543250982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagname: start row delay
-  repeatable: 1
-  setOnStart: 0
-  savekey: 
-  timeSet: 0.25
-  curTime: 0
---- !u!114 &1543250987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543250982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagname: change position delay
-  repeatable: 1
-  setOnStart: 0
-  savekey: 
-  timeSet: 0.1
-  curTime: 0
+  birdPrefab: {fileID: 4698977778594916722, guid: fb91fa346ee166d458a4a6c44698bec8, type: 3}
+  birdTag: Bird
+  wolfPrefab: {fileID: 4698977778594916722, guid: c7e0bb3b1c64be649b8ee513eda357f3, type: 3}
+  wolfTag: Wolf
+  lockToTarget: 1
+  target: {fileID: 565257025}
+  maxRange: 20
+  minRange: 10
+  startCheckDelay: 1
+  birdCheckInterval: 30
+  birdSpawn: 6
+  birdSpawnMin: 1
+  birdSpawnMax: 3
+  wolfCheckInterval: 30
+  wolfSpawn: 2
 --- !u!1 &1714997280
 GameObject:
   m_ObjectHideFlags: 0
