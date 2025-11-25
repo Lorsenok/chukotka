@@ -3,14 +3,18 @@ using UnityEngine;
 
 public class NpcRegistry : MonoBehaviour
 {
-    private readonly Dictionary<string, NpcDialogController> _map = new();
+    private readonly Dictionary<int, NPCDialogueController> _npcs = new();
 
-    private void Awake()
+    public void RegisterNpc(NPCDialogueController npc)
     {
-        foreach (var npc in FindObjectsOfType<NpcDialogController>())
-            _map[npc.Id] = npc;
+        _npcs[npc.NpcId] = npc;
     }
 
-    public NpcDialogController Get(string id) =>
-        _map.TryGetValue(id, out var npc) ? npc : null;
+    public void UnregisterNpc(NPCDialogueController npc)
+    {
+        _npcs.Remove(npc.NpcId);
+    }
+
+    public bool TryGetNpc(int npcId, out NPCDialogueController npc)
+        => _npcs.TryGetValue(npcId, out npc);
 }

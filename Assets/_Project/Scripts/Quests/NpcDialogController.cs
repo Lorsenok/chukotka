@@ -1,44 +1,26 @@
 using UnityEngine;
 using Zenject;
 
-public class NpcDialogController : MonoBehaviour
+public class NPCDialogueController : MonoBehaviour
 {
-    [SerializeField] private string npcId;
+    [SerializeField] private int _npcId;
+    public int NpcId => _npcId;
 
-    private DialogueTree _currentDialog;
-    private IDialogueSetter _dialogueSetter;
-    private IGameState _gameState;
-
-    public string Id => npcId;
+    private NpcRegistry _registry;
 
     [Inject]
-    private void Construct(IDialogueSetter dialogueSetter, IGameState gameState)
+    public void Construct(NpcRegistry registry)
     {
-        _dialogueSetter = dialogueSetter;
-        _gameState = gameState;
-    }
-    
-    public void SetDialog(DialogueTree dialog)
-    {
-        _currentDialog = dialog;
-    }
-    
-    public void ActivateDialog(string dialogId)
-    {
-        // Локальный поиск диалога, например из массива на NPC
+        _registry = registry;
     }
 
-    public void Interact()
+    private void OnEnable()
     {
-        if (_currentDialog == null)
-            return;
+        _registry.RegisterNpc(this);
+    }
 
-        // запуск системы диалога
-        // if (_gameState.GetCurrentState() == GameState.Game && isPlayerOn)
-        // {
-        //     _dialogueSetter.SetTree(_currentDialog, trigger);
-        // }
-        //
-        // DialogUI.Instance.StartDialog(_currentDialog);
+    private void OnDisable()
+    {
+        _registry.UnregisterNpc(this);
     }
 }

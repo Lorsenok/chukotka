@@ -3,8 +3,12 @@ using Zenject;
 
 public class BindingsInstaller : MonoInstaller
 {
+    [SerializeField] private NpcRegistry _npcRegistry;
+    
     public override void InstallBindings()
     {
+        Container.Bind<NpcRegistry>().FromInstance(_npcRegistry).AsSingle().NonLazy();
+        
         Container.Bind<ISceneChanger>().To<SceneChangerService>().AsSingle();
         Container.Bind<IGameState>().To<GameStateService>().AsSingle();
         Container.Bind<IInputControler>().To<InputControlerService>().AsSingle();
