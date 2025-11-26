@@ -18,7 +18,7 @@ public class NPCDialogueTrigger : MonoBehaviour
         DialogueService.OnDialogueEnd -= OnEnd;
     }
 
-    private void OnStart(DialogueTree tree, Trigger trigger)
+    private void OnStart(DialogueTree tree, Trigger trigger, TalkTaskInstance talkTaskInstance)
     {
         idle.enabled = false;
         active.enabled = true;
@@ -27,7 +27,7 @@ public class NPCDialogueTrigger : MonoBehaviour
             playerController.CanMove = false;
     }
 
-    private void OnEnd()
+    private void OnEnd(TalkTaskInstance talkTaskInstance)
     {
         idle.enabled = true;
         active.enabled = false;

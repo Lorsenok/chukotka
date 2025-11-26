@@ -25,6 +25,8 @@ public class TalkTaskInstance : TaskInstance
     {
         _done = false;
         _dialogEvents.ActivateDialog(this);
+        
+        DialogueService.OnDialogueEnd += CheckDialogCompleted;
     }
 
     public override void Update() { }
@@ -32,12 +34,17 @@ public class TalkTaskInstance : TaskInstance
     public override void Stop()
     {
         Debug.Log("Завершён диалог" + _dialogId + " для NPC" + _npcId + _description);
-        OnDialogCompleted(this);
     }
 
     public override bool IsCompleted => _done;
-    
-    private void OnDialogCompleted(TalkTaskInstance instance)
+
+    public override void Dispose()
+    {
+        DialogueService.OnDialogueEnd -= CheckDialogCompleted;
+        base.Dispose();
+    }
+
+    private void CheckDialogCompleted(TalkTaskInstance instance)
     {
         _dialogEvents.CompleteDialog(this);
         _done = true;

@@ -3,15 +3,15 @@ using UnityEngine;
 
 public interface IDialogueSetter
 {
-    void SetTree(DialogueTree tree, Trigger trigger);
+    void SetTree(DialogueTree tree, Trigger trigger, TalkTaskInstance talkTaskInstance);
 }
 public class DialogueService : IDialogueSetter
 {
-    public static Action<DialogueTree, Trigger> OnTreeSet { get; set; }
-    public static Action OnDialogueEnd { get; set; }
+    public static Action<DialogueTree, Trigger, TalkTaskInstance> OnTreeSet { get; set; }
+    public static Action<TalkTaskInstance> OnDialogueEnd { get; set; }
 
-    public void SetTree(DialogueTree tree, Trigger trigger)
+    public void SetTree(DialogueTree tree, Trigger trigger, TalkTaskInstance talkTaskInstance)
     {
-        OnTreeSet?.Invoke(tree, trigger);
+        OnTreeSet?.Invoke(tree, trigger, talkTaskInstance);
     }
 }

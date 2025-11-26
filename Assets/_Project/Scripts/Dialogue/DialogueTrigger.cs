@@ -12,8 +12,8 @@ public class DialogueTrigger : DialogueTriggerMessage
     private IDialogueSetter dialogueSetter;
     private InputAction dialogueAction;
     
-    public event Action OnDialogueEnded;
-
+    private TalkTaskInstance talkTaskInstance;
+    
     [Inject]
     private void Init(IDialogueSetter dialogueSetter, IInputControler inputControler)
     {
@@ -29,14 +29,12 @@ public class DialogueTrigger : DialogueTriggerMessage
             input.Player.Use.performed -= OnPickupButton;
 
         dialogueAction.performed += OnDialogueButton; 
-        DialogueService.OnDialogueEnd += OnDialogueEnded;
     }
 
     public override void OnDisable()
     {
         base.OnDisable();
         dialogueAction.performed -= OnDialogueButton;
-        DialogueService.OnDialogueEnd -= OnDialogueEnded;
     }
 
     private void OnDialogueButton(InputAction.CallbackContext context)
@@ -49,7 +47,7 @@ public class DialogueTrigger : DialogueTriggerMessage
         base.Action();
         if (gameState.GetCurrentState() == GameState.Game && isPlayerOn)
         {
-            dialogueSetter.SetTree(tree, trigger);
+            dialogueSetter.SetTree(tree, trigger, talkTaskInstance);
         }
     }
 }

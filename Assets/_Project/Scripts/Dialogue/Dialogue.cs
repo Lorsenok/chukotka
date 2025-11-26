@@ -34,6 +34,7 @@ public class Dialogue : MonoBehaviour
     private bool isWorking = false;
     private bool isChoice = false;
     private int curMessage = 1;
+    private TalkTaskInstance currentTalkTask;
 
     private IGameState gameState;
     private InputSystem input;
@@ -56,7 +57,7 @@ public class Dialogue : MonoBehaviour
         input.UI.Skip.performed -= SkipByButton;
     }
 
-    private void SetDialogueTree(DialogueTree tree, Trigger trigger)
+    private void SetDialogueTree(DialogueTree tree, Trigger trigger, TalkTaskInstance talkTaskInstance)
     {
         this.trigger = trigger;
         gameState.SetState(state);
@@ -66,6 +67,7 @@ public class Dialogue : MonoBehaviour
         isWorking = true;
         curMessage = 0;
         curTree = tree;
+        currentTalkTask = talkTaskInstance;
         Setup(0);
     }
 
@@ -102,7 +104,7 @@ public class Dialogue : MonoBehaviour
     {
         if (curTree.keys.Length - 1 < curMessage)
         {
-            DialogueService.OnDialogueEnd?.Invoke();
+            DialogueService.OnDialogueEnd?.Invoke(currentTalkTask);
             if (trigger != null) trigger.Action();
             isWorking = false;
             gameState.SetState(GameState.Game);
