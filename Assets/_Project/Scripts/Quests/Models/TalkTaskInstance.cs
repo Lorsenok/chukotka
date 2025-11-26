@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class TalkTaskInstance : TaskInstance
 {
     private readonly QuestDialogEvents _dialogEvents;
@@ -25,18 +27,20 @@ public class TalkTaskInstance : TaskInstance
         _dialogEvents.ActivateDialog(this);
     }
 
-    private void OnDialogCompleted(TalkTaskInstance instance)
-    {
-        //if (npcId == _cfg.NpcId)
-            _done = true;
-    }
-
     public override void Update() { }
 
     public override void Stop()
     {
-        _dialogEvents.OnDialogCompleted -= OnDialogCompleted;
+        Debug.Log("Завершён диалог" + _dialogId + " для NPC" + _npcId + _description);
+        OnDialogCompleted(this);
     }
 
     public override bool IsCompleted => _done;
+    
+    private void OnDialogCompleted(TalkTaskInstance instance)
+    {
+        _dialogEvents.CompleteDialog(this);
+        _done = true;
+        Complete();
+    }
 }

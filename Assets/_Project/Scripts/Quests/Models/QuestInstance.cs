@@ -27,6 +27,7 @@ public class QuestInstance : IDisposable
         if (_currentTaskIndex >= 0 && _currentTaskIndex < _taskInstances.Count)
         {
             var prev = _taskInstances[_currentTaskIndex];
+            prev.OnCompleted -= OnTaskCompleted;
             prev.Dispose();
         }
 
@@ -35,6 +36,7 @@ public class QuestInstance : IDisposable
         if (_currentTaskIndex < _taskInstances.Count)
         {
             var current = _taskInstances[_currentTaskIndex];
+            current.OnCompleted += OnTaskCompleted;
             current.Start();
         }
     }
@@ -63,5 +65,10 @@ public class QuestInstance : IDisposable
     {
         foreach (var t in _taskInstances)
             t.Dispose();
+    }
+    
+    private void OnTaskCompleted(TaskInstance task)
+    {
+        MoveNext();
     }
 }

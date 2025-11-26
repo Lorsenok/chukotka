@@ -8,6 +8,13 @@ public abstract class TaskInstance : IDisposable
     public string GetDescription() => _description;
     public TaskType GetTaskType() => _taskType;
     
+    public event Action<TaskInstance> OnCompleted;
+
+    protected void Complete()
+    {
+        OnCompleted?.Invoke(this);
+    }
+    
     // Вызывается при старте задачи.
     public abstract void Start();
 

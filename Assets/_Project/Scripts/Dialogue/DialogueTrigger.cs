@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.InputSystem;
@@ -10,6 +11,8 @@ public class DialogueTrigger : DialogueTriggerMessage
 
     private IDialogueSetter dialogueSetter;
     private InputAction dialogueAction;
+    
+    public event Action OnDialogueEnded;
 
     [Inject]
     private void Init(IDialogueSetter dialogueSetter, IInputControler inputControler)
@@ -25,13 +28,15 @@ public class DialogueTrigger : DialogueTriggerMessage
         if (input != null)
             input.Player.Use.performed -= OnPickupButton;
 
-        dialogueAction.performed += OnDialogueButton;
+        dialogueAction.performed += OnDialogueButton; 
+        DialogueService.OnDialogueEnd += OnDialogueEnded;
     }
 
     public override void OnDisable()
     {
         base.OnDisable();
         dialogueAction.performed -= OnDialogueButton;
+        DialogueService.OnDialogueEnd -= OnDialogueEnded;
     }
 
     private void OnDialogueButton(InputAction.CallbackContext context)

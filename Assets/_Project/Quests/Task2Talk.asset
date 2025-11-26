@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: "\u041F\u043E\u0433\u043E\u0432\u043E\u0440\u0438 \u0441 \u043E\u0445\u043E\u0442\u043D\u0438\u043A\u043E\u043C"
   TaskType: 0
-  _npcId: "\u041E\u0445\u043E\u0442\u043D\u0438\u043A"
+  _npcId: Hunter
   dialogId: q1d2
