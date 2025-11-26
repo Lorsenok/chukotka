@@ -78,11 +78,23 @@ public class BirdsController : MonoBehaviour
         freePoints[p] = false;
         bird.CurPoint = points[p];
     }
-
+    
     private void Awake()
     {
         freePoints = new bool[points.Length];
         for (int i = 0; i < freePoints.Length; i++) freePoints[i] = true;
+    }
+
+    private void Update()
+    {
+        for (int i = 0; i < curBirds.Count; i++)
+        {
+            if (curBirds[i]) return;
+            
+            freePoints[Array.IndexOf(points, curBirds[i].CurPoint)] = true;
+            curBirds.Remove(curBirds[i]);
+            break;
+        }
     }
 
     private void OnEnable()
