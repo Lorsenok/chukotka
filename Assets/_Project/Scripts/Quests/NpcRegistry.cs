@@ -5,14 +5,16 @@ using Zenject;
 
 public class NpcRegistry : MonoBehaviour
 {
-    [Inject]
-    private readonly QuestDialogEvents _dialogEvents;
-    
+    [Inject] private readonly QuestDialogEvents _dialogEvents;
+
     private readonly Dictionary<string, NPCDialogueController> _npcs = new();
 
-    private void OnEnable()
+    private void Start()
     {
         _dialogEvents.OnDialogActivated += CheckActivateDialog;
+        
+        if (_dialogEvents.CurrentActiveDialog != null)
+            CheckActivateDialog(_dialogEvents.CurrentActiveDialog);
     }
 
     private void OnDisable()
@@ -29,7 +31,7 @@ public class NpcRegistry : MonoBehaviour
     {
         _npcs.Remove(npc.NpcId);
     }
-    
+
     private void CheckActivateDialog(TalkTaskInstance instance)
     {
         if (_npcs.TryGetValue(instance.NpcId, out var npc))
