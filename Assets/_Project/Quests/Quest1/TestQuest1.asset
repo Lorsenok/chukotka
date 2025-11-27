@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 928694388c8c4373b28bf3f107a32480, type: 3}
-  m_Name: TestQuest2
+  m_Name: TestQuest1
   m_EditorClassIdentifier: 
-  questId: 2
-  questTitle: "\u041D\u0430\u0441\u0442\u0443\u043F\u0430\u044E\u0442 \u0447\u0443\u0436\u0430\u043A\u0438"
+  questId: 1
+  questDescription: 
   tasks:
-  - {fileID: 11400000, guid: 66459f6a078209248b0280751bd6ae4b, type: 2}
+  - {fileID: 11400000, guid: 9d3e73167f697bc48b428df9c0cb2135, type: 2}
+  - {fileID: 11400000, guid: 1bc5652ae83ecd14fbf2c0b16d5b3045, type: 2}
+  - {fileID: 11400000, guid: bfb95a64c68679e458e1a0e63a7a701e, type: 2}

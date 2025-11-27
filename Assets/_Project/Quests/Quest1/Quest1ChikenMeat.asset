@@ -15,5 +15,5 @@ MonoBehaviour:
   Description: "\u0414\u043E\u0431\u0443\u0434\u044C \u043A\u0443\u0440\u0438\u043D\u043E\u0435
     \u043C\u044F\u0441\u043E"
   TaskType: 1
-  targetItemId: "\u044B\u0430\u044B"
-  requiredCount: 1
+  _item: {fileID: 11400000, guid: be15635bed4faf64da6986fa80d281f1, type: 2}
+  _requiredCount: 1
