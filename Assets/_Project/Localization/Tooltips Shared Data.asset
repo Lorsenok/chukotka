@@ -55,6 +55,14 @@ MonoBehaviour:
     m_Key: tool5
     m_Metadata:
       m_Items: []
+  - m_Id: 1718786242166784
+    m_Key: tool6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1718786305081344
+    m_Key: tool6name
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
