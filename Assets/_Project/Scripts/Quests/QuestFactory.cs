@@ -6,6 +6,7 @@ public class QuestFactory
     private readonly QuestLineConfig _config;
 
     private readonly QuestDialogEvents _dialogEvents;
+    
     private readonly IInventory _inventory;
     
     public QuestFactory(QuestLineConfig config, QuestDialogEvents questDialogEvents, IInventory inventory)

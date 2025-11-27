@@ -10,6 +10,7 @@ public class ProjectInstaller : MonoInstaller
         Container.Bind<QuestLineConfig>().FromInstance(questLine).AsSingle().NonLazy();
         
         Container.Bind<QuestDialogEvents>().AsSingle().NonLazy();
+        Container.Bind<IInventory>().To<InventoryService>().AsSingle();
         Container.BindInterfacesTo<QuestManager>().AsSingle().NonLazy();
     }
 }

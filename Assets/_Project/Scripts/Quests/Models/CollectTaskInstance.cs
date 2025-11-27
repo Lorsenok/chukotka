@@ -29,9 +29,13 @@ public class CollectTaskInstance : TaskInstance
     {
         int counter = 0;
         
+        
         foreach (Item item in _inventory.Items)
         {
-            if (item.name == _item.name) 
+            if(item == null)
+                continue;
+            
+            if (item.name  == _item.name) 
                 counter++;
         }
 
