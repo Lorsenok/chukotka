@@ -31,7 +31,6 @@ public class NPCDialogueController : MonoBehaviour
     {
         DialogWrapper dialog = _dialogs.Find(dialog => dialog.DialogId == instance.DialogId);
         dialog.Activate(instance);
-        Debug.Log("активирован диалог" + instance.DialogId + " для NPC" + _npcId + instance.GetDescription());
     }
 
     public void RemoveDialog(TalkTaskInstance instance)
