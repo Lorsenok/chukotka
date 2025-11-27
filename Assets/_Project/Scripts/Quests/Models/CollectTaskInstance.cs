@@ -22,7 +22,7 @@ public class CollectTaskInstance : TaskInstance
         Update();
         
         _inventory.OnItemsChanged += Update;
-        Debug.Log("Начат сбор ресурса" + _item.description + " в количестве " + _requiredCount);
+        Debug.Log("Начат сбор ресурса" + _item.itemname + " в количестве " + _requiredCount);
     }
 
     public override void Update()

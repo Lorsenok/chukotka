@@ -144,6 +144,10 @@ public class InventoryUI : GameMenu
         Dictionary<string, ItemWithCount> newItems = new();
         foreach (Item item in inventory.Items)
         {
+            if (item == null)
+                Debug.LogWarning("Inventory item is null!!");
+                continue;
+            
             if (newItems.TryGetValue(item.name, out var existing))
             {
                 existing.Count++;
