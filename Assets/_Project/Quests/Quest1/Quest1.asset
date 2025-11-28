@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 928694388c8c4373b28bf3f107a32480, type: 3}
-  m_Name: TestQuest1
+  m_Name: Quest1
   m_EditorClassIdentifier: 
   questId: 1
   questDescription: 
   tasks:
   - {fileID: 11400000, guid: 1bc5652ae83ecd14fbf2c0b16d5b3045, type: 2}
-  - {fileID: 11400000, guid: 77a2e7b8d27ea2f458394f989db111be, type: 2}
   - {fileID: 11400000, guid: bfb95a64c68679e458e1a0e63a7a701e, type: 2}
   - {fileID: 11400000, guid: 3fb9f099b83327e4fa7ea817a5ca6f62, type: 2}
+  - {fileID: 11400000, guid: 77a2e7b8d27ea2f458394f989db111be, type: 2}
   - {fileID: 11400000, guid: da7ab53e0907972438c3172119edf725, type: 2}
-  - {fileID: 11400000, guid: 9d3e73167f697bc48b428df9c0cb2135, type: 2}

@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9f2743c4c14446e87dc0cdfaac4c2c0, type: 3}
-  m_Name: QuestLine
+  m_Script: {fileID: 11500000, guid: 928694388c8c4373b28bf3f107a32480, type: 3}
+  m_Name: QuestStart
   m_EditorClassIdentifier: 
-  quests:
-  - {fileID: 11400000, guid: f74d34436d9cae34ca55705050461fdf, type: 2}
-  - {fileID: 11400000, guid: aa33f6772219b9e4cbaa17a3b579dc7d, type: 2}
+  questId: Start
+  questDescription: 
+  tasks:
+  - {fileID: 11400000, guid: 9d3e73167f697bc48b428df9c0cb2135, type: 2}
