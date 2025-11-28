@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &885534879358925204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3323572905891837917}
+  - component: {fileID: 4850716272183427263}
+  - component: {fileID: 7175025443408668322}
+  m_Layer: 0
+  m_Name: target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3323572905891837917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885534879358925204}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3480739057512430398}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4850716272183427263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885534879358925204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e24403e8bbba543a6f70a739a291bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockToTarget: 1
+  target: {fileID: 3480739057512430398}
+  changePositionDelay: {fileID: 7175025443408668322}
+  minRange: 5
+  maxRange: 10
+--- !u!114 &7175025443408668322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885534879358925204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagname: change position delay
+  repeatable: 1
+  setOnStart: 0
+  savekey: 
+  timeSet: 1.5
+  curTime: 0
 --- !u!1 &1401140602325432230
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,9 +445,9 @@ MonoBehaviour:
   visualActionOnDamage: {fileID: 11400000, guid: 0602c7b5b8e1d304f95f326ae9398987, type: 2}
   timerDelay: {fileID: 2318846243298551186}
   effectTimer: {fileID: 0}
-  animController: {fileID: 0}
-  attackAnim: 
-  attackAnimTime: 0
+  animController: {fileID: -2517036353178970769}
+  attackAnim: attack
+  attackAnimTime: 0.3
 --- !u!114 &2318846243298551186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,6 +482,9 @@ GameObject:
   - component: {fileID: 5500761368291544682}
   - component: {fileID: 7535525609482521652}
   - component: {fileID: -6585730592156180498}
+  - component: {fileID: -2517036353178970769}
+  - component: {fileID: -1326773122757921144}
+  - component: {fileID: 1080638228430399746}
   - component: {fileID: 2223824031188991272}
   m_Layer: 0
   m_Name: Animal Angry
@@ -439,6 +510,7 @@ Transform:
   - {fileID: 7010961739415614335}
   - {fileID: 4923585957773397637}
   - {fileID: 5909461082296772452}
+  - {fileID: 3323572905891837917}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6334257619906543369
@@ -485,12 +557,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 40
-  m_Sprite: {fileID: 21300000, guid: 63c2c822443d2084e9c4277d06f72537, type: 3}
+  m_Sprite: {fileID: 574110636, guid: 944d57a0e874f8846aec9f48598cda42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.21875, y: 1.21875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -561,8 +633,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9375, y: 1.21875}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 3.21875, y: 1.21875}
+    newSize: {x: 3.21875, y: 1.21875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -591,24 +663,27 @@ MonoBehaviour:
   jumpForce: 4
   jumpDelayTimer: {fileID: 7535525609482521652}
   minDistanceToJump: 1
+  flip: 0
   idle: {fileID: 0}
   move: {fileID: 0}
   spr: {fileID: 6334257619906543369}
   minVelocityToMove: 0
+  targetWhileNotAgr: {fileID: 3323572905891837917}
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab:
   - {fileID: 2494444330949010391, guid: 6f73825348bf7d1499e72344661a1aae, type: 3}
+  spawnAfterDying: []
   lootSpawnpoint: {fileID: 0}
+  agrByTrigger: 1
   escapeSpeedMultiplier: 0.15
-  hpWhenEscaping: 4
+  hpWhenEscaping: 0
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
-  flip: 0
   minSpeedX: 0.25
-  animController: {fileID: 0}
+  animController: {fileID: -2517036353178970769}
   idleAnim: idle
   idleAnimTime: 0.1
-  walkAnim: walk
+  walkAnim: idle
   walkAnimTime: 0.1
   jumpAnim: 
   jumpAnimTime: 0
@@ -664,6 +739,73 @@ MonoBehaviour:
   autoSet: 1
   set: {r: 1, g: 1, b: 1, a: 1}
   speed: 2.5
+--- !u!114 &-2517036353178970769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c46948491a93d48a925977cff1f250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animators:
+  - {fileID: -1326773122757921144}
+  - {fileID: 1080638228430399746}
+--- !u!114 &-1326773122757921144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 0
+  animname: idle
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: 858211223, guid: 21a6b67a5ded3b54480174bd232732a8, type: 3}
+  - {fileID: 480115283, guid: 21a6b67a5ded3b54480174bd232732a8, type: 3}
+  - {fileID: -817963897, guid: 21a6b67a5ded3b54480174bd232732a8, type: 3}
+  - {fileID: -1510706954, guid: 21a6b67a5ded3b54480174bd232732a8, type: 3}
+  - {fileID: 829558174, guid: 21a6b67a5ded3b54480174bd232732a8, type: 3}
+  - {fileID: 1534290255, guid: 21a6b67a5ded3b54480174bd232732a8, type: 3}
+  - {fileID: 326952762, guid: 21a6b67a5ded3b54480174bd232732a8, type: 3}
+  - {fileID: 1807855555, guid: 21a6b67a5ded3b54480174bd232732a8, type: 3}
+  timePerFrame: 0.1
+  loop: 1
+  curSprite: 0
+--- !u!114 &1080638228430399746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698977778594916722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accf67b0fccc63943bba3d94d48763b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priority: 1
+  animname: attack
+  spr: {fileID: 6334257619906543369}
+  sprites:
+  - {fileID: 574110636, guid: 944d57a0e874f8846aec9f48598cda42, type: 3}
+  - {fileID: -544108545, guid: 944d57a0e874f8846aec9f48598cda42, type: 3}
+  - {fileID: 379467996, guid: 944d57a0e874f8846aec9f48598cda42, type: 3}
+  - {fileID: -1566728541, guid: 944d57a0e874f8846aec9f48598cda42, type: 3}
+  - {fileID: -29420462, guid: 944d57a0e874f8846aec9f48598cda42, type: 3}
+  - {fileID: 1742583923, guid: 944d57a0e874f8846aec9f48598cda42, type: 3}
+  timePerFrame: 0.1
+  loop: 0
+  curSprite: 0
 --- !u!114 &2223824031188991272
 MonoBehaviour:
   m_ObjectHideFlags: 0

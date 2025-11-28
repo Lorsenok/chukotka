@@ -4,7 +4,7 @@ using Random = System.Random;
 
 public class Animal : TargetFollower
 {
-    [Header("Animal")]
+    [Header("Animal")] [SerializeField] private Transform targetWhileNotAgr;
     [SerializeField] private DestroyableObject destroyableObject;
     [SerializeField] private GameObject[] dropPrefab;
     [SerializeField] private GameObject[] spawnAfterDying;
@@ -33,6 +33,7 @@ public class Animal : TargetFollower
     {
         if (other.gameObject.GetComponent<Controller>() && agrByTrigger)
         {
+            target = other.transform;
             agr = true;
         }
     }
@@ -51,17 +52,17 @@ public class Animal : TargetFollower
         timeToEscape.OnTimerEnd -= OnEscape;
     }
 
-    private void Start()
-    {
-        target = FindObjectsByType<Controller>(FindObjectsSortMode.None)[0].transform;
-    }
-
     public override void Update()
     {
         if (destroyableObject.HP <= 0) return;
         bool isMoving = rg.linearVelocityX > minVelocityToMove || rg.linearVelocityX < -minVelocityToMove;
         if (!agr)
         {
+            if (targetWhileNotAgr)
+            {
+                target = targetWhileNotAgr;
+                base.Update();
+            }
             return;
         }
         if (destroyableObject.HP <= hpWhenEscaping && !isEscaping)
