@@ -6,6 +6,10 @@ public class NPCDialogueController : MonoBehaviour
 {
     [SerializeField] private string _npcId;
     [SerializeField] private List<DialogWrapper> _dialogs;
+    
+    [Inject]
+    private QuestDialogEvents _dialogEvents;
+    
     public string NpcId => _npcId;
 
     private NpcRegistry _registry;
@@ -20,11 +24,13 @@ public class NPCDialogueController : MonoBehaviour
     {
         _registry.RegisterNpc(this);
         DeactivateAllDialogs();
+        _dialogEvents.OnDialogCompleted += RemoveDialog;
     }
 
     private void OnDisable()
     {
         _registry.UnregisterNpc(this);
+        _dialogEvents.OnDialogCompleted -= RemoveDialog;
     }
     
     public void ActivateDialog(TalkTaskInstance instance)
@@ -36,7 +42,7 @@ public class NPCDialogueController : MonoBehaviour
     public void RemoveDialog(TalkTaskInstance instance)
     {
         DialogWrapper dialog = _dialogs.Find(dialog => dialog.DialogId == instance.DialogId);
-        _dialogs.Remove(dialog);
+        dialog.gameObject.SetActive(false);
     }
 
     private void DeactivateAllDialogs()
