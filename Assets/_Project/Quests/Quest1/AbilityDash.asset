@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1488cd95f07e40abaf7642b9af1e7957, type: 3}
-  m_Name: AbilityDoubleJump
+  m_Name: AbilityDash
   m_EditorClassIdentifier: 
-  Description: "\u041F\u043E\u043B\u0443\u0447\u0438 \u0434\u0432\u043E\u0439\u043D\u043E\u0439
-    \u043F\u0440\u044B\u0436\u043E\u043A"
+  Description: "\u041F\u043E\u043B\u0443\u0447\u0438 \u043D\u0430\u0432\u044B\u043A
+    \u0440\u044B\u0432\u043A\u0430"
   TaskType: 4
   abilities:
-  - {fileID: 11400000, guid: 28555ce10c88c444aa1af6122d2d4b03, type: 2}
+  - {fileID: 11400000, guid: 52f286d0919bdd94f8db714c530a6ee0, type: 2}
