@@ -9,14 +9,9 @@ public class QuestManager : IInitializable
     private List<QuestInstance> _quests;
 
     [Inject]
-    public void Construct(QuestLineConfig config, QuestDialogEvents dialogEvents)
+    public void Construct(QuestLineConfig config, QuestDialogEvents dialogEvents, IInventory inventory)
     {
-        _factory = new QuestFactory(config, dialogEvents);
-    }
-
-    public void Debug()
-    {
-        UnityEngine.Debug.Log("sdkjfsdfsdof42");
+        _factory = new QuestFactory(config, dialogEvents, inventory);
     }
 
     public void Initialize()

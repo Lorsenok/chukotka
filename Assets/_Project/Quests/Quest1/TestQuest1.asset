@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: TestQuest1
   m_EditorClassIdentifier: 
   questId: 1
-  questTitle: "\u0417\u043D\u0430\u043A\u043E\u043C\u0441\u0442\u0432\u043E \u0441
-    \u043E\u0445\u043E\u0442\u043D\u0438\u043A\u043E\u043C"
+  questDescription: 
   tasks:
-  - {fileID: 11400000, guid: 9d3e73167f697bc48b428df9c0cb2135, type: 2}
   - {fileID: 11400000, guid: 1bc5652ae83ecd14fbf2c0b16d5b3045, type: 2}
+  - {fileID: 11400000, guid: bfb95a64c68679e458e1a0e63a7a701e, type: 2}
+  - {fileID: 11400000, guid: 3fb9f099b83327e4fa7ea817a5ca6f62, type: 2}
+  - {fileID: 11400000, guid: da7ab53e0907972438c3172119edf725, type: 2}
+  - {fileID: 11400000, guid: 9d3e73167f697bc48b428df9c0cb2135, type: 2}
