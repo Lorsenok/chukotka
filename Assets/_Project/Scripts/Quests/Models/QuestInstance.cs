@@ -7,6 +7,8 @@ public class QuestInstance : IDisposable
     private int _currentTaskIndex = -1;
     private string _id;
     private string _description;
+    
+    public event Action OnCompleted;
 
     public QuestInstance(string id,  string description, List<TaskInstance> taskInstances)
     {
@@ -39,6 +41,9 @@ public class QuestInstance : IDisposable
             current.OnCompleted += OnTaskCompleted;
             current.Start();
         }
+        
+        if (_currentTaskIndex >= _taskInstances.Count)
+            OnCompleted?.Invoke();
     }
 
     public void Update()
@@ -54,12 +59,6 @@ public class QuestInstance : IDisposable
     }
 
     public bool IsCompleted => _currentTaskIndex >= _taskInstances.Count;
-
-    public void Stop()
-    {
-        if (_currentTaskIndex >= 0 && _currentTaskIndex < _taskInstances.Count)
-            _taskInstances[_currentTaskIndex].Stop();
-    }
 
     public void Dispose()
     {
