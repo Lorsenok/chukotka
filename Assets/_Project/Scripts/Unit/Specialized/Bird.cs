@@ -11,21 +11,31 @@ public class Bird : MonoBehaviour
     [SerializeField] private DestroyableObject destroyableObject;
     [SerializeField] private float flyHeight = 1f;
     [SerializeField] private float speed = 1f;
-
+    [SerializeField] private float sinMovementSpeed = 1f;
+    
     [SerializeField] private Timer switchDelayTimer;
     
     [Header("Animation")]
+    [SerializeField] private SpriteRenderer spr;
+    [SerializeField] private bool mirror;
     [SerializeField] private CustomAnimatorController animController;
     [SerializeField] private string idleAnim;
     [SerializeField] private float idleAnimTime;
     [SerializeField] private string flyAnim;
     [SerializeField] private float flyAnimTime;
-    
+
+    private float sintime = 0f;
     private Vector3 GetCurPos(Vector3 start, Vector3 end, float t, float jumpHeight)
     {
         Vector2 linear = Vector2.Lerp(start, end, t);
         float h = 4f * t * (1f - t) * jumpHeight;
         linear.y += h;
+        
+        linear.x += Mathf.Sin(sintime);
+        if (spr) spr.flipX = Mathf.Sin(sintime) > Mathf.Sin(sintime - Time.deltaTime);;
+        if (mirror) spr.flipX = !spr.flipX;
+        if (t >= 1f) sintime += Time.deltaTime * sinMovementSpeed;
+        
         return linear;
     }
 

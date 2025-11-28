@@ -21,6 +21,7 @@ public class TargetFollower : MonoBehaviour
     [SerializeField] protected float minDistanceToJump;
     
     [Header("Animation")]
+    [SerializeField] private bool flip;
     [SerializeField] protected CustomAnimator idle;
     [SerializeField] protected CustomAnimator move;
     [SerializeField] protected SpriteRenderer spr;
@@ -97,6 +98,6 @@ public class TargetFollower : MonoBehaviour
         bool isMoving = rg.linearVelocityX > minVelocityToMove || rg.linearVelocityX < -minVelocityToMove;
         if (idle != null) idle.enabled = !isMoving;
         if (move != null) move.enabled = isMoving;
-        if (spr != null && isMoving) spr.flipX = rg.linearVelocityX < 0f;
+        if (spr != null && isMoving) spr.flipX = target.position.x < transform.position.x ? flip : !flip;
     }
 }

@@ -432,6 +432,7 @@ MonoBehaviour:
   jumpForce: 0
   jumpDelayTimer: {fileID: 2790582102380298432}
   minDistanceToJump: 0
+  flip: 1
   idle: {fileID: 5791665234605276985}
   move: {fileID: 8200958204273365472}
   spr: {fileID: 663601553081523855}

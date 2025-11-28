@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af32d521fc5d2954bbc2700a90ebbd3f
+guid: 19e656f468b1135498fcd9c324597de9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle-Sheet_0
+      name: fly-Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 37
-        height: 28
+        x: 2
+        y: 4
+        width: 32
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee8bd40928abd8745b3b9348b7b7df01
-      internalID: -293112442
+      spriteID: e8766be249398d840b7030fd932580ba
+      internalID: 9735227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-Sheet_1
+      name: fly-Sheet_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 0
-        width: 37
-        height: 28
+        x: 39
+        y: 5
+        width: 32
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5d1d388ec44ecd468035dd4689c0e47
-      internalID: 2134797988
+      spriteID: 08ed92531ac2afb49b66113267d163e5
+      internalID: -1663333390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-Sheet_2
+      name: fly-Sheet_2
       rect:
         serializedVersion: 2
-        x: 74
-        y: 0
-        width: 37
-        height: 28
+        x: 76
+        y: 2
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65079bedf67297a42b34726aff77b8bf
-      internalID: 1001852796
+      spriteID: a335b13e54bd422438ef31ecea98b390
+      internalID: 1871772166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-Sheet_3
+      name: fly-Sheet_3
       rect:
         serializedVersion: 2
-        x: 111
+        x: 113
         y: 0
-        width: 37
-        height: 28
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8fc93cdc68af7a49bb14057adc99ac0
-      internalID: 1952352313
+      spriteID: 66ae0801cf5285740a691e091f866fd9
+      internalID: -415000717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-Sheet_4
+      name: fly-Sheet_4
       rect:
         serializedVersion: 2
-        x: 148
+        x: 150
         y: 0
-        width: 37
-        height: 28
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac77ef0de20cba4a9333c79f21e5728
-      internalID: -2071040905
+      spriteID: b94bc707db2742b4aa1d5b905a6f3464
+      internalID: 380669237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-Sheet_5
+      name: fly-Sheet_5
       rect:
         serializedVersion: 2
-        x: 185
+        x: 187
         y: 0
-        width: 37
-        height: 28
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaea6041a0df40f478ad3dd85fb440e7
-      internalID: -898877770
+      spriteID: ecf9c5047376a83499d8886dc1718eea
+      internalID: -1825428136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-Sheet_6
+      name: fly-Sheet_6
       rect:
         serializedVersion: 2
-        x: 222
-        y: 0
-        width: 37
-        height: 28
+        x: 224
+        y: 2
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39445854152437640b2770801e057bdc
-      internalID: 1180035239
+      spriteID: 6c98b2103dfeede42b66f032c0901219
+      internalID: 66630915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle-Sheet_7
+      name: fly-Sheet_7
       rect:
         serializedVersion: 2
-        x: 259
-        y: 0
-        width: 37
-        height: 28
+        x: 261
+        y: 5
+        width: 32
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb576e50eb0e1f64b89e38b96d95102a
-      internalID: -1119075519
+      spriteID: dc236d263ceccb94fa28e2eb4ff2b55d
+      internalID: 1335677277
       vertices: []
       indices: 
       edges: []
@@ -276,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9f5aa4c94de8a9f4a84572c99eb764f5
+    spriteID: 063be8ab65694314fa4efcce0be8e512
     internalID: 0
     vertices: []
     indices: 
@@ -285,19 +285,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries:
-      - key: SpriteEditor.SliceOnImport
-        value: True
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":37.0,"y":28.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      idle-Sheet_0: -293112442
-      idle-Sheet_1: 2134797988
-      idle-Sheet_2: 1001852796
-      idle-Sheet_3: 1952352313
-      idle-Sheet_4: -2071040905
-      idle-Sheet_5: -898877770
-      idle-Sheet_6: 1180035239
-      idle-Sheet_7: -1119075519
+      fly-Sheet_0: 9735227
+      fly-Sheet_1: -1663333390
+      fly-Sheet_2: 1871772166
+      fly-Sheet_3: -415000717
+      fly-Sheet_4: 380669237
+      fly-Sheet_5: -1825428136
+      fly-Sheet_6: 66630915
+      fly-Sheet_7: 1335677277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

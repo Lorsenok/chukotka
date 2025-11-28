@@ -7,15 +7,16 @@ public class Animal : TargetFollower
     [Header("Animal")]
     [SerializeField] private DestroyableObject destroyableObject;
     [SerializeField] private GameObject[] dropPrefab;
+    [SerializeField] private GameObject[] spawnAfterDying;
     [SerializeField] private Transform lootSpawnpoint;
-
+    [SerializeField] private bool agrByTrigger = true;
+    
     [Header("Escaping")][SerializeField] private float escapeSpeedMultiplier = 1f;
     [SerializeField] private int hpWhenEscaping;
     [SerializeField] private Timer timeToEscape;
     [SerializeField] private GameObject[] spawnAfterEscapePrefabs;
 
     [Header("Custom Animator")]
-    [SerializeField] private bool flip = false;
     [SerializeField] private float minSpeedX = 0.25f;
     [SerializeField] private CustomAnimatorController animController;
     [SerializeField] private string idleAnim;
@@ -30,7 +31,7 @@ public class Animal : TargetFollower
     private bool agr = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<Controller>())
+        if (other.gameObject.GetComponent<Controller>() && agrByTrigger)
         {
             agr = true;
         }
@@ -75,8 +76,6 @@ public class Animal : TargetFollower
         }
         else base.Update();
 
-        spr.flipX = target.position.x < transform.position.x ? flip : !flip;
-
         if (isMoving && animController != null && Mathf.Abs(rg.linearVelocityX) > minSpeedX && Vector2.Distance(transform.position, target.position) > minDistance)
         {
             animController.PullAnimation(walkAnim, walkAnimTime);
@@ -114,7 +113,11 @@ public class Animal : TargetFollower
             {
                 Instantiate(dropPrefab[rand], transform.position, dropPrefab[rand].transform.rotation);
             }
+        }
 
+        foreach (GameObject obj in spawnAfterDying)
+        {
+            Instantiate(obj, transform.position, obj.transform.rotation);
         }
     }
 }

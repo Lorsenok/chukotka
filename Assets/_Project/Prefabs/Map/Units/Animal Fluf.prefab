@@ -260,7 +260,6 @@ GameObject:
   - component: {fileID: 8068558652106071531}
   - component: {fileID: 4570883430831221604}
   - component: {fileID: 2042772848013348005}
-  - component: {fileID: 3404604098965821951}
   m_Layer: 0
   m_Name: Animal Fluf
   m_TagString: Bird
@@ -509,15 +508,15 @@ MonoBehaviour:
   animname: idle
   spr: {fileID: 6334257619906543369}
   sprites:
-  - {fileID: -293112442, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
-  - {fileID: 2134797988, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
-  - {fileID: 1001852796, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
-  - {fileID: 1952352313, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
-  - {fileID: -2071040905, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
-  - {fileID: -898877770, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
-  - {fileID: 1180035239, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
-  - {fileID: -1119075519, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
-  timePerFrame: 0.1
+  - {fileID: 9735227, guid: 19e656f468b1135498fcd9c324597de9, type: 3}
+  - {fileID: -1663333390, guid: 19e656f468b1135498fcd9c324597de9, type: 3}
+  - {fileID: 1871772166, guid: 19e656f468b1135498fcd9c324597de9, type: 3}
+  - {fileID: -415000717, guid: 19e656f468b1135498fcd9c324597de9, type: 3}
+  - {fileID: 380669237, guid: 19e656f468b1135498fcd9c324597de9, type: 3}
+  - {fileID: -1825428136, guid: 19e656f468b1135498fcd9c324597de9, type: 3}
+  - {fileID: 66630915, guid: 19e656f468b1135498fcd9c324597de9, type: 3}
+  - {fileID: 1335677277, guid: 19e656f468b1135498fcd9c324597de9, type: 3}
+  timePerFrame: 0.08
   loop: 1
   curSprite: 0
 --- !u!114 &4911382896185564891
@@ -564,12 +563,15 @@ MonoBehaviour:
   destroyableObject: {fileID: 5025325049783167554}
   flyHeight: 1
   speed: 2
+  sinMovementSpeed: 1
   switchDelayTimer: {fileID: 8068558652106071531}
+  spr: {fileID: 6334257619906543369}
+  mirror: 0
   animController: {fileID: 1022220381131382507}
-  idleAnim: 1
-  idleAnimTime: 2
-  flyAnim: 1
-  flyAnimTime: 2
+  idleAnim: walk
+  idleAnimTime: 0.1
+  flyAnim: idle
+  flyAnimTime: 0.1
 --- !u!114 &8068558652106071531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,20 +612,23 @@ MonoBehaviour:
   jumpForce: 0
   jumpDelayTimer: {fileID: 2042772848013348005}
   minDistanceToJump: 0
+  flip: 0
   idle: {fileID: 9081938253999711420}
-  move: {fileID: 9081938253999711420}
+  move: {fileID: 4911382896185564891}
   spr: {fileID: 6334257619906543369}
   minVelocityToMove: 0
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab:
   - {fileID: 2494444330949010391, guid: 6f73825348bf7d1499e72344661a1aae, type: 3}
   - {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
+  spawnAfterDying:
+  - {fileID: 4753878490498050857, guid: 213862a4478fbc54787c7f68e183dde9, type: 3}
   lootSpawnpoint: {fileID: 3480739057512430398}
+  agrByTrigger: 0
   escapeSpeedMultiplier: 1
   hpWhenEscaping: 5
   timeToEscape: {fileID: 5500761368291544682}
   spawnAfterEscapePrefabs: []
-  flip: 0
   minSpeedX: 0.25
   animController: {fileID: 1022220381131382507}
   idleAnim: 
@@ -650,24 +655,6 @@ MonoBehaviour:
   savekey: 
   timeSet: 0
   curTime: 0
---- !u!114 &3404604098965821951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4698977778594916722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73c5df62b4625fc46a4f539421e8dc00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagname: escape timer
-  repeatable: 0
-  setOnStart: 0
-  savekey: 
-  timeSet: 10
-  curTime: 10
 --- !u!1 &8466107372646631808
 GameObject:
   m_ObjectHideFlags: 0
