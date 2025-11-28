@@ -47,11 +47,18 @@ public class QuestFactory
                 return CreateTalkTask(config as TalkTaskConfig);
             case TaskType.Collect:
                 return CreateGatherTask(config as CollectTaskConfig);
+            case TaskType.SetInventory:
+                return CreateSetInventoryTask(config as SetInventoryTaskConfig);
             default:
                 throw new System.NotImplementedException();
         }
     }
-    
+
+    private TaskInstance CreateSetInventoryTask(SetInventoryTaskConfig config)
+    {
+        return new SetInventoryTaskInstance(config.InventoryItemTrigger);
+    }
+
     private TalkTaskInstance CreateTalkTask(TalkTaskConfig config)
     {
         return new TalkTaskInstance(_dialogEvents, config.NpcId, config.DialogId, config.Description);

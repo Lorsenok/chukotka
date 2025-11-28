@@ -10,5 +10,6 @@ public enum TaskType
 {
     Talk,
     Collect,
-    Kill
+    Kill,
+    SetInventory
 }
