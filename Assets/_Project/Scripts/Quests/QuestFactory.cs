@@ -7,10 +7,13 @@ public class QuestFactory
 
     private readonly QuestDialogEvents _dialogEvents;
     
-    public QuestFactory(QuestLineConfig config, QuestDialogEvents questDialogEvents)
+    private readonly IInventory _inventory;
+    
+    public QuestFactory(QuestLineConfig config, QuestDialogEvents questDialogEvents, IInventory inventory)
     {
         _config = config;
         _dialogEvents = questDialogEvents;
+        _inventory = inventory;
     }
     
     public List<QuestInstance> CreateQuests()
@@ -42,13 +45,26 @@ public class QuestFactory
         {
             case TaskType.Talk:
                 return CreateTalkTask(config as TalkTaskConfig);
+            case TaskType.Collect:
+                return CreateGatherTask(config as CollectTaskConfig);
+            case TaskType.SetInventory:
+                return CreateSetInventoryTask(config as SetInventoryTaskConfig);
             default:
                 throw new System.NotImplementedException();
         }
     }
-    
+
+    private TaskInstance CreateSetInventoryTask(SetInventoryTaskConfig config)
+    {
+        return new SetInventoryTaskInstance(_inventory, config.ItemsToPutDown, config.ItemsToPickUp);
+    }
+
     private TalkTaskInstance CreateTalkTask(TalkTaskConfig config)
     {
         return new TalkTaskInstance(_dialogEvents, config.NpcId, config.DialogId, config.Description);
+    }
+    private CollectTaskInstance CreateGatherTask(CollectTaskConfig config)
+    {
+        return new CollectTaskInstance(_inventory, config.Item, config.RequiredCount);
     }
 }
