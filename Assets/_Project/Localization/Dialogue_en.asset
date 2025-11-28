@@ -75,7 +75,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 643406642368512
     m_Localized: The gods are angry with us, so angry! You fell into the ocean while
-      we were hunting the whale, and Kotka saved you. <link="t3"><color=red><u>Sedna</u></color></link>
+      we were hunting the whale, and Kotka saved you. <color=red><link="t3"><color=red><u>Sedna</u></color></link></color>
       grew furious and overturned the boat with our best hunters. They brought you
       ashore half-dead.
     m_Metadata:
@@ -84,17 +84,13 @@ MonoBehaviour:
     m_Localized: Remember what?
     m_Metadata:
       m_Items: []
-  - m_Id: 2915692988682240
-    m_Localized: "Those \u201Cthings\u201D?"
-    m_Metadata:
-      m_Items: []
   - m_Id: 643025518546944
     m_Localized: "And you don\u2019t remember anything\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 237707051487232
-    m_Localized: "Ettyk, <link=\"t2\"><color=red><u>Ytlygun</u></color></link>. What
-      happened to me? My head is foggy\u2026"
+    m_Localized: "<link=\"t1\"><color=red><u>Ettyk</u></color></link>, <link=\"t2\"><color=red><u>Ytlygun</u></color></link>.
+      What happened to me? My head is foggy\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 237422656704512
@@ -102,300 +98,13 @@ MonoBehaviour:
       you doing?
     m_Metadata:
       m_Items: []
-  - m_Id: 3201720760750080
-    m_Localized: <i><color="red">Gereglyn</color></i>? What?!
+  - m_Id: 51392143216394253
+    m_Localized: Shaman tighten the <link="t6"><color=red><u>kamgyt</u></color></link>,
+      bowing respectfully to the skulls
     m_Metadata:
       m_Items: []
-  - m_Id: 3202564457582592
-    m_Localized: "Don\u2019t you know? Those long flat sticks whose tracks you probably
-      saw. They say they glide well on the snow and your foot doesn\u2019t sink.
-      If only we had such!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3202892804476928
-    m_Localized: "Alright, since you\u2019ve come \u2014 help gather the catch. The
-      snares got tangled somewhere and there are no extra hands. Your tann\u2019ytan
-      business, ha-ha?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3203393117835264
-    m_Localized: "I\u2019ll help, but how am I supposed to run fast like that?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3246548840173568
-    m_Localized: "Ga, I\u2019ll help you! Look, you need to do it like this\u2026"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3247036994244608
-    m_Localized: <i><color="red">Inniy, look</color></i>! I found your snares!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3247841386254336
-    m_Localized: "Here they are \u2014 they were lying nearby. And you were still
-      laughing at me!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3248170974662656
-    m_Localized: "Ha, indeed. Thank you! These pelts will last us a long time. Now
-      go to the elder, I\u2019ll sort things out from here."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3250257762537472
-    m_Localized: "I was helping the shaman\u2026"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3250240800772096
-    m_Localized: "Ah, you\u2019ve come, you cursed one! Where have you been roaming?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3269075188666368
-    m_Localized: "The old fool who\u2019s lost his mind?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3282607292633088
-    m_Localized: "<link=\"shake\"><color=\"red\">Don\u2019t you dare call him that!</color></link>
-      He may be old, but he\u2019s wiser than all of us!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3282931512332288
-    m_Localized: "Aha \u2014 when he doesn\u2019t eat fly-agarics! Why did you come
-      to me?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3283085002887168
-    m_Localized: "Hunter Tanat told me to come to you. We gathered furs \u2014 enough
-      to clothe the whole camp for the winter!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3283539904516096
-    m_Localized: "At least you did something sensible. Alright, I don\u2019t have
-      time to dally. Some outsiders are loitering near the village; they should be
-      driven off."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3283986950213632
-    m_Localized: "It\u2019s tann\u2019ytan! The shaman said it was them \u2014 he
-      knew it!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3284187542802432
-    m_Localized: "<link=\"shake\"><color=\"red\">I know what he\u2019s teaching you,
-      pup, and he thinks I won\u2019t notice. Don\u2019t think you\u2019ll get away
-      with this.</color></link> There are no tann\u2019ytan in the village, understand?
-      Just outsiders!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3284485799759872
-    m_Localized: <link="shake"><color="red">Since you fancy yourself so clever, go
-      and deal with them yourself!</color></link>
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3284993352486912
-    m_Localized: "And who will cry for you, runt? Go and don\u2019t bother me! We\u2019ll
-      see how your shamanic power saves you. Or will you fling your seal-hide in
-      front of yourself?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3286020004859904
-    m_Localized: "You\u2019re sending me to certain death!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3287626037415936
-    m_Localized: What is this? Where did you get them?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4327844366602240
-    m_Localized: Back? What do you need? Why are you so battered?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4327873261162496
-    m_Localized: "This is an enormous rarity. That very bone\u2026 <i>zhileza</i>\u2026"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9320768535875584
-    m_Localized: "<link=\"shake\"><color=\"red\">From the tann\u2019ytan?</color></link>
-      Admit it now \u2014 it was them, wasn\u2019t it?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9321048677634048
-    m_Localized: "No! The thing is in no way connected to the tann\u2019ytan; this
-      <i>zhileza</i> is simply very rare."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9322461004648448
-    m_Localized: May I go now?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9353744976007168
-    m_Localized: "What? Oh, yes, yes. Go, visit the wise ones \u2014 they have business
-      with you. And drop by the hunter, maybe he\u2019s finished with the pelts.
-      Off you go to him!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9354230315700224
-    m_Localized: "You can keep this <i>zhileza</i>. I have no use for it. Tanat will
-      give you lots of fish for it, and the shaman can make those\u2026 <i>things</i>
-      of yours."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561407307776
-    m_Localized: Ettyk, itligin!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561478610944
-    m_Localized: "<link=\"wave\"><color=\"blue\">Evil Vykwan man, evil and stupid!
-      Don\u2019t listen to him, Kotka \u2014 I won\u2019t let you be harmed.</color></link>"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561478610945
-    m_Localized: "<link=\"wave\"><color=\"blue\">This is the very bone from which
-      tann\u2019ytan make their armor! It truly doesn\u2019t break or bend! I\u2019ll
-      take it to the elder \u2014 let him only try to say it wasn\u2019t them!</color></link>"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561478610946
-    m_Localized: I took them from the outsiders who were wandering near the camp.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561478610947
-    m_Localized: "I fought the outsiders at the edge of the camp. They were tann\u2019ytan,
-      absolutely! They were like in the shaman\u2019s tales \u2014 <link=\"wave\"><color=\"blue\">clad
-      in bone, with walrus-like mustaches</color></link>. But the elder still doesn\u2019t
-      believe me!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805248
-    m_Localized: "The elder doesn\u2019t want to alarm the people unnecessarily.
-      Imagine what would happen if he said that these\u2026 these <i><color=\"red\">kytn\xE9vet</color></i>
-      were roaming around the camp!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805249
-    m_Localized: "And what? <link=\"shake\"><color=\"red\">He\u2019s lying! I killed
-      a man for the first time! He sent me to my doom!</color></link>"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805250
-    m_Localized: "But don\u2019t say that. Remember, ears are everywhere. If you
-      keep shouting across the camp \u2014 he may truly wish you dead as a slanderer."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805251
-    m_Localized: "But you do believe me, don\u2019t you?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805252
-    m_Localized: "I trust my own eyes and ears. So I won\u2019t believe you or the
-      elder until I see it myself."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805253
-    m_Localized: "I have a <i>zhileza</i>. I found it with them. It\u2019s the one
-      \u2014 that very bone! You fought the tann\u2019ytan, can you recognize it?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805254
-    m_Localized: "I can, but I need time. And time is precious now. We must fill
-      our stores of game. There\u2019s almost no food in the camp, lest famine occur.
-      It was an unlucky year. Ever since the deer fell on its side at <i><color=\"red\">Pyghetti</color></i>,
-      we\u2019ve been living all year\u2026 on our side, sucking our paws like foxes!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805255
-    m_Localized: "Let me go hunting for now, and you look at this\u2026 zhileza?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805256
-    m_Localized: "Ha, go. We need two meat. And if you happen to find a zhileza in
-      the forest \u2014 bring it too, two plastines. If these really were tann\u2019ytan,
-      surely it\u2019s in the woods."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805257
-    m_Localized: Tanat, look how much game I brought down in the forest! And I found
-      a zhileza!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805258
-    m_Localized: "Well done! I haven\u2019t been sitting idle here either."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805259
-    m_Localized: "Well then\u2026 is that it?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805260
-    m_Localized: "I didn\u2019t want to believe it. But yes. My heart feels that
-      something is wrong here. Don\u2019t tell anyone about it for now \u2014 keep
-      it to yourself. And if the Tann\u2019ytan show up again, come to me \u2014
-      I\u2019ll help you deal with them. For now, take this \u2014 in a time of trouble,
-      the totem will protect your life. If you use it up, come back to me. I\u2019ll
-      give you another one, if you manage to find more zhyleza."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805261
-    m_Localized: Thank you!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805262
-    m_Localized: "Wait a bit \u2014 there\u2019s nothing to thank me for yet. Better
-      go to the wise ones. Quietly warn them that tann\u2019ytan were near the camp.
-      They won\u2019t tell anyone unnecessarily, and their experience is worth more
-      than mine."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805263
-    m_Localized: Ettyk, wise ones! The elder said that you need my help.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805264
-    m_Localized: "Look, sister! The broken one has come! And how fearsome! Not long
-      ago he hadn\u2019t even crawled out from under the sled."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805265
-    m_Localized: Ha! Now I can drive anyone under the sled if I need to!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805266
-    m_Localized: "Marvelous, marvelous! I met five zhileza walruses, slaughtered
-      them and didn\u2019t even notice!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805267
-    m_Localized: "\u2026Pardon?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805268
-    m_Localized: "We forgive you! But we won\u2019t let you go back!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805269
-    m_Localized: "Help, little friend, find it \u2014 search the outskirts!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805270
-    m_Localized: What am I supposed to find?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805271
-    m_Localized: "The spirits say the tann\u2019ytan dropped a great evil near the
-      camp. They dropped it and enclosed it in a transparent sphere!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805272
-    m_Localized: "Find that heap of evil quickly \u2014 otherwise the whole camp
-      will perish!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805273
-    m_Localized: "Tann\u2019ytan? You already know about them? Hunter Tanat told
-      me to tell you about them \u2014 I fought them and defeated them!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805274
-    m_Localized: "You defeated them, but didn\u2019t finish them. Go, find that sphere.
-      But don\u2019t break it, be careful!"
+  - m_Id: 51392143216394252
+    m_Localized: Watch and learn, Chu. One day you may be the one doing this.
     m_Metadata:
       m_Items: []
   - m_Id: 34643561482805275
@@ -403,297 +112,136 @@ MonoBehaviour:
       wise, but like small children.</color></link>
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805276
-    m_Localized: <link="wave"><color="blue">And here it is! That wondrous sphere!</color></link>
+  - m_Id: 51392143216394257
+    m_Localized: Shaman returns to the <link="t6"><color=red><u>kamgyt</u></color></link>
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805277
-    m_Localized: What kind of sphere is this? And why is some kind of pelt lying
-      inside it?
+  - m_Id: 51392143216394256
+    m_Localized: Go, go.
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805278
-    m_Localized: "When I was little \u2014 five winters old \u2014 the tann\u2019ytan
-      came to us too. Their warriors were killed, and then they found such a sphere.
-      They opened it and took out a pelt. After that it was as if the whole camp
-      was cursed. <link=\"shake\"><color=\"red\">People fell ill and died.</color></link>
-      The skin at first was covered with spots, and then they coughed up blood. See
-      these pits on my face? Marks of an evil fate. All my brothers and sisters died,
-      and only these marks remained on me. These marks have been with me for sixty
-      winters. Fear what the tann\u2019ytan leave behind! Their gifts are deadly!"
+  - m_Id: 51392143216394255
+    m_Localized: "Shouts come from the elder\u2019s yaranga. Chu immediately seizes
+      the chance to slip away: Hear that, shaman? I think strangers broke into the
+      village! I\u2019ll run, all right? Maybe someone needs help?"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805279
-    m_Localized: My sister is right. Take this sphere to the shaman. He will figure
-      out what to do with it.
+  - m_Id: 51392143216394254
+    m_Localized: "Ettuvyi\u2026? They say the truth: our shaman is wise, but he\u2019s
+      lost his mind\u2026"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805280
-    m_Localized: You truly did well! This deed is far more important than fighting
-      outsiders. Could it be that Vytrytva has given you a second spirit?
+  - m_Id: 51392143216394251
+    m_Localized: What are you doing?
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805281
-    m_Localized: "Me\u2026 me like Vytrytva? Like a hero?"
+  - m_Id: 51392143216394250
+    m_Localized: "Thanat sent it? Ah, he\u2019s an honest man. He remembers the ancestors\u2019
+      teachings. Others have forgotten how the gods once protected them. They don\u2019t
+      know why the ember must be cast out of the yaranga. Why every guest must be
+      led through the flame\u2026"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805282
-    m_Localized: "What did you think? A hero is not one who beats the weak \u2014
-      a hero is one who helps people!"
+  - m_Id: 51392143216394249
+    m_Localized: "Ettuvyi, I\u2019m back! The hunter told me to give you this bag."
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805283
-    m_Localized: "Did you know that Vytrytva was my ancestor? My clan comes from
-      him. As a reward for your bravery I\u2019ll tell you my family\u2019s secret
-      \u2014 how he defeated his enemies."
+  - m_Id: 51392143216394248
+    m_Localized: "You\u2019ll see. Now go. I\u2019ve no time to fuss with you."
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805284
-    m_Localized: Oh-oh! The Kele are angry! Run to the shaman, and be careful not
-      to break this sphere! If you break it, all will be lost!
+  - m_Id: 51392143216394247
+    m_Localized: Bird skulls? What does he need them for?
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805285
-    m_Localized: Itligin! Itligin, we are in danger!
+  - m_Id: 51392143216394246
+    m_Localized: "Ha-ha, keep thinking that way. A ptarmigan won\u2019t let itself
+      be caught unless it wants to be. Here\u2019s your meat. And take this to the
+      shaman."
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805286
-    m_Localized: "Yes, I feel it. I have an uneasy feeling. Evil is coming from beneath
-      the ground. As if someone left an amulet there\u2026"
+  - m_Id: 51392143216394245
+    m_Localized: "See? I\u2019m wiser than a ptarmigan. Look how many I shot! They
+      practically jumped into my hands!"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805287
-    m_Localized: An amulet? What kind?
+  - m_Id: 51392143216394242
+    m_Localized: "Help\u2026 and what good are you? If you can\u2019t value the life
+      that gives you your own?"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805288
-    m_Localized: "I don\u2019t know what kind, only it seems broken. Bad waves come
-      from it\u2026 <link=\"shake\"><color=\"red\">The earth trembles.</color></link>
-      If you find anything, bring it to me."
+  - m_Id: 51392143216394244
+    m_Localized: "You\u2019re the only fool here. Every tribe \u2014 human or ptarmigan
+      \u2014 is equally important. Anyway, show me you\u2019re wiser than a ptarmigan.
+      The camp is starving, and I don\u2019t have enough hands. Hunt some birds.
+      I\u2019ll give you some meat in return."
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805289
-    m_Localized: "All this \u2014 earthquakes and such \u2014 because of some amulet?"
+  - m_Id: 51392143216394243
+    m_Localized: "You mean the ptarmigans? What\u2019s there to value? Silly birds,
+      wandering around and pecking at the ground."
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805290
-    m_Localized: "Anything\u2019s possible. Better be safe \u2014 replenish your
-      supplies, take everything you need. In such places anything can happen."
+  - m_Id: 51392143216394241
+    m_Localized: The shaman sent me to you. Said something about the value of life.
+      Told me to help you.
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805291
-    m_Localized: You saved everyone today, Chu!
+  - m_Id: 51392143216394240
+    m_Localized: You. So you came. What do you need?
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805292
-    m_Localized: You did a noble deed!
+  - m_Id: 51392143187034112
+    m_Localized: Ettik, Thanat!
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805293
-    m_Localized: "Indeed \u2014 no one will drive him under the sled anymore!"
+  - m_Id: 1
+    m_Localized: "I\u2019m telling you, we have nothing! Get out of here while you
+      can!"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805294
-    m_Localized: Well done! Vykwan, will you say something?
+  - m_Id: 2
+    m_Localized: Vykvan, what happened?
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805295
-    m_Localized: "Ah, yes. Mmm\u2026 well done. But the camp is still in danger.
-      Something could always happen\u2026"
+  - m_Id: 3
+    m_Localized: "He came, the cursed one! It gets worse every hour: first the tanny\u2019tan,
+      now the ruin of the camp!"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805296
-    m_Localized: Sister! Sister, where are you?
+  - m_Id: 4
+    m_Localized: Why do you call me that? What did I do?
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805297
-    m_Localized: "Don\u2019t scatter! Stay together! Tanat, are you here?"
+  - m_Id: 5
+    m_Localized: "You don\u2019t know? The sea took five heroes, our emerchin, the
+      camp is starving! And all because of you and your seal! If they were here,
+      they\u2019d deal with these strangers!"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805298
-    m_Localized: Yes!
+  - m_Id: 6
+    m_Localized: "Don\u2019t blame Kotku! She meant no harm when she dove after me
+      into the water!"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805299
-    m_Localized: "Find Tynek! Make sure people don\u2019t disperse. Trouble is coming,
-      trouble is coming\u2026"
+  - m_Id: 7
+    m_Localized: "Sure, right. A <link=\"t5\"><color=red><u>ermechin</u></color></link>
+      would\u2019ve hanged himself after such shame, but you\u2019re still standing
+      here. Still expecting something. And you know what? Deal with the tanny\u2019tan
+      yourself! Maybe your blood will satisfy them, and they\u2019ll leave us alone."
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805300
-    m_Localized: What happened?
+  - m_Id: 8
+    m_Localized: "You have neither heart nor honor. You\u2019re a cruel man!"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805301
-    m_Localized: "Oh\u2026 oh\u2026"
+  - m_Id: 9
+    m_Localized: "You little whelp, you dare talk back to the elder? We\u2019ll see
+      how you sing when the strangers get to you!"
     m_Metadata:
       m_Items: []
-  - m_Id: 34643561482805302
-    m_Localized: "Itligin? Ettuvyi, what\u2019s wrong with you \u2014 are you alive?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805303
-    m_Localized: "Destruction has come to the camp. It happened long ago, and it
-      seems to have repeated. My teacher\u2019s teacher told it to him, and he to
-      me. The Kele stole the sun, stars and moon. It seems you angered them greatly
-      today, so they\u2019ve taken revenge."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805304
-    m_Localized: And what is to be done?! What did they do then?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805305
-    m_Localized: "That time the shaman himself descended into the realm of the Kele
-      and took the lights from them. But I am weak\u2026 I won\u2019t find the way\u2026
-      <link=\"shake\"><color=\"red\">we will perish\u2026</color></link>"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805306
-    m_Localized: "Then I\u2019ll find it!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805307
-    m_Localized: You?!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34643561482805308
-    m_Localized: "Yes! They\u2019ll regret having crossed me \u2014 <link=\"shake\"><color=\"red\">I
-      haven\u2019t even beaten them enough today!</color></link> Itligin, how does
-      one get into the realm of the Kele?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34656678648471552
-    m_Localized: "\u041C\u043D\u043E\u0433\u043E \u0431\u044B\u043B\u043E \u0447\u0443\u043A\u0447
-      \u043D\u0430 \u0441\u0432\u0435\u0442\u0435. \u0423 \u0433\u043E\u0440\u044B
-      \u042F\u0440\u0430\u043D\u0430\u0439 \u0436\u0438\u043B\u0438 \u043E\u043B\u0435\u043D\u0435\u0432\u043E\u0434\u044B
-      \u0447\u0430\u0432\u0447\u0443\u0432\u0430\u0442, \u0443 \u0431\u0435\u0440\u0435\u0433\u0430
-      \u043C\u043E\u0440\u044F - \u0431\u0435\u0440\u0435\u0433\u043E\u0432\u044B\u0435
-      \u0430\u043D\u043A\u044B\u043B\u0430\u0442. \u0416\u0438\u043B\u0438 \u043E\u043D\u0438
-      \u0434\u0440\u0443\u0436\u043D\u043E, \u043A\u0430\u043A \u0434\u043E\u0431\u0440\u044B\u0435
-      \u0441\u043E\u0441\u0435\u0434\u0438"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34656803890388992
-    m_Localized: "\u0418 \u0448\u0451\u043B \u043A\u0430\u043A-\u0442\u043E \u0448\u0430\u043C\u0430\u043D
-      \u0415\u0442\u0442\u0443\u0432\u044C\u0438, \u0438\u0437 \u0431\u0435\u0440\u0435\u0433\u043E\u0432\u044B\u0445
-      \u0447\u0443\u043A\u0447, \u043A \u044F\u0440\u0430\u043D\u0430\u0439\u0441\u043A\u0438\u043C
-      \u0447\u0443\u043A\u0447\u0430\u043C. \u041F\u0440\u0438\u0448\u0451\u043B
-      \u0438 \u0432\u0438\u0434\u0438\u0442 - \u043D\u0435\u0442 \u0432 \u0441\u0442\u043E\u0439\u0431\u0438\u0449\u0435
-      \u043D\u0438\u043A\u043E\u0433\u043E, \u043E\u0434\u043D\u0438 \u043E\u043B\u0435\u043D\u0438
-      \u043F\u0440\u043E\u043C\u0435\u0436 \u044F\u0440\u0430\u043D\u0433 \u0431\u0440\u043E\u0434\u044F\u0442.
-      \u041D\u0430\u0448\u0451\u043B \u0442\u043E\u043B\u044C\u043A\u043E \u043C\u0430\u043B\u044C\u0447\u0438\u043A\u0430
-      \u043D\u043E\u0432\u043E\u0440\u043E\u0436\u0434\u0435\u043D\u043D\u043E\u0433\u043E.
-      \u041E\u0441\u0442\u0430\u0432\u0438\u043B\u0438 \u0435\u0433\u043E \u0432
-      \u043B\u044E\u043B\u044C\u043A\u0435 \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0438
-      \u0438 \u0441\u0433\u0438\u043D\u0443\u043B\u0438 \u043D\u0435\u0432\u0435\u0441\u0442\u044C
-      \u043A\u0443\u0434\u0430. \u0412\u0437\u044F\u043B \u043E\u043D \u043C\u043B\u0430\u0434\u0435\u043D\u0446\u0430
-      \u0432 \u0441\u0432\u043E\u0451 \u0441\u0442\u043E\u0439\u0431\u0438\u0449\u0435. "
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34656854226231296
-    m_Localized: "\u0410 \u0432\u0435\u0447\u0435\u0440\u043E\u043C \u0441\u0442\u0430\u043B\u0438
-      \u0431\u0435\u0440\u0435\u0433\u043E\u0432\u044B\u0435 \u0447\u0443\u043A\u0447\u0438
-      \u0441\u043E\u0432\u0435\u0442 \u0434\u0435\u0440\u0436\u0430\u0442\u044C.
-      \u041E\u0442\u0447\u0435\u0433\u043E \u044F\u0440\u0430\u043D\u0430\u0439\u0446\u044B
-      \u0443\u0448\u043B\u0438, \u043E\u0442\u0447\u0435\u0433\u043E \u0440\u0435\u0431\u0451\u043D\u043A\u0430
-      \u0441\u0432\u043E\u0435\u0433\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u043B\u0438?
-      \u0412\u044B\u043A\u0432\u0430\u043D, \u0441\u0442\u0430\u0440\u043E\u0441\u0442\u0430,
-      \u0442\u0440\u0435\u0431\u043E\u0432\u0430\u043B \u043C\u043B\u0430\u0434\u0435\u043D\u0446\u0430
-      \u043E\u0431\u0440\u0430\u0442\u043D\u043E \u043E\u0442\u043D\u0435\u0441\u0442\u0438.
-      \u0421\u0442\u0430\u043B \u0448\u0430\u043C\u0430\u043D \u043A\u0430\u043C\u043B\u0430\u0442\u044C
-      \u043D\u0430 \u0431\u0443\u0431\u043D\u0435. \u0418 \u0432\u044B\u043F\u0430\u043B\u0430
-      \u043C\u0430\u043B\u044C\u0447\u0438\u043A\u0443 \u0442\u043E\u043C\u0443 \u0432\u0435\u043B\u0438\u043A\u0430\u044F
-      \u0441\u0443\u0434\u044C\u0431\u0430 - \u043D\u043E \u0434\u0443\u0440\u043D\u0430\u044F
-      \u0438\u043B\u0438 \u0445\u043E\u0440\u043E\u0448\u0430\u044F, \u0434\u0443\u0445\u0438
-      \u043D\u0435 \u0437\u043D\u0430\u043B\u0438. "
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34656924807979008
-    m_Localized: "\u0410 \u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439
-      \u0434\u0435\u043D\u044C \u0432\u0441\u0451 \u0441\u0442\u043E\u0439\u0431\u0438\u0449\u0435
-      \u043C\u043E\u0440 \u043E\u0445\u0432\u0430\u0442\u0438\u043B. \u041C\u043D\u043E\u0433\u043E
-      \u0442\u043E\u0433\u0434\u0430 \u0447\u0443\u043A\u0447 \u043F\u043E\u043B\u0435\u0433\u043B\u043E.
-      \u041A\u0430\u043C\u043B\u0430\u043B \u0448\u0430\u043C\u0430\u043D, \u0433\u0430\u0434\u0430\u043B,
-      \u0432 \u0431\u0443\u0431\u0435\u043D \u0431\u0438\u043B - \u0434\u0430 \u0431\u0435\u0437
-      \u0442\u043E\u043B\u043A\u0443. \u0421\u043B\u043E\u0432\u043D\u043E \u0434\u0443\u0445\u0438
-      \u043E\u0442\u0432\u0435\u0440\u043D\u0443\u043B\u0438\u0441\u044C \u043E\u0442
-      \u0447\u0443\u043A\u0447. "
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34656972664987648
-    m_Localized: "\u0414\u0435\u0440\u0435\u0432\u043D\u044E \u0441\u0442\u0430\u0440\u043E\u0441\u0442\u0430
-      \u0441\u043F\u0430\u0441 - \u0443 \u0442\u0430\u043D\u043D\u2019\u044B\u0442\u0430\u043D,
-      \u0447\u0443\u0436\u0430\u043A\u043E\u0432, \u0437\u0435\u043B\u044C\u0435
-      \u043D\u0430 \u043F\u0435\u0441\u0446\u043E\u0432\u044B\u0435 \u0448\u043A\u0443\u0440\u043A\u0438
-      \u0432\u044B\u043C\u0435\u043D\u044F\u043B. \u041A\u0442\u043E \u044D\u0442\u043E
-      \u0437\u0435\u043B\u044C\u0435 \u043F\u0438\u043B, \u0442\u043E\u0442 \u0438\u0441\u0446\u0435\u043B\u0438\u0442\u044C\u0441\u044F
-      \u0441\u043C\u043E\u0433. \u041F\u043E\u043D\u044F\u043B\u0438 \u043B\u044E\u0434\u0438,
-      \u0447\u0442\u043E \u043D\u0435\u0441\u043F\u0440\u043E\u0441\u0442\u0430 \u043C\u0430\u043B\u044C\u0447\u0438\u043A\u0430
-      \u0431\u0440\u043E\u0441\u0438\u043B\u0438. \u0420\u043E\u0436\u0434\u0430\u044E\u0442\u0441\u044F
-      \u0432 \u0441\u0442\u043E\u0439\u0431\u0438\u0449\u0435 \u0438\u043D\u043E\u0433\u0434\u0430
-      \u0442\u0430\u043A\u0438\u0435, \u043A\u0442\u043E \u0441 \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F
-      \u043F\u0440\u043E\u043A\u043B\u044F\u0442 \u0438 \u0431\u0435\u0434\u044B
-      \u043F\u0440\u0438\u043D\u043E\u0441\u0438\u0442. \u0412\u0437\u044F\u043B\u0438
-      \u0447\u0443\u043A\u0447\u0438 \u043A\u043E\u043F\u044C\u044F \u0438 \u0440\u0435\u0448\u0438\u043B\u0438
-      \u0437\u0430\u043A\u043E\u043B\u043E\u0442\u044C \u043E\u0442\u0440\u043E\u0434\u044C\u0435. "
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34657016738734080
-    m_Localized: "\u041F\u0440\u0438\u0448\u043B\u0438, \u0434\u0430 \u0432\u0438\u0434\u044F\u0442:
-      \u043D\u0435 \u043E\u0434\u0438\u043D \u043C\u043B\u0430\u0434\u0435\u043D\u0435\u0446.
-      \u041D\u0435\u0440\u043F\u0430 \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0430\u044F
-      \u0440\u044F\u0434\u043E\u043C \u0441 \u043D\u0438\u043C \u043B\u0435\u0436\u0438\u0442
-      - \u0438 \u043E\u0442\u043A\u0443\u0434\u0430 \u0442\u043E\u043B\u044C\u043A\u043E
-      \u0432\u0437\u044F\u043B\u0430\u0441\u044C? \u0410 \u043C\u043B\u0430\u0434\u0435\u043D\u0435\u0446
-      \u0435\u0439 \u0433\u0443\u043A\u0430\u0435\u0442, \u0430 \u043E\u043D\u0430
-      \u0435\u043C\u0443 \u0443\u0440\u0447\u0438\u0442, \u0441\u043B\u043E\u0432\u043D\u043E
-      \u0433\u043E\u0432\u043E\u0440\u044F\u0442 \u0434\u0440\u0443\u0433 \u0441
-      \u0434\u0440\u0443\u0433\u043E\u043C. \u041D\u0435 \u0441\u0442\u0430\u043B\u0438
-      \u0447\u0443\u043A\u0447\u0438 \u043C\u0430\u043B\u044C\u0447\u0438\u043A\u0430
-      \u0443\u0431\u0438\u0432\u0430\u0442\u044C. \u041A \u043F\u0440\u043E\u043A\u043B\u044F\u0442\u043E\u043C\u0443
-      \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0443 \u0434\u043E\u0431\u0440\u044B\u0439
-      \u0437\u0432\u0435\u0440\u044C \u043D\u0435 \u043F\u0440\u0438\u043F\u043E\u043B\u0437\u0451\u0442.
-      \u041D\u0430\u0437\u0432\u0430\u043B\u0438 \u043C\u0430\u043B\u044C\u0447\u0438\u043A\u0430
-      \u0427\u0443, \u0430 \u043D\u0435\u0440\u043F\u0443 \u0435\u0433\u043E \u041A\u043E\u0442\u043A\u0430.
-      \u0418 \u0431\u044B\u043B\u0438 \u043E\u043D\u0438 \u043D\u0435\u0440\u0430\u0437\u043B\u0443\u0447\u043D\u044B,
-      \u043A\u0430\u043A \u0431\u0440\u0430\u0442\u044C\u044F."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34657032060526592
-    m_Localized: "\u041D\u043E \u0445\u043E\u0442\u044C \u0447\u0443\u043A\u0447\u0438
-      \u043F\u043E\u0441\u043B\u0435 \u0442\u043E\u0433\u043E \u0438 \u043E\u0442\u0432\u0435\u0440\u043D\u0443\u043B\u0438\u0441\u044C
-      \u043E\u0442 \u0431\u043E\u0433\u043E\u0432, \u0445\u043E\u0442\u044C \u0438
-      \u0431\u043E\u044F\u043B\u0438\u0441\u044C \u0438 \u0432\u0438\u043D\u0438\u043B\u0438
-      \u0442\u043E\u0433\u043E \u043C\u0430\u043B\u044C\u0447\u0438\u043A\u0430 \u0432
-      \u0431\u0435\u0434\u0430\u0445 \u0441\u0432\u043E\u0438\u0445 - \u043E\u0434\u0438\u043D
-      \u0448\u0430\u043C\u0430\u043D \u0437\u043D\u0430\u043B: \u0441\u0443\u0436\u0434\u0435\u043D\u043E
-      \u0435\u043C\u0443 \u0438\u0437\u0433\u043D\u0430\u0442\u044C \u0437\u043B\u043E
-      \u0438\u0437 \u044D\u0442\u043E\u0433\u043E \u043C\u0438\u0440\u0430. \u0421\u0442\u0430\u043D\u0435\u0442
-      \u043E\u043D \u0432\u0435\u043B\u0438\u043A\u0438\u043C \u0431\u043E\u0433\u0430\u0442\u044B\u0440\u0451\u043C!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34674627697332224
-    m_Localized: Tanat
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34674524085440512
-    m_Localized: Chu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34674609108176896
-    m_Localized: Ettuvyi
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34676172652433408
-    m_Localized: Vykwan
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34676258191069184
-    m_Localized: Aina
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34676296761888768
-    m_Localized: Tynek
+  - m_Id: 10
+    m_Localized: The elder turns and leaves.
     m_Metadata:
       m_Items: []
   references:

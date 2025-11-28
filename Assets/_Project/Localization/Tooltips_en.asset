@@ -63,6 +63,14 @@ MonoBehaviour:
     m_Localized: Ermechin
     m_Metadata:
       m_Items: []
+  - m_Id: 1718786242166784
+    m_Localized: "Kamgyt \u2014 shamanic song or incantation."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1718786305081344
+    m_Localized: Kamgyt
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

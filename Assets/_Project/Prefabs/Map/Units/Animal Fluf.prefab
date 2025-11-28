@@ -509,9 +509,16 @@ MonoBehaviour:
   animname: idle
   spr: {fileID: 6334257619906543369}
   sprites:
-  - {fileID: 567359241, guid: bcf697d4bc041ae47b4679a4c96f0122, type: 3}
+  - {fileID: -293112442, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
+  - {fileID: 2134797988, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
+  - {fileID: 1001852796, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
+  - {fileID: 1952352313, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
+  - {fileID: -2071040905, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
+  - {fileID: -898877770, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
+  - {fileID: 1180035239, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
+  - {fileID: -1119075519, guid: af32d521fc5d2954bbc2700a90ebbd3f, type: 3}
   timePerFrame: 0.1
-  loop: 0
+  loop: 1
   curSprite: 0
 --- !u!114 &4911382896185564891
 MonoBehaviour:
@@ -558,11 +565,11 @@ MonoBehaviour:
   flyHeight: 1
   speed: 2
   switchDelayTimer: {fileID: 8068558652106071531}
-  animController: {fileID: 0}
-  idleAnim: 
-  idleAnimTime: 0
-  flyAnim: 
-  flyAnimTime: 0
+  animController: {fileID: 1022220381131382507}
+  idleAnim: 1
+  idleAnimTime: 2
+  flyAnim: 1
+  flyAnimTime: 2
 --- !u!114 &8068558652106071531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,8 +610,8 @@ MonoBehaviour:
   jumpForce: 0
   jumpDelayTimer: {fileID: 2042772848013348005}
   minDistanceToJump: 0
-  idle: {fileID: 0}
-  move: {fileID: 0}
+  idle: {fileID: 9081938253999711420}
+  move: {fileID: 9081938253999711420}
   spr: {fileID: 6334257619906543369}
   minVelocityToMove: 0
   destroyableObject: {fileID: 5025325049783167554}
@@ -618,7 +625,7 @@ MonoBehaviour:
   spawnAfterEscapePrefabs: []
   flip: 0
   minSpeedX: 0.25
-  animController: {fileID: 0}
+  animController: {fileID: 1022220381131382507}
   idleAnim: 
   idleAnimTime: 0
   walkAnim: 
