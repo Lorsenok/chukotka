@@ -15,7 +15,7 @@ public class BindingsInstaller : MonoInstaller
         Container.Bind<IDialogueSetter>().To<DialogueService>().AsSingle();
         //Container.Bind<IInventory>().To<InventoryService>().AsSingle();
         Container.Bind<ITaskContainer>().To<TaskService>().AsSingle();
-        Container.Bind<IAbilityContainer>().To<AbilityService>().AsSingle();
+        //Container.Bind<IAbilityContainer>().To<AbilityService>().AsSingle();
         GameSaver.StopAllSaves = false;
     }
 }

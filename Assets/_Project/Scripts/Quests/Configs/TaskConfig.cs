@@ -11,5 +11,6 @@ public enum TaskType
     Talk,
     Collect,
     Kill,
-    SetInventory
+    SetInventory,
+    Ability
 }
