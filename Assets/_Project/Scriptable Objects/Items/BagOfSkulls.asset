@@ -16,23 +16,23 @@ MonoBehaviour:
   type: 0
   itemname:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:fd6d628ff72d3e54483e9374500fd82d
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 53366422518661120
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:fd6d628ff72d3e54483e9374500fd82d
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 53366422518661120
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: f9aa69e5eed1c8b4683d5b226a82e2f7, type: 3}
   references:
     version: 2
     RefIds: []

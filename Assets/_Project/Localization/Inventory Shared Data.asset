@@ -103,6 +103,10 @@ MonoBehaviour:
     m_Key: meatdes
     m_Metadata:
       m_Items: []
+  - m_Id: 53366422518661120
+    m_Key: bagOfSkuls
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

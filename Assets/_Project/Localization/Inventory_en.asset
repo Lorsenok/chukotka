@@ -108,6 +108,10 @@ MonoBehaviour:
     m_Localized: Meaaaaaattttt
     m_Metadata:
       m_Items: []
+  - m_Id: 53366422518661120
+    m_Localized: A bag of skuls
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
