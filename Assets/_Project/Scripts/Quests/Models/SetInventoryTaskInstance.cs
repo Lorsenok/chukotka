@@ -1,16 +1,21 @@
 public class SetInventoryTaskInstance : TaskInstance
 {
-    private readonly InventoryItemTrigger _inventoryItemTrigger;
+    private readonly IInventory _inventory;
+    private readonly Item[] _itemsToPutDown;
+    private readonly Item[] _itemsToPickUp;
+    
     private bool _done;
     
-    public SetInventoryTaskInstance(InventoryItemTrigger inventoryItemTrigger)
+    public SetInventoryTaskInstance(IInventory inventory, Item[] itemsToPutDown, Item[] itemsToPickUp)
     {
-        _inventoryItemTrigger = inventoryItemTrigger;
+        _inventory = inventory;
+        _itemsToPutDown = itemsToPutDown;
+        _itemsToPickUp = itemsToPickUp;
     }
 
     public override void Start()
     {
-        _inventoryItemTrigger.Action();
+        Action();
         _done = true;
         Complete();
     }
@@ -20,4 +25,17 @@ public class SetInventoryTaskInstance : TaskInstance
     public override void Stop() { }
 
     public override bool IsCompleted => _done;
+    
+    private void Action()
+    {
+        foreach (Item item in _itemsToPutDown)
+        {
+            _inventory.AddItem(item);
+        }
+        
+        foreach (Item item in _itemsToPickUp)
+        {
+            _inventory.RemoveItem(item);
+        }
+    }
 }

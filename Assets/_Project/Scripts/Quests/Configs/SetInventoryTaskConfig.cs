@@ -3,7 +3,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Quest/Tasks/SetInventoryTask")]
 public class SetInventoryTaskConfig : TaskConfig
 {
-    [SerializeField] private InventoryItemTrigger _inventoryItemTrigger;
+    [Tooltip("Что положить в инвентарь")] [SerializeField]
+    private Item[] _itemsToPutDown;
+
+    [Tooltip("Что достать из инвентаря")] [SerializeField]
+    private Item[] _itemsToPickUp;
     
-    public InventoryItemTrigger InventoryItemTrigger => _inventoryItemTrigger;
+    public Item[] ItemsToPutDown => _itemsToPutDown;
+    public Item[] ItemsToPickUp => _itemsToPickUp;
 }

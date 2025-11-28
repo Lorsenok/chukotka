@@ -56,7 +56,7 @@ public class QuestFactory
 
     private TaskInstance CreateSetInventoryTask(SetInventoryTaskConfig config)
     {
-        return new SetInventoryTaskInstance(config.InventoryItemTrigger);
+        return new SetInventoryTaskInstance(_inventory, config.ItemsToPutDown, config.ItemsToPickUp);
     }
 
     private TalkTaskInstance CreateTalkTask(TalkTaskConfig config)
