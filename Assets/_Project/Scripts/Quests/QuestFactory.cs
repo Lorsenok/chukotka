@@ -7,14 +7,16 @@ public class QuestFactory
     private readonly QuestDialogEvents _dialogEvents;
     private readonly IInventory _inventory;
     private readonly IAbilityContainer _abilityContainer;
+    private readonly QuestObjectsGlobalRegistry _questObjectsGlobalRegistry;
     
     public QuestFactory(QuestLineConfig config, QuestDialogEvents questDialogEvents, 
-        IInventory inventory, IAbilityContainer abilityContainer)
+        IInventory inventory, IAbilityContainer abilityContainer, QuestObjectsGlobalRegistry questObjectsGlobalRegistry)
     {
         _config = config;
         _dialogEvents = questDialogEvents;
         _inventory = inventory;
         _abilityContainer = abilityContainer;
+        _questObjectsGlobalRegistry = questObjectsGlobalRegistry;
     }
     
     public List<QuestInstance> CreateQuests()
@@ -52,11 +54,18 @@ public class QuestFactory
                 return CreateSetInventoryTask(config as SetInventoryTaskConfig);
             case TaskType.Ability:
                 return CreateAbilityTask(config as AbilityConfig);
+            case TaskType.ObjectsActivator:
+                return CreateObjectsActivatorTask(config as ObjectsActivatorConfig);
             default:
                 throw new System.NotImplementedException();
         }
     }
 
+    private TaskInstance CreateObjectsActivatorTask(ObjectsActivatorConfig config)
+    {
+        return new ObjectsActivatorInstance(_questObjectsGlobalRegistry, config.ObjectsToActivate, config.ObjectsToDeactivate);
+    }
+    
     private TaskInstance CreateAbilityTask(AbilityConfig config)
     {
         return new AbilityInstance(_abilityContainer, config.Abilities);

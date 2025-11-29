@@ -4,5 +4,6 @@ public enum TaskType
     Collect,
     Kill,
     SetInventory,
-    Ability
+    Ability,
+    ObjectsActivator
 }
