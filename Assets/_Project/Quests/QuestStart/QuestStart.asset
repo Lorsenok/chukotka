@@ -15,4 +15,5 @@ MonoBehaviour:
   questId: Start
   questDescription: 
   tasks:
+  - {fileID: 11400000, guid: 97f392cad5f470f4b92c90805c5dca19, type: 2}
   - {fileID: 11400000, guid: 9d3e73167f697bc48b428df9c0cb2135, type: 2}
