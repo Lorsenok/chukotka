@@ -18,4 +18,7 @@ MonoBehaviour:
   _itemsToPutDown:
   - {fileID: 11400000, guid: d10786604ae138045b55eb5d7e3b776a, type: 2}
   _itemsToPickUp:
-  - {fileID: 11400000, guid: be15635bed4faf64da6986fa80d281f1, type: 2}
+  - {fileID: 11400000, guid: d185aeb8d4d188041917acd1c4aa4926, type: 2}
+  - {fileID: 11400000, guid: d185aeb8d4d188041917acd1c4aa4926, type: 2}
+  - {fileID: 11400000, guid: d185aeb8d4d188041917acd1c4aa4926, type: 2}
+  - {fileID: 11400000, guid: d185aeb8d4d188041917acd1c4aa4926, type: 2}

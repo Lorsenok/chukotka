@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 384a87f895144abda49ce427321e083f, type: 3}
-  m_Name: Task1FinishSchamanDialog
+  m_Name: Talk2Stranger
   m_EditorClassIdentifier: 
-  Description: "\u0414\u043E\u0433\u043E\u0432\u043E\u0440\u0438 \u0441 \u0448\u0430\u043C\u0430\u043D\u043E\u043C"
+  Description: "\u041F\u043E\u0433\u043E\u0432\u043E\u0440\u0438 \u0441 \u0447\u0443\u0436\u0430\u043A\u0430\u043C\u0438"
   TaskType: 0
-  _npcId: Schaman
-  dialogId: q3d1
+  _npcId: Stranger
+  dialogId: q3d2

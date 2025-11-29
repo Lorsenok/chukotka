@@ -244,6 +244,33 @@ MonoBehaviour:
     m_Localized: The elder turns and leaves.
     m_Metadata:
       m_Items: []
+  - m_Id: 52147158801481728
+    m_Localized: Chu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52147230247256064
+    m_Localized: Elder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52147456831946752
+    m_Localized: Schaman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52147561047818240
+    m_Localized: Hunter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52159342164082688
+    m_Localized: <sprite index=1><sprite index=2><sprite index=3><sprite index=4><sprite
+      index=5><sprite index=6><sprite index=7><sprite index=8><sprite index=9><sprite
+      index=10><sprite index=11><sprite index=12><sprite index=13><sprite index=14><sprite
+      index=15><sprite index=16><sprite index=17><sprite index=18><sprite index=19>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52159974098894848
+    m_Localized: Stranger
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
