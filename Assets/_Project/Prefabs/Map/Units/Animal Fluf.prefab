@@ -620,7 +620,7 @@ MonoBehaviour:
   targetWhileNotAgr: {fileID: 0}
   destroyableObject: {fileID: 5025325049783167554}
   dropPrefab:
-  - {fileID: 2494444330949010391, guid: 4a0de3c171222334cae163b05721780e, type: 3}
+  - {fileID: 2494444330949010391, guid: 6f73825348bf7d1499e72344661a1aae, type: 3}
   spawnAfterDying:
   - {fileID: 4753878490498050857, guid: 213862a4478fbc54787c7f68e183dde9, type: 3}
   lootSpawnpoint: {fileID: 3480739057512430398}
