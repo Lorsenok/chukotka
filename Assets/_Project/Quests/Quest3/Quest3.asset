@@ -16,3 +16,4 @@ MonoBehaviour:
   questDescription: "\u041F\u043E\u044F\u0432\u043B\u0435\u043D\u0438\u0435 \u0447\u0443\u0436\u0430\u043A\u043E\u0432"
   tasks:
   - {fileID: 11400000, guid: 4c5bb3c049ee6fa4dbea1e045ed19753, type: 2}
+  - {fileID: 11400000, guid: 4c5bb3c049ee6fa4dbea1e045ed19753, type: 2}

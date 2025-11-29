@@ -9608,22 +9608,22 @@ MonoBehaviour:
   - name2
   - name1
   - name2
-  - name1
   - name2
   - name1
-  - name2
   - name1
+  - name2
+  - name2
   icon:
   - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
   - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
   - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
   - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
-  - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
   - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
   - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
-  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
   - {fileID: -769527344, guid: a98f28aa5ee0f6a4ab7d1816d49bd1eb, type: 3}
-  side: 000100010001000100
+  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
+  - {fileID: 1092104359, guid: 003acc9526d571e4a89d6a03c94c0863, type: 3}
+  side: 000100010100000101
   nextId: 010000000200000003000000040000000500000006000000070000000800000009000000
   panels: 010000000100000001000000010000000100000001000000010000000100000001000000
 --- !u!114 &1939699258

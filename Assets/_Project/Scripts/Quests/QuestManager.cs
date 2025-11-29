@@ -27,8 +27,8 @@ public class QuestManager : IInitializable
             return;
         
         _currentQuest = _quests[0];
-        _currentQuest.Start();
         _currentQuest.OnCompleted += OnQuestCompleted;
+        _currentQuest.Start();
     }
 
     private void OnQuestCompleted()
