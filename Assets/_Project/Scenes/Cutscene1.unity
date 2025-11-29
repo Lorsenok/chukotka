@@ -634,6 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255c70daefc0c2a4b9cc95133706c1e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _npcRegistry: {fileID: 0}
 --- !u!114 &1151683399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,9 +1256,9 @@ MonoBehaviour:
   message: {fileID: 489793016}
   table:
     m_TableReference:
-      m_TableCollectionName: GUID:766e6e7cba28b3b4987097e58b7e1ae3
+      m_TableCollectionName: GUID:15d9e346d157aa9439c5e420feb26164
   keys:
-  - c1
+  - cut1
   - cut2
   - cut3
   - cut4

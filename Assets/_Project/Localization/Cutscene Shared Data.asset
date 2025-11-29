@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Cutscene Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Cutscene
+  m_TableCollectionNameGuidString: 15d9e346d157aa9439c5e420feb26164
+  m_Entries:
+  - m_Id: 34656678648471552
+    m_Key: cut1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34656803890388992
+    m_Key: cut2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34656854226231296
+    m_Key: cut3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34656924807979008
+    m_Key: cut4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34656972664987648
+    m_Key: cut5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34657016738734080
+    m_Key: cut6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34657032060526592
+    m_Key: cut7
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7875544067959423077
+  references:
+    version: 2
+    RefIds:
+    - rid: 7875544067959423077
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1764403215152
