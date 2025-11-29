@@ -42,6 +42,10 @@ public class NPCDialogueController : MonoBehaviour
     public void RemoveDialog(TalkTaskInstance instance)
     {
         DialogWrapper dialog = _dialogs.Find(dialog => dialog.DialogId == instance.DialogId);
+        
+        if (dialog == null)
+            return;
+        
         dialog.gameObject.SetActive(false);
     }
 
