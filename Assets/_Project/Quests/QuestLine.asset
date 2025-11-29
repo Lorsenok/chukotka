@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: QuestLine
   m_EditorClassIdentifier: 
   quests:
-  - {fileID: 11400000, guid: 8f28adc2309d1e349ba2992e0359026c, type: 2}
   - {fileID: 11400000, guid: f74d34436d9cae34ca55705050461fdf, type: 2}
-  - {fileID: 11400000, guid: 70613b8da08dae043b1b9dfd9d700ecf, type: 2}
   - {fileID: 11400000, guid: aa33f6772219b9e4cbaa17a3b579dc7d, type: 2}
+  - {fileID: 11400000, guid: 8f28adc2309d1e349ba2992e0359026c, type: 2}
+  - {fileID: 11400000, guid: 70613b8da08dae043b1b9dfd9d700ecf, type: 2}
