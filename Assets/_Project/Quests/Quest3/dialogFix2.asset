@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928694388c8c4373b28bf3f107a32480, type: 3}
-  m_Name: QuestStart
+  m_Script: {fileID: 11500000, guid: 5b4f7eca34734621a42b669ab5010824, type: 3}
+  m_Name: dialogFix2
   m_EditorClassIdentifier: 
-  questId: Start
-  questDescription: 
-  tasks:
-  - {fileID: 11400000, guid: 97f392cad5f470f4b92c90805c5dca19, type: 2}
-  - {fileID: 11400000, guid: 9d3e73167f697bc48b428df9c0cb2135, type: 2}
+  Description: 
+  TaskType: 5
+  _objectsToActivate: []
+  _objectsToDeactivate:
+  - SceneType: 0
+    QuestObjectType: 2
