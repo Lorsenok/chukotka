@@ -5,16 +5,15 @@ using Zenject;
 public class QuestObjectsSceneRegistry : MonoBehaviour
 {
     [SerializeField] private SceneType sceneType;
-    
+
     private readonly Dictionary<QuestObjectType, QuestObjectController> _objects = new();
-    
-    [Inject] 
-    private readonly QuestObjectsGlobalRegistry _globalRegistry;
+
+    [Inject] private readonly QuestObjectsGlobalRegistry _globalRegistry;
 
     private void Start()
     {
         _globalRegistry.OnObjectActivityChanged += SetObjectActive;
-     
+
         SetAllObjectsActive();
     }
 
@@ -32,23 +31,34 @@ public class QuestObjectsSceneRegistry : MonoBehaviour
     {
         _objects.Remove(questObject.Type);
     }
-    
+
     private void SetAllObjectsActive()
     {
         foreach (var questObject in _objects)
         {
-            SetObjectActive(questObject.Value);
+            var questObjectStruct = GetQuestObjectStruct(questObject.Value);
+            SetObjectActive(questObjectStruct);
         }
     }
 
-    private void SetObjectActive(QuestObjectController questObject)
+    private void SetObjectActive(QuestObjectStruct questObjectStruct)
     {
-        if (questObject.SceneType != sceneType)
+        if (questObjectStruct.SceneType != sceneType)
             return;
-        
-        if (_globalRegistry.CheckObjectIsActive(questObject))
-            questObject.Activate();
+
+        if (_globalRegistry.CheckObjectIsActive(questObjectStruct))
+            _objects[questObjectStruct.QuestObjectType].Activate();
         else
-            questObject.Deactivate();
+            _objects[questObjectStruct.QuestObjectType].Deactivate();
+    }
+
+    private QuestObjectStruct GetQuestObjectStruct(QuestObjectController controller)
+    {
+        QuestObjectStruct questObjectStruct = new QuestObjectStruct
+        {
+            SceneType = sceneType,
+            QuestObjectType = controller.Type
+        };
+        return questObjectStruct;
     }
 }

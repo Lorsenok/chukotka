@@ -2,13 +2,13 @@ public class ObjectsActivatorInstance : TaskInstance
 {
     private QuestObjectsGlobalRegistry _questObjectsGlobalRegistry;
     
-    private QuestObjectController[] _objectsToActivate;
-    private QuestObjectController[] _objectsToDeactivate;
+    private QuestObjectStruct[] _objectsToActivate;
+    private QuestObjectStruct[] _objectsToDeactivate;
     
     private bool _done;
 
     public ObjectsActivatorInstance(QuestObjectsGlobalRegistry questObjectsGlobalRegistry,
-        QuestObjectController[] objectsToActivate, QuestObjectController[] objectsToDeactivate)
+        QuestObjectStruct[] objectsToActivate, QuestObjectStruct[] objectsToDeactivate)
     {
         _questObjectsGlobalRegistry = questObjectsGlobalRegistry;
         _objectsToActivate = objectsToActivate;

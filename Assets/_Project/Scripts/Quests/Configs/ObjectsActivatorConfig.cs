@@ -4,11 +4,11 @@ using UnityEngine;
 public class ObjectsActivatorConfig : TaskConfig
 {
     [Tooltip("Что надо активировать")] [SerializeField]
-    private QuestObjectController[] _objectsToActivate;
+    private QuestObjectStruct[] _objectsToActivate;
 
     [Tooltip("Что надо деактивировать")] [SerializeField]
-    private QuestObjectController[] _objectsToDeactivate;
+    private QuestObjectStruct[] _objectsToDeactivate;
 
-    public QuestObjectController[] ObjectsToActivate => _objectsToActivate;
-    public QuestObjectController[] ObjectsToDeactivate => _objectsToDeactivate;
+    public QuestObjectStruct[] ObjectsToActivate => _objectsToActivate;
+    public QuestObjectStruct[] ObjectsToDeactivate => _objectsToDeactivate;
 }
