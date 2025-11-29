@@ -13,6 +13,7 @@ public class ProjectInstaller : MonoInstaller
         Container.Bind<IAbilityContainer>().To<AbilityService>().AsSingle();
         
         Container.Bind<QuestDialogEvents>().AsSingle().NonLazy();
+        Container.Bind<QuestObjectsGlobalRegistry>().AsSingle().NonLazy();
         Container.BindInterfacesTo<QuestManager>().AsSingle().NonLazy();
     }
 }
