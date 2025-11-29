@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928694388c8c4373b28bf3f107a32480, type: 3}
   m_Name: Quest3
   m_EditorClassIdentifier: 
-  questId: 
-  questDescription: 
-  tasks: []
+  questId: 3
+  questDescription: "\u041F\u043E\u044F\u0432\u043B\u0435\u043D\u0438\u0435 \u0447\u0443\u0436\u0430\u043A\u043E\u0432"
+  tasks:
+  - {fileID: 11400000, guid: 4c5bb3c049ee6fa4dbea1e045ed19753, type: 2}

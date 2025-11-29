@@ -10,11 +10,13 @@ public class QuestObjectsGlobalRegistry
     public void ActivateObject(QuestObjectStruct questObject)
     {
         _activeObjects.Add(questObject);
+        OnObjectActivityChanged?.Invoke(questObject);
     }
     
     public void DeactivateObject(QuestObjectStruct questObject)
     {
         _activeObjects.Remove(questObject);
+        OnObjectActivityChanged?.Invoke(questObject);
     }
     
     public bool CheckObjectIsActive(QuestObjectStruct questObject)

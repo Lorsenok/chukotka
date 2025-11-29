@@ -15,5 +15,6 @@ MonoBehaviour:
   Description: 
   TaskType: 5
   _objectsToActivate:
-  - {fileID: 0}
+  - SceneType: 0
+    QuestObjectType: 1
   _objectsToDeactivate: []
