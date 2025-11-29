@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class ObjectsActivatorInstance : TaskInstance
 {
     private QuestObjectsGlobalRegistry _questObjectsGlobalRegistry;
@@ -27,7 +29,9 @@ public class ObjectsActivatorInstance : TaskInstance
             _questObjectsGlobalRegistry.DeactivateObject(obj);
         }
         
+        Debug.Log("ObjectsActivatorInstance completed");
         _done = true;
+        Complete();
     }
 
     public override void Update() { }
