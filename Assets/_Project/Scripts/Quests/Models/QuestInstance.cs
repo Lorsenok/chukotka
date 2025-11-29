@@ -60,11 +60,7 @@ public class QuestInstance : IDisposable
 
     public bool IsCompleted => _currentTaskIndex >= _taskInstances.Count;
 
-    public void Dispose()
-    {
-        foreach (var t in _taskInstances)
-            t.Dispose();
-    }
+    public void Dispose() { }
     
     private void OnTaskCompleted(TaskInstance task)
     {

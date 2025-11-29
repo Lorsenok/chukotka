@@ -9100,7 +9100,7 @@ MonoBehaviour:
   _npcId: Schaman
   _dialogs:
   - {fileID: 253680922}
-  - {fileID: 253680922}
+  - {fileID: 1579817013}
 --- !u!4 &1810524711
 Transform:
   m_ObjectHideFlags: 0
@@ -9751,7 +9751,7 @@ GameObject:
   - component: {fileID: 1939699258}
   - component: {fileID: 1939699257}
   m_Layer: 0
-  m_Name: Dialogue Trigger Start
+  m_Name: Dialogue Trigger pickUpSkulls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
