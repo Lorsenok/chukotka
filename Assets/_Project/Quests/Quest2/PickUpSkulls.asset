@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f2aabe62ab4715a6896964446802d9, type: 3}
   m_Name: PickUpSkulls
   m_EditorClassIdentifier: 
-  Description: 
-  TaskType: 0
+  Description: "\u041E\u0442\u0434\u0430\u0442\u044C \u043C\u0435\u0448\u043E\u043A
+    \u0441 \u043A\u043E\u0441\u0442\u044F\u043C\u0438"
+  TaskType: 3
   _itemsToPutDown: []
-  _itemsToPickUp: []
+  _itemsToPickUp:
+  - {fileID: 11400000, guid: d10786604ae138045b55eb5d7e3b776a, type: 2}
